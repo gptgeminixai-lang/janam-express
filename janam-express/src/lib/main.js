@@ -2,7 +2,7 @@ import {
   CITIES, FIRSTS, econ, filmOf, songOf, cricketOf, milestoneOf,
   pmOn, presidentOn, population, findCity, tvEra, fmtIN, MONTHS,
   greetingOf, regionalCinemaOf, stateStoryOf, hinduYears, inflate,
-  stateSymbolsOf, stateCultureOf, regionalEra, knownForOf,
+  stateSymbolsOf, stateCultureOf, regionalEra, knownForOf, sportOf,
 } from './lookup.js';
 import panchang from '../data/panchang.json';
 import { skyOn, panchangOn } from './astronomy.js';
@@ -247,6 +247,15 @@ function render() {
   $('ckyear').textContent = ck.year === y ? `THE YEAR ${y}` : `AROUND YOUR YEAR · ${ck.year}`;
   $('ckhead').textContent = ck.headline;
   $('ckstory').textContent = ck.story;
+  const sp = sportOf(y);
+  if (sp) {
+    $('sportyear').textContent = `THE YEAR ${y}`;
+    $('sporthead').textContent = sp.sport;
+    $('sportmoment').textContent = sp.moment;
+    $('sportcard').hidden = false;
+  } else {
+    $('sportcard').hidden = true;
+  }
 
   /* beat 5 · front page */
   $('mast').textContent = `THE ${bornCity.toUpperCase()} HERALD`;
@@ -530,10 +539,12 @@ function renderHistory(scope) {
   $('historylist').innerHTML = '<li class="tl-loading">Leafing through the calendar…</li>';
   (scope === 'india' ? historyIndia : historyOn)(m, d).then(events => {
     if (mine !== RENDER || historyScope !== scope) return;
+    if ((!events || !events.length) && scope === 'india') {
+      renderHistory('global'); // no India events for this date — show the world instead
+      return;
+    }
     if (!events || !events.length) {
-      $('historylist').innerHTML = `<li class="tl-loading">${scope === 'india'
-        ? 'No India-specific events on record for this date yet — try World.'
-        : 'History is catching its breath — try again in a moment.'}</li>`;
+      $('historylist').innerHTML = '<li class="tl-loading">History is catching its breath — try again in a moment.</li>';
       return;
     }
     $('historylist').innerHTML = events.map(e =>

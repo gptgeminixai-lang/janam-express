@@ -173,6 +173,11 @@ img{max-width:100%}
 .sboard h3{font-family:var(--disp);font-weight:400;color:#FFF3C4;font-size:clamp(26px,5vw,40px);
   margin:0 0 8px;line-height:1.05;letter-spacing:.03em}
 .sboard .story{font-family:var(--serif);color:#CDEBD3;font-size:15px;line-height:1.65;margin:14px 0 0}
+.sboard-alt{margin-top:14px;background:#2B1E10;border-color:#6B4E2E}
+.sboard-alt .row{border-bottom-color:#5C4426;color:#EAD3AC}
+.sboard-alt .row b{color:#F6C97A}
+.sboard-alt h3{color:#F6C97A}
+.sboard-alt .story{color:#E8D6BC}
 
 /* ---------- newspaper ---------- */
 .paperfold{background:var(--paper);color:var(--ink);width:min(680px,94vw);padding:30px 34px 26px;

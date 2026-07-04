@@ -51,12 +51,14 @@ export async function historyOn(m, d) {
    as historyOn() and keyword-filters to India (verified approach — Wikidata SPARQL
    for India events is 30-60s cold, too slow for a client call). */
 const INDIA_RX = /Indi(a|an)|Delhi|Mumbai|Bombay|Bengal|Kashmir|Gandhi|Mughal|Hindu|Sikh|Punjab|Madras|Calcutta|Kolkata|Chennai|Maratha|Rajput|Nehru|Ambedkar|Assam|Gujarat|Kerala|Tamil|Telugu|Hyderabad|Mysore|Odisha|Bihar|Rajasthan|Sikkim|\bGoa\b|ISRO|Ganges|Ganga|Himalaya|Sepoy|Partition/;
+// strip out clear non-India false positives ("American Indians", Indiana, West Indies, etc.)
+const NOT_INDIA_RX = /American Indian|Native American|Red Indian|Indian reservation|Indian Territory|Indiana\b|Indianapolis|West Indies|Indian Wells/i;
 export async function historyIndia(m, d) {
   try {
     const u = `https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/events/${String(m).padStart(2, '0')}/${String(d).padStart(2, '0')}`;
     const j = await get(u);
     const events = (j.events || [])
-      .filter(e => INDIA_RX.test(e.text))
+      .filter(e => INDIA_RX.test(e.text) && !NOT_INDIA_RX.test(e.text))
       .sort((a, b) => a.year - b.year)
       .slice(0, 6)
       .map(e => ({ year: e.year, text: e.text, thumb: e.pages?.[0]?.thumbnail?.source || null }));

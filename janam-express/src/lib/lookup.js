@@ -8,6 +8,7 @@ import regional from '../data/regional.json';
 import statesymbols from '../data/statesymbols.json';
 import stateculture from '../data/stateculture.json';
 import knownfor from '../data/knownfor.json';
+import sports from '../data/sports.json';
 
 export const CITIES = citiesData.cities;
 export const PMS = staticData.pms;
@@ -131,6 +132,7 @@ const normState = s => (s || '').replace(/\s*\(.*\)$/, '').replace(/\s+/g, ' ').
 export const stateSymbolsOf = state => statesymbols[normState(state)] || null;
 export const stateCultureOf = state => stateculture.states[normState(state)] || null;
 export const knownForOf = city => knownfor[city] || null;
+export const sportOf = year => sports[year] || null;
 
 /* the user's birth year in the calendar their region actually keeps */
 export function regionalEra(state, year) {
