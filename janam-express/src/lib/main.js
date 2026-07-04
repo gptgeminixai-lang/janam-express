@@ -2,18 +2,26 @@ import {
   CITIES, FIRSTS, econ, filmOf, songOf, cricketOf, milestoneOf,
   pmOn, presidentOn, population, findCity, tvEra, fmtIN, MONTHS,
   greetingOf, regionalCinemaOf, stateStoryOf, hinduYears, inflate,
+  stateSymbolsOf, stateCultureOf, regionalEra,
 } from './lookup.js';
+import panchang from '../data/panchang.json';
 import { skyOn, panchangOn } from './astronomy.js';
 import { weatherOn, historyOn, famousBirthdays, postersOf } from './api.js';
 import { rashiChart, RASHIS, GRAHA_NAMES } from './kundli.js';
 import nakInfo from '../data/nakshatras.json';
 import rashiInfo from '../data/rashis.json';
 import grahaGoverns from '../data/grahas.json';
+import { mahadasha, numerology, weekdayOf } from './jyotish.js';
 import { buildCaption, shareTicket, downloadTicket } from './share.js';
+
+const GRAHA_EMOJI = { Sun: '☀️', Moon: '🌙', Mars: '♂', Mercury: '☿', Jupiter: '♃', Venus: '♀', Saturn: '♄', Rahu: '☊', Ketu: '☋' };
 
 const LORD_ABBR = { Sun: 'Su', Moon: 'Mo', Mars: 'Ma', Mercury: 'Me', Jupiter: 'Ju', Venus: 'Ve', Saturn: 'Sa', Rahu: 'Ra', Ketu: 'Ke' };
 const GANA_GLOSS = { Deva: 'divine, gentle nature', Manushya: 'human, balanced nature', Rakshasa: 'fierce, intense nature' };
 const lowerFirst = s => s ? s[0].toLowerCase() + s.slice(1) : s;
+const ordinal = n => ['first', 'second', 'third', 'fourth'][n - 1] || `${n}th`;
+const cleanDeity = d => (d || '').split(/[/(]/)[0].trim(); // "Brahma / Prajapati (creator)" -> "Brahma"
+const SYM_EMOJI = { animal: '🐾', bird: '🦜', flower: '🌸', tree: '🌳' };
 
 const $ = id => document.getElementById(id);
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -200,7 +208,8 @@ function render() {
       song
         ? `${song.film ? 'From ' + song.film + '. ' : ''}${song.source || ''} Playing from every radio, every paan shop, every wedding loudspeaker in ${y}.`
         : "Every Wednesday at 8 PM, Ameen Sayani counted down the year's biggest songs to a listening nation.",
-      false],
+      false,
+      song ? `${song.song} ${song.film || ''} song`.trim() : null],
     ['CH 3 · YOUR TELEVISION ERA', y < 1959 ? 'Before television' : 'What India watched', tvEra(y), false],
   ];
   if (regional) {
@@ -319,6 +328,78 @@ function render() {
       .map(([ab, nm]) => `<span><b>${ab}</b> ${nm}</span>`).join('');
   }).catch(() => { $('chartmoon').textContent = 'the sky is clouded over just now'; });
 
+  /* beat 13 · the gods of your birth */
+  const wd = weekdayOf(dob);
+  $('weekdaygod').textContent = wd.deity;
+  $('weekdaysub').textContent = `Born on a ${wd.day} — ${wd.name}, the day of ${wd.graha}. Tradition keeps ${wd.vrat}.`;
+  $('deityname').textContent = '…'; $('deitystory').textContent = ''; $('deitytemple').textContent = '';
+  $('tithigod').textContent = ''; $('navagraha').textContent = '';
+  chartP.then(chart => {
+    if (!fresh()) return;
+    const nk = nakInfo[chart.moonNakshatra.index];
+    $('deityname').textContent = cleanDeity(nk.deity);
+    $('deitystory').textContent = nk.deityStory;
+    $('deitytemple').innerHTML = `Honoured at the <b style="color:#EFC078">${nk.temple}</b>, ${nk.templeTown}.`;
+    const isAma = chart.tithiNum === 29;
+    const td = isAma ? { tithi: 'Amavasya', deity: 'the Pitrs (the ancestors)' } : panchang.tithiDeity[chart.tithiNum % 15];
+    $('tithigod').textContent = td.deity;
+    $('tithigodsub').textContent = `${chart.tithiNum < 15 ? 'Shukla' : 'Krishna'} ${td.tithi || ''}`.trim();
+    const nav = panchang.navagraha[nk.lord];
+    if (nav) {
+      $('navagraha').innerHTML = `Your star answers to <b>${nk.lord}</b>, whose Navagraha temple is <b>${nav.temple}</b> at ${nav.town}.`;
+      $('navagrahabeej').textContent = `Its seed-mantra: ${nav.beej}`;
+      $('navagraha').closest('.god-card').hidden = false;
+    } else {
+      $('navagraha').closest('.god-card').hidden = true;
+    }
+  });
+
+  /* beat 14 · the wheel of your years (mahadasha + numbers + naam-akshar) */
+  const nu = numerology(y, m, d, name !== 'Traveller' ? name : '');
+  $('numbers').innerHTML = [['Moolank', nu.moolank], ['Bhagyank', nu.bhagyank], nu.naamank ? ['Naamank', nu.naamank] : null]
+    .filter(Boolean).map(([label, info]) =>
+      `<div class="num-card"><p class="nl">${label}</p><div class="nn">${info.n}</div>` +
+      `<p class="np">${info.planet}</p><p class="nt">${info.trait}</p></div>`).join('');
+  $('dashalead').textContent = 'reading the wheel…'; $('dasharibbon').innerHTML = ''; $('dashanow').textContent = '';
+  $('naamakshar').textContent = '';
+  chartP.then(chart => {
+    if (!fresh()) return;
+    const md = mahadasha(chart.moonNakshatra, dob);
+    $('dashalead').innerHTML = `You were born into your <b>${md.birthLord}</b> mahadasha — ${md.birthNote}.`;
+    const maxY = Math.max(90, Math.ceil(md.age) + 8);
+    $('dasharibbon').innerHTML = md.periods.filter(p => p.start < maxY).map((p, i) => {
+      const span = Math.min(p.end, maxY) - p.start;
+      const cls = p === md.current ? 'now' : (i === 0 ? 'birth' : '');
+      return `<div class="dseg ${cls}" style="flex-grow:${span.toFixed(2)}"><span class="dp">${p.lord}</span><span class="dy">${Math.round(p.start)}–${Math.round(p.end)}</span></div>`;
+    }).join('');
+    $('dashanow').innerHTML = `Today, at ${Math.floor(md.age)}, the wheel has turned to <b>${md.current.lord}</b> — ${md.currentNote}.`;
+    const nk = nakInfo[chart.moonNakshatra.index];
+    const syl = (nk.naamAkshar || [])[chart.moonNakshatra.pada - 1];
+    if (syl) {
+      const named = name && name !== 'Traveller';
+      $('naamakshar').innerHTML = `By the old panchang, a child of <b>${nk.name}</b>'s ${ordinal(chart.moonNakshatra.pada)} quarter is named beginning with the sound <b>${syl}</b>` +
+        (named ? ` — your parents called you <b>${name}</b>. Did they agree with the sky?` : '. Did your parents agree with the sky?');
+    }
+  });
+
+  /* beat 15 · your homeland */
+  const cult = stateCultureOf(city.state), sym = stateSymbolsOf(city.state), era = regionalEra(city.state, y);
+  if (cult) {
+    $('hlnewyear').textContent = cult.newYear;
+    $('hlera').innerHTML = `around ${cult.newYearMonth}` + (era ? ` · in your own calendar, ${y} is <b>${era.value}</b>` : '');
+    $('hlculture').innerHTML = `The walls of your region wear <b>${cult.artForm}</b>, its dance is <b>${cult.dance}</b>, and its taste is <b>${cult.dish}</b>.`;
+    $('homelandbeat').hidden = false;
+  } else {
+    $('homelandbeat').hidden = true;
+  }
+  if (sym) {
+    $('hlsymbols').innerHTML = [['animal', 'Animal', sym.animal], ['bird', 'Bird', sym.bird], ['flower', 'Flower', sym.flower], ['tree', 'Tree', sym.tree]]
+      .map(([k, l, v]) => `<div class="hl-sym"><span class="emo">${SYM_EMOJI[k]}</span><span class="sl">${l}</span><span class="sv">${v}</span></div>`).join('');
+    $('hlsymbols').closest('.hl-card').hidden = false;
+  } else {
+    $('hlsymbols').closest('.hl-card').hidden = true;
+  }
+
   /* beat 6 · not yet */
   $('nylist').innerHTML = FIRSTS.filter(f => f[0] > iso).slice(0, 5).map(f => {
     const wait = Math.max(1, Math.round((new Date(f[0]) - dob) / 31557600000));
@@ -337,11 +418,13 @@ function render() {
     $('mbtitle').textContent = chart.moonNakshatra.name;
     $('mbsub').textContent = `Janma nakshatra · pada ${chart.moonNakshatra.pada} — the star the sky filed you under`;
   }).catch(() => {});
-  panchP.then(p => {
+  Promise.all([chartP, panchP.catch(() => null)]).then(([chart, p]) => {
     if (!fresh()) return;
     const g = k => (p && p[k]) ? p[k] : '—';
+    const yoga = (panchang.yoga[chart.yogaIndex] || {}).name || '—';
     $('mbgrid').innerHTML =
-      `<div><b>Tithi</b>${g('tithi')}</div><div><b>Paksha</b>${g('paksha')}</div>` +
+      `<div><b>Tithi</b>${g('tithi')}</div><div><b>Yoga</b>${yoga}</div>` +
+      `<div><b>Karana</b>${chart.karanaName}</div><div><b>Paksha</b>${g('paksha')}</div>` +
       `<div><b>Masa</b>${g('masa')}</div><div><b>Moon</b>${sky.moonName}, ${sky.moonIllum}%</div>`;
   }).catch(() => {});
 
@@ -353,7 +436,6 @@ function render() {
   $('astrogana').textContent = '';
   $('astrogana').className = 'gana-badge';
   $('astrorows').innerHTML = '';
-  $('astrotree').textContent = '';
   Promise.all([chartP, panchP.catch(() => null)]).then(([chart, p]) => {
     if (!fresh()) return;
     const nk = nakInfo[chart.moonNakshatra.index];
@@ -376,7 +458,6 @@ function render() {
       rows.push(['Moon’s phase', `You arrived on a <b>${p.paksha}</b> (${waxing ? 'waxing' : 'waning'}) tithi — the ${waxing ? 'brightening half, leaning outward, building and optimistic' : 'waning half, leaning inward, releasing and reflective'}.`]);
     }
     $('astrorows').innerHTML = rows.map(([k, v]) => `<div class="arow"><b>${k}</b><span>${v}</span></div>`).join('');
-    $('astrotree').innerHTML = `Your star's tree is the <b>${cleanTree}</b>. For centuries, a family planted the newborn's birth-star tree and tended it like the child — so the tree's health mirrored the child's. Plant one this birthday.`;
   }).catch(() => { $('astrotrait').textContent = 'The sky is clouded over just now.'; });
 
   /* beat 8 · ticket */
@@ -418,11 +499,19 @@ function render() {
 }
 
 function showChannel() {
-  const [tag, title, body, posters] = J.channels[J.ch];
+  const [tag, title, body, posters, listen] = J.channels[J.ch];
   $('chtag').textContent = tag;
   $('chtitle').textContent = title;
   $('chbody').textContent = body;
   $('posterwall').hidden = !(posters && $('posterwall').innerHTML);
+  if (listen) {
+    const q = encodeURIComponent(listen);
+    $('ytlink').href = `https://www.youtube.com/results?search_query=${q}`;
+    $('splink').href = `https://open.spotify.com/search/${q}`;
+    $('tvlisten').hidden = false;
+  } else {
+    $('tvlisten').hidden = true;
+  }
 }
 $('chknob').addEventListener('click', () => {
   J.ch = (J.ch + 1) % J.channels.length;

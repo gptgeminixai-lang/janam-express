@@ -9,7 +9,16 @@
   "lord": "Ketu",
   "gana": "Deva",
   "bodyPart": "Head, brain",
-  "traits": "Quick, pioneering and energetic healer-types; youthful, adventurous initiators who love speed and fresh starts."
+  "traits": "Quick, pioneering and energetic healer-types; youthful, adventurous initiators who love speed and fresh starts.",
+  "deityStory": "The presiding deities are the Ashvins, golden horse-headed twin physicians who ride the dawn's chariot and are the healers of the gods. Their swift steeds gallop ahead of the sunrise, carrying medicine that mends the sick and even restores the dead to life.",
+  "temple": "Piravi Marundeeswarar Temple (Shiva)",
+  "templeTown": "Thiruthuraipoondi",
+  "naamAkshar": [
+   "Chu",
+   "Che",
+   "Cho",
+   "La"
+  ]
  },
  {
   "name": "Bharani",
@@ -21,7 +30,16 @@
   "lord": "Venus",
   "gana": "Manushya",
   "bodyPart": "Head, forehead, eyes",
-  "traits": "Intense, disciplined and passionate; carriers of creative and moral burdens who transform through struggle and endurance."
+  "traits": "Intense, disciplined and passionate; carriers of creative and moral burdens who transform through struggle and endurance.",
+  "deityStory": "The lord is Yama, the stern god of death and dharma, the first mortal who died and so became the ruler of the departed. Astride his buffalo with noose in hand, he weighs every soul's deeds and grants each its just measure of rebirth.",
+  "temple": "Agneeswarar Temple (Shiva)",
+  "templeTown": "Nalladai",
+  "naamAkshar": [
+   "Li",
+   "Lu",
+   "Le",
+   "Lo"
+  ]
  },
  {
   "name": "Krittika",
@@ -33,7 +51,16 @@
   "lord": "Sun",
   "gana": "Rakshasa",
   "bodyPart": "Head, neck, lower jaw",
-  "traits": "Sharp, fiery and purifying; determined critics and nurturers who cut through illusion with honesty and drive."
+  "traits": "Sharp, fiery and purifying; determined critics and nurturers who cut through illusion with honesty and drive.",
+  "deityStory": "Agni, the god of fire, blazes as the mouth of the gods who carries every offering skyward through his flames. Born with two faces and seven tongues, he is also the fostering flame of the six Krittika mothers who nursed the war-god Skanda.",
+  "temple": "Kathra Sundareswarar Temple (Shiva)",
+  "templeTown": "Kanjanagaram",
+  "naamAkshar": [
+   "A",
+   "Ee",
+   "U",
+   "E"
+  ]
  },
  {
   "name": "Rohini",
@@ -45,7 +72,16 @@
   "lord": "Moon",
   "gana": "Manushya",
   "bodyPart": "Forehead, mouth, tongue",
-  "traits": "Charming, sensual and creative; magnetic, beauty-loving and fertile natures with strong material and artistic appeal."
+  "traits": "Charming, sensual and creative; magnetic, beauty-loving and fertile natures with strong material and artistic appeal.",
+  "deityStory": "Brahma, the four-faced Creator, spoke the universe into being from a golden lotus rising out of Vishnu's navel. As Prajapati, lord of creatures, he fashioned all beings and set the wheel of the cosmos turning.",
+  "temple": "Pandava Thoothar (Dhootha) Perumal Temple (Vishnu)",
+  "templeTown": "Kancheepuram",
+  "naamAkshar": [
+   "O",
+   "Va",
+   "Vi",
+   "Vu"
+  ]
  },
  {
   "name": "Mrigashira",
@@ -57,7 +93,16 @@
   "lord": "Mars",
   "gana": "Deva",
   "bodyPart": "Eyebrows, cheeks, chin",
-  "traits": "Curious, gentle seekers; restless explorers and researchers forever searching for something better, with a soft nervous sensitivity."
+  "traits": "Curious, gentle seekers; restless explorers and researchers forever searching for something better, with a soft nervous sensitivity.",
+  "deityStory": "Soma, also called Chandra the moon god, rides his silver chariot pouring cool nectar across the night sky. Cursed to wax and wane after favouring one wife among the twenty-seven star-daughters of Daksha, his debt is why the moon forever swells and fades.",
+  "temple": "Adhinarayana Perumal Temple (Vishnu)",
+  "templeTown": "Enkan",
+  "naamAkshar": [
+   "Ve",
+   "Vo",
+   "Ka",
+   "Ki"
+  ]
  },
  {
   "name": "Ardra",
@@ -69,7 +114,16 @@
   "lord": "Rahu",
   "gana": "Manushya",
   "bodyPart": "Neck, throat, shoulders",
-  "traits": "Stormy, sharp-minded and transformative; emotional intensity and mental brilliance that destroys the old to renew, like rain after thunder."
+  "traits": "Stormy, sharp-minded and transformative; emotional intensity and mental brilliance that destroys the old to renew, like rain after thunder.",
+  "deityStory": "Rudra, the fierce storm-god who is Shiva in his howling aspect, roars through the tempest with his arrows of lightning. Both the destroyer of worlds and the compassionate healer, he holds the power to wound and to cure.",
+  "temple": "Abhaya Varadeeswarar Temple (Shiva)",
+  "templeTown": "Athirampattinam",
+  "naamAkshar": [
+   "Ku",
+   "Gha",
+   "Nga",
+   "Chha"
+  ]
  },
  {
   "name": "Punarvasu",
@@ -81,7 +135,16 @@
   "lord": "Jupiter",
   "gana": "Deva",
   "bodyPart": "Fingers, nose, ears",
-  "traits": "Optimistic, wise and renewing; philosophical wanderers who return to safety and light, radiating generosity and fresh beginnings."
+  "traits": "Optimistic, wise and renewing; philosophical wanderers who return to safety and light, radiating generosity and fresh beginnings.",
+  "deityStory": "Aditi, the boundless mother of the gods, is the infinite sky from whom the shining Adityas were born. She is the goddess of return and renewal, the nurturing space that gives all things fresh birth and freedom.",
+  "temple": "Athitheeswarar Temple (Shiva)",
+  "templeTown": "Vaniyambadi",
+  "naamAkshar": [
+   "Ke",
+   "Ko",
+   "Ha",
+   "Hi"
+  ]
  },
  {
   "name": "Pushya",
@@ -93,7 +156,16 @@
   "lord": "Saturn",
   "gana": "Deva",
   "bodyPart": "Face, mouth",
-  "traits": "Nurturing, devout and protective; the most auspicious nourisher — caring, spiritual and steady providers of support and prosperity."
+  "traits": "Nurturing, devout and protective; the most auspicious nourisher — caring, spiritual and steady providers of support and prosperity.",
+  "deityStory": "Brihaspati, guru and high priest of the gods, is the lord of wisdom, prayer, and the planet Jupiter. His hymns strengthen the devas in their battles, and his counsel guides the heavens in matters of law and devotion.",
+  "temple": "Akshayapureeswarar Temple (Shiva)",
+  "templeTown": "Vilankulam",
+  "naamAkshar": [
+   "Hu",
+   "He",
+   "Ho",
+   "Da"
+  ]
  },
  {
   "name": "Ashlesha",
@@ -105,7 +177,16 @@
   "lord": "Mercury",
   "gana": "Rakshasa",
   "bodyPart": "Ears, joints, nails",
-  "traits": "Hypnotic, shrewd and penetrating; intuitive and secretive minds with serpentine wisdom, entangling charm and deep psychological insight."
+  "traits": "Hypnotic, shrewd and penetrating; intuitive and secretive minds with serpentine wisdom, entangling charm and deep psychological insight.",
+  "deityStory": "The deities are the Nagas, the coiled serpent-spirits who guard hidden treasures and the underworld waters. Wise, mesmerizing, and venomous, they embrace and entwine, holding the secret power of both poison and protection.",
+  "temple": "Naganathaswamy / Karkadeswarar Temple (Shiva)",
+  "templeTown": "Tirunageswaram",
+  "naamAkshar": [
+   "Di",
+   "Du",
+   "De",
+   "Do"
+  ]
  },
  {
   "name": "Magha",
@@ -117,7 +198,16 @@
   "lord": "Ketu",
   "gana": "Rakshasa",
   "bodyPart": "Nose, lips, chin",
-  "traits": "Regal, proud and tradition-bound; dignified leaders who honor lineage and ancestry, drawn to power, ceremony and respect."
+  "traits": "Regal, proud and tradition-bound; dignified leaders who honor lineage and ancestry, drawn to power, ceremony and respect.",
+  "deityStory": "The presiding powers are the Pitrs, the revered ancestral fathers who dwell in the realm of the forefathers. They bless their descendants with lineage and legacy, and are honoured with offerings so the family's line endures.",
+  "temple": "Mahalingeswarar Temple (Shiva)",
+  "templeTown": "Medai",
+  "naamAkshar": [
+   "Ma",
+   "Mi",
+   "Mu",
+   "Me"
+  ]
  },
  {
   "name": "Purva Phalguni",
@@ -129,7 +219,16 @@
   "lord": "Venus",
   "gana": "Manushya",
   "bodyPart": "Right hand, lips, private parts",
-  "traits": "Warm, playful and pleasure-loving; charismatic lovers of leisure, romance and creativity who value rest, luxury and generosity."
+  "traits": "Warm, playful and pleasure-loving; charismatic lovers of leisure, romance and creativity who value rest, luxury and generosity.",
+  "deityStory": "Bhaga is the god of delight, marital bliss, and shared good fortune who bestows prosperity and love. He presides over unions and pleasures, granting the happiness of partnership and the wealth that comes from divine favour.",
+  "temple": "Arangulanathar Temple (Shiva)",
+  "templeTown": "Thiruvarangulam",
+  "naamAkshar": [
+   "Mo",
+   "Ta",
+   "Ti",
+   "Tu"
+  ]
  },
  {
   "name": "Uttara Phalguni",
@@ -141,7 +240,16 @@
   "lord": "Sun",
   "gana": "Manushya",
   "bodyPart": "Left hand, genitals",
-  "traits": "Reliable, generous and dutiful; steady friends and partners who honor commitments, offering kindness, service and organized support."
+  "traits": "Reliable, generous and dutiful; steady friends and partners who honor commitments, offering kindness, service and organized support.",
+  "deityStory": "Aryaman is the god of patronage, hospitality, and honourable contracts, the divine friend who upholds bonds of marriage and kinship. He guards the sacred vows between people and rewards nobility, generosity, and loyalty.",
+  "temple": "Maangalyeswarar Temple (Shiva)",
+  "templeTown": "Idayattru Mangalam",
+  "naamAkshar": [
+   "Te",
+   "To",
+   "Pa",
+   "Pi"
+  ]
  },
  {
   "name": "Hasta",
@@ -153,7 +261,16 @@
   "lord": "Moon",
   "gana": "Deva",
   "bodyPart": "Hands, fingers",
-  "traits": "Skillful, clever and dexterous; hands-on makers and healers with wit, craftsmanship and a talent for grasping what they set out to achieve."
+  "traits": "Skillful, clever and dexterous; hands-on makers and healers with wit, craftsmanship and a talent for grasping what they set out to achieve.",
+  "deityStory": "Savitri, the radiant solar deity, is the vivifying power of the Sun who stirs all life into motion at dawn. Invoked in the sacred Gayatri, this god's golden hands bless the world with skill, creativity, and light.",
+  "temple": "Krupakupareshwarar (Kabartheeswarar) Temple (Shiva)",
+  "templeTown": "Komal",
+  "naamAkshar": [
+   "Pu",
+   "Sha",
+   "Na",
+   "Tha"
+  ]
  },
  {
   "name": "Chitra",
@@ -165,7 +282,16 @@
   "lord": "Mars",
   "gana": "Rakshasa",
   "bodyPart": "Neck, forehead",
-  "traits": "Dazzling, artistic and design-minded; charismatic creators drawn to beauty, structure and glamour, shining with individuality and flair."
+  "traits": "Dazzling, artistic and design-minded; charismatic creators drawn to beauty, structure and glamour, shining with individuality and flair.",
+  "deityStory": "Tvashtar, also known as Vishvakarman, is the celestial architect and divine craftsman who shapes all forms. He forged the thunderbolt of Indra and fashions the bodies of every creature, master of beauty, tools, and cosmic design.",
+  "temple": "Chitraratha Vallabha Perumal Temple (Vishnu)",
+  "templeTown": "Kuruvithurai",
+  "naamAkshar": [
+   "Pe",
+   "Po",
+   "Ra",
+   "Ri"
+  ]
  },
  {
   "name": "Swati",
@@ -177,7 +303,16 @@
   "lord": "Rahu",
   "gana": "Deva",
   "bodyPart": "Chest, intestines",
-  "traits": "Independent, adaptable and diplomatic; free-spirited and self-reliant like the wind, valuing balance, movement, trade and personal freedom."
+  "traits": "Independent, adaptable and diplomatic; free-spirited and self-reliant like the wind, valuing balance, movement, trade and personal freedom.",
+  "deityStory": "Vayu, the god of wind and breath, sweeps invisible and unstoppable across the sky, the life-force that animates all beings. Father of the mighty Hanuman and Bhima, he embodies movement, independence, and the vital air.",
+  "temple": "Dhaathreeswarar Temple (Shiva)",
+  "templeTown": "Chithukadu",
+  "naamAkshar": [
+   "Ru",
+   "Re",
+   "Ro",
+   "Ta"
+  ]
  },
  {
   "name": "Vishakha",
@@ -189,7 +324,16 @@
   "lord": "Jupiter",
   "gana": "Rakshasa",
   "bodyPart": "Arms, breasts",
-  "traits": "Ambitious, goal-focused and determined; single-minded achievers who pursue their aims relentlessly and thrive on triumph and recognition."
+  "traits": "Ambitious, goal-focused and determined; single-minded achievers who pursue their aims relentlessly and thrive on triumph and recognition.",
+  "deityStory": "The joint lords are Indra, king of the gods who wields the thunderbolt, and Agni, the god of fire. Together they blend the storm-king's triumphant power with the sacred flame, a fierce pairing of victory and transformation.",
+  "temple": "Muthukumaraswami (Murugan) Temple",
+  "templeTown": "Panpoli",
+  "naamAkshar": [
+   "Ti",
+   "Tu",
+   "Te",
+   "To"
+  ]
  },
  {
   "name": "Anuradha",
@@ -201,7 +345,16 @@
   "lord": "Saturn",
   "gana": "Deva",
   "bodyPart": "Stomach, breasts, womb",
-  "traits": "Devoted, friendly and cooperative; loyal team-builders who thrive on friendship, love and honor, balancing discipline with warm devotion."
+  "traits": "Devoted, friendly and cooperative; loyal team-builders who thrive on friendship, love and honor, balancing discipline with warm devotion.",
+  "deityStory": "Mitra is the god of friendship, harmony, and sacred contracts, the benevolent light that binds people in trust. Companion to Varuna, he oversees oaths and partnerships, rewarding devotion and cooperative bonds.",
+  "temple": "Mahalakshmiswarar Temple (Shiva)",
+  "templeTown": "Tirunindravur",
+  "naamAkshar": [
+   "Na",
+   "Ni",
+   "Nu",
+   "Ne"
+  ]
  },
  {
   "name": "Jyeshtha",
@@ -213,7 +366,16 @@
   "lord": "Mercury",
   "gana": "Rakshasa",
   "bodyPart": "Neck, right torso, tongue",
-  "traits": "Senior, protective and authoritative; capable elders and defenders who carry responsibility and hidden depth, respected yet often isolated."
+  "traits": "Senior, protective and authoritative; capable elders and defenders who carry responsibility and hidden depth, respected yet often isolated.",
+  "deityStory": "Indra, the eldest and chief of the gods, rules the heavens astride the white elephant Airavata, hurling his thunderbolt Vajra. Slayer of the drought-demon Vritra, he releases the imprisoned waters and commands storm, rain, and sovereignty.",
+  "temple": "Varadharaja Perumal Temple (Vishnu)",
+  "templeTown": "Pasupathikoil",
+  "naamAkshar": [
+   "No",
+   "Ya",
+   "Yi",
+   "Yu"
+  ]
  },
  {
   "name": "Mula",
@@ -225,7 +387,16 @@
   "lord": "Ketu",
   "gana": "Rakshasa",
   "bodyPart": "Feet, left torso",
-  "traits": "Investigative, radical and root-seeking; fearless truth-diggers who tear down surfaces to reach the core, undergoing deep transformation."
+  "traits": "Investigative, radical and root-seeking; fearless truth-diggers who tear down surfaces to reach the core, undergoing deep transformation.",
+  "deityStory": "Nirriti is the fierce goddess of dissolution, destruction, and calamity who presides over endings and the deep root of things. She strips away all that is false, clearing the ground so that new creation may take root.",
+  "temple": "Singeeswarar Temple (Shiva)",
+  "templeTown": "Mappedu",
+  "naamAkshar": [
+   "Ye",
+   "Yo",
+   "Bha",
+   "Bhi"
+  ]
  },
  {
   "name": "Purva Ashadha",
@@ -237,7 +408,16 @@
   "lord": "Venus",
   "gana": "Manushya",
   "bodyPart": "Thighs, back",
-  "traits": "Invincible, persuasive and proud; unstoppable optimists with the confidence to convince and conquer, buoyant like water that cannot be defeated."
+  "traits": "Invincible, persuasive and proud; unstoppable optimists with the confidence to convince and conquer, buoyant like water that cannot be defeated.",
+  "deityStory": "Apas, the deity of the celestial waters, is the primordial ocean whose invigorating currents purify and sustain all life. This deity grants the unstoppable, rising strength of flowing water, cleansing and renewing.",
+  "temple": "Akashapureeswarar Temple (Shiva)",
+  "templeTown": "Kaduveli",
+  "naamAkshar": [
+   "Bhu",
+   "Dha",
+   "Pha",
+   "Dda"
+  ]
  },
  {
   "name": "Uttara Ashadha",
@@ -249,7 +429,16 @@
   "lord": "Sun",
   "gana": "Manushya",
   "bodyPart": "Thighs, waist",
-  "traits": "Principled, persistent and dignified; ethical achievers who win lasting victory through patience, integrity and steady hard work."
+  "traits": "Principled, persistent and dignified; ethical achievers who win lasting victory through patience, integrity and steady hard work.",
+  "deityStory": "The Vishvedevas are the universal gods, a collective of ten benevolent deities embodying steadfastness, virtue, and enduring victory. Together they grant lasting achievement and the unshakeable strength to finish what is begun.",
+  "temple": "Brahmapureeswarar Temple (Shiva)",
+  "templeTown": "Keezhapungudi",
+  "naamAkshar": [
+   "Bhe",
+   "Bho",
+   "Ja",
+   "Ji"
+  ]
  },
  {
   "name": "Shravana",
@@ -261,7 +450,16 @@
   "lord": "Moon",
   "gana": "Deva",
   "bodyPart": "Ears, knees, skin",
-  "traits": "Attentive, learned and connective; great listeners and knowledge-keepers who link people and ideas, valuing wisdom, tradition and reputation."
+  "traits": "Attentive, learned and connective; great listeners and knowledge-keepers who link people and ideas, valuing wisdom, tradition and reputation.",
+  "deityStory": "Vishnu, the preserver of the universe, reclines on the cosmic serpent Ananta upon the milk-ocean, sustaining all worlds. In three great strides he once measured the entire cosmos, and he descends through the ages as avatars to restore dharma.",
+  "temple": "Prasanna Venkateswara Perumal Temple (Vishnu)",
+  "templeTown": "Tiruparkadal",
+  "naamAkshar": [
+   "Khi",
+   "Khu",
+   "Khe",
+   "Kho"
+  ]
  },
  {
   "name": "Dhanishtha",
@@ -273,7 +471,16 @@
   "lord": "Mars",
   "gana": "Rakshasa",
   "bodyPart": "Back, anus",
-  "traits": "Rhythmic, wealthy and musical; energetic performers and organizers with a strong sense of timing, drawn to prosperity, status and group harmony."
+  "traits": "Rhythmic, wealthy and musical; energetic performers and organizers with a strong sense of timing, drawn to prosperity, status and group harmony.",
+  "deityStory": "The Ashta Vasus are the eight elemental gods of earthly abundance, embodying fire, earth, wind, sky, sun, moon, dawn, and the pole star. They bestow wealth, music, and prosperity, the shining attendants of material plenty.",
+  "temple": "Brahmagnaana Pureeswarar Temple (Shiva)",
+  "templeTown": "Keezha Korukkai",
+  "naamAkshar": [
+   "Ga",
+   "Gi",
+   "Gu",
+   "Ge"
+  ]
  },
  {
   "name": "Shatabhisha",
@@ -285,7 +492,16 @@
   "lord": "Rahu",
   "gana": "Rakshasa",
   "bodyPart": "Jaw, right thigh",
-  "traits": "Secretive, healing and unconventional; solitary mystics and menders drawn to medicine, mysteries and hidden truths, fiercely independent."
+  "traits": "Secretive, healing and unconventional; solitary mystics and menders drawn to medicine, mysteries and hidden truths, fiercely independent.",
+  "deityStory": "Varuna is the god of the cosmic waters, the sky, and cosmic order, who binds wrongdoers with his noose and watches all deeds with a thousand eyes. Once sovereign of the moral law, he is the healer of a hundred maladies and keeper of hidden truths.",
+  "temple": "Agnipureeswarar Temple (Shiva)",
+  "templeTown": "Tirupugalur",
+  "naamAkshar": [
+   "Go",
+   "Sa",
+   "Si",
+   "Su"
+  ]
  },
  {
   "name": "Purva Bhadrapada",
@@ -297,7 +513,16 @@
   "lord": "Jupiter",
   "gana": "Manushya",
   "bodyPart": "Sides of body, ribs, left thigh, soles",
-  "traits": "Intense, idealistic and otherworldly; passionate visionaries with a fiery, penance-driven spirit and a dual nature bridging the material and spiritual."
+  "traits": "Intense, idealistic and otherworldly; passionate visionaries with a fiery, penance-driven spirit and a dual nature bridging the material and spiritual.",
+  "deityStory": "Aja Ekapada, the one-footed goat, is a fierce fiery aspect of Shiva who stands as a pillar connecting earth and heaven. This unicorn-like storm deity embodies burning spiritual intensity and the single-pointed force of transformation.",
+  "temple": "Tiruvaneswarar Temple (Shiva)",
+  "templeTown": "Ranganathapuram",
+  "naamAkshar": [
+   "Se",
+   "So",
+   "Da",
+   "Di"
+  ]
  },
  {
   "name": "Uttara Bhadrapada",
@@ -309,7 +534,16 @@
   "lord": "Saturn",
   "gana": "Manushya",
   "bodyPart": "Sides of body, shins, soles of feet",
-  "traits": "Calm, deep and wise; patient, compassionate old souls with hidden strength and serpent-like depth, offering steady counsel and quiet endurance."
+  "traits": "Calm, deep and wise; patient, compassionate old souls with hidden strength and serpent-like depth, offering steady counsel and quiet endurance.",
+  "deityStory": "Ahirbudhnya is the serpent of the depths, the dragon coiled at the bottom of the cosmic ocean who guards its still, dark waters. A form linked to Shiva, this deep-sea naga embodies profound calm, mystery, and the wisdom of hidden foundations.",
+  "temple": "Sahasralakshmeeswarar Temple (Shiva)",
+  "templeTown": "Theeyathur",
+  "naamAkshar": [
+   "Du",
+   "Tha",
+   "Jha",
+   "Da"
+  ]
  },
  {
   "name": "Revati",
@@ -321,6 +555,15 @@
   "lord": "Mercury",
   "gana": "Deva",
   "bodyPart": "Armpits, abdomen, groin, feet",
-  "traits": "Kind, nourishing and protective; gentle guides and caretakers who shelter the weak and lost, wealthy in compassion and drawn to journeys and completion."
+  "traits": "Kind, nourishing and protective; gentle guides and caretakers who shelter the weak and lost, wealthy in compassion and drawn to journeys and completion.",
+  "deityStory": "Pushan is the nourishing, protective god of pathways who guards travellers, herds, and safe journeys, guiding souls on their final road. The pastoral shepherd of the heavens, he ensures safe passage and the well-being of all who wander.",
+  "temple": "Kailasanathar Temple (Shiva)",
+  "templeTown": "Karukudi",
+  "naamAkshar": [
+   "De",
+   "Do",
+   "Cha",
+   "Chi"
+  ]
  }
 ]

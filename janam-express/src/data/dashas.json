@@ -1,0 +1,15 @@
+{
+  "order": ["Ketu", "Venus", "Sun", "Moon", "Mars", "Rahu", "Jupiter", "Saturn", "Mercury"],
+  "years": { "Ketu": 7, "Venus": 20, "Sun": 6, "Moon": 10, "Mars": 7, "Rahu": 18, "Jupiter": 16, "Saturn": 19, "Mercury": 17 },
+  "note": {
+    "Ketu": "a chapter of endings, detachment and the quiet search for meaning",
+    "Venus": "a long season of love, art, comfort and pleasure",
+    "Sun": "a chapter of selfhood, authority, vitality and recognition",
+    "Moon": "a tender chapter of emotion, home and the inner tide",
+    "Mars": "a chapter of energy, courage, drive and conflict",
+    "Rahu": "a restless chapter of ambition, desire and the unconventional",
+    "Jupiter": "a fortunate chapter of wisdom, growth and faith",
+    "Saturn": "a long chapter of discipline, labour, patience and hard-won lessons",
+    "Mercury": "a bright chapter of intellect, learning, wit and commerce"
+  }
+}

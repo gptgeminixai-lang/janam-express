@@ -1,0 +1,354 @@
+{
+ "states": {
+  "Tamil Nadu": {
+   "newYear": "Puthandu",
+   "newYearMonth": "mid-April (~14 Apr)",
+   "calendarEra": "Tamil 60-year cycle",
+   "artForm": "Tanjore (Thanjavur) painting",
+   "dance": "Bharatanatyam",
+   "dish": "Sadya / Pongal"
+  },
+  "Kerala": {
+   "newYear": "Vishu",
+   "newYearMonth": "mid-April (~14 Apr)",
+   "calendarEra": "Kollam Era (Malayalam Era)",
+   "artForm": "Kerala mural painting",
+   "dance": "Kathakali",
+   "dish": "Onam Sadya"
+  },
+  "Karnataka": {
+   "newYear": "Ugadi",
+   "newYearMonth": "late March / early April",
+   "calendarEra": "Shaka Samvat",
+   "artForm": "Mysore painting",
+   "dance": "Yakshagana",
+   "dish": "Bisi bele bath"
+  },
+  "Andhra Pradesh": {
+   "newYear": "Ugadi",
+   "newYearMonth": "late March / early April",
+   "calendarEra": "Shaka Samvat (Telugu samvatsara)",
+   "artForm": "Kalamkari",
+   "dance": "Kuchipudi",
+   "dish": "Pulihora / Gongura pachadi"
+  },
+  "Telangana": {
+   "newYear": "Ugadi",
+   "newYearMonth": "late March / early April",
+   "calendarEra": "Shaka Samvat (Telugu samvatsara)",
+   "artForm": "Nirmal painting / Cheriyal scroll",
+   "dance": "Perini Shivatandavam",
+   "dish": "Hyderabadi biryani"
+  },
+  "Maharashtra": {
+   "newYear": "Gudi Padwa",
+   "newYearMonth": "late March / early April",
+   "calendarEra": "Shaka Samvat",
+   "artForm": "Warli painting",
+   "dance": "Lavani",
+   "dish": "Puran poli"
+  },
+  "Goa": {
+   "newYear": "Samvatsar Padvo (Gudi Padwa)",
+   "newYearMonth": "late March / early April",
+   "calendarEra": "Shaka Samvat",
+   "artForm": "Kunbi / azulejo tilework",
+   "dance": "Dekhni",
+   "dish": "Fish curry rice / Xacuti"
+  },
+  "Gujarat": {
+   "newYear": "Bestu Varas (Diwali New Year)",
+   "newYearMonth": "October / November",
+   "calendarEra": "Vikram Samvat",
+   "artForm": "Pithora painting",
+   "dance": "Garba",
+   "dish": "Dhokla"
+  },
+  "Rajasthan": {
+   "newYear": "Chaitra Shukla Pratipada / Diwali (Vikram)",
+   "newYearMonth": "late March-April (Diwali Oct-Nov)",
+   "calendarEra": "Vikram Samvat",
+   "artForm": "Phad painting",
+   "dance": "Ghoomar",
+   "dish": "Dal baati churma"
+  },
+  "Madhya Pradesh": {
+   "newYear": "Gudi Padwa / Chaitra Pratipada",
+   "newYearMonth": "late March / early April",
+   "calendarEra": "Vikram Samvat",
+   "artForm": "Gond painting",
+   "dance": "Matki / Rai",
+   "dish": "Poha-jalebi / Bhutte ka kees"
+  },
+  "Uttar Pradesh": {
+   "newYear": "Chaitra Shukla Pratipada (Navratri)",
+   "newYearMonth": "late March / early April",
+   "calendarEra": "Vikram Samvat",
+   "artForm": "Sanjhi / Chikankari",
+   "dance": "Kathak",
+   "dish": "Awadhi biryani / Bedmi puri"
+  },
+  "Bihar": {
+   "newYear": "Satuan / Mesha Sankranti",
+   "newYearMonth": "mid-April (~14 Apr)",
+   "calendarEra": "Vikram Samvat",
+   "artForm": "Madhubani (Mithila) painting",
+   "dance": "Jat-Jatin / Jhijhiya",
+   "dish": "Litti chokha"
+  },
+  "Jharkhand": {
+   "newYear": "Sarhul / Mesha Sankranti",
+   "newYearMonth": "spring (Mar-Apr)",
+   "calendarEra": "Vikram Samvat",
+   "artForm": "Sohrai-Khovar painting",
+   "dance": "Chhau (Seraikella) / Paika",
+   "dish": "Dhuska / Litti"
+  },
+  "West Bengal": {
+   "newYear": "Poila Boishakh",
+   "newYearMonth": "mid-April (~15 Apr)",
+   "calendarEra": "Bengali San (Bangabda)",
+   "artForm": "Kalighat painting / Patachitra",
+   "dance": "Gaudiya Nritya / Chhau",
+   "dish": "Shorshe ilish (Hilsa)"
+  },
+  "Odisha": {
+   "newYear": "Pana Sankranti (Maha Bishuba Sankranti)",
+   "newYearMonth": "mid-April (~14 Apr)",
+   "calendarEra": "Shaka / Amli San",
+   "artForm": "Pattachitra",
+   "dance": "Odissi",
+   "dish": "Dalma / Pakhala"
+  },
+  "Chhattisgarh": {
+   "newYear": "Chaitra Shukla Pratipada",
+   "newYearMonth": "late March / early April",
+   "calendarEra": "Vikram Samvat",
+   "artForm": "Godna / Bhitti-chitra",
+   "dance": "Panthi / Raut Nacha",
+   "dish": "Chila / Faraa"
+  },
+  "Punjab": {
+   "newYear": "Vaisakhi (Baisakhi)",
+   "newYearMonth": "mid-April (~13-14 Apr)",
+   "calendarEra": "Nanakshahi / Vikram Samvat",
+   "artForm": "Phulkari embroidery",
+   "dance": "Bhangra / Giddha",
+   "dish": "Sarson da saag & makki di roti"
+  },
+  "Haryana": {
+   "newYear": "Vaisakhi",
+   "newYearMonth": "mid-April (~13-14 Apr)",
+   "calendarEra": "Vikram Samvat",
+   "artForm": "Phulkari embroidery",
+   "dance": "Ghoomar / Phag",
+   "dish": "Bajra khichdi / Kadhi"
+  },
+  "Himachal Pradesh": {
+   "newYear": "Bishu / Losar (Kinnaur)",
+   "newYearMonth": "mid-April (Bishu); Losar Feb-Mar",
+   "calendarEra": "Vikram Samvat",
+   "artForm": "Kangra (Pahari) painting",
+   "dance": "Nati",
+   "dish": "Dham (Madra, etc.)"
+  },
+  "Uttarakhand": {
+   "newYear": "Phool Dei",
+   "newYearMonth": "mid-March (Chaitra 1)",
+   "calendarEra": "Vikram Samvat",
+   "artForm": "Aipan",
+   "dance": "Chholiya",
+   "dish": "Kafuli / Aloo ke gutke"
+  },
+  "Assam": {
+   "newYear": "Bohag Bihu (Rongali Bihu)",
+   "newYearMonth": "mid-April (~14-15 Apr)",
+   "calendarEra": "Bengali/Assamese San (Bhaskarabda)",
+   "artForm": "Manuscript (Sattriya) painting",
+   "dance": "Bihu (folk) / Sattriya (classical)",
+   "dish": "Khar / Masor tenga"
+  },
+  "Meghalaya": {
+   "newYear": "Wangala (Garo)",
+   "newYearMonth": "October / November",
+   "calendarEra": "Gregorian (tribal reckoning)",
+   "artForm": "Cane & bamboo craft",
+   "dance": "Nongkrem / Wangala (100-drums)",
+   "dish": "Jadoh"
+  },
+  "Manipur": {
+   "newYear": "Sajibu Cheiraoba",
+   "newYearMonth": "mid-April",
+   "calendarEra": "Meitei (Malem/Meetei) era",
+   "artForm": "Longpi pottery",
+   "dance": "Manipuri (Raas Leela) / Thabal Chongba",
+   "dish": "Eromba"
+  },
+  "Nagaland": {
+   "newYear": "Sekrenyi / harvest new-year (tribal)",
+   "newYearMonth": "February (Sekrenyi)",
+   "calendarEra": "Gregorian (tribal reckoning)",
+   "artForm": "Naga shawl weaving / wood carving",
+   "dance": "War dance (Zeliang etc.)",
+   "dish": "Smoked pork with axone (fermented soybean)"
+  },
+  "Mizoram": {
+   "newYear": "Chapchar Kut",
+   "newYearMonth": "March",
+   "calendarEra": "Gregorian (tribal reckoning)",
+   "artForm": "Puan weaving",
+   "dance": "Cheraw (Bamboo dance)",
+   "dish": "Bai / Vawksa rep"
+  },
+  "Tripura": {
+   "newYear": "Poila Boishakh / Tripurabda",
+   "newYearMonth": "mid-April (~15 Apr)",
+   "calendarEra": "Tripurabda (Tripura era)",
+   "artForm": "Bamboo & cane craft / Risa weaving",
+   "dance": "Hojagiri",
+   "dish": "Mui Borok (Wahan Mosdeng, etc.)"
+  },
+  "Arunachal Pradesh": {
+   "newYear": "Losar / Nyokum",
+   "newYearMonth": "Feb-Mar (Losar)",
+   "calendarEra": "Tibetan (Losar) / Gregorian",
+   "artForm": "Thangka painting / mask making",
+   "dance": "Aji Lamu / Bardo Chham",
+   "dish": "Thukpa / Apong"
+  },
+  "Sikkim": {
+   "newYear": "Losoong (Namsoong) / Losar",
+   "newYearMonth": "December (Losoong); Losar Feb",
+   "calendarEra": "Tibetan lunar calendar",
+   "artForm": "Thangka painting",
+   "dance": "Singhi Chham (Snow Lion) / Maruni",
+   "dish": "Momos / Gundruk"
+  },
+  "Delhi": {
+   "newYear": "Chaitra Shukla Pratipada / Vaisakhi",
+   "newYearMonth": "late March-April",
+   "calendarEra": "Vikram Samvat",
+   "artForm": "Zardozi / miniature",
+   "dance": "Kathak (regional)",
+   "dish": "Chaat / Butter chicken"
+  },
+  "Jammu & Kashmir": {
+   "newYear": "Navreh (Kashmiri) / Vaisakhi (Jammu)",
+   "newYearMonth": "late March-April",
+   "calendarEra": "Saptarshi (Laukika) era / Vikram Samvat",
+   "artForm": "Papier-mache / Kashmiri carpet",
+   "dance": "Rouf / Kud (Jammu)",
+   "dish": "Rogan josh / Wazwan"
+  },
+  "Ladakh": {
+   "newYear": "Losar",
+   "newYearMonth": "December-February",
+   "calendarEra": "Tibetan lunar calendar",
+   "artForm": "Thangka painting",
+   "dance": "Cham (masked) / Jabro",
+   "dish": "Thukpa / Skyu"
+  },
+  "Puducherry": {
+   "newYear": "Puthandu",
+   "newYearMonth": "mid-April (~14 Apr)",
+   "calendarEra": "Tamil 60-year cycle",
+   "artForm": "Tanjore-style painting",
+   "dance": "Bharatanatyam",
+   "dish": "Tamil-French Creole / Sadya"
+  },
+  "Andaman & Nicobar Islands": {
+   "newYear": "Mixed (settler communities)",
+   "newYearMonth": "varies (Bengali/Tamil mid-April)",
+   "calendarEra": "Gregorian / Bengali San",
+   "artForm": "Shell & coconut craft",
+   "dance": "Nicobarese Ossuary / mixed folk",
+   "dish": "Seafood (fish curry, coconut)"
+  },
+  "Chandigarh": {
+   "newYear": "Vaisakhi",
+   "newYearMonth": "mid-April (~13-14 Apr)",
+   "calendarEra": "Vikram Samvat / Nanakshahi",
+   "artForm": "Rock Garden mosaic craft",
+   "dance": "Bhangra / Giddha",
+   "dish": "Sarson da saag & makki di roti"
+  },
+  "Dadra & Nagar Haveli and Daman & Diu": {
+   "newYear": "Gudi Padwa (Daman) / tribal new year",
+   "newYearMonth": "late March / early April",
+   "calendarEra": "Shaka / Vikram Samvat",
+   "artForm": "Warli painting",
+   "dance": "Tarpa / Gheria",
+   "dish": "Rotlo / Seafood"
+  },
+  "Lakshadweep": {
+   "newYear": "Islamic (Muharram) / Mesha Sankranti",
+   "newYearMonth": "varies (Islamic lunar)",
+   "calendarEra": "Hijri (Islamic) / Kollam Era",
+   "artForm": "Coir & shell craft",
+   "dance": "Lava / Kolkali",
+   "dish": "Tuna (mas) dishes / coconut rice"
+  }
+ },
+ "samvatsara": [
+  "Prabhava",
+  "Vibhava",
+  "Shukla",
+  "Pramoduta",
+  "Prajapati",
+  "Angirasa",
+  "Shrimukha",
+  "Bhava",
+  "Yuva",
+  "Dhatri",
+  "Ishvara",
+  "Bahudhanya",
+  "Pramathi",
+  "Vikrama",
+  "Vrishapraja (Vishu)",
+  "Chitrabhanu",
+  "Svabhanu",
+  "Tarana",
+  "Parthiva",
+  "Vyaya",
+  "Sarvajit",
+  "Sarvadhari",
+  "Virodhi",
+  "Vikriti",
+  "Khara",
+  "Nandana",
+  "Vijaya",
+  "Jaya",
+  "Manmatha",
+  "Durmukhi",
+  "Hevilambi",
+  "Vilambi",
+  "Vikari",
+  "Sharvari",
+  "Plava",
+  "Shubhakrit",
+  "Shobhakrit",
+  "Krodhi",
+  "Vishvavasu",
+  "Parabhava",
+  "Plavanga",
+  "Kilaka",
+  "Saumya",
+  "Sadharana",
+  "Virodhakrit",
+  "Paridhavi",
+  "Pramadi",
+  "Ananda",
+  "Rakshasa",
+  "Nala",
+  "Pingala",
+  "Kalayukta",
+  "Siddharthi",
+  "Raudri",
+  "Durmati",
+  "Dundubhi",
+  "Rudhirodgari",
+  "Raktakshi",
+  "Krodhana",
+  "Akshaya"
+ ]
+}

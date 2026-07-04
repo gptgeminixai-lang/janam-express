@@ -10,6 +10,8 @@
   --mono:'Courier New',Courier,monospace;
 }
 *{box-sizing:border-box}
+/* the hidden attribute must win over display:flex/grid class rules (e.g. .tv-listen, .posterwall) */
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 body{background:var(--night);color:var(--paper);font-family:var(--serif);margin:0;overflow-x:hidden}
 ::selection{background:var(--marigold);color:var(--ink)}
@@ -143,6 +145,15 @@ img{max-width:100%}
 .screen h3{font-family:var(--disp);font-weight:400;font-size:clamp(30px,6vw,46px);margin:0 0 10px;line-height:1.02;
   color:#E8F6D2;text-shadow:2px 0 0 rgba(255,60,60,.35),-2px 0 0 rgba(80,160,255,.35)}
 .screen p{font-size:15px;line-height:1.65;margin:0;color:#B9D8A0;font-family:var(--serif)}
+.tv-listen{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-top:16px;position:relative;z-index:1}
+.tv-listen .listen-label{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#8FCF6A}
+.listen-btn{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-decoration:none;
+  padding:8px 14px;border-radius:999px;display:inline-flex;align-items:center;gap:6px;border:1px solid;
+  transition:filter .1s,transform .1s}
+.listen-btn.yt{color:#FF8A8A;border-color:#8B3A3A;background:rgba(255,80,80,.14)}
+.listen-btn.sp{color:#8FE6AC;border-color:#2E7A4E;background:rgba(60,200,120,.14)}
+.listen-btn:hover{filter:brightness(1.25);transform:translateY(-1px)}
+.listen-btn:focus-visible{outline:2px solid var(--marigold);outline-offset:2px}
 .posterwall{display:flex;gap:10px;margin-top:16px;overflow-x:auto;padding-bottom:6px;position:relative;z-index:1}
 .posterwall img{height:130px;border-radius:4px;border:1px solid #2E4A22;flex:0 0 auto}
 .crt-controls{display:flex;justify-content:space-between;align-items:center;margin-top:14px}
@@ -315,24 +326,99 @@ footer a{color:rgba(244,232,206,.6)}
 .achip{font-family:var(--mono);font-size:12px;color:var(--paper);background:rgba(244,232,206,.08);
   border:1px solid rgba(244,232,206,.24);border-radius:999px;padding:7px 13px;display:flex;gap:7px;align-items:baseline}
 .achip b{font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--marigold);font-weight:700}
-.astro-card{background:rgba(244,232,206,.06);border:1px solid rgba(244,232,206,.2);border-radius:14px;padding:18px 20px}
-.astro-label{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--marigold);margin:0 0 10px}
-.astro-trait{font-family:var(--serif);font-size:clamp(16px,3vw,20px);line-height:1.55;color:var(--paper);margin:0 0 12px}
+.astro-card{background:rgba(244,232,206,.06);border:1px solid rgba(244,232,206,.2);border-radius:14px;padding:20px 22px}
+.astro-label{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--marigold);margin:0 0 12px}
+.astro-trait{font-family:var(--serif);font-size:clamp(16px,2.4vw,18px);line-height:1.62;color:var(--paper);margin:0}
+.astro-trait + .gana-badge{margin-top:16px}
 .gana-badge{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;
   border-radius:999px;padding:6px 14px;border:1px solid}
 .gana-deva{color:#8FD0A0;border-color:#3E6E4C;background:rgba(80,150,100,.12)}
 .gana-manushya{color:#EBC97A;border-color:#7A5E24;background:rgba(200,160,60,.12)}
 .gana-rakshasa{color:#E39089;border-color:#7E3A34;background:rgba(190,80,70,.12)}
-.astro-rows{display:flex;flex-direction:column;gap:12px}
-.arow{display:flex;flex-direction:column;gap:3px}
-.arow>b{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,232,206,.55);font-weight:400}
-.arow>span{font-family:var(--serif);font-size:15px;line-height:1.5;color:var(--paper)}
+.astro-rows{display:flex;flex-direction:column;gap:16px}
+.arow{display:flex;flex-direction:column;gap:5px;padding-left:15px;border-left:2px solid rgba(239,166,54,.45)}
+.arow>b{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--marigold);font-weight:400}
+.arow>span{font-family:var(--serif);font-size:16px;line-height:1.62;color:rgba(244,232,206,.94)}
 .arow b{color:var(--marigold);font-weight:400}
-.astro-tree{display:flex;gap:16px;align-items:center;background:linear-gradient(150deg,rgba(80,120,70,.16),rgba(40,60,40,.12));border-color:rgba(120,170,110,.35)}
-.tree-emoji{font-size:44px;line-height:1;flex:0 0 auto}
-.tree-line{font-family:var(--serif);font-size:15px;line-height:1.55;color:var(--paper);margin:0}
-.tree-line b{color:#9FD79A;font-weight:700}
+.astro-cta{display:flex;align-items:center;gap:14px;text-decoration:none;
+  background:linear-gradient(120deg,#3A2656,#6B3A2E);border:1px solid var(--marigold);border-radius:14px;
+  padding:16px 20px;box-shadow:0 14px 40px rgba(0,0,0,.5);transition:transform .1s,box-shadow .1s}
+.astro-cta:hover{transform:translateY(-2px);box-shadow:0 18px 46px rgba(0,0,0,.6)}
+.astro-cta:focus-visible{outline:3px solid var(--marigold);outline-offset:3px}
+.astro-cta .cta-spark{font-size:26px;line-height:1}
+.astro-cta .cta-text{display:flex;flex-direction:column;gap:3px;flex:1;
+  font-family:var(--disp);font-size:clamp(19px,3.6vw,24px);color:var(--paper);line-height:1.05;text-transform:uppercase;letter-spacing:.02em}
+.astro-cta .cta-text small{font-family:var(--serif);font-size:13px;color:rgba(244,232,206,.8);text-transform:none;letter-spacing:0;line-height:1.4}
+.astro-cta .cta-arrow{font-family:var(--disp);font-size:28px;color:var(--marigold)}
 .astro-note{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(244,232,206,.4);text-align:center;margin:4px 0 0}
+
+/* ---------- the gods of your birth ---------- */
+#godsbeat{background:radial-gradient(820px 500px at 50% 18%,#3A2410 0%,transparent 64%),var(--night)}
+.gods{width:min(620px,94vw);display:flex;flex-direction:column;gap:14px}
+.deity-hero{background:linear-gradient(160deg,#6B3E10,#3A2208);border:1px solid #9A6B22;border-radius:18px;
+  padding:24px 26px;text-align:center;box-shadow:0 22px 55px rgba(0,0,0,.55),inset 0 0 40px rgba(239,166,54,.08)}
+.deity-eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#EFC078;margin:0 0 8px}
+.deity-name{font-family:var(--disp);font-weight:400;font-size:clamp(34px,7vw,52px);margin:0 0 12px;color:#FCE9C6;line-height:1;text-transform:uppercase;letter-spacing:.02em}
+.deity-story{font-family:var(--serif);font-size:clamp(15px,2.6vw,17px);line-height:1.62;color:rgba(252,233,198,.92);margin:0 auto 14px;max-width:48ch}
+.deity-temple{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:#EFC078;margin:0;line-height:1.5}
+.gods-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.gods-row{grid-template-columns:1fr}}
+.god-card{background:rgba(244,232,206,.06);border:1px solid rgba(239,166,54,.28);border-radius:14px;padding:18px 20px}
+.god-label{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--marigold);margin:0 0 8px}
+.god-big{font-family:var(--disp);font-weight:400;font-size:clamp(24px,5vw,30px);color:var(--paper);margin:0 0 6px;line-height:1.05}
+.god-sub{font-family:var(--serif);font-size:14px;line-height:1.5;color:rgba(244,232,206,.85);margin:0}
+.navagraha-card{text-align:left}
+.navagraha-line{font-family:var(--serif);font-size:clamp(15px,2.6vw,17px);line-height:1.55;color:var(--paper);margin:0 0 8px}
+.navagraha-line b{color:var(--marigold);font-weight:400}
+.navagraha-beej{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;color:#EFC078;margin:0;font-style:italic}
+
+/* ---------- the wheel of your years (mahadasha + numbers) ---------- */
+#dashabeat{background:linear-gradient(180deg,var(--night),#1B1633 55%,var(--night))}
+.wheel{width:min(680px,94vw)}
+.wheel-lead{font-family:var(--serif);font-size:clamp(16px,3vw,20px);line-height:1.6;color:var(--paper);text-align:center;margin:0}
+.wheel-lead b{color:var(--marigold)}
+.dasha-ribbon{display:flex;width:100%;height:58px;border-radius:10px;overflow:hidden;
+  border:1px solid rgba(244,232,206,.25);margin:20px 0}
+.dseg{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;
+  border-right:1px solid rgba(14,8,24,.5);font-family:var(--mono);background:rgba(244,232,206,.05);overflow:hidden}
+.dseg:last-child{border-right:none}
+.dseg .dp{font-size:10.5px;color:rgba(244,232,206,.7);letter-spacing:.02em;white-space:nowrap}
+.dseg .dy{font-size:8px;color:rgba(244,232,206,.4);white-space:nowrap}
+.dseg.birth{background:rgba(244,232,206,.14)}
+.dseg.now{background:linear-gradient(180deg,var(--marigold),#C9821E);box-shadow:0 0 22px rgba(239,166,54,.5)}
+.dseg.now .dp{color:var(--night);font-weight:700}
+.dseg.now .dy{color:rgba(20,10,30,.72)}
+.wheel-now{font-family:var(--serif);font-size:clamp(15px,2.6vw,18px);line-height:1.55;text-align:center;color:rgba(244,232,206,.9);margin:0}
+.wheel-now b{color:var(--marigold)}
+.numbers{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:26px}
+.num-card{flex:1;min-width:150px;max-width:220px;background:rgba(244,232,206,.06);border:1px solid rgba(244,232,206,.2);
+  border-radius:14px;padding:16px 16px 18px;text-align:center}
+.num-card .nl{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--marigold);margin:0}
+.num-card .nn{font-family:var(--disp);font-size:52px;color:var(--paper);line-height:1;margin:2px 0}
+.num-card .np{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:rgba(244,232,206,.6);text-transform:uppercase;margin:0 0 8px}
+.num-card .nt{font-family:var(--serif);font-size:13.5px;line-height:1.5;color:rgba(244,232,206,.9);margin:0}
+.naamakshar{width:min(680px,94vw);font-family:var(--serif);font-size:clamp(15px,2.8vw,18px);line-height:1.6;
+  text-align:center;color:var(--paper);margin:24px 0 0;background:rgba(239,166,54,.08);border:1px dashed rgba(239,166,54,.4);
+  border-radius:12px;padding:16px 20px}
+.naamakshar b{color:var(--marigold)}
+
+/* ---------- your homeland ---------- */
+#homelandbeat{background:radial-gradient(760px 460px at 50% 26%,#123528 0%,transparent 66%),var(--night)}
+.homeland{width:min(620px,94vw);display:flex;flex-direction:column;gap:14px}
+.hl-card{background:rgba(244,232,206,.06);border:1px solid rgba(244,232,206,.2);border-radius:14px;padding:18px 20px}
+.hl-label{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--marigold);margin:0 0 10px}
+.hl-newyear{text-align:center}
+.hl-big{font-family:var(--disp);font-weight:400;font-size:clamp(30px,6.4vw,44px);color:var(--paper);margin:0 0 6px;line-height:1;text-transform:uppercase}
+.hl-sub{font-family:var(--serif);font-size:15px;color:rgba(244,232,206,.85);margin:0}
+.hl-sub b{color:var(--marigold);font-weight:400}
+.hl-sym-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media (max-width:520px){.hl-sym-grid{grid-template-columns:repeat(2,1fr)}}
+.hl-sym{background:rgba(244,232,206,.05);border:1px solid rgba(244,232,206,.16);border-radius:10px;padding:12px 8px;text-align:center}
+.hl-sym .emo{font-size:26px;line-height:1;display:block;margin-bottom:6px}
+.hl-sym .sl{font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,232,206,.5);display:block}
+.hl-sym .sv{font-family:var(--serif);font-size:13.5px;color:var(--paper);line-height:1.25;display:block;margin-top:2px}
+.hl-culture-line{font-family:var(--serif);font-size:clamp(15px,2.6vw,17px);line-height:1.6;color:var(--paper);margin:0}
+.hl-culture-line b{color:var(--marigold);font-weight:400}
 
 /* ---------- kundli / rashi chart ---------- */
 #kundlibeat{background:radial-gradient(760px 420px at 50% 34%,#241A3E 0%,transparent 66%),var(--night)}

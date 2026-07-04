@@ -5,6 +5,8 @@ import milestonesData from '../data/milestones.json';
 import citiesData from '../data/cities.json';
 import staticData from '../data/static.json';
 import regional from '../data/regional.json';
+import statesymbols from '../data/statesymbols.json';
+import stateculture from '../data/stateculture.json';
 
 export const CITIES = citiesData.cities;
 export const PMS = staticData.pms;
@@ -121,6 +123,25 @@ export function hinduYears(y, m, d) {
 /* inflate a rupee amount from a birth year to today's money using the CPI multiplier */
 export function inflate(amount, mult) {
   return amount * mult;
+}
+
+/* ---------- homeland / regional culture ---------- */
+const normState = s => (s || '').replace(/\s*\(.*\)$/, '').replace(/\s+/g, ' ').trim();
+export const stateSymbolsOf = state => statesymbols[normState(state)] || null;
+export const stateCultureOf = state => stateculture.states[normState(state)] || null;
+
+/* the user's birth year in the calendar their region actually keeps */
+export function regionalEra(state, year) {
+  const c = stateCultureOf(state);
+  if (!c) return null;
+  const era = c.calendarEra || '', ny = c.newYear || '';
+  const samv = () => stateculture.samvatsara[(((year - 1987) % 60) + 60) % 60];
+  if (/Kollam/i.test(era)) return { label: 'Kollam Era', value: `${year - 825} ME` };
+  if (/Bengali|Bangabda/i.test(era)) return { label: 'Bengali San', value: `${year - 593} BS` };
+  if (/Vikram/i.test(era)) return { label: 'Vikram Samvat', value: `${year + 57} VS` };
+  if (/Ugadi|Puthandu|Gudi|samvatsara|60-year|Tamil|Telugu/i.test(ny + era)) return { label: 'Samvatsara year', value: samv() };
+  if (/Shaka|Saka/i.test(era)) return { label: 'Shaka Samvat', value: `${year - 78} Shaka` };
+  return { label: 'Vikram Samvat', value: `${year + 57} VS` };
 }
 
 /* ---------- regional layer ---------- */

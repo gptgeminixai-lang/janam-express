@@ -1,0 +1,59 @@
+---
+import '../styles/global.css';
+const base = import.meta.env.BASE_URL;
+---
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your detailed reading — Janam Express</title>
+  <meta name="description" content="A full personalised Jyotish reading — weekly and monthly planetary transits — coming soon to Janam Express." />
+</head>
+<body>
+<div class="atmos"></div><div class="vign"></div>
+
+<section class="beat" id="readingpage">
+  <div class="rd-card">
+    <p class="rd-kicker">· The Jyotish Desk ·</p>
+    <span class="rd-soon">Coming soon</span>
+    <h1 class="rd-title">Your detailed reading</h1>
+    <p class="rd-lead">A full, personalised Jyotish reading of how the nine grahas are moving through
+      your chart — right now, this week, and this month.</p>
+
+    <ul class="rd-list">
+      <li><b>This week</b> — the transits touching your Moon and lagna, and what they stir up.</li>
+      <li><b>This month</b> — the slower planets shaping the weeks ahead, in plain language.</li>
+      <li><b>Your dashas</b> — which planetary period you're living through, and its flavour.</li>
+      <li><b>Gentle guidance</b> — favourable days and directions, framed as heritage, never as fate.</li>
+    </ul>
+
+    <p class="rd-note">We're building this carefully and respectfully. Leave your journey running —
+      it'll be here when the desk opens.</p>
+
+    <a class="rd-back" href={base}>← Back to your journey</a>
+  </div>
+</section>
+
+<style>
+  #readingpage{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:8svh 20px}
+  .rd-card{width:min(600px,94vw);background:linear-gradient(155deg,#2C1E48,#1A1230);
+    border:1px solid #46345F;border-radius:20px;padding:34px 32px 30px;
+    box-shadow:0 30px 70px rgba(0,0,0,.6);text-align:center}
+  .rd-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--marigold);margin:0 0 16px}
+  .rd-soon{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--night);background:var(--marigold);border-radius:999px;padding:6px 14px;margin-bottom:14px}
+  .rd-title{font-family:var(--disp);font-weight:400;font-size:clamp(38px,8vw,60px);margin:0 0 14px;
+    color:var(--paper);line-height:.98;text-transform:uppercase;letter-spacing:.02em;text-wrap:balance}
+  .rd-lead{font-family:var(--serif);font-size:clamp(16px,3vw,20px);line-height:1.55;color:rgba(244,232,206,.9);margin:0 auto 24px;max-width:46ch}
+  .rd-list{list-style:none;margin:0 0 24px;padding:0;text-align:left;display:flex;flex-direction:column;gap:12px}
+  .rd-list li{font-family:var(--serif);font-size:15px;line-height:1.5;color:var(--paper);
+    background:rgba(244,232,206,.06);border:1px solid rgba(244,232,206,.18);border-radius:12px;padding:13px 16px}
+  .rd-list b{color:var(--marigold);font-weight:400}
+  .rd-note{font-family:var(--serif);font-style:italic;font-size:14px;color:rgba(244,232,206,.65);line-height:1.55;margin:0 0 26px}
+  .rd-back{display:inline-block;font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--paper);text-decoration:none;border:1.5px solid rgba(244,232,206,.5);border-radius:999px;padding:12px 22px}
+  .rd-back:hover{border-color:var(--marigold);color:var(--marigold)}
+  .rd-back:focus-visible{outline:3px solid var(--marigold);outline-offset:2px}
+</style>
+</body>
+</html>

@@ -1,0 +1,9 @@
+[
+  { "day": "Sunday", "name": "Ravivar", "deity": "Surya", "graha": "Sun", "vrat": "the Ravivar vrat, for health, vitality and clarity" },
+  { "day": "Monday", "name": "Somvar", "deity": "Shiva", "graha": "Moon", "vrat": "the Somvar vrat, for peace and the granting of wishes" },
+  { "day": "Tuesday", "name": "Mangalvar", "deity": "Hanuman", "graha": "Mars", "vrat": "the Mangalvar vrat, for courage, strength and protection" },
+  { "day": "Wednesday", "name": "Budhvar", "deity": "Vishnu", "graha": "Mercury", "vrat": "the Budhvar vrat, for intellect and good fortune" },
+  { "day": "Thursday", "name": "Guruvar", "deity": "Brihaspati (Vishnu)", "graha": "Jupiter", "vrat": "the Guruvar vrat, for wisdom, learning and prosperity" },
+  { "day": "Friday", "name": "Shukravar", "deity": "Lakshmi", "graha": "Venus", "vrat": "the Shukravar vrat, for abundance, love and beauty" },
+  { "day": "Saturday", "name": "Shanivar", "deity": "Shani (Hanuman)", "graha": "Saturn", "vrat": "the Shanivar vrat, for relief from hardship and karmic weight" }
+]

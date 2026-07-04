@@ -58,10 +58,11 @@ export async function rashiChart(y, m, d) {
     if (body === 'Moon') return A.EclipticGeoMoon(date).lon;
     return A.Ecliptic(A.GeoVector(A.Body[body], date, true)).elon;
   };
-  let moonLon = 0;
+  let moonLon = 0, sunLon = 0;
   for (const [abbr, body] of GRAHAS) {
     const lon = sid(tropOf(abbr, body));
     if (abbr === 'Mo') moonLon = lon;
+    if (abbr === 'Su') sunLon = lon;
     placements.push({ graha: abbr, rashi: Math.floor(lon / 30) });
   }
   const rahu = sid(meanNode(A, date));
@@ -78,6 +79,16 @@ export async function rashiChart(y, m, d) {
   const nakSize = 360 / 27;
   const nIndex = Math.min(26, Math.floor(moonLon / nakSize));
   const pada = Math.floor((moonLon % nakSize) / (nakSize / 4)) + 1;
-  const moonNakshatra = { index: nIndex, name: NAKSHATRAS[nIndex], pada };
-  return { signs, moonRashi, sunRashi, moonNakshatra, ayanamsa: ayan };
+  const fraction = (moonLon % nakSize) / nakSize; // how far through the nakshatra (for dasha balance)
+  const moonNakshatra = { index: nIndex, name: NAKSHATRAS[nIndex], pada, fraction };
+  // Yoga (sum of sidereal longitudes / 13°20') and Karana (half-tithi) — two more panchang limbs
+  const yogaIndex = Math.floor(norm(moonLon + sunLon) / nakSize) % 27;
+  const elong = norm(moonLon - sunLon);
+  const tithiNum = Math.floor(elong / 12); // 0..29 (0-14 Shukla, 15-29 Krishna)
+  const kHalf = Math.floor(elong / 6); // 0..59
+  const MOV = ['Bawa', 'Balava', 'Kaulava', 'Taitila', 'Garija', 'Vanija', 'Vishti'];
+  const karanaName = kHalf === 0 ? 'Kimstughna'
+    : kHalf >= 57 ? ['Shakuni', 'Chatushpada', 'Naga'][kHalf - 57]
+    : MOV[(kHalf - 1) % 7];
+  return { signs, moonRashi, sunRashi, moonNakshatra, moonLon, sunLon, placements, yogaIndex, karanaName, tithiNum, ayanamsa: ayan };
 }

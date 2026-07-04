@@ -1,0 +1,267 @@
+{
+ "yoga": [
+  {
+   "name": "Vishkambha",
+   "meaning": "Mixed yoga; hidden risks but strong crisis-solving ability, supportive of durable foundations"
+  },
+  {
+   "name": "Priti",
+   "meaning": "Auspicious; love, affection, harmony and good relationships"
+  },
+  {
+   "name": "Ayushman",
+   "meaning": "Auspicious; longevity, vitality, health and endurance"
+  },
+  {
+   "name": "Saubhagya",
+   "meaning": "Highly auspicious; good fortune, prosperity and marital happiness"
+  },
+  {
+   "name": "Shobhana",
+   "meaning": "Auspicious; beauty, charm, grace and artistic appeal"
+  },
+  {
+   "name": "Atiganda",
+   "meaning": "Inauspicious; obstacles and dangers, best avoided for new ventures"
+  },
+  {
+   "name": "Sukarma",
+   "meaning": "Auspicious; good deeds, ethical action and righteous work"
+  },
+  {
+   "name": "Dhriti",
+   "meaning": "Auspicious; patience, stability, steadiness and wise decisions"
+  },
+  {
+   "name": "Shula",
+   "meaning": "Inauspicious; conflict, pain and struggle, though it fosters courage"
+  },
+  {
+   "name": "Ganda",
+   "meaning": "Inauspicious; risk, danger and knots that require caution"
+  },
+  {
+   "name": "Vriddhi",
+   "meaning": "Auspicious; growth, increase, expansion and progress"
+  },
+  {
+   "name": "Dhruva",
+   "meaning": "Auspicious; firmness, permanence, stability and determination"
+  },
+  {
+   "name": "Vyaghata",
+   "meaning": "Inauspicious; hindrances and collisions, promotes problem-solving"
+  },
+  {
+   "name": "Harshana",
+   "meaning": "Auspicious; joy, cheerfulness and delight"
+  },
+  {
+   "name": "Vajra",
+   "meaning": "Mixed; thunderbolt strength and unbreakable will, but harsh energy"
+  },
+  {
+   "name": "Siddhi",
+   "meaning": "Highly auspicious; success, achievement and fulfilment of goals"
+  },
+  {
+   "name": "Vyatipata",
+   "meaning": "Highly inauspicious; calamity and reversal, avoided for all good work"
+  },
+  {
+   "name": "Variyana",
+   "meaning": "Auspicious; comfort, excellence, honour and ease"
+  },
+  {
+   "name": "Parigha",
+   "meaning": "Inauspicious; obstruction and barriers, develops perseverance"
+  },
+  {
+   "name": "Shiva",
+   "meaning": "Auspicious; spiritual upliftment, benevolence and compassion"
+  },
+  {
+   "name": "Siddha",
+   "meaning": "Auspicious; accomplishment, perfection and mastery"
+  },
+  {
+   "name": "Sadhya",
+   "meaning": "Auspicious; attainment through effort and dedication"
+  },
+  {
+   "name": "Shubha",
+   "meaning": "Highly auspicious; auspiciousness, prosperity and harmony"
+  },
+  {
+   "name": "Shukla",
+   "meaning": "Auspicious; purity, brightness and positive clarity"
+  },
+  {
+   "name": "Brahma",
+   "meaning": "Highly auspicious; creativity, intellect and divine wisdom"
+  },
+  {
+   "name": "Indra",
+   "meaning": "Highly auspicious; power, leadership and authority"
+  },
+  {
+   "name": "Vaidhriti",
+   "meaning": "Inauspicious; division and imbalance, avoided for important undertakings"
+  }
+ ],
+ "karana": [
+  {
+   "name": "Bawa",
+   "meaning": "Movable karana; symbolised by the lion, favourable for auspicious and permanent works"
+  },
+  {
+   "name": "Balava",
+   "meaning": "Movable karana; symbolised by the tiger, good for religious and Brahminical acts"
+  },
+  {
+   "name": "Kaulava",
+   "meaning": "Movable karana; symbolised by the boar, favourable for friendship and relationships"
+  },
+  {
+   "name": "Taitila",
+   "meaning": "Movable karana; symbolised by the donkey, good for trade and royal favour"
+  },
+  {
+   "name": "Garija",
+   "meaning": "Movable karana; symbolised by the elephant, favourable for farming and building"
+  },
+  {
+   "name": "Vanija",
+   "meaning": "Movable karana; symbolised by the cow, auspicious for commerce and trade"
+  },
+  {
+   "name": "Vishti",
+   "meaning": "Movable karana (Bhadra); symbolised by the dog, inauspicious and best avoided for good works"
+  },
+  {
+   "name": "Shakuni",
+   "meaning": "Fixed karana; symbolised by the bird of prey, suited to medicine and mantra work"
+  },
+  {
+   "name": "Chatushpada",
+   "meaning": "Fixed karana; symbolised by the quadruped, suited to rites for ancestors and cattle"
+  },
+  {
+   "name": "Naga",
+   "meaning": "Fixed karana; symbolised by the serpent, inauspicious, harsh and cruel in nature"
+  },
+  {
+   "name": "Kimstughna",
+   "meaning": "Fixed karana; symbolised by the worm, auspicious for beginnings and pious acts"
+  }
+ ],
+ "tithiDeity": [
+  {
+   "tithi": "Pratipada",
+   "deity": "Agni"
+  },
+  {
+   "tithi": "Dwitiya",
+   "deity": "Brahma"
+  },
+  {
+   "tithi": "Tritiya",
+   "deity": "Gauri"
+  },
+  {
+   "tithi": "Chaturthi",
+   "deity": "Ganesha"
+  },
+  {
+   "tithi": "Panchami",
+   "deity": "Naga (Serpent)"
+  },
+  {
+   "tithi": "Shashthi",
+   "deity": "Kartikeya"
+  },
+  {
+   "tithi": "Saptami",
+   "deity": "Surya"
+  },
+  {
+   "tithi": "Ashtami",
+   "deity": "Rudra (Shiva)"
+  },
+  {
+   "tithi": "Navami",
+   "deity": "Durga"
+  },
+  {
+   "tithi": "Dashami",
+   "deity": "Yama"
+  },
+  {
+   "tithi": "Ekadashi",
+   "deity": "Vishwadeva"
+  },
+  {
+   "tithi": "Dwadashi",
+   "deity": "Vishnu"
+  },
+  {
+   "tithi": "Trayodashi",
+   "deity": "Kamadeva"
+  },
+  {
+   "tithi": "Chaturdashi",
+   "deity": "Kali (Shiva)"
+  },
+  {
+   "tithi": "Purnima",
+   "deity": "Chandra (Moon)"
+  }
+ ],
+ "navagraha": {
+  "Sun": {
+   "temple": "Suryanar Kovil",
+   "town": "Suryanar Kovil (near Kumbakonam)",
+   "beej": "Om Hraam Hreem Hraum Sah Suryaya Namah"
+  },
+  "Moon": {
+   "temple": "Kailasanathar Temple",
+   "town": "Thingalur",
+   "beej": "Om Shraam Shreem Shraum Sah Chandraya Namah"
+  },
+  "Mars": {
+   "temple": "Vaitheeswaran Koil",
+   "town": "Vaitheeswaran Koil",
+   "beej": "Om Kraam Kreem Kraum Sah Bhaumaya Namah"
+  },
+  "Mercury": {
+   "temple": "Swetharanyeswarar Temple",
+   "town": "Tiruvenkadu",
+   "beej": "Om Braam Breem Braum Sah Budhaya Namah"
+  },
+  "Jupiter": {
+   "temple": "Apatsahayesvarar Temple",
+   "town": "Alangudi",
+   "beej": "Om Graam Greem Graum Sah Gurave Namah"
+  },
+  "Venus": {
+   "temple": "Agneeswarar Temple",
+   "town": "Kanjanur",
+   "beej": "Om Draam Dreem Draum Sah Shukraya Namah"
+  },
+  "Saturn": {
+   "temple": "Dharbaranyeswarar Temple",
+   "town": "Tirunallar",
+   "beej": "Om Praam Preem Praum Sah Shanaischaraya Namah"
+  },
+  "Rahu": {
+   "temple": "Naganathaswamy Temple",
+   "town": "Tirunageswaram",
+   "beej": "Om Bhraam Bhreem Bhraum Sah Rahave Namah"
+  },
+  "Ketu": {
+   "temple": "Naganathaswamy Temple",
+   "town": "Keezhaperumpallam",
+   "beej": "Om Sraam Sreem Sraum Sah Ketave Namah"
+  }
+ }
+}

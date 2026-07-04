@@ -1,0 +1,8 @@
+[
+  { "name": "Vasanta", "en": "Spring", "months": "Chaitra–Vaishakha", "mood": "the world in blossom, the air soft and new" },
+  { "name": "Grishma", "en": "Summer", "months": "Jyeshtha–Ashadha", "mood": "the fierce bright heat before the rains" },
+  { "name": "Varsha", "en": "Monsoon", "months": "Shravana–Bhadrapada", "mood": "the rains breaking over a thirsty land, everything green" },
+  { "name": "Sharad", "en": "Autumn", "months": "Ashwin–Kartika", "mood": "skies washing clean after the monsoon — the festival season" },
+  { "name": "Hemanta", "en": "Pre-winter", "months": "Margashirsha–Pausha", "mood": "the cool, mellow turn toward winter, harvest in the barns" },
+  { "name": "Shishira", "en": "Winter", "months": "Magha–Phalguna", "mood": "the still, cold heart of the year, mist at dawn" }
+]

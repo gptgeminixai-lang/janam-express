@@ -1,0 +1,225 @@
+{
+ "deity": {
+  "summary": "Complete bundleable deity/temple dataset for the DEITY/GOD/TEMPLE spiritual layer. All five datasets are static lookups (no birth-time needed), key off already-computed nakshatra/weekday/tithi/graha, and use small tables (7/9/15/27 rows). Anchor sources are Wikipedia (List_of_Nakshatras, List_of_Natchathara_temples, Navagraha_temples_in_Tamil_Nadu) — verified, reusable text; deity STORIES are 1-2 sentence retellings (facts, not copyrightable). Beej mantras are traditional public-domain Sanskrit. Positioning stays as respectful cultural garnish: temple names, deity stories, traditional vrat — never prediction. KEY BEATS: (a) \"Your nakshatra's guardian deity\" card with story + which real Tamil Nadu temple honors it; (b) \"Your weekday god\" — day-of-week vrat/deity/graha; (c) Navagraha temple map (9 real temples near Kumbakonam) tied to user's rashi-lord/nakshatra-lord graha; (d) tithi deity on the birth tithi. Images: Wikimedia has PD/CC photos of every navagraha temple and most nakshatra temples, plus classic Ravi Varma PD deity paintings (Lakshmi, Saraswati, Hanuman, Shiva, Surya). VERIFIED GAPS: individual per-temple presiding deity (Shiva vs Vishnu form) for the 27 nakshatra temples is partial on Wikipedia — temple NAMES are solid, but if a \"deity of the nakshatra temple\" field is wanted it needs a second-pass per-temple lookup. Nakshatra deity + ruling planet, weekday deity/graha/vrat, navagraha deity+temple+beej mantra, and tithi deity are all fully verified.",
+  "ideas": [
+   {
+    "title": "Your Nakshatra's Guardian Deity (+ story + real temple)",
+    "what": "From the already-computed birth nakshatra (1 of 27), show the presiding Vedic deity, a 1-2 line origin story, and the specific Tamil Nadu 'birth-star temple' that honors it. Keys purely off nakshatra index — pure static lookup, no birth time. E.g. Ashwini -> Ashvini Kumaras (twin celestial physicians, sons of Surya, healers who revived the dead) -> Thiruthuraipoondi Piravi Marundeeswarar Temple.",
+    "source": "Wikipedia List_of_Nakshatras (deity+planet, https://en.wikipedia.org/wiki/List_of_Nakshatras) + Wikipedia List_of_Natchathara_temples (27 temple names+towns, https://en.wikipedia.org/wiki/List_of_Natchathara_temples). Both static tables, bundle at build. Stories are short factual retellings from Vedic myth (not copyrightable).",
+    "feasible": "easy; birth-time-free (nakshatra already computed). Deity+planet+temple-name all verified; only per-temple presiding-deity detail is a soft gap.",
+    "wow": "Deeply personal 'this is YOUR god and here is the actual temple in India you could visit' — highest emotional pull, keys off a number they already have."
+   },
+   {
+    "title": "Your Weekday God (vara -> deity + graha + vrat)",
+    "what": "From the birthday's weekday (already derivable from date), show the ruling deity, ruling planet, and the traditional fast/vrat for that day. E.g. born on a Tuesday -> Mangalvar -> Hanuman + Mangal (Mars) -> Mangalvar vrat for courage/strength.",
+    "source": "hindutone.com Hindu days-of-week + pujayagna.com vrat pages (Somvar/Mangalvar/Budhwar/Guruvar/Shukravar/Shanivar/Ravivar). 7-row static table. Weekday-from-date is trivial JS (Zeller/Date).",
+    "feasible": "trivial; birth-time-free. Fully verified across sources.",
+    "wow": "Everyone knows their birth weekday; instantly ties them to a familiar god (Hanuman/Shiva/Lakshmi/Shani) + a fast their family probably keeps."
+   },
+   {
+    "title": "Navagraha Temple for Your Ruling Planet",
+    "what": "Take the graha that rules the user's nakshatra (or rashi lord — already computed), and point to its real Navagraha temple in the Kumbakonam circuit, with the temple's presiding deity + beej mantra. E.g. planet Shani -> Dharbaranyeswarar Temple, Thirunallar (the famous Saturn temple) + beej 'Aum Pram Prim Pron Sah Shanicharaye Namah'.",
+    "source": "Wikipedia Navagraha_temples_in_Tamil_Nadu (temple+deity+town, https://en.wikipedia.org/wiki/Navagraha_temples_in_Tamil_Nadu) + astrotalk.com/drikpanchang beej mantras. 9-row static table. Only 7 classical grahas map to temples (Rahu/Ketu included = 9); works off nakshatra-lord which is one of the 9.",
+    "feasible": "easy; birth-time-free (nakshatra/rashi lord already computed).",
+    "wow": "Turns the abstract 'your planet' into a pin on a real map of 9 famous temples — plus a chantable one-line mantra."
+   },
+   {
+    "title": "Your Birth-Tithi Deity",
+    "what": "From the already-computed tithi (1-15), show the tithi's presiding deity. E.g. born on Chaturthi -> Ganesha; Ekadashi -> Vishnu; Purnima -> Chandra; Amavasya -> Pitrs (ancestors).",
+    "source": "clickastro.com tithi list + jyotishguide.com panchang tithi (15-row static table). Tithi already computed in the app.",
+    "feasible": "trivial; birth-time-free. Verified.",
+    "wow": "Adds a third independent 'divine coordinate' (day-deity) alongside nakshatra-deity and weekday-deity, so almost every user gets a rich 3-deity combo."
+   },
+   {
+    "title": "Ishta Devata / 'Your personal deity' summary card",
+    "what": "Synthesis card combining nakshatra deity + weekday deity + tithi deity into a small 'your spiritual signature' panel, framed explicitly as cultural tradition (Ishta Devata = one's cherished chosen deity concept), never prediction.",
+    "source": "Composes the four tables above; Ishta Devata concept from astrosight.ai/AstroVed. No new data beyond the 4 bundled tables.",
+    "feasible": "medium (design/synthesis only); birth-time-free.",
+    "wow": "Ties the whole spiritual layer into one shareable summary — the 'kundli' emotional payoff without any fortune-telling claim."
+   }
+  ],
+  "tables": [
+   {
+    "name": "nakshatra_deity",
+    "keyedBy": "nakshatra index (27 rows)",
+    "rowCount": "27",
+    "sample": "Ashwini | Ashvins (twin celestial physicians, sons of Surya & Sanjna-as-mare; healers who revived the dead & restored youth) | Ketu || Krittika | Agni (fire god, purifier, carrier of offerings, cosmic priest) | Surya || Rohini | Brahma/Prajapati (creator; nakshatra of fertility & abundance) | Chandra || Anuradha | Mitra (god of friendship & divine contracts) | Shani || Revati | Pushan (nourisher-protector, guardian of travelers & herds, an Aditya) | Budha"
+   },
+   {
+    "name": "weekday_deity",
+    "keyedBy": "weekday (7 rows)",
+    "rowCount": "7",
+    "sample": "Sunday/Ravivar | Surya (Sun God) | Surya/Sun | Ravivar vrat — health, vitality, leadership || Monday/Somvar | Shiva (& Chandra) | Chandra/Moon | Somvar vrat — peace, wish-fulfilment || Tuesday/Mangalvar | Hanuman (& Mangal) | Mangal/Mars | Mangalvar vrat — courage, strength, protection || Saturday/Shanivar | Shani (& Hanuman) | Shani/Saturn | Shanivar vrat — relief from Shani dosha/karmic delays"
+   },
+   {
+    "name": "navagraha_temple",
+    "keyedBy": "graha (9 rows)",
+    "rowCount": "9",
+    "sample": "Surya/Sun | Suryanar Kovil, Suryanar Kovil (near Kumbakonam) | Aum Hraam Hreem Hraum Sah Suryaya Namah || Shani/Saturn | Dharbaranyeswarar Temple, Thirunallar (Karaikal) | Aum Pram Prim Pron Sah Shanicharaye Namah || Guru/Jupiter | Apatsahayesvarar Temple, Alangudi | Om Brim Brihaspataye Namah || Rahu | Naganathar Temple, Tirunageswaram | Om Bhraam Bhreem Bhraum Sah Rahave Namah || Ketu | Nagannathaswamy Temple, Keelaperumpallam | Aum Sraam Sreem Sraum Sah Ketave Namah"
+   },
+   {
+    "name": "nakshatra_temple_tamilnadu",
+    "keyedBy": "nakshatra index (27 rows)",
+    "rowCount": "27",
+    "sample": "Ashwini | Thiruthuraipoondi Piravi Marundeeswarar Temple | Thiruthuraipoondi || Bharani | Nalladai Agneeswarar Temple | Nalladai || Rohini | Kancheepuram Sri Pandava Dhootha Perumal Temple | Kancheepuram || Swathi | Chithukadu Dhaathreeswarar Temple | Siddharkadu (Chennai) || Revathi | Kargudi Kailasanathar Temple | Kargudi"
+   },
+   {
+    "name": "tithi_deity",
+    "keyedBy": "tithi number (15 rows)",
+    "rowCount": "15",
+    "sample": "Pratipada (1) | Agni || Chaturthi (4) | Ganesha (& Yama) || Ekadashi (11) | Vishnu || Chaturdashi (14) | Shiva || Purnima (15) | Chandra; Amavasya | Pitrs (ancestors)"
+   }
+  ]
+ },
+ "regional": {
+  "summary": "Complete state-keyed data for the REGIONAL/NATIVE identity angle, all from free/reusable sources (Wikipedia CC-BY-SA text + PD/CC Wikimedia images). Five bundleable static tables, each ~28 states + major UTs, plus calendar-era conversion formulas that turn birth YEAR into the user's regional era-year and Tamil cycle-name — no birth time needed, pure date+state computation. VERIFIED anchors: Malayalam/Kollam Era = Gregorian−825 (−824 before ~Aug 17); Bengali San = Gregorian−594 (−593 after ~Apr 15); Vikram Samvat = Gregorian+57 (+56 Jan–Mar); Shaka = Gregorian−78 (−79 Jan–Mar); Tamil 60-yr cycle index = ((Y−1987) mod 60)+1 with year 1 = Prabhava, so 1985 → Krodhana (matches brief), 1960 → Raudri, etc. Odia Amli ≈ Gregorian−592/593. Regional new years cluster: lunisolar Chaitra (Ugadi/Gudi Padwa/Cheti Chand/Navreh) late-Mar–early-Apr; solar Mesha Sankranti Apr 13–15 (Baisakhi/Vishu/Puthandu/Bihu/Pana Sankranti/Pohela Boishakh); Gujarat Bestu Varas at Diwali (Oct–Nov); Sikkim Losoong (Dec). Every state also has an official animal/bird/flower/tree (Wikipedia \"List of Indian state ___\" pages — authoritative, complete for 28 states + UTs), a signature art form, folk dance, and dish. All five tables are small (<40 rows), precompute-friendly, and key off the birth-STATE the site already derives from the city. New-year and era-year additionally key off the birth MONTH (to pick the right offset branch) and YEAR.",
+  "ideas": [
+   {
+    "title": "Your people's New Year is X, around <month>",
+    "what": "Given birth STATE, show the regional/community New Year: name, native script, the Gregorian month it lands in, and calendar type (lunisolar Chaitra vs solar Mesha Sankranti). e.g. Maharashtra→Gudi Padwa (late Mar/early Apr, lunisolar), Kerala→Vishu (Apr 14, solar), Gujarat→Bestu Varas (day after Diwali, Oct–Nov). Static state→festival map; no per-year date needed if we say 'around <month>', but we CAN compute the exact date the same way the site already computes tithi/masa (Chaitra Shukla Pratipada for lunisolar; Mesha Sankranti for solar).",
+    "source": "Wikipedia 'Indian New Year's days' (CC-BY-SA) https://en.wikipedia.org/wiki/Indian_New_Year's_days ; per-festival Wikipedia pages (Gudi Padwa, Vishu, Puthandu, Vaisakhi, Pohela Boishakh, Bihu, Ugadi, Cheti Chand, Bestu Varas). Cross-checked with ClearIAS/Prokerala festival guides.",
+    "feasible": "trivial — birth-time-free. Static state→{name, nativeName, monthWindow, calendarType} lookup, ~15 distinct festivals mapped to 28 states. Exact date optional (reuse existing sidereal engine for Chaitra-Pratipada / Mesha-Sankranti).",
+    "wow": "'Your people ring in the new year not on 1 January but on <date> — it's called <Vishu>, and this year it falls around mid-April.' Ties the user's identity to a living tradition most Indians know but rarely see named for THEIR community."
+   },
+   {
+    "title": "Your birth year in your own calendar era",
+    "what": "Convert the Gregorian birth YEAR into the regional era-year for the birth region: Malayalam/Kollam Era (Kerala), Bengali San (WB/Assam), Vikram Samvat (North/Gujarat/Rajasthan), Shaka (national/Deccan), Tamil 60-name cycle year (TN), Odia Amli (Odisha). e.g. 'Your birth year 1985 = Kollam 1160 / Tamil year Krodhana / Bengali 1392 / Vikram Samvat 2042.' Keys off state→era + a fixed subtraction/offset, plus birth MONTH to pick the pre/post-new-year branch.",
+    "source": "Malayalam calendar https://en.wikipedia.org/wiki/Malayalam_calendar (ME = Gregorian−825/−824); Bengali calendar https://en.wikipedia.org/wiki/Bengali_calendar (San = −594/−593); Vikram Samvat https://en.wikipedia.org/wiki/Vikram_Samvat (+57/+56); Saka era (−78/−79); Tamil calendar https://en.wikipedia.org/wiki/Tamil_calendar + srirangaminfo 60-name list (anchor 1987=Prabhava); Odia/Anka year https://en.wikipedia.org/wiki/Anka_year (~−592). All CC-BY-SA / public-domain factual offsets.",
+    "feasible": "easy — pure integer arithmetic, birth-time-free. Formulas: ME=Y−825; San=Y−594; VS=Y+57; Shaka=Y−78 (each −1 if birth month is before that era's new-year month). Tamil: idx=((Y−1987) mod 60)+1 → name from 60-entry array. One small state→era-list table + one 60-name array.",
+    "wow": "Seeing '1985 = Krodhana' or 'Kollam 1160' reframes a boring Gregorian year as the year your grandparents actually wrote on letters and horoscopes. High shareability, uniquely 'yours'."
+   },
+   {
+    "title": "Your state's official emblems (animal / bird / flower / tree)",
+    "what": "Given birth state, show the 4 official state symbols as a little identity crest: state animal, bird, flower, tree — with a Wikimedia PD/CC image each. e.g. Rajasthan→Chinkara / Great Indian bustard / Rohira / Khejri; West Bengal→Fishing cat / White-throated kingfisher / Night-flowering jasmine / Devil's tree. Pure static state→{animal,bird,flower,tree} lookup.",
+    "source": "Wikipedia 'List of Indian state animals' / '…state birds' / '…state trees' / '…state flowers' (all CC-BY-SA, complete for 28 states + UTs). Images: Wikimedia Commons — most species photos are CC-BY-SA / CC0; pick PD or CC-BY ones and store attribution.",
+    "feasible": "easy — birth-time-free static lookup. 4 columns × ~36 rows. Only real work is curating one legally-clean Wikimedia image per unique species (many species repeat across states, so ~60–70 images total).",
+    "wow": "A tiny 'coat of arms' for the user's home state — most people don't know their state bird/flower. Visual, screenshot-friendly, deepens the regional-identity theme the site already leans into."
+   },
+   {
+    "title": "Your state's signature art form",
+    "what": "Given birth state, name the signature folk/painting tradition with one representative Wikimedia image: Bihar→Madhubani, Maharashtra→Warli, Odisha→Pattachitra, Rajasthan→Phad, West Bengal→Kalighat, Andhra→Kalamkari, Kerala→Mural, Karnataka→Mysore painting, Tamil Nadu→Tanjore, Punjab→Phulkari, Uttarakhand→Aipan, MP→Gond. Static state→artForm map.",
+    "source": "Wikipedia per-art pages (Madhubani art, Warli, Pattachitra, Phad painting, Kalighat painting, Kalamkari, Kerala mural, Mysore painting, Tanjore painting, Phulkari, Gond art) — CC-BY-SA. Overview: MeMeraki 'state-wise map of Indian folk art', TheBetterIndia GI-tag folk-art map. Images: Wikimedia Commons CC/PD.",
+    "feasible": "easy — birth-time-free static lookup, ~28 rows. Image curation is the only effort; many art pages have CC-licensed sample images on Commons.",
+    "wow": "'The walls of a home in your region are painted in <Warli> — here's what it looks like.' Turns an abstract 'where you're from' into a concrete visual craft, very shareable and rarely surfaced per-user."
+   },
+   {
+    "title": "Your state's folk dance + signature dish",
+    "what": "Two more identity garnishes per state: the iconic folk dance (Punjab→Bhangra, Gujarat→Garba, Rajasthan→Ghoomar, Assam→Bihu, Maharashtra→Lavani, Karnataka→Yakshagana, Kerala→Theyyam, Manipur→Lai Haraoba) and the signature dish (Bihar→Litti Chokha, Gujarat→Dhokla, J&K→Rogan Josh, Tamil Nadu→Pongal, Maharashtra→Puran Poli, WB→Macher Jhol, Punjab→Sarson da Saag). Two static state→X maps.",
+    "source": "Wikipedia 'List of Indian folk dances' (CC-BY-SA) https://en.wikipedia.org/wiki/List_of_Indian_folk_dances ; dish sources: Holidify '29 traditional foods by state', per-dish Wikipedia pages (Litti, Puran poli, Rogan josh, Macher jhol, Dhokla, Pongal). Images optional from Wikimedia Commons CC/PD.",
+    "feasible": "trivial — birth-time-free, two ~28-row text lookups. Dance and dish can be text-only (emoji garnish) or add one Commons image each.",
+    "wow": "Rounds out a mini 'passport of your homeland': your new year, your era-year, your state crest, your art, your dance, your dish — a complete regional-identity card generated from just a city + date. Strong reason to share the whole card."
+   }
+  ],
+  "tables": [
+   {
+    "name": "stateNewYear",
+    "keyedBy": "state (28 states + major UTs, ~15 distinct festivals)",
+    "rowCount": "~36 rows (many states share a festival)",
+    "sample": "[\"Maharashtra\",\"Gudi Padwa\",\"गुढी पाडवा\",\"Mar–Apr (Chaitra Shukla 1)\",\"lunisolar\"] | [\"Karnataka\",\"Ugadi\",\"ಯುಗಾದಿ\",\"Mar–Apr (Chaitra Shukla 1)\",\"lunisolar\"] | [\"Kerala\",\"Vishu\",\"വിഷു\",\"Apr 14–15 (Mesha Sankranti)\",\"solar\"] | [\"Tamil Nadu\",\"Puthandu\",\"புத்தாண்டு\",\"Apr 14 (Mesha Sankranti)\",\"solar\"] | [\"West Bengal\",\"Pohela Boishakh\",\"পহেলা বৈশাখ\",\"Apr 14–15\",\"solar\"] | [\"Punjab\",\"Baisakhi\",\"ਵਿਸਾਖੀ\",\"Apr 13–14\",\"solar\"] | [\"Assam\",\"Bohag/Rongali Bihu\",\"ৰঙালী বিহু\",\"Apr 14–15\",\"solar\"] | [\"Gujarat\",\"Bestu Varas\",\"બેસતું વર્ષ\",\"Oct–Nov (day after Diwali)\",\"lunisolar\"] | [\"Odisha\",\"Pana Sankranti (Maha Bishuba)\",\"ପଣା ସଂକ୍ରାନ୍ତି\",\"Apr 13–14\",\"solar\"]"
+   },
+   {
+    "name": "stateCalendarEra",
+    "keyedBy": "state → era name + offset formula (+ shared 60-name Tamil array)",
+    "rowCount": "~10 era rows + 60-name array; mapped onto 28 states",
+    "sample": "[\"Kerala\",\"Kollam Era (ME)\",\"Y−825 (Y−824 if before ~Aug 17)\",\"1985→1160\"] | [\"West Bengal / Assam\",\"Bengali San\",\"Y−594 (Y−593 if after ~Apr 15)\",\"1985→1391/1392\"] | [\"Tamil Nadu\",\"Tamil 60-name cycle\",\"idx=((Y−1987) mod 60)+1; array[idx]\",\"1985→Krodhana, 1960→Raudri\"] | [\"Rajasthan/UP/Gujarat/N.India\",\"Vikram Samvat\",\"Y+57 (Y+56 if Jan–Mar)\",\"1985→2042\"] | [\"National / Deccan\",\"Shaka Samvat\",\"Y−78 (Y−79 if Jan–Mar)\",\"1985→1907\"] | [\"Odisha\",\"Amli / Anka era\",\"~Y−592\",\"1985→1393\"] | Tamil 60-name array (anchor idx1=Prabhava@1987-88): Prabhava,Vibhava,Shukla,Pramoduta,Prajapati,Angirasa,Srimukha,Bhava,Yuva,Dhatu,…,Krodhana(59),Akshaya(60)"
+   },
+   {
+    "name": "stateSymbols",
+    "keyedBy": "state (28 states + UTs Delhi/J&K/Ladakh/Puducherry)",
+    "rowCount": "~36 rows × 4 symbols",
+    "sample": "[\"Rajasthan\",\"Chinkara\",\"Great Indian bustard\",\"Rohira\",\"Khejri\"] | [\"West Bengal\",\"Fishing cat\",\"White-throated kingfisher\",\"Night-flowering jasmine (Shiuli)\",\"Devil's tree (Chhatim)\"] | [\"Maharashtra\",\"Indian giant squirrel\",\"Yellow-footed green pigeon\",\"Jarul\",\"Mango\"] | [\"Kerala\",\"Indian elephant\",\"Great hornbill\",\"Golden shower (Kanikonna)\",\"Coconut\"] | [\"Tamil Nadu\",\"Nilgiri tahr\",\"Emerald dove\",\"Glory lily\",\"Palmyra palm\"] | [\"Assam\",\"One-horned rhinoceros\",\"White-winged wood duck\",\"Foxtail orchid\",\"Hollong\"] | [\"J&K (UT)\",\"Hangul\",\"Kalij pheasant\",\"Common rhododendron\",\"Chinar\"]"
+   },
+   {
+    "name": "stateArtForm",
+    "keyedBy": "state (28)",
+    "rowCount": "~28 rows",
+    "sample": "[\"Bihar\",\"Madhubani (Mithila)\"] | [\"Maharashtra\",\"Warli\"] | [\"Odisha\",\"Pattachitra\"] | [\"Rajasthan\",\"Phad\"] | [\"West Bengal\",\"Kalighat\"] | [\"Andhra Pradesh\",\"Kalamkari\"] | [\"Kerala\",\"Mural painting\"] | [\"Karnataka\",\"Mysore painting\"] | [\"Tamil Nadu\",\"Tanjore painting\"] | [\"Punjab\",\"Phulkari\"] | [\"Uttarakhand\",\"Aipan\"] | [\"Madhya Pradesh\",\"Gond\"]"
+   },
+   {
+    "name": "stateDanceDish",
+    "keyedBy": "state (28)",
+    "rowCount": "~28 rows × 2 (dance, dish)",
+    "sample": "[\"Punjab\",\"Bhangra\",\"Sarson da Saag & Makki di Roti\"] | [\"Gujarat\",\"Garba\",\"Dhokla\"] | [\"Rajasthan\",\"Ghoomar\",\"Dal Baati Churma\"] | [\"Assam\",\"Bihu\",\"Masor Tenga\"] | [\"Maharashtra\",\"Lavani\",\"Puran Poli\"] | [\"Bihar\",\"Jat-Jatin\",\"Litti Chokha\"] | [\"West Bengal\",\"Gambhira\",\"Macher Jhol\"] | [\"Tamil Nadu\",\"Karakattam\",\"Pongal\"] | [\"Kerala\",\"Theyyam\",\"Sadhya\"] | [\"J&K\",\"Rouf\",\"Rogan Josh\"] | [\"Karnataka\",\"Yakshagana\",\"Bisi Bele Bath\"]"
+   }
+  ]
+ },
+ "festival": {
+  "summary": "PANCHANG/FESTIVALS angle for Janam Express — all verified against the project's own engine. KEY FINDING: the app already bundles `mhah-panchang`, whose `calendar(date,lat,lon)` and `calculate(date)` return Yoga, Karna AND Ritu objects (each with name_en_IN + ino index) — the app currently reads only Tithi/Nakshatra/Paksha/Masa and throws the rest away (astronomy.js lines 46-63). So YOGA, KARANA and RITU are already computed at runtime and cost ZERO new dependency: just read cal.Yoga/cal.Karna/cal.Ritu and join to a tiny bundled meaning table keyed by the engine's exact ino index (0-based). I extracted the engine's EXACT output-string arrays from node_modules so the meaning tables key correctly (the engine uses idiosyncratic spellings: Yoga 'Prithi'/'Vaidhruthi', Karna 'Bawa'/'Sakuna'/'Kimstughana', Tithi 'Chavithi'/'Punnami', Masa starts at index0='Baisakha'). AYANA (Uttarayana/Dakshinayana) is a trivial pure function of the Sun's sidereal longitude the kundli engine already computes (Makara 270°→Mithuna 90° = Uttarayana). TITHI-BIRTHDAY next-occurrence is computable by scanning forward day-by-day for the matching (masa,paksha,tithi) using the same engine (~365 calls, fine at load or on click). FESTIVALS: two viable routes — (A) compute each festival by scanning a year for its fixed (masa,paksha,tithi) rule via the engine [no bundle, but risk on adhika-masa & purnimanta/amanta & drik-vs-suryasiddhanta edge cases → can be off by a day/month for some years]; (B) bundle a verified static table 1950-2010 (~10 festivals x 61 yrs = 610 rows, ~8KB) scraped from epicastrology.com (confirmed to hold full 1950-2050 per-festival Gregorian date lists) or drikpanchang year-archive. RECOMMENDATION: bundle the static table for the ~10 headline festivals (accuracy guaranteed, matches the app's 'precompute data' ethos) and compute yoga/karana/ritu/ayana/tithi-birthday live. Special-tithi births and 'your star's festival' and 'how many Diwalis' all fall out of data already present.",
+  "ideas": [
+   {
+    "title": "Complete the 5-limb Panchang: add Yoga + Karana (already computed, zero cost)",
+    "what": "The app shows Tithi/Nakshatra/Paksha/Masa but panchang has 5 limbs (vaara/tithi/nakshatra/yoga/karana). Add the two missing: YOGA (Sun+Moon combined longitude / 13°20', 27 values) and KARANA (half-tithi, 6° of elongation, 11 recurring names). Show engine's name + a one-line meaning/nature from a bundled 27-row and 11-row table keyed by the engine's integer ino index. Keys off computed date only (no birth time needed — uses the same ~6AM-IST sample instant already used for tithi).",
+    "source": "ALREADY IN THE BUNDLE. astronomy.js already imports mhah-panchang and calls p.calendar(date,lat,lon) which returns cal.Yoga and cal.Karna objects {name, name_en_IN, ino, start, end} — currently discarded. Just add `yoga: cal.Yoga` / `karana: cal.Karna` to the returned object (astronomy.js:52-58). Meaning table is a static lookup I compiled from https://www.astrogle.com/astrology/27-yogas-11-karanas-panchangam.html and https://en.wikipedia.org/wiki/Karana_(pancanga). Verified engine name arrays extracted from node_modules/mhah-panchang/dist/mhah-panchang.esm.js:826-833.",
+    "feasible": "TRIVIAL. Birth-time-free (uses existing near-sunrise sample). No new dependency, no network, ~1KB of added JSON. The only care needed: the meaning table must key by ino index (0-based) not by name-guess, because the engine's spellings are idiosyncratic ('Prithi','Vaidhruthi','Bawa','Sakuna','Kimstughana').",
+    "wow": "Completes the panchang to all five limbs like a real almanac page — 'On the morning you were born the sky read: tithi X, nakshatra Y, yoga Harshana (joy/thrill), karana Bava (a good-omen half-day for beginnings).' Feels like a printed panchang from the year of birth."
+   },
+   {
+    "title": "Tithi-Birthday: your REAL Hindu birthday and when it next falls",
+    "what": "Explain that traditionally Hindus celebrate the anniversary of their birth TITHI within its MASA+PAKSHA, not the Gregorian date — so the 'real' birthday drifts ~11 days earlier each year and lands on a different English date annually. Then compute + show the NEXT occurrence from today (2026): scan forward day-by-day from today, evaluating the engine's (masa,paksha,tithi) each day, return the first date whose triple matches the birth triple. Keys off the computed birth (masa,paksha,tithi) which the app already has.",
+    "source": "Concept + method verified: https://www.janmatithi.in/what-is-janma-tithi-and-how-to-find-yours/ and https://www.drikpanchang.com/utilities/tithi/hindu-shraddha-tithi-calculator.html (Tithi Pravesh = Sun-Moon return to same relative angle). Computation reuses the already-bundled mhah-panchang engine — no new source.",
+    "feasible": "EASY-MEDIUM. Birth-time-free (tithi already sampled at ~sunrise). Implementation is a forward scan of up to ~385 days calling engine.calendar() once per day; each call is cheap (pure math, no network). Do it lazily on click, not on initial load, to keep cheap-Android snappy. Edge case to handle: adhika-masa years can make a tithi occur twice or 'skip' — acceptable to return the nearest match and footnote it.",
+    "wow": "'Your Gregorian birthday is 12 August. But your janma-tithi — Bhadrapada Krishna Ashtami, the same tithi as Krishna himself — next falls on 2 Sept 2026. That's the day your grandmother would have marked.' Deeply resonant, and almost nobody knows their own tithi-birthday date."
+   },
+   {
+    "title": "Special-tithi births: you share a tithi with a god or a vrat",
+    "what": "If the birth tithi is one of the 'named' special tithis, surface its significance: Purnima (full-moon, Guru/Hanuman births, completeness), Amavasya (new-moon; Diwali/Lakshmi if Kartika, ancestor/pitru energy), Ekadashi (Vishnu fasting day, x2/month), Chaturthi (Ganesh — Bhadrapada Shukla Chaturthi = Ganesh Chaturthi), Ashtami (Shakti/Kala-Bhairava; Bhadrapada Krishna Ashtami = Janmashtami/Krishna), Navami (Chaitra Shukla Navami = Ram Navami), Chaturdashi (Krishna Chaturdashi of Phalguna = Maha Shivratri). Show 'you were born on the same tithi as Lord Krishna's birth' when masa+paksha also match.",
+    "source": "Bundled 15-tithi->deity/festival table (see tables). Mappings verified: Ganesh=Bhadrapada Shukla Chaturthi (https://en.wikipedia.org/wiki/Ganesh_Chaturthi), Janmashtami=Bhadrapada Krishna Ashtami, Ram Navami=Chaitra Shukla Navami, Maha Shivratri=Phalguna Krishna Chaturdashi (https://www.drikpanchang.com/hindu-festivals/maha-shivaratri/maha-shivaratri.html), Ekadashi=Vishnu (https://www.drikpanchang.com/vrats/ekadashidates.html).",
+    "feasible": "TRIVIAL. Birth-time-free. Pure lookup on the tithi index (and optionally masa+paksha for the exact-festival match) the app already computes. ~15-row static table, <1KB.",
+    "wow": "'You were born on Ashtami — the tithi of Shakti and, in Bhadrapada's dark fortnight, of Krishna's own birth.' Turns a lunar coincidence into a personal totem, in the same respectful-garnish register as the existing nakshatra deity/animal/tree cards."
+   },
+   {
+    "title": "Nearest festival to your birth date + 'how many Diwalis you've seen'",
+    "what": "Show the major Hindu festival closest to the user's Gregorian DOB ('you were born 4 days after Diwali 1974') and a running count: 'you have lived through 52 Diwalis, 52 Holis, 76 Makar Sankrantis' (Sankranti is ~fixed 14 Jan so count = age; lunar ones = age, ~1 per year). Optionally 'the Diwali of your birth year fell on 13 Nov 1974.' Keys off the Gregorian DOB against a bundled festival-date dataset 1950-2010.",
+    "source": "Bundled festival-date table 1950-2010. VERIFIED FULL DIWALI SERIES pulled from https://www.epicastrology.com/en/Festival/?name=diwali (e.g. 1950-11-09, 1974-11-13, 1985-11-12, 1999-11-07, 2005-11-01, 2010-11-05) and Holika Dahan from https://www.epicastrology.com/en/Festival/?name=holika_dahan (1950-03-03 ... 1970-03-22). Same site hosts per-festival 1950-2050 lists for Holi, Dussehra, Janmashtami, Ganesh Chaturthi, Navratri, Raksha Bandhan, Maha Shivratri; drikpanchang year-archive (https://www.drikpanchang.com/sitemaps/year/diwali/diwali-puja-calendar.html) is the cross-check.",
+    "feasible": "MEDIUM (data-gathering, not code). Birth-time-free. Code is a trivial nearest-date search + subtraction. The work is assembling & double-sourcing the ~610-row table (10 festivals x 61 years). Recommend scrape epicastrology per-festival pages, cross-check a sample against drikpanchang, store as JSON keyed by year. Alternative (harder, riskier) is computing each festival live from the engine's (masa,paksha,tithi) rule — works but has adhika-masa / purnimanta-vs-amanta / drik-vs-suryasiddhanta edge cases that can shift a date by a day or a whole month in some years, so a verified static table is safer and matches the app's precompute ethos.",
+    "wow": "'You've watched 52 Diwalis go by. The very first — the one you were too small to remember — lit up the sky on 13 November 1974, just four days after you were born.' Concrete, warm, shareable; ties the abstract lunar calendar to a lived count."
+   },
+   {
+    "title": "Ritu (which of 6 seasons) + Ayana (Uttarayana/Dakshinayana) of your birth",
+    "what": "Name the RITU (Vasanta/Grishma/Varsha/Sharad/Hemanta/Shishira) and the AYANA (Uttarayana = sun's northward half, Jan-Jun; Dakshinayana = southward, Jul-Dec) you were born in, each with a one-line poetic mood. Ritu from the engine's cal.Ritu (already computed) or from the birth masa; Ayana from the Sun's sidereal longitude the kundli already computes (Makara 270° through Mithuna 90° = Uttarayana; else Dakshinayana).",
+    "source": "Ritu: engine cal.Ritu (name_en_UK ['Spring','Summer','Monsoon','Autumn','Pre-Winter','Winter'], verified node_modules/mhah-panchang/dist/mhah-panchang.esm.js:797-800) OR bundled 6-row masa->ritu table. Season/month mapping + ayana solstice logic verified: https://en.wikipedia.org/wiki/Ritu_(Indian_season). Ayana is a pure function of sunRashi/sun sidereal longitude already returned by rashiChart() in kundli.js.",
+    "feasible": "TRIVIAL. Birth-time-free. Ritu is either already computed (read cal.Ritu) or a 6-row lookup on masa. Ayana is a one-line if-statement on the already-computed Sun longitude. ~0.5KB.",
+    "wow": "'You arrived in Sharad Ritu, autumn — skies washing clean after the monsoon, the season of Navratri and Diwali — during Dakshinayana, the sun's inward, contemplative southern march.' Poetic, ancient, and it costs almost nothing."
+   },
+   {
+    "title": "Your star's / tithi's festival day — nakshatras & tithis that ARE festivals",
+    "what": "Several nakshatras and tithis recur annually as festivals; tell the user if theirs is one. E.g. Shravana nakshatra -> Onam & Raksha Bandhan vibe; Rohini -> Janmashtami's nakshatra (Krishna's star); Pushya -> Guru Pushya yoga (auspicious for buying gold); Chitra -> Chitra Purnima; Ashwini/Bharani etc. Plus tithi->festival from idea 3. 'The sky files your birthday under Rohini — the very star under which Krishna was born.'",
+    "source": "Bundled small nakshatra->festival table (subset, ~8-10 rows) + the tithi->festival table. Rohini=Krishna's nakshatra and Shravana=Onam verified via festival-nakshatra searches; cross-check drikpanchang festival pages. Nakshatra already computed by kundli.js (moonNakshatra.index).",
+    "feasible": "EASY. Birth-time-free. Pure lookup on the already-computed nakshatra index + tithi index. Only a handful of nakshatras map cleanly to a festival, so table is small and can be curated conservatively (only assert well-known links to stay in respectful-garnish register).",
+    "wow": "'Your janma-nakshatra is Rohini — the same star the sky was showing on the night Krishna was born.' Connects the user's totem-star (already a beloved beat) directly to living festival culture."
+   }
+  ],
+  "tables": [
+   {
+    "name": "yoga27 (27 Nitya Yogas -> nature + one-line meaning)",
+    "keyedBy": "ino index 0-26 matching engine cal.Yoga.ino (engine name_en_IN in parens must match exactly)",
+    "rowCount": "27",
+    "sample": "[0] Vishkambha (engine:'Vishkambha') — nature: mixed/inauspicious — 'the supporting pillar; steady but heavy, guard against over-effort.' | [2] Ayushman (engine:'Ayushman') — auspicious — 'long life and vitality; a yoga of health and endurance.' | [13] Harshana (engine:'Harshana') — auspicious — 'joy and thrill; wit, learning and delight.' | [16] Vyatipata (engine:'Vyatipata') — inauspicious — 'sudden upheaval; a day to avoid new beginnings.' | [26] Vaidhriti (engine:'Vaidhruthi') — inauspicious — 'pulling apart; scattered energy, better for reflection than action.' NOTE engine spellings: idx1='Prithi'(Priti), idx7='Dhrithi', idx10='Vridhi', idx26='Vaidhruthi'."
+   },
+   {
+    "name": "karana11 (11 Karanas -> fixed/movable + deity + one-line)",
+    "keyedBy": "ino index 0-10 matching engine cal.Karna.ino (engine order: Bawa,Balava,Kaulava,Taitula,Garaja,Vanija,Vishti,Sakuna,Chatushpada,Nagava,Kimstughana)",
+    "rowCount": "11",
+    "sample": "[0] Bava (engine:'Bawa') — movable — 'auspicious for beginnings, permanent/creative works; a good-omen half-day.' | [2] Kaulava (engine:'Kaulava') — movable — 'friendship and social bonds.' | [6] Vishti/Bhadra (engine:'Vishti') — movable, INAUSPICIOUS — 'the Bhadra half; traditionally avoided for auspicious work.' | [7] Shakuni (engine:'Sakuna') — FIXED, deity Garuda — 'calm, intuitive, medicinal works.' | [10] Kimstughna (engine:'Kimstughana') — FIXED — 'the tail-end karana of new-moon; humble endings.'"
+   },
+   {
+    "name": "tithi15_festival (15 tithis -> presiding deity + festival if any)",
+    "keyedBy": "tithi ordinal 1-15 within a paksha (map engine tithi ino 0-14 = Shukla 1-15, 15-29 = Krishna 1-15; engine Amavasya at ino29, Punnami/Purnima at ino14)",
+    "rowCount": "15 (+ paksha-specific festival notes)",
+    "sample": "Chaturthi(4) — deity Ganesha — 'Bhadrapada Shukla Chaturthi = Ganesh Chaturthi (Ganesha's birth).' | Ashtami(8) — deity Durga/Shakti & Kala-Bhairava — 'Bhadrapada Krishna Ashtami = Janmashtami (Krishna).' | Navami(9) — 'Chaitra Shukla Navami = Ram Navami (Rama's birth).' | Ekadashi(11) — deity Vishnu — 'fasting day, twice a month.' | Chaturdashi(14) — 'Phalguna Krishna Chaturdashi = Maha Shivratri.' | Purnima(15 Shukla) — 'full moon; Guru Purnima, Holi, Buddha/Hanuman.' | Amavasya(15 Krishna) — 'new moon; Kartika Amavasya = Diwali/Lakshmi; pitru/ancestor day.'"
+   },
+   {
+    "name": "ritu6 (6 seasons -> months + Gregorian + ayana + poetic mood)",
+    "keyedBy": "ritu index 0-5 (engine cal.Ritu name_en_UK) OR derived from masa pair",
+    "rowCount": "6",
+    "sample": "Vasanta/Spring — Chaitra+Vaishakha — Mar-Apr — Uttarayana — 'blossoming, renewal, the year's tender green start.' | Grishma/Summer — Jyeshtha+Ashadha — May-Jun — Uttarayana(ends at solstice) — 'peak heat and long light before the rains.' | Varsha/Monsoon — Shravana+Bhadrapada — Jul-Aug — Dakshinayana — 'the sky breaks open; green, fertile, romantic rain.' | Sharad/Autumn — Ashwin+Kartika — Sep-Nov — Dakshinayana — 'clarity after rain; the festival season, Navratri to Diwali.' | Hemanta/Pre-winter — Margashirsha+Pausha — Nov-Dec — Dakshinayana — 'crisp cooling, harvest calm.' | Shishira/Winter — Magha+Phalguna — Jan-Feb — Uttarayana(begins at solstice) — 'coldest, inward, the sun turns north again.'"
+   },
+   {
+    "name": "festivalDates1950_2010 (major Hindu festival Gregorian dates, bundled)",
+    "keyedBy": "year (1950-2010) x festival column; ~10 festivals",
+    "rowCount": "~610 (61 years x ~10 festivals)",
+    "sample": "{year:1974, diwali:'1974-11-13', holi:'1974-03-08', dussehra:'1974-10-25', janmashtami:'1974-08-10', ganeshChaturthi:'1974-08-27', makarSankranti:'1974-01-14', mahaShivratri:'1974-02-21', rakshaBandhan:'1974-08-02', navratriStart:'1974-10-16'} | {year:1985, diwali:'1985-11-12'} | {year:1999, diwali:'1999-11-07'} | {year:2005, diwali:'2005-11-01'} | {year:2010, diwali:'2010-11-05'}. SOURCE: scrape per-festival pages at epicastrology.com/en/Festival/?name=<festival> (confirmed full 1950-2050 Gregorian lists for diwali & holika_dahan), cross-check sample years vs drikpanchang.com year-archive. Makar Sankranti is quasi-fixed (14 Jan, 15 Jan in some years) so can be near-computed. ~8KB JSON."
+   }
+  ]
+ }
+}

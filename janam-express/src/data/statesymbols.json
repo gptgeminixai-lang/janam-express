@@ -1,0 +1,200 @@
+{
+ "Andhra Pradesh": {
+  "animal": "Blackbuck",
+  "bird": "Rose-ringed parakeet",
+  "flower": "Jasmine",
+  "tree": "Neem"
+ },
+ "Arunachal Pradesh": {
+  "animal": "Gayal (Mithun)",
+  "bird": "Great hornbill",
+  "flower": "Foxtail orchid",
+  "tree": "Hollong"
+ },
+ "Assam": {
+  "animal": "One-horned rhinoceros",
+  "bird": "White-winged wood duck",
+  "flower": "Foxtail orchid",
+  "tree": "Hollong"
+ },
+ "Bihar": {
+  "animal": "Gaur",
+  "bird": "House sparrow",
+  "flower": "Kachnar",
+  "tree": "Sacred fig (Peepal)"
+ },
+ "Chhattisgarh": {
+  "animal": "Wild water buffalo",
+  "bird": "Hill myna",
+  "flower": "Palash",
+  "tree": "Sal"
+ },
+ "Goa": {
+  "animal": "Gaur",
+  "bird": "Flame-throated bulbul",
+  "flower": "Red jasmine",
+  "tree": "Coconut"
+ },
+ "Gujarat": {
+  "animal": "Asiatic lion",
+  "bird": "Greater flamingo",
+  "flower": "Marigold",
+  "tree": "Banyan"
+ },
+ "Haryana": {
+  "animal": "Blackbuck",
+  "bird": "Black francolin",
+  "flower": "Lotus",
+  "tree": "Sacred fig (Peepal)"
+ },
+ "Himachal Pradesh": {
+  "animal": "Snow leopard",
+  "bird": "Western tragopan",
+  "flower": "Pink rhododendron",
+  "tree": "Deodar"
+ },
+ "Jharkhand": {
+  "animal": "Indian elephant",
+  "bird": "Asian koel",
+  "flower": "Palash",
+  "tree": "Sal"
+ },
+ "Karnataka": {
+  "animal": "Indian elephant",
+  "bird": "Indian roller",
+  "flower": "Lotus",
+  "tree": "Sandalwood"
+ },
+ "Kerala": {
+  "animal": "Indian elephant",
+  "bird": "Great hornbill",
+  "flower": "Golden shower (Kanikkonna)",
+  "tree": "Coconut"
+ },
+ "Madhya Pradesh": {
+  "animal": "Swamp deer (Barasingha)",
+  "bird": "Indian paradise flycatcher",
+  "flower": "Palash",
+  "tree": "Banyan"
+ },
+ "Maharashtra": {
+  "animal": "Indian giant squirrel",
+  "bird": "Yellow-footed green pigeon",
+  "flower": "Jarul",
+  "tree": "Mango"
+ },
+ "Manipur": {
+  "animal": "Sangai",
+  "bird": "Mrs. Hume's pheasant",
+  "flower": "Siroi lily",
+  "tree": "Uningthou"
+ },
+ "Meghalaya": {
+  "animal": "Clouded leopard",
+  "bird": "Hill myna",
+  "flower": "Lady's slipper orchid",
+  "tree": "White teak"
+ },
+ "Mizoram": {
+  "animal": "Himalayan serow",
+  "bird": "Mrs. Hume's pheasant",
+  "flower": "Red vanda",
+  "tree": "Iron wood (Nageia)"
+ },
+ "Nagaland": {
+  "animal": "Gayal (Mithun)",
+  "bird": "Blyth's tragopan",
+  "flower": "Rhododendron",
+  "tree": "Alder"
+ },
+ "Odisha": {
+  "animal": "Sambar",
+  "bird": "Indian roller",
+  "flower": "Ashoka",
+  "tree": "Sacred fig (Peepal)"
+ },
+ "Punjab": {
+  "animal": "Blackbuck",
+  "bird": "Northern goshawk",
+  "flower": "Sword lily (Gladiolus)",
+  "tree": "Indian rosewood (Sheesham)"
+ },
+ "Rajasthan": {
+  "animal": "Chinkara",
+  "bird": "Great Indian bustard",
+  "flower": "Rohira",
+  "tree": "Khejri"
+ },
+ "Sikkim": {
+  "animal": "Red panda",
+  "bird": "Blood pheasant",
+  "flower": "Noble orchid",
+  "tree": "Rhododendron"
+ },
+ "Tamil Nadu": {
+  "animal": "Nilgiri tahr",
+  "bird": "Emerald dove",
+  "flower": "Glory lily",
+  "tree": "Palmyra palm"
+ },
+ "Telangana": {
+  "animal": "Spotted deer (Chital)",
+  "bird": "Indian roller",
+  "flower": "Tanner's cassia (Tangedu)",
+  "tree": "Prosopis (Jammi)"
+ },
+ "Tripura": {
+  "animal": "Phayre's langur",
+  "bird": "Green imperial pigeon",
+  "flower": "Nageswar",
+  "tree": "Agar"
+ },
+ "Uttar Pradesh": {
+  "animal": "Swamp deer (Barasingha)",
+  "bird": "Sarus crane",
+  "flower": "Palash",
+  "tree": "Ashoka"
+ },
+ "Uttarakhand": {
+  "animal": "Alpine musk deer",
+  "bird": "Himalayan monal",
+  "flower": "Brahma kamal",
+  "tree": "Burans (Rhododendron)"
+ },
+ "West Bengal": {
+  "animal": "Fishing cat",
+  "bird": "White-throated kingfisher",
+  "flower": "Night-flowering jasmine (Shiuli)",
+  "tree": "Devil tree (Chhatim)"
+ },
+ "Delhi": {
+  "animal": "Nilgai",
+  "bird": "House sparrow",
+  "flower": "Alfalfa",
+  "tree": "Flamboyant (Gulmohar)"
+ },
+ "Jammu and Kashmir": {
+  "animal": "Hangul (Kashmir stag)",
+  "bird": "Kalij pheasant",
+  "flower": "Common rhododendron",
+  "tree": "Chinar"
+ },
+ "Ladakh": {
+  "animal": "Snow leopard",
+  "bird": "Black-necked crane",
+  "flower": "Himalayan blue poppy",
+  "tree": "Juniper"
+ },
+ "Puducherry": {
+  "animal": "Indian palm squirrel",
+  "bird": "Asian koel",
+  "flower": "Cannonball flower",
+  "tree": "Bael"
+ },
+ "Chandigarh": {
+  "animal": "Indian grey mongoose",
+  "bird": "Indian grey hornbill",
+  "flower": "Palash",
+  "tree": "Mango"
+ }
+}
