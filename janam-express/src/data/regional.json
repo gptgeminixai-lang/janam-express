@@ -552,396 +552,1842 @@
  "cinema": {
   "ta": [
    {
+    "year": 1950,
+    "film": "Manthiri Kumari",
+    "confidence": "likely",
+    "note": "Karunanidhi's words, MGR's sword — Dravidian cinema finds its voice"
+   },
+   {
+    "year": 1951,
+    "film": "Marmayogi",
+    "confidence": "likely",
+    "note": "MGR's swashbuckling mystic, a cult favourite of the masses"
+   },
+   {
     "year": 1952,
     "film": "Parasakthi",
-    "note": "Sivaji Ganesan's thunderous debut — Dravidian cinema finds its voice",
-    "confidence": "likely"
+    "confidence": "verified",
+    "note": "Sivaji Ganesan's fiery debut monologue ran forty weeks strong"
+   },
+   {
+    "year": 1953,
+    "film": "Avvaiyar",
+    "confidence": "likely",
+    "note": "K. B. Sundarambal as the poet-saint in Gemini's prestige spectacular"
+   },
+   {
+    "year": 1954,
+    "film": "Malaikkallan",
+    "confidence": "verified",
+    "note": "MGR's masked outlaw, first Tamil film honoured by the President"
    },
    {
     "year": 1955,
     "film": "Missiamma",
-    "note": "The comedy every Tamil household can still quote",
-    "confidence": "likely"
+    "confidence": "verified",
+    "note": "Gemini Ganesan and Savitri sparkle in L. V. Prasad's evergreen comedy"
+   },
+   {
+    "year": 1956,
+    "film": "Madurai Veeran",
+    "confidence": "verified",
+    "note": "MGR's folk hero — the first Tamil film to gross a crore"
+   },
+   {
+    "year": 1957,
+    "film": "Mayabazar",
+    "confidence": "likely",
+    "note": "Savitri and Ghatotkacha's feast — fantasy filmmaking's high watermark"
    },
    {
     "year": 1958,
     "film": "Nadodi Mannan",
-    "note": "MGR directs MGR — a phenomenon, not just a film",
-    "confidence": "likely"
+    "confidence": "verified",
+    "note": "MGR directs MGR — dual roles, silver jubilee, political launchpad"
    },
    {
     "year": 1959,
     "film": "Veerapandiya Kattabomman",
-    "note": "Sivaji's roaring freedom-fighter epic",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "Sivaji Ganesan's roaring freedom fighter, an award-winning thunderclap"
+   },
+   {
+    "year": 1960,
+    "film": "Kalathur Kannamma",
+    "confidence": "likely",
+    "note": "Gemini–Savitri weepie introducing a child called Kamal Haasan"
    },
    {
     "year": 1961,
     "film": "Pasamalar",
-    "note": "Brother-sister tearjerker; Tamil cinema at its most beloved",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "Sivaji and Savitri's sibling tearjerker, Tamil cinema's eternal cry"
+   },
+   {
+    "year": 1962,
+    "film": "Nenjil Or Aalayam",
+    "confidence": "likely",
+    "note": "Sridhar's hospital heartbreak, famously shot in twenty-eight days"
+   },
+   {
+    "year": 1963,
+    "film": "Periya Idathu Penn",
+    "confidence": "likely",
+    "note": "MGR romances across class lines in a year-topping hit"
    },
    {
     "year": 1964,
-    "film": "Kadhalikka Neramillai",
-    "note": "The colour comedy that never aged",
-    "confidence": "likely"
+    "film": "Karnan",
+    "confidence": "likely",
+    "note": "Sivaji's tragic Karnan — the Mahabharata epic still packing rereleases"
    },
    {
     "year": 1965,
     "film": "Enga Veettu Pillai",
-    "note": "MGR's double role ruled the year",
-    "confidence": "likely"
+    "confidence": "verified",
+    "note": "MGR's double role and 'Naan Aanaiyittal' — pure mass euphoria"
+   },
+   {
+    "year": 1966,
+    "film": "Anbe Vaa",
+    "confidence": "likely",
+    "note": "MGR goes technicolor romantic comedy amid snowy Shimla hills"
+   },
+   {
+    "year": 1967,
+    "film": "Kaavalkaaran",
+    "confidence": "likely",
+    "note": "MGR back from a bullet wound; fans besieged the theatres"
    },
    {
     "year": 1968,
     "film": "Thillana Mohanambal",
-    "note": "Sivaji and Padmini — dance versus nadaswaram",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "Sivaji's nadaswaram versus Padmini's dance — a gorgeous classic"
+   },
+   {
+    "year": 1969,
+    "film": "Adimai Penn",
+    "confidence": "likely",
+    "note": "MGR's costume spectacular, among the decade's biggest grossers"
+   },
+   {
+    "year": 1970,
+    "film": "Maattukara Velan",
+    "confidence": "likely",
+    "note": "MGR's double-role crowd-pleaser tops a devoted year"
+   },
+   {
+    "year": 1971,
+    "film": "Rickshawkaran",
+    "confidence": "likely",
+    "note": "MGR pedals to a National Award and thumping collections"
+   },
+   {
+    "year": 1972,
+    "film": "Vasantha Maligai",
+    "confidence": "likely",
+    "note": "Sivaji–Vanisri romance that ran in theatres for years"
    },
    {
     "year": 1973,
     "film": "Ulagam Sutrum Valiban",
-    "note": "MGR circles the globe; box-office records fall",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "MGR's globe-trotting extravaganza smashed every Tamil record"
+   },
+   {
+    "year": 1974,
+    "film": "Netru Indru Naalai",
+    "confidence": "likely",
+    "note": "MGR's vigilante hit — the matinee god's late-career thunder"
    },
    {
     "year": 1975,
     "film": "Apoorva Raagangal",
-    "note": "A young Rajinikanth walks through the gate — cinema history",
-    "confidence": "likely"
+    "confidence": "verified",
+    "note": "Balachander's taboo romance; a quiet debutant named Rajinikanth appears"
+   },
+   {
+    "year": 1976,
+    "film": "Moondru Mudichu",
+    "confidence": "likely",
+    "note": "Rajinikanth's flicked cigarette, Sridevi's steel — stars in the making"
    },
    {
     "year": 1977,
     "film": "16 Vayathinile",
-    "note": "Bharathiraja takes Tamil film out of the studio into the village",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "Bharathiraja takes cinema to the village; Kamal, Rajini, Sridevi ignite"
    },
    {
     "year": 1978,
     "film": "Mullum Malarum",
-    "note": "Rajinikanth's first great performance",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "Rajinikanth's Kaali — the performance that made critics kneel"
+   },
+   {
+    "year": 1979,
+    "film": "Ninaithale Inikkum",
+    "confidence": "likely",
+    "note": "Kamal, Rajini and a pop band on a Singapore cruise"
    },
    {
     "year": 1980,
     "film": "Billa",
-    "note": "Rajini remakes Don and becomes a superstar for good",
-    "confidence": "likely"
+    "confidence": "verified",
+    "note": "Rajinikanth's first blockbuster — twenty-five weeks, superstardom sealed"
+   },
+   {
+    "year": 1981,
+    "film": "Thillu Mullu",
+    "confidence": "likely",
+    "note": "Rajinikanth's moustache-less comic riot, still quoted daily"
    },
    {
     "year": 1982,
     "film": "Moondram Pirai",
-    "note": "Kamal's heartbreak classic — that final scene at the level crossing",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "Kamal and Sridevi's heartbreak on a hill — that climax"
+   },
+   {
+    "year": 1983,
+    "film": "Mundhanai Mudichu",
+    "confidence": "likely",
+    "note": "Bhagyaraj's village comedy — the sleeper that outran the stars"
+   },
+   {
+    "year": 1984,
+    "film": "Nallavanukku Nallavan",
+    "confidence": "likely",
+    "note": "Rajinikanth's dependable mass entertainer wins the year"
+   },
+   {
+    "year": 1985,
+    "film": "Padikkadavan",
+    "confidence": "verified",
+    "note": "Rajinikanth and Sivaji Ganesan share one screen — fans delirious"
    },
    {
     "year": 1986,
     "film": "Mouna Ragam",
-    "note": "Mani Ratnam arrives; the modern Tamil romance is born",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "Mani Ratnam's marriage of strangers redefined Tamil romance"
    },
    {
     "year": 1987,
     "film": "Nayakan",
-    "note": "Kamal's godfather — in TIME's all-time 100 films",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "Kamal Haasan's Velu Naicker — in Time's all-time hundred films"
+   },
+   {
+    "year": 1988,
+    "film": "Agni Natchathiram",
+    "confidence": "likely",
+    "note": "Mani Ratnam's stylish half-brothers, Ilaiyaraaja's chartbusting beats"
    },
    {
     "year": 1989,
     "film": "Apoorva Sagodharargal",
-    "note": "Kamal as Appu — every child of 1989 remembers",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "Kamal Haasan's Appu — pint-sized avenger, giant box office"
+   },
+   {
+    "year": 1990,
+    "film": "Michael Madana Kama Rajan",
+    "confidence": "likely",
+    "note": "Kamal times four in a screwball classic of quadruplets"
    },
    {
     "year": 1991,
     "film": "Thalapathi",
-    "note": "Rajini and Mani Ratnam, Karna retold in the slums",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "Rajinikanth and Mani Ratnam retell Karna under golden light"
    },
    {
     "year": 1992,
-    "film": "Roja",
-    "note": "A. R. Rahman erupts; India gets a new sound",
-    "confidence": "likely"
+    "film": "Annaamalai",
+    "confidence": "likely",
+    "note": "Rajinikanth's milkman rises — 'vetri nichayam' echoed for months"
+   },
+   {
+    "year": 1993,
+    "film": "Gentleman",
+    "confidence": "likely",
+    "note": "Shankar's debut vigilante spectacle, powered by A. R. Rahman"
+   },
+   {
+    "year": 1994,
+    "film": "Kadhalan",
+    "confidence": "likely",
+    "note": "Prabhudeva's 'Mukkabla' moves — Rahman made the nation dance"
    },
    {
     "year": 1995,
     "film": "Baashha",
-    "note": "Auto-driver with a past — the definitive Rajini mass film",
-    "confidence": "likely"
+    "confidence": "verified",
+    "note": "Rajinikanth's auto-driver with a past — dialogue worship begins"
    },
    {
     "year": 1996,
     "film": "Indian",
-    "note": "Kamal doubles as freedom fighter and vigilante",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "Kamal Haasan doubles as freedom-fighter avenger in Shankar's biggest yet"
+   },
+   {
+    "year": 1997,
+    "film": "Arunachalam",
+    "confidence": "likely",
+    "note": "Rajinikanth must spend thirty crores in thirty days — gleefully"
+   },
+   {
+    "year": 1998,
+    "film": "Jeans",
+    "confidence": "likely",
+    "note": "Shankar's most expensive spectacle, India's Oscar entry that year"
    },
    {
     "year": 1999,
     "film": "Padayappa",
-    "note": "'En vazhi thani vazhi' — Rajini at full wattage",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "Rajinikanth versus Ramya Krishnan's Neelambari — box office earthquake"
    },
    {
     "year": 2000,
-    "film": "Alaipayuthey",
-    "note": "Mani Ratnam's marriage story; Rahman's spring-water score",
-    "confidence": "likely"
+    "film": "Kushi",
+    "confidence": "likely",
+    "note": "Vijay and Jyothika's lovers' quarrel charms the new millennium"
+   },
+   {
+    "year": 2001,
+    "film": "Dheena",
+    "confidence": "likely",
+    "note": "Ajith becomes 'Thala' — the title stuck forever"
+   },
+   {
+    "year": 2002,
+    "film": "Gemini",
+    "confidence": "likely",
+    "note": "Vikram's gangster and 'O Podu' — the year's runaway craze"
+   },
+   {
+    "year": 2003,
+    "film": "Saamy",
+    "confidence": "likely",
+    "note": "Vikram's whistle-worthy cop Aarusaamy ruled the year"
    },
    {
     "year": 2004,
     "film": "Ghilli",
-    "note": "Vijay sprints into superstardom",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "Vijay's kabaddi-and-chase blockbuster, the decade's rewatch champion"
    },
    {
     "year": 2005,
     "film": "Chandramukhi",
-    "note": "Rajini versus the haunted room; a year-long run",
-    "confidence": "likely"
+    "confidence": "verified",
+    "note": "Rajinikanth's ghost-taming comeback grossed a record eighty crores"
+   },
+   {
+    "year": 2006,
+    "film": "Varalaru",
+    "confidence": "likely",
+    "note": "Ajith in triple roles powers the year's top grosser"
    },
    {
     "year": 2007,
     "film": "Sivaji: The Boss",
-    "note": "Shankar + Rajini — the costliest Indian film of its day",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "Rajinikanth and Shankar mint South India's costliest blockbuster"
    },
    {
     "year": 2008,
     "film": "Dasavathaaram",
-    "note": "Kamal Haasan plays ten roles",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "Kamal Haasan plays ten roles — audacity as event cinema"
+   },
+   {
+    "year": 2009,
+    "film": "Ayan",
+    "confidence": "likely",
+    "note": "Suriya's slick smuggling thriller outran everything that year"
    },
    {
     "year": 2010,
     "film": "Enthiran",
-    "note": "Rajini the robot — Indian cinema goes sci-fi blockbuster",
-    "confidence": "likely"
+    "confidence": "verified",
+    "note": "Rajinikanth the robot — Indian cinema's biggest spectacle to date"
    }
   ],
   "ml": [
    {
+    "year": 1950,
+    "film": "Nallathanka",
+    "confidence": "likely",
+    "note": "Udaya Studios' folk-tale hit as Kerala's box office awakens"
+   },
+   {
+    "year": 1951,
+    "film": "Jeevitha Nauka",
+    "confidence": "verified",
+    "note": "Malayalam's first blockbuster — 284 days, Thikkurissy at the helm"
+   },
+   {
+    "year": 1952,
+    "film": "Marumakal",
+    "confidence": "likely",
+    "note": "A young Prem Nazir steps before the cameras for the first time"
+   },
+   {
+    "year": 1953,
+    "film": "Thiramala",
+    "confidence": "likely",
+    "note": "An earnest social drama from cinema's homespun early years"
+   },
+   {
     "year": 1954,
     "film": "Neelakuyil",
-    "note": "The film that put Malayalam cinema on the national map",
-    "confidence": "likely"
+    "confidence": "verified",
+    "note": "Sathyan and Miss Kumari in the first authentic Malayalam classic"
+   },
+   {
+    "year": 1955,
+    "film": "Harishchandra",
+    "confidence": "likely",
+    "note": "Thikkurissy's truth-bound king, the year's devotional favourite"
+   },
+   {
+    "year": 1956,
+    "film": "Avar Unarunnu",
+    "confidence": "likely",
+    "note": "A social awakening tale from Malayalam's studio-era stirrings"
+   },
+   {
+    "year": 1957,
+    "film": "Padatha Painkili",
+    "confidence": "likely",
+    "note": "The year's runaway popular hit, romance in full song"
+   },
+   {
+    "year": 1958,
+    "film": "Randidangazhi",
+    "confidence": "likely",
+    "note": "Thakazhi's paddy-field novel reaches the screen with force"
+   },
+   {
+    "year": 1959,
+    "film": "Chaturangam",
+    "confidence": "likely",
+    "note": "A lean year's standout from cinema's slow-building decade"
+   },
+   {
+    "year": 1960,
+    "film": "Umma",
+    "confidence": "likely",
+    "note": "Baburaj's honeyed songs made this Muslim social a runaway hit"
+   },
+   {
+    "year": 1961,
+    "film": "Mudiyanaya Puthran",
+    "confidence": "likely",
+    "note": "Sathyan smoulders in Thoppil Bhasi's fiery social drama"
+   },
+   {
+    "year": 1962,
+    "film": "Palattu Koman",
+    "confidence": "likely",
+    "note": "Sathyan and Prem Nazir headline a hit from Udaya's heyday"
+   },
+   {
+    "year": 1963,
+    "film": "Ninamaninja Kalpadukal",
+    "confidence": "likely",
+    "note": "Acclaimed drama that won national notice for Malayalam"
+   },
+   {
+    "year": 1964,
+    "film": "Bhargavi Nilayam",
+    "confidence": "likely",
+    "note": "Basheer's ghost Bhargavi haunts Madhu — a spectral classic"
    },
    {
     "year": 1965,
     "film": "Chemmeen",
-    "note": "Kerala's sea-spray classic — first South film to win the President's Gold Medal",
-    "confidence": "likely"
+    "confidence": "verified",
+    "note": "Karuthamma's forbidden shore — the South's first President's Gold Medal winner"
+   },
+   {
+    "year": 1966,
+    "film": "Iruttinte Athmavu",
+    "confidence": "likely",
+    "note": "Prem Nazir's mad Velayudhan — the Evergreen Hero's finest hour"
+   },
+   {
+    "year": 1967,
+    "film": "Ramanan",
+    "confidence": "likely",
+    "note": "Prem Nazir sings Changampuzha's beloved tragic pastoral ballad"
+   },
+   {
+    "year": 1968,
+    "film": "Thulabharam",
+    "confidence": "likely",
+    "note": "Sharada's devastating mother act won the National Award"
+   },
+   {
+    "year": 1969,
+    "film": "Adimakal",
+    "confidence": "likely",
+    "note": "Prem Nazir and Sheela in Sethumadhavan's acclaimed drama"
+   },
+   {
+    "year": 1970,
+    "film": "Ningalenne Communistakki",
+    "confidence": "likely",
+    "note": "Thoppil Bhasi's red-flag stage legend storms the screen"
+   },
+   {
+    "year": 1971,
+    "film": "Anubhavangal Paalichakal",
+    "confidence": "likely",
+    "note": "Sathyan's haunting farewell, released in the year of his passing"
+   },
+   {
+    "year": 1972,
+    "film": "Chembarathi",
+    "confidence": "likely",
+    "note": "P. N. Menon's tender village romance, a surprise smash"
+   },
+   {
+    "year": 1973,
+    "film": "Nirmalyam",
+    "confidence": "likely",
+    "note": "M. T.'s debut; P. J. Antony's oracle won India's top honours"
+   },
+   {
+    "year": 1974,
+    "film": "Chattakari",
+    "confidence": "likely",
+    "note": "Lakshmi's Anglo-Indian romance seduced and scandalised all Kerala"
+   },
+   {
+    "year": 1975,
+    "film": "Swami Ayyappan",
+    "confidence": "likely",
+    "note": "Devotional blockbuster that sent pilgrims streaming to Sabarimala"
+   },
+   {
+    "year": 1976,
+    "film": "Themmadi Velappan",
+    "confidence": "likely",
+    "note": "Prem Nazir rules the marquee at his record-breaking peak"
+   },
+   {
+    "year": 1977,
+    "film": "Itha Ivide Vare",
+    "confidence": "likely",
+    "note": "I. V. Sasi's brooding revenge drama packed the houses"
+   },
+   {
+    "year": 1978,
+    "film": "Avalude Ravukal",
+    "confidence": "likely",
+    "note": "I. V. Sasi's bold Seema starrer became a cultural flashpoint"
+   },
+   {
+    "year": 1979,
+    "film": "Sarapancharam",
+    "confidence": "likely",
+    "note": "Jayan's daredevil machismo ignites the Malayalam action era"
+   },
+   {
+    "year": 1980,
+    "film": "Manjil Virinja Pookkal",
+    "confidence": "likely",
+    "note": "Fazil's debut hit — a silky villain named Mohanlal arrives"
+   },
+   {
+    "year": 1981,
+    "film": "Kolilakkam",
+    "confidence": "likely",
+    "note": "Action king Jayan's final film, released after his tragic death"
+   },
+   {
+    "year": 1982,
+    "film": "Yavanika",
+    "confidence": "likely",
+    "note": "K. G. George's drumbeat murder mystery, a modern classic"
+   },
+   {
+    "year": 1983,
+    "film": "Koodevide",
+    "confidence": "likely",
+    "note": "Padmarajan's piercing love triangle with a rising Mammootty"
+   },
+   {
+    "year": 1984,
+    "film": "My Dear Kuttichathan",
+    "confidence": "likely",
+    "note": "India's first 3D film — glasses on, Kerala gasped"
+   },
+   {
+    "year": 1985,
+    "film": "Yathra",
+    "confidence": "likely",
+    "note": "Mammootty's wrenching prison romance, tears in every talkie"
    },
    {
     "year": 1986,
     "film": "Rajavinte Makan",
-    "note": "Mohanlal becomes The Complete Actor",
-    "confidence": "likely"
+    "confidence": "verified",
+    "note": "Mohanlal becomes 'The Emperor' — superstardom starts here"
    },
    {
     "year": 1987,
     "film": "Nadodikkattu",
-    "note": "Mohanlal and Sreenivasan — the unemployment comedy Kerala never stopped quoting",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "Mohanlal and Sreenivasan's Dasan and Vijayan — comedy immortality"
    },
    {
     "year": 1988,
     "film": "Chithram",
-    "note": "Ran 366 days straight — a Kerala record",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "Priyadarshan–Mohanlal comedy gold that ran a full year"
    },
    {
     "year": 1989,
     "film": "Kireedam",
-    "note": "Mohanlal's broken-dream policeman's son; a generation wept",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "Mohanlal's broken Sethumadhavan, an acting landmark"
+   },
+   {
+    "year": 1990,
+    "film": "His Highness Abdullah",
+    "confidence": "likely",
+    "note": "Mohanlal sings his way into a palace of intrigue"
    },
    {
     "year": 1991,
-    "film": "Godfather",
-    "note": "Feuding families, endless laughs — ran over a year",
-    "confidence": "likely"
+    "film": "Kilukkam",
+    "confidence": "likely",
+    "note": "Mohanlal, Revathi and Ooty mischief — the decade's biggest laugh"
+   },
+   {
+    "year": 1992,
+    "film": "Yoddha",
+    "confidence": "likely",
+    "note": "Mohanlal's Kathmandu romp with A. R. Rahman's cult score"
    },
    {
     "year": 1993,
     "film": "Manichitrathazhu",
-    "note": "The psychological classic remade by every other industry",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "Shobana's Nagavalli — Fazil's psychological classic, a national treasure"
+   },
+   {
+    "year": 1994,
+    "film": "Thenmavin Kombath",
+    "confidence": "likely",
+    "note": "Mohanlal–Priyadarshan comedy gold under the mango bough"
+   },
+   {
+    "year": 1995,
+    "film": "Spadikam",
+    "confidence": "verified",
+    "note": "Mohanlal's Aadu Thoma — chisel, swagger, thunderous applause"
+   },
+   {
+    "year": 1996,
+    "film": "Hitler",
+    "confidence": "likely",
+    "note": "Mammootty as the iron big brother of five sisters"
+   },
+   {
+    "year": 1997,
+    "film": "Aaraam Thampuran",
+    "confidence": "likely",
+    "note": "Mohanlal storms the kovilakam — feudal nostalgia at full blast"
+   },
+   {
+    "year": 1998,
+    "film": "Harikrishnans",
+    "confidence": "likely",
+    "note": "Mohanlal and Mammootty together — Kerala's dream double bill"
+   },
+   {
+    "year": 1999,
+    "film": "Friends",
+    "confidence": "likely",
+    "note": "Jayaram leads the year's biggest crowd-pleaser about friendship"
    },
    {
     "year": 2000,
     "film": "Narasimham",
-    "note": "Mohanlal mass mode; Mollywood learns the word blockbuster",
-    "confidence": "likely"
+    "confidence": "verified",
+    "note": "Mohanlal's mundu-flick and thunder dialogue — a mass avalanche"
+   },
+   {
+    "year": 2001,
+    "film": "Raavanaprabhu",
+    "confidence": "verified",
+    "note": "Mohanlal doubles up in Devasuram's fiery sequel"
+   },
+   {
+    "year": 2002,
+    "film": "Meesa Madhavan",
+    "confidence": "verified",
+    "note": "Dileep's lovable thief steals hearts and box office records"
+   },
+   {
+    "year": 2003,
+    "film": "Balettan",
+    "confidence": "verified",
+    "note": "Mohanlal's beloved big-brother drama tops the year"
+   },
+   {
+    "year": 2004,
+    "film": "Sethurama Iyer CBI",
+    "confidence": "verified",
+    "note": "Mammootty's iciest detective returns; Kerala leans in"
+   },
+   {
+    "year": 2005,
+    "film": "Rajamanikyam",
+    "confidence": "verified",
+    "note": "Mammootty's Thiruvananthapuram slang becomes the year's catchphrase"
    },
    {
     "year": 2006,
     "film": "Classmates",
-    "note": "The campus reunion that started the nostalgia wave",
-    "confidence": "likely"
+    "confidence": "verified",
+    "note": "Prithviraj-led campus reunion that made all Kerala nostalgic"
+   },
+   {
+    "year": 2007,
+    "film": "Mayavi",
+    "confidence": "verified",
+    "note": "Mammootty's mass comedy caper tops the year"
+   },
+   {
+    "year": 2008,
+    "film": "Twenty:20",
+    "confidence": "verified",
+    "note": "Every Malayalam star on one screen — for charity, for history"
+   },
+   {
+    "year": 2009,
+    "film": "Kerala Varma Pazhassi Raja",
+    "confidence": "verified",
+    "note": "Mammootty's warrior king in M. T.'s sweeping historical epic"
+   },
+   {
+    "year": 2010,
+    "film": "Pokkiri Raja",
+    "confidence": "verified",
+    "note": "Mammootty and Prithviraj's brother act rules the box office"
    }
   ],
   "te": [
    {
+    "year": 1950,
+    "film": "Shavukaru",
+    "note": "Vijaya Productions' debut; young N. T. Rama Rao under L. V. Prasad",
+    "confidence": "likely"
+   },
+   {
     "year": 1951,
     "film": "Patala Bhairavi",
-    "note": "NTR and the sorcerer — fantasy filmmaking decades ahead",
+    "note": "K. V. Reddy's fantasy made NTR a matinee god overnight",
+    "confidence": "verified"
+   },
+   {
+    "year": 1952,
+    "film": "Pelli Chesi Choodu",
+    "note": "L. V. Prasad's wedding comedy with NTR, ANR and Savitri sparkling",
+    "confidence": "likely"
+   },
+   {
+    "year": 1953,
+    "film": "Devadasu",
+    "note": "ANR and Savitri's doomed romance; Ghantasala's songs still ache",
+    "confidence": "likely"
+   },
+   {
+    "year": 1954,
+    "film": "Vipra Narayana",
+    "note": "ANR as the devotee-poet; Bhanumathi's voice carried the whole year",
     "confidence": "likely"
    },
    {
     "year": 1955,
     "film": "Missamma",
-    "note": "NTR, ANR and Savitri in one frame",
+    "note": "Savitri, NTR and ANR in L. V. Prasad's evergreen comedy",
+    "confidence": "likely"
+   },
+   {
+    "year": 1956,
+    "film": "Tenali Ramakrishna",
+    "note": "ANR as the witty court poet beside NTR's Krishnadevaraya",
     "confidence": "likely"
    },
    {
     "year": 1957,
     "film": "Mayabazar",
-    "note": "Voted India's greatest film ever in a CNN-IBN poll — Ghatotkacha's feast",
+    "note": "K. V. Reddy's masterpiece; SVR's Ghatotkacha remains Telugu cinema's Everest",
+    "confidence": "verified"
+   },
+   {
+    "year": 1958,
+    "film": "Bhookailas",
+    "note": "NTR's singing Ravana carried mythological cinema to new heights",
+    "confidence": "likely"
+   },
+   {
+    "year": 1959,
+    "film": "Jayabheri",
+    "note": "ANR's rebel musician; Ghantasala and P. Susheela in full flow",
+    "confidence": "likely"
+   },
+   {
+    "year": 1960,
+    "film": "Sri Venkateswara Mahatmyam",
+    "note": "NTR as Lord Venkateswara; devotees garlanded the cinema screens",
+    "confidence": "likely"
+   },
+   {
+    "year": 1961,
+    "film": "Jagadeka Veeruni Katha",
+    "note": "K. V. Reddy's fantasy; NTR charming four celestial princesses",
+    "confidence": "likely"
+   },
+   {
+    "year": 1962,
+    "film": "Gundamma Katha",
+    "note": "NTR, ANR and Savitri in Vijaya's forever-rewatched family comedy",
     "confidence": "likely"
    },
    {
     "year": 1963,
     "film": "Lava Kusa",
-    "note": "First Telugu colour film; mythological box-office thunder",
+    "note": "First full-colour Telugu blockbuster; NTR's Rama ran for years",
+    "confidence": "likely"
+   },
+   {
+    "year": 1964,
+    "film": "Ramudu Bheemudu",
+    "note": "NTR's double role set Indian cinema's twin-brother template",
+    "confidence": "likely"
+   },
+   {
+    "year": 1965,
+    "film": "Pandava Vanavasam",
+    "note": "NTR's thundering Bhima in Kamalakara Kameswara Rao's epic",
+    "confidence": "verified"
+   },
+   {
+    "year": 1966,
+    "film": "Navaratri",
+    "note": "ANR in nine roles across one dazzling, moonlit night",
+    "confidence": "likely"
+   },
+   {
+    "year": 1967,
+    "film": "Ummadi Kutumbam",
+    "note": "NTR anchoring a sprawling joint-family tearjerker, a huge hit",
+    "confidence": "likely"
+   },
+   {
+    "year": 1968,
+    "film": "Sudigundalu",
+    "note": "Adurthi Subba Rao and ANR's conscience-shaking courtroom classic",
+    "confidence": "likely"
+   },
+   {
+    "year": 1969,
+    "film": "Adrushtavanthulu",
+    "note": "ANR's crowd-pleasing comedy-drama danced past silver jubilee",
+    "confidence": "likely"
+   },
+   {
+    "year": 1970,
+    "film": "Kodalu Diddina Kapuram",
+    "note": "NTR family drama that carried the National Award home",
+    "confidence": "likely"
+   },
+   {
+    "year": 1971,
+    "film": "Prem Nagar",
+    "note": "ANR and Vanisri's rain-soaked palace romance, a monster hit",
+    "confidence": "likely"
+   },
+   {
+    "year": 1972,
+    "film": "Pandanti Kapuram",
+    "note": "Krishna's ensemble family saga crowned with the National Award",
+    "confidence": "verified"
+   },
+   {
+    "year": 1973,
+    "film": "Devudu Chesina Manushulu",
+    "note": "NTR in a lost-and-found masala storm that packed halls",
+    "confidence": "likely"
+   },
+   {
+    "year": 1974,
+    "film": "Alluri Seetharama Raju",
+    "note": "Krishna as the revolutionary; first Telugu CinemaScope epic",
+    "confidence": "likely"
+   },
+   {
+    "year": 1975,
+    "film": "Mutyala Muggu",
+    "note": "Bapu's pearl-pretty Ramayana retelling; Rao Gopal Rao's villainy immortal",
+    "confidence": "likely"
+   },
+   {
+    "year": 1976,
+    "film": "Siri Siri Muvva",
+    "note": "K. Viswanath, Jaya Prada, and anklets that learned to speak",
+    "confidence": "likely"
+   },
+   {
+    "year": 1977,
+    "film": "Adavi Ramudu",
+    "note": "NTR and K. Raghavendra Rao rewrote the box-office record books",
+    "confidence": "likely"
+   },
+   {
+    "year": 1978,
+    "film": "Maro Charitra",
+    "note": "K. Balachander's Kamal Haasan tragedy; forbidden young love, unforgettable end",
+    "confidence": "likely"
+   },
+   {
+    "year": 1979,
+    "film": "Vetagadu",
+    "note": "NTR's forest romp with Sridevi, Raghavendra Rao's runaway crowd-pleaser",
     "confidence": "likely"
    },
    {
     "year": 1980,
     "film": "Sankarabharanam",
-    "note": "A classical-music film that outran every mass entertainer",
+    "note": "K. Viswanath's classical-music miracle; Somayajulu turned raga into rapture",
+    "confidence": "verified"
+   },
+   {
+    "year": 1981,
+    "film": "Premabhishekam",
+    "note": "Dasari's tragic ANR romance ran a year-long theatrical marathon",
+    "confidence": "likely"
+   },
+   {
+    "year": 1982,
+    "film": "Bobbili Puli",
+    "note": "NTR's roaring soldier — his last blaze before entering politics",
     "confidence": "likely"
    },
    {
     "year": 1983,
     "film": "Khaidi",
-    "note": "Chiranjeevi breaks out — the angry young Telugu decade begins",
+    "note": "Chiranjeevi's ferocious breakout; the Megastar era begins right here",
     "confidence": "likely"
+   },
+   {
+    "year": 1984,
+    "film": "Challenge",
+    "note": "Chiranjeevi bets his future in Kodandarami Reddy's slick hit",
+    "confidence": "likely"
+   },
+   {
+    "year": 1985,
+    "film": "Mayuri",
+    "note": "Sudha Chandran dancing on a prosthetic leg into history",
+    "confidence": "likely"
+   },
+   {
+    "year": 1986,
+    "film": "Swathi Muthyam",
+    "note": "K. Viswanath's Oscar-entry fable with Kamal Haasan's innocent hero",
+    "confidence": "likely"
+   },
+   {
+    "year": 1987,
+    "film": "Pasivadi Pranam",
+    "note": "Chiranjeevi guards a child witness; hearts and collections melted",
+    "confidence": "likely"
+   },
+   {
+    "year": 1988,
+    "film": "Rudraveena",
+    "note": "Chiranjeevi's reformer-musician for K. Balachander won national honours",
+    "confidence": "likely"
+   },
+   {
+    "year": 1989,
+    "film": "Siva",
+    "note": "Ram Gopal Varma's debut; Nagarjuna's cycle chain rewired Telugu cinema",
+    "confidence": "verified"
    },
    {
     "year": 1990,
     "film": "Jagadeka Veerudu Athiloka Sundari",
-    "note": "Chiranjeevi and a goddess on earth — pure magic",
+    "note": "Chiranjeevi romances Sridevi's goddess in Raghavendra Rao's fantasy blockbuster",
+    "confidence": "likely"
+   },
+   {
+    "year": 1991,
+    "film": "Gang Leader",
+    "note": "Chiranjeevi's vengeance-with-laughs smash, the year's biggest crowd magnet",
     "confidence": "likely"
    },
    {
     "year": 1992,
     "film": "Gharana Mogudu",
-    "note": "First Telugu film to gross ₹10 crore; Chiranjeevi is Megastar",
+    "note": "Chiranjeevi, first Telugu star to gross a ten-crore share",
+    "confidence": "likely"
+   },
+   {
+    "year": 1993,
+    "film": "Mutha Mestri",
+    "note": "Chiranjeevi's market porter turned people's leader, a huge hit",
+    "confidence": "likely"
+   },
+   {
+    "year": 1994,
+    "film": "Bhairava Dweepam",
+    "note": "Balakrishna revived the folklore-fantasy genre in glittering style",
+    "confidence": "likely"
+   },
+   {
+    "year": 1995,
+    "film": "Alluda Majaka",
+    "note": "Chiranjeevi's rowdy comic caper, the year's biggest talking point",
+    "confidence": "likely"
+   },
+   {
+    "year": 1996,
+    "film": "Ninne Pelladata",
+    "note": "Krishna Vamsi's fresh romance; Nagarjuna and Tabu charmed families",
+    "confidence": "likely"
+   },
+   {
+    "year": 1997,
+    "film": "Annamayya",
+    "note": "Nagarjuna as the saint-composer; Raghavendra Rao's devotional blockbuster",
+    "confidence": "likely"
+   },
+   {
+    "year": 1998,
+    "film": "Tholi Prema",
+    "note": "Pawan Kalyan's gentle first-love tale won the National Award",
+    "confidence": "likely"
+   },
+   {
+    "year": 1999,
+    "film": "Samarasimha Reddy",
+    "note": "Balakrishna's faction fury launched the Rayalaseema action wave",
+    "confidence": "likely"
+   },
+   {
+    "year": 2000,
+    "film": "Nuvve Kavali",
+    "note": "Friendship-turned-love teen hit; a National Award, new stars born",
+    "confidence": "likely"
+   },
+   {
+    "year": 2001,
+    "film": "Narasimha Naidu",
+    "note": "Balakrishna's faction blockbuster out-thundered everything else that year",
     "confidence": "likely"
    },
    {
     "year": 2002,
     "film": "Indra",
-    "note": "Chiranjeevi thunder at the peak of mass cinema",
+    "note": "Chiranjeevi's Rayalaseema epic smashed every Telugu record standing",
     "confidence": "likely"
    },
    {
     "year": 2003,
-    "film": "Simhadri",
-    "note": "A young Rajamouli and Jr NTR announce themselves",
+    "film": "Tagore",
+    "note": "Chiranjeevi's anti-corruption crusader, the year's forty-five-crore champion",
+    "confidence": "verified"
+   },
+   {
+    "year": 2004,
+    "film": "Arya",
+    "note": "Sukumar's debut; Allu Arjun's one-sided love became cult scripture",
+    "confidence": "likely"
+   },
+   {
+    "year": 2005,
+    "film": "Chatrapathi",
+    "note": "S. S. Rajamouli unleashed Prabhas on tyrants; a mass classic",
     "confidence": "likely"
    },
    {
     "year": 2006,
     "film": "Pokiri",
-    "note": "Mahesh Babu's era-defining hit",
+    "note": "Puri Jagannadh and Mahesh Babu's undercover cop rewrote the records",
+    "confidence": "likely"
+   },
+   {
+    "year": 2007,
+    "film": "Yamadonga",
+    "note": "Rajamouli sent Jr NTR to Yama's court; riotous fantasy hit",
+    "confidence": "likely"
+   },
+   {
+    "year": 2008,
+    "film": "Jalsa",
+    "note": "Trivikram's breezy Pawan Kalyan entertainer topped the year's charts",
     "confidence": "likely"
    },
    {
     "year": 2009,
     "film": "Magadheera",
-    "note": "Rajamouli reincarnation epic — the road to Baahubali starts here",
+    "note": "Rajamouli's reincarnation epic; Ram Charan rode to one-fifty crore",
+    "confidence": "verified"
+   },
+   {
+    "year": 2010,
+    "film": "Simha",
+    "note": "Balakrishna's comeback roar in Boyapati Srinu's debut blockbuster",
     "confidence": "likely"
    }
   ],
   "kn": [
    {
+    "year": 1950,
+    "film": "Shaneeshwara Mahatme",
+    "note": "Kemparaj Urs' mythological, one of just two Kannada releases",
+    "confidence": "verified"
+   },
+   {
+    "year": 1951,
+    "film": "Jaganmohini",
+    "note": "D. Shankar Singh's fantasy, first Kannada film to run hundred days",
+    "confidence": "verified"
+   },
+   {
+    "year": 1952,
+    "film": "Sri Srinivasa Kalyana",
+    "note": "The year's only Kannada film; a pre-stardom Rajkumar glimpsed",
+    "confidence": "verified"
+   },
+   {
+    "year": 1953,
+    "film": "Gunasagari",
+    "note": "H. L. N. Simha's hit with Pandari Bai and Honnappa Bhagavathar",
+    "confidence": "verified"
+   },
+   {
     "year": 1954,
     "film": "Bedara Kannappa",
-    "note": "Dr. Rajkumar debuts — Kannada cinema finds its Annavru",
+    "note": "Rajkumar's debut ran a full year and won national honours",
+    "confidence": "verified"
+   },
+   {
+    "year": 1955,
+    "film": "Mahakavi Kalidasa",
+    "note": "Honnappa Bhagavathar's poet-saint tale took home national recognition",
+    "confidence": "likely"
+   },
+   {
+    "year": 1956,
+    "film": "Ohileshwara",
+    "note": "Young Rajkumar's devotional; composer G. K. Venkatesh announces himself",
+    "confidence": "likely"
+   },
+   {
+    "year": 1957,
+    "film": "Rayara Sose",
+    "note": "Rajkumar family drama, among the year's most feted films",
+    "confidence": "likely"
+   },
+   {
+    "year": 1958,
+    "film": "Bhookailasa",
+    "note": "AVM's Rajkumar mythological grossed a mighty eighty lakh",
+    "confidence": "verified"
+   },
+   {
+    "year": 1959,
+    "film": "Mahishasura Mardini",
+    "note": "Rajkumar mythological, the decade's first one-crore Kannada grosser",
+    "confidence": "verified"
+   },
+   {
+    "year": 1960,
+    "film": "Ranadheera Kanteerava",
+    "note": "Rajkumar's Mysore warrior; Kannada cinema's first historical super-hit",
+    "confidence": "likely"
+   },
+   {
+    "year": 1961,
+    "film": "Kittur Chennamma",
+    "note": "B. R. Panthulu's warrior queen with B. Saroja Devi in armour",
+    "confidence": "likely"
+   },
+   {
+    "year": 1962,
+    "film": "Bhoodana",
+    "note": "G. V. Iyer directing Rajkumar; the year's most remembered drama",
+    "confidence": "verified"
+   },
+   {
+    "year": 1963,
+    "film": "Santha Thukaram",
+    "note": "Rajkumar as the singing saint, honoured among India's best",
+    "confidence": "likely"
+   },
+   {
+    "year": 1964,
+    "film": "Naandi",
+    "note": "N. Lakshminarayan's realist landmark; Rajkumar in rare art-house turn",
+    "confidence": "likely"
+   },
+   {
+    "year": 1965,
+    "film": "Satya Harishchandra",
+    "note": "Rajkumar's truth-bound king; Hunsur Krishnamurthy's undying classic",
+    "confidence": "likely"
+   },
+   {
+    "year": 1966,
+    "film": "Mantralaya Mahatme",
+    "note": "Rajkumar as saint Raghavendra; pure devotion packed the halls",
+    "confidence": "likely"
+   },
+   {
+    "year": 1967,
+    "film": "Belli Moda",
+    "note": "Puttanna Kanagal's debut; Kalpana announced a whole new sensibility",
+    "confidence": "likely"
+   },
+   {
+    "year": 1968,
+    "film": "Jedara Bale",
+    "note": "Rajkumar as suave agent CID 999 — Karnataka's own Bond",
+    "confidence": "likely"
+   },
+   {
+    "year": 1969,
+    "film": "Gejje Pooje",
+    "note": "Puttanna Kanagal's shattering tale of a devadasi's daughter",
+    "confidence": "likely"
+   },
+   {
+    "year": 1970,
+    "film": "Sri Krishnadevaraya",
+    "note": "Rajkumar crowned emperor in B. R. Panthulu's award-winning historical",
+    "confidence": "likely"
+   },
+   {
+    "year": 1971,
+    "film": "Kasturi Nivasa",
+    "note": "Rajkumar's generous mill owner; ruin never looked so noble",
     "confidence": "likely"
    },
    {
     "year": 1972,
-    "film": "Bangarada Manushya",
-    "note": "Rajkumar's farmer epic ran two straight years",
+    "film": "Bangaarada Manushya",
+    "note": "Rajkumar's farming epic reigned two years, earning three crore",
+    "confidence": "verified"
+   },
+   {
+    "year": 1973,
+    "film": "Gandhada Gudi",
+    "note": "Rajkumar the forest officer; conservation became box-office gold",
+    "confidence": "likely"
+   },
+   {
+    "year": 1974,
+    "film": "Bhootayyana Maga Ayyu",
+    "note": "Siddalingaiah's rustic feud classic with Vishnuvardhan and Lokesh",
     "confidence": "likely"
    },
    {
     "year": 1975,
     "film": "Mayura",
-    "note": "Rajkumar as the Kadamba king — pride of Karnataka",
+    "note": "Rajkumar as the Kadamba founder; historical pride, packed houses",
+    "confidence": "likely"
+   },
+   {
+    "year": 1976,
+    "film": "Premada Kanike",
+    "note": "Rajkumar and Aarathi's romance, the year's runaway favourite",
+    "confidence": "likely"
+   },
+   {
+    "year": 1977,
+    "film": "Sanaadi Appanna",
+    "note": "Rajkumar's shehnai player, breathing Bismillah Khan's actual music",
+    "confidence": "likely"
+   },
+   {
+    "year": 1978,
+    "film": "Shankar Guru",
+    "note": "Rajkumar in triple role; the box office tripled its joy",
+    "confidence": "likely"
+   },
+   {
+    "year": 1979,
+    "film": "Huliya Halina Mevu",
+    "note": "Rajkumar action-drama standing tallest among the year's draws",
+    "confidence": "likely"
+   },
+   {
+    "year": 1980,
+    "film": "Auto Raja",
+    "note": "Shankar Nag's auto driver became the working man's hero",
+    "confidence": "likely"
+   },
+   {
+    "year": 1981,
+    "film": "Antha",
+    "note": "Ambareesh's brutal cop thriller; censors fumed, crowds queued",
+    "confidence": "likely"
+   },
+   {
+    "year": 1982,
+    "film": "Chalisuva Modagalu",
+    "note": "Rajkumar with Saritha and Ambika in Singeetham's tear-soaked hit",
+    "confidence": "likely"
+   },
+   {
+    "year": 1983,
+    "film": "Kaviratna Kalidasa",
+    "note": "Rajkumar as poet Kalidasa; the songs became Kannada folklore",
+    "confidence": "likely"
+   },
+   {
+    "year": 1984,
+    "film": "Bandhana",
+    "note": "Vishnuvardhan and Suhasini's doomed love, Kannada cinema's evergreen weepie",
+    "confidence": "likely"
+   },
+   {
+    "year": 1985,
+    "film": "Bettada Hoovu",
+    "note": "Child Puneeth Rajkumar's National Award-winning mountain flower",
+    "confidence": "likely"
+   },
+   {
+    "year": 1986,
+    "film": "Anuraga Aralithu",
+    "note": "Rajkumar's five-crore chart-topper for director M. S. Rajashekar",
+    "confidence": "verified"
+   },
+   {
+    "year": 1987,
+    "film": "Premaloka",
+    "note": "Ravichandran's candy-coloured campus musical reinvented Kannada romance",
+    "confidence": "likely"
+   },
+   {
+    "year": 1988,
+    "film": "Ranadheera",
+    "note": "Ravichandran's swashbuckling musical kept the Premaloka wave rolling",
+    "confidence": "likely"
+   },
+   {
+    "year": 1989,
+    "film": "Yuddha Kanda",
+    "note": "Ravichandran action-musical at the crest of his showman decade",
+    "confidence": "likely"
+   },
+   {
+    "year": 1990,
+    "film": "Muthina Haara",
+    "note": "Vishnuvardhan and Suhasini in Rajendra Singh Babu's war-torn epic",
+    "confidence": "likely"
+   },
+   {
+    "year": 1991,
+    "film": "Ramachari",
+    "note": "Ravichandran and Malashri's romance ruled the year's charts",
+    "confidence": "likely"
+   },
+   {
+    "year": 1992,
+    "film": "Jeevana Chaitra",
+    "note": "Rajkumar's temperance drama; 'Naadamaya' swept awards and hearts",
+    "confidence": "likely"
+   },
+   {
+    "year": 1993,
+    "film": "Aakasmika",
+    "note": "Rajkumar in T. S. Nagabharana's suspense drama, the year's event",
+    "confidence": "likely"
+   },
+   {
+    "year": 1994,
+    "film": "Odahuttidavaru",
+    "note": "Rajkumar and Ambareesh, two titans finally sharing one frame",
     "confidence": "likely"
    },
    {
     "year": 1995,
     "film": "Om",
-    "note": "Upendra's cult film — re-released more times than anyone can count",
+    "note": "Upendra's real-rowdy saga with Shivarajkumar; a cult still unmatched",
+    "confidence": "verified"
+   },
+   {
+    "year": 1996,
+    "film": "Janumada Jodi",
+    "note": "Shivarajkumar in Nagabharana's folk musical that ran a year",
+    "confidence": "likely"
+   },
+   {
+    "year": 1997,
+    "film": "Amruthavarshini",
+    "note": "Dinesh Babu's rain-laced psychological hit with Ramesh Aravind",
+    "confidence": "likely"
+   },
+   {
+    "year": 1998,
+    "film": "A",
+    "note": "Upendra directing Upendra; a mind-bending love story, instant cult",
+    "confidence": "likely"
+   },
+   {
+    "year": 1999,
+    "film": "Upendra",
+    "note": "Upendra's self-titled shock-piece, Kannada cinema's wildest provocation",
+    "confidence": "likely"
+   },
+   {
+    "year": 2000,
+    "film": "Yajamana",
+    "note": "Vishnuvardhan's patriarch drama swelled into a monumental blockbuster",
+    "confidence": "likely"
+   },
+   {
+    "year": 2001,
+    "film": "Kotigobba",
+    "note": "Vishnuvardhan's twelve-crore chart-topper under director Naganna",
+    "confidence": "verified"
+   },
+   {
+    "year": 2002,
+    "film": "Appu",
+    "note": "Puneeth Rajkumar's adult debut detonated a new star age",
+    "confidence": "likely"
+   },
+   {
+    "year": 2003,
+    "film": "Chandra Chakori",
+    "note": "S. Narayan's musical fairy tale ran a full year",
+    "confidence": "likely"
+   },
+   {
+    "year": 2004,
+    "film": "Apthamitra",
+    "note": "Vishnuvardhan versus Nagavalli's ghost; P. Vasu's thundering blockbuster",
+    "confidence": "likely"
+   },
+   {
+    "year": 2005,
+    "film": "Jogi",
+    "note": "Prem's mother-son tearjerker; Shivarajkumar's career-defining smash",
     "confidence": "likely"
    },
    {
     "year": 2006,
     "film": "Mungaru Male",
-    "note": "The monsoon romance that ran a full year and revived Sandalwood",
+    "note": "Yogaraj Bhat's monsoon romance, first South film past fifty crore",
+    "confidence": "verified"
+   },
+   {
+    "year": 2007,
+    "film": "Duniya",
+    "note": "Soori's debut; Vijay's slum-bred everyman became instant folklore",
     "confidence": "likely"
+   },
+   {
+    "year": 2008,
+    "film": "Gaalipata",
+    "note": "Yogaraj Bhat's breezy Ganesh musical led the year's field",
+    "confidence": "likely"
+   },
+   {
+    "year": 2009,
+    "film": "Raam",
+    "note": "Puneeth Rajkumar's action entertainer topped a quieter year",
+    "confidence": "likely"
+   },
+   {
+    "year": 2010,
+    "film": "Jackie",
+    "note": "Puneeth Rajkumar and Duniya Soori's chase drama, the year's biggest",
+    "confidence": "verified"
    }
   ],
   "bn": [
    {
+    "year": 1950,
+    "film": "Chinnamul",
+    "confidence": "verified",
+    "note": "Nemai Ghosh's Partition-refugee landmark; a young Ritwik Ghatak acted in it."
+   },
+   {
+    "year": 1951,
+    "film": "Barjatri",
+    "confidence": "likely",
+    "note": "Satyen Bose's beloved comedy of a raucous groom's party."
+   },
+   {
+    "year": 1952,
+    "film": "Basu Paribar",
+    "confidence": "likely",
+    "note": "Early Uttam Kumar family drama that hinted at the stardom to come."
+   },
+   {
+    "year": 1953,
+    "film": "Sharey Chuattar",
+    "confidence": "likely",
+    "note": "The boarding-house comedy that first paired Uttam Kumar and Suchitra Sen."
+   },
+   {
+    "year": 1954,
+    "film": "Agni Pariksha",
+    "confidence": "likely",
+    "note": "The Uttam-Suchitra romance that made them Bengal's eternal screen couple."
+   },
+   {
     "year": 1955,
     "film": "Pather Panchali",
-    "note": "Satyajit Ray's debut — Cannes bows to Apu and Durga",
-    "confidence": "likely"
+    "confidence": "verified",
+    "note": "Satyajit Ray's debut announced Indian cinema to the world."
+   },
+   {
+    "year": 1956,
+    "film": "Aparajito",
+    "confidence": "verified",
+    "note": "Ray's Apu sequel won the Golden Lion at Venice."
    },
    {
     "year": 1957,
     "film": "Harano Sur",
-    "note": "Uttam-Suchitra at their most luminous",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "Uttam-Suchitra's amnesia romance; 'Tumi Je Amar' still echoes."
+   },
+   {
+    "year": 1958,
+    "film": "Jalsaghar",
+    "confidence": "verified",
+    "note": "Ray's crumbling zamindar and his last night of music."
+   },
+   {
+    "year": 1959,
+    "film": "Apur Sansar",
+    "confidence": "verified",
+    "note": "The Apu Trilogy closes; Soumitra Chatterjee and Sharmila Tagore debut."
    },
    {
     "year": 1960,
     "film": "Meghe Dhaka Tara",
-    "note": "Ghatak's partition masterpiece",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "Ritwik Ghatak's shattering refugee elegy — 'Dada, ami banchte chai!'"
    },
    {
     "year": 1961,
     "film": "Saptapadi",
-    "note": "THE Uttam-Suchitra romance",
-    "confidence": "likely"
+    "confidence": "likely",
+    "note": "Uttam-Suchitra at their peak; Ray's Teen Kanya marked the Tagore centenary the same year."
+   },
+   {
+    "year": 1962,
+    "film": "Abhijan",
+    "confidence": "verified",
+    "note": "Soumitra drove Ray's taxi noir; Kanchenjungha brought Ray's first colour."
+   },
+   {
+    "year": 1963,
+    "film": "Mahanagar",
+    "confidence": "verified",
+    "note": "Ray's working woman of Calcutta; Suchitra Sen won at Moscow for Saat Pake Bandha."
    },
    {
     "year": 1964,
     "film": "Charulata",
-    "note": "Ray's own favourite of all his films",
-    "confidence": "likely"
+    "confidence": "verified",
+    "note": "Ray's own favourite — Tagore's lonely wife, immortalised."
+   },
+   {
+    "year": 1965,
+    "film": "Subarnarekha",
+    "confidence": "likely",
+    "note": "Ghatak's Partition tragedy, shot in 1962, finally reached screens."
    },
    {
     "year": 1966,
     "film": "Nayak",
-    "note": "Uttam Kumar plays a matinee idol for Ray — meta before meta",
-    "confidence": "likely"
+    "confidence": "verified",
+    "note": "Uttam Kumar played the matinee idol for Ray — myth meeting myth."
+   },
+   {
+    "year": 1967,
+    "film": "Antony Firingee",
+    "confidence": "likely",
+    "note": "Uttam Kumar as the Portuguese-Bengali kobiyal; a folk-poet romance for the ages."
+   },
+   {
+    "year": 1968,
+    "film": "Chowringhee",
+    "confidence": "likely",
+    "note": "Uttam Kumar presides over Hotel Shahjahan in the bestselling novel's hit adaptation."
    },
    {
     "year": 1969,
     "film": "Goopy Gyne Bagha Byne",
-    "note": "Ray's singing-ghost fantasy every Bengali child knows by heart",
-    "confidence": "likely"
+    "confidence": "verified",
+    "note": "Ray's singing-and-drumming fable — Bengal's most beloved fantasy."
+   },
+   {
+    "year": 1970,
+    "film": "Pratidwandi",
+    "confidence": "verified",
+    "note": "Ray's angry young Calcutta; Aranyer Din Ratri arrived the same year."
+   },
+   {
+    "year": 1971,
+    "film": "Seemabaddha",
+    "confidence": "verified",
+    "note": "Ray skewers corporate ambition in boardroom Calcutta."
+   },
+   {
+    "year": 1972,
+    "film": "Calcutta 71",
+    "confidence": "likely",
+    "note": "Mrinal Sen's incendiary chronicle of hunger and rage; Uttam fans had Memsaheb."
+   },
+   {
+    "year": 1973,
+    "film": "Ashani Sanket",
+    "confidence": "verified",
+    "note": "Ray's Bengal-famine elegy won the Golden Bear at Berlin."
    },
    {
     "year": 1974,
     "film": "Sonar Kella",
-    "note": "Feluda rides to Jaisalmer — detective fiction on golden sand",
-    "confidence": "likely"
+    "confidence": "verified",
+    "note": "Feluda hunts the golden fortress — every Bengali childhood's favourite mystery."
+   },
+   {
+    "year": 1975,
+    "film": "Jana Aranya",
+    "confidence": "verified",
+    "note": "Ray's bleak Calcutta finale; Uttam Kumar's Amanush ruled the box office."
+   },
+   {
+    "year": 1976,
+    "film": "Datta",
+    "confidence": "likely",
+    "note": "Suchitra Sen carried Saratchandra's heroine to a major hit."
+   },
+   {
+    "year": 1977,
+    "film": "Ananda Ashram",
+    "confidence": "verified",
+    "note": "Uttam-Sharmila blockbuster that ran 26 weeks; devotional smash Baba Taraknath shared the year."
+   },
+   {
+    "year": 1978,
+    "film": "Ganadevata",
+    "confidence": "likely",
+    "note": "Tarun Majumdar's award-winning Tarashankar epic of village Bengal."
+   },
+   {
+    "year": 1979,
+    "film": "Joi Baba Felunath",
+    "confidence": "verified",
+    "note": "Feluda in Benares, facing Maganlal Meghraj — instantly quotable."
    },
    {
     "year": 1980,
     "film": "Hirak Rajar Deshe",
-    "note": "'Dori dhore maro taan' — satire Bengal still quotes at politicians",
-    "confidence": "likely"
+    "confidence": "verified",
+    "note": "Ray's satire of a tyrant king; the year Bengal lost Uttam Kumar."
+   },
+   {
+    "year": 1981,
+    "film": "Ogo Bodhu Shundori",
+    "confidence": "likely",
+    "note": "Uttam Kumar's posthumous comedy hit — a bittersweet farewell."
+   },
+   {
+    "year": 1982,
+    "film": "Kharij",
+    "confidence": "likely",
+    "note": "Mrinal Sen's domestic reckoning went on to the Jury Prize at Cannes."
+   },
+   {
+    "year": 1983,
+    "film": "Protidan",
+    "confidence": "verified",
+    "note": "Prabhat Roy's hit with Victor Banerjee, Naseeruddin Shah and Sharmila Tagore."
+   },
+   {
+    "year": 1984,
+    "film": "Ghare Baire",
+    "confidence": "verified",
+    "note": "Ray films Tagore's home-and-the-world triangle; premiered at Cannes."
+   },
+   {
+    "year": 1985,
+    "film": "Bhalobasa Bhalobasa",
+    "confidence": "likely",
+    "note": "Tarun Majumdar's musical romance made Tapas Paul and Debashree the pair of the moment."
+   },
+   {
+    "year": 1986,
+    "film": "Anurager Chhowa",
+    "confidence": "likely",
+    "note": "The breakthrough that launched Prosenjit — Tollywood's next three decades."
+   },
+   {
+    "year": 1987,
+    "film": "Guru Dakshina",
+    "confidence": "likely",
+    "note": "Tapas Paul's melodrama whose songs played at every para function."
+   },
+   {
+    "year": 1988,
+    "film": "Chhoto Bou",
+    "confidence": "likely",
+    "note": "Anjan Chowdhury's family drama — the Tollywood masala formula at full power."
+   },
+   {
+    "year": 1989,
+    "film": "Sati",
+    "confidence": "likely",
+    "note": "Aparna Sen directed Shabana Azmi as the mute girl married to a tree."
+   },
+   {
+    "year": 1990,
+    "film": "Ganashatru",
+    "confidence": "verified",
+    "note": "Ray returned after illness with his Ibsen adaptation; Shakha Proshakha followed the same year."
+   },
+   {
+    "year": 1991,
+    "film": "Agantuk",
+    "confidence": "verified",
+    "note": "Ray's final film — the stranger who asks who we really are."
+   },
+   {
+    "year": 1992,
+    "film": "Padma Nadir Majhi",
+    "confidence": "verified",
+    "note": "Goutam Ghose's fisherfolk epic; the year Ray received his honorary Oscar and bid farewell."
+   },
+   {
+    "year": 1993,
+    "film": "Charachar",
+    "confidence": "likely",
+    "note": "Buddhadeb Dasgupta's bird-catcher fable flew to the Berlin festival."
+   },
+   {
+    "year": 1994,
+    "film": "Unishe April",
+    "confidence": "likely",
+    "note": "Rituparno Ghosh's mother-daughter breakthrough won the Golden Lotus."
+   },
+   {
+    "year": 1995,
+    "film": "Yugant",
+    "confidence": "verified",
+    "note": "Aparna Sen's marriage-in-ruins duet with Anjan Dutt and Roopa Ganguly."
+   },
+   {
+    "year": 1996,
+    "film": "Lathi",
+    "confidence": "likely",
+    "note": "Prabhat Roy's stick-wielding patriarch drama struck a Bengali family nerve."
+   },
+   {
+    "year": 1997,
+    "film": "Dahan",
+    "confidence": "likely",
+    "note": "Rituparno Ghosh's unflinching Calcutta drama; its two actresses shared the National Award."
+   },
+   {
+    "year": 1998,
+    "film": "Hothat Brishti",
+    "confidence": "verified",
+    "note": "Basu Chatterjee's cross-border romance charmed both Bengals; Ranokhetro ruled the single screens."
+   },
+   {
+    "year": 1999,
+    "film": "Asukh",
+    "confidence": "likely",
+    "note": "Rituparno's father-daughter chamber piece won the National Award for Best Bengali Film."
+   },
+   {
+    "year": 2000,
+    "film": "Utsab",
+    "confidence": "likely",
+    "note": "Rituparno's Durga Puja homecoming; Uttara won Buddhadeb Dasgupta Best Director at Venice."
+   },
+   {
+    "year": 2001,
+    "film": "Pratibad",
+    "confidence": "likely",
+    "note": "Prosenjit's mass-action juggernaut; Konkona Sen Sharma announced herself in Ek Je Aachhe Kanya."
+   },
+   {
+    "year": 2002,
+    "film": "Sathi",
+    "confidence": "likely",
+    "note": "Jeet's debut blockbuster rebooted the Tollywood romance machine."
+   },
+   {
+    "year": 2003,
+    "film": "Chokher Bali",
+    "confidence": "likely",
+    "note": "Rituparno filmed Tagore with Aishwarya Rai — a national event for Bengali cinema."
+   },
+   {
+    "year": 2004,
+    "film": "Bandhan",
+    "confidence": "likely",
+    "note": "Rabi Kinagi's Jeet-Koel romance, the mass hit of the year."
+   },
+   {
+    "year": 2005,
+    "film": "Herbert",
+    "confidence": "likely",
+    "note": "Suman Mukhopadhyay's cult Herbert won the National Award; Antarmahal stirred controversy."
+   },
+   {
+    "year": 2006,
+    "film": "MLA Fatakeshto",
+    "confidence": "verified",
+    "note": "Mithun's dialogue-spouting political vigilante became instant folklore."
+   },
+   {
+    "year": 2007,
+    "film": "The Bong Connection",
+    "confidence": "likely",
+    "note": "Anjan Dutt's Kolkata-Houston tale; its soundtrack defined cafe Calcutta."
+   },
+   {
+    "year": 2008,
+    "film": "Chirodini Tumi Je Amar",
+    "confidence": "likely",
+    "note": "Raj Chakraborty's debut blockbuster launched Rahul-Priyanka and a new Tollywood wave."
+   },
+   {
+    "year": 2009,
+    "film": "Antaheen",
+    "confidence": "likely",
+    "note": "Won the National Award for Best Feature Film; Dev's Challenge owned the multiplexes."
+   },
+   {
+    "year": 2010,
+    "film": "Autograph",
+    "confidence": "likely",
+    "note": "Srijit Mukherji's debut with Prosenjit reborn — the new-wave Tollywood manifesto."
    }
   ]
  },
@@ -949,44 +2395,206 @@
   {
    "language": "marathi",
    "decade": 1950,
-   "headline": "Shyamchi Aai and the sant tradition",
-   "story": "Shyamchi Aai (1953) won India's first-ever National Film Award; Marathi cinema was the conscience of the young republic."
+   "headline": "Shyamchi Aai (1953) wins India's first Golden Lotus",
+   "story": "Acharya Atre's Shyamchi Aai took the very first National Film Award President's Gold Medal, and Anant Mane's Sangtye Aika (1959) closed the decade by making Jayshree Gadkar the queen of tamasha cinema."
+  },
+  {
+   "language": "marathi",
+   "decade": 1960,
+   "headline": "Tamasha fever: Ek Gaon Bara Bhangadi (1968)",
+   "story": "Lavani ruled the screen — Jayshree Gadkar dazzled in Sawaal Majha Aika! (1964) and Anant Mane's Ek Gaon Bara Bhangadi (1968), with Nilu Phule's sly villagers stealing scenes."
   },
   {
    "language": "marathi",
    "decade": 1970,
-   "headline": "Pinjra and the Dada Kondke decade",
-   "story": "V. Shantaram's Pinjra (1972) and Dada Kondke's record run of silver-jubilee comedies packed Maharashtra's single screens."
+   "headline": "Pinjra (1972) — melodrama meets the new wave",
+   "story": "V. Shantaram's Pinjra broke records while Shantata! Court Chalu Aahe (1971) and Jabbar Patel's Saamna (1975, invited to Berlin) launched Marathi parallel cinema; Dada Kondke's Songadya comedies packed rural talkies."
+  },
+  {
+   "language": "marathi",
+   "decade": 1980,
+   "headline": "Ashi Hi Banwa Banwi (1988) — the comedy cult",
+   "story": "Ashok Saraf, Laxmikant Berde and Sachin turned Marathi film into a laughter factory with Ashi Hi Banwa Banwi and Dhumdhadaka (1985), while Jabbar Patel's Umbartha (1982) gave Smita Patil a landmark."
+  },
+  {
+   "language": "marathi",
+   "decade": 1990,
+   "headline": "Maherchi Sadi (1991) weeps its way into history",
+   "story": "Vijay Kondke's tearjerker with Alka Kubal ran 75 weeks and became the biggest Marathi hit ever to that point; Doghi (1995) and Tu Tithe Mee (1998) kept serious drama alive."
   },
   {
    "language": "marathi",
    "decade": 2000,
-   "headline": "Shwaas revives Marathi cinema",
-   "story": "Shwaas (2004) went to the Oscars as India's official entry and lit the fuse of the Marathi new wave."
+   "headline": "Shwaas (2004) sends Marathi cinema to the Oscars",
+   "story": "Sandeep Sawant's Shwaas won the Golden Lotus and became India's Oscar entry, igniting a renaissance sealed by Jogwa (2009) and Harishchandrachi Factory (2009)."
+  },
+  {
+   "language": "punjabi",
+   "decade": 1950,
+   "headline": "Bhangra (1959) sets Punjab dancing",
+   "story": "A post-Partition industry rebuilt itself on comedies like Posti (1950), Lachhi and Madari, until Jugal Kishore's Bhangra, with Sunder and Nishi and Mohammed Rafi on playback, made bhangra songs a screen staple."
   },
   {
    "language": "punjabi",
    "decade": 1960,
-   "headline": "Nanak Naam Jahaz Hai",
-   "story": "The 1969 devotional landmark — Punjab queued for months; a National Award followed."
+   "headline": "Nanak Naam Jahaz Hai (1969) — the miracle hit",
+   "story": "Released for Guru Nanak's 500th birth anniversary, it ran for months and single-handedly revived Punjabi cinema; Satluj De Kandhe (1964) had earlier won the National Award."
+  },
+  {
+   "language": "punjabi",
+   "decade": 1970,
+   "headline": "The devotional decade",
+   "story": "Nanak Dukhiya Sub Sansar (1970) and Dukh Bhanjan Tera Naam (1974) rode the devotional wave, while Mehar Mittal's comedy and rustic romances seeded the masala style of the decade to come."
   },
   {
    "language": "punjabi",
    "decade": 1980,
-   "headline": "Chann Pardesi",
-   "story": "The 1981 National Award winner anchored Punjabi cinema through a difficult decade."
+   "headline": "Chann Pardesi (1980) wins national respect",
+   "story": "The National Award-winning Chann Pardesi, with Raj Babbar and Amrish Puri, opened a golden run — Gurdas Maan lit up Long Da Lishkara (1986) and Marhi Da Deeva (1989) brought literary gravitas."
+  },
+  {
+   "language": "punjabi",
+   "decade": 1990,
+   "headline": "Shaheed-e-Mohabbat Boota Singh (1999)",
+   "story": "In a decade of near-collapse, Gurdas Maan's Partition love story won the National Award and toured world festivals — the lifeline that kept Punjabi cinema breathing."
+  },
+  {
+   "language": "punjabi",
+   "decade": 2000,
+   "headline": "Jee Aayan Nu (2002) — the NRI revival",
+   "story": "Manmohan Singh's Harbhajan Mann starrers Jee Aayan Nu and Asa Nu Maan Watna Da (2004) rebooted the industry for the diaspora era, with Mel Karade Rabba (2010) passing the baton to a new generation."
+  },
+  {
+   "language": "gujarati",
+   "decade": 1950,
+   "headline": "Malela Jeev (1956) and the family 'socials'",
+   "story": "Manhar Raskapur filmed Pannalal Patel's Malela Jeev with the novelist himself scripting — heir to Gunsundari and Kariyavar, these social dramas of home and marriage carried a lean decade."
+  },
+  {
+   "language": "gujarati",
+   "decade": 1960,
+   "headline": "Mehndi Rang Lagyo (1960)",
+   "story": "The musical hit Mehndi Rang Lagyo and Akhand Saubhagyavati (1963, with Asha Parekh) gave Gujarati cinema its pan-family blockbusters and songs still sung at weddings."
   },
   {
    "language": "gujarati",
    "decade": 1970,
-   "headline": "Gujarati cinema's golden run",
-   "story": "Jesal Toral (1971) kicked off the boom years — mythologicals and folk tales filled Gujarat theatres."
+   "headline": "Jesal Toral (1971) opens the golden age",
+   "story": "Ravindra Dave's saint-outlaw legend was a monster hit, and Upendra Trivedi became the decade's superstar with folk hits like Santu Rangili (1976) and Kashino Dikro (1979)."
+  },
+  {
+   "language": "gujarati",
+   "decade": 1980,
+   "headline": "Bhavni Bhavai (1980) meets the Kanodia wave",
+   "story": "Ketan Mehta's folk-theatre landmark with Naseeruddin Shah won national honours, while Naresh Kanodia's musical melodramas like Dhola Maru (1983) ruled the single screens."
+  },
+  {
+   "language": "gujarati",
+   "decade": 1990,
+   "headline": "Desh Re Joya Dada Pardes Joya (1998) smashes every record",
+   "story": "Govindbhai Patel's NRI family saga earned around Rs 22 crore on Rs 10 tickets — the biggest Gujarati hit of the century; Manvini Bhavai (1993) brought Upendra Trivedi National Award glory."
+  },
+  {
+   "language": "gujarati",
+   "decade": 2000,
+   "headline": "Vikram Thakor and the village blockbuster",
+   "story": "As urban screens faded, Vikram Thakor's rural romances like Ek Var Piyu Ne Malva Aavje (2006) filled heartland cinemas, keeping Dhollywood alive until the urban reboot of the 2010s."
+  },
+  {
+   "language": "odia",
+   "decade": 1950,
+   "headline": "Kedar Gouri (1954) — poetry on celluloid",
+   "story": "Nitai Palit filmed Radhanath Rai's tragic romance with music by Bhuban-Kishan, while Sri Jagannath (1950) and Bhai Bhai (1956) moved Odia film from mythology toward social themes."
+  },
+  {
+   "language": "odia",
+   "decade": 1960,
+   "headline": "Matira Manisha (1966) — Mrinal Sen in Odia",
+   "story": "Sri Lokenath (1960) won Odia cinema's first National Award, and Mrinal Sen's Matira Manisha turned Kalindi Charan Panigrahi's novel into a classic of the soil."
+  },
+  {
+   "language": "odia",
+   "decade": 1970,
+   "headline": "Shesha Shrabana (1976) and the Prashanta Nanda storm",
+   "story": "Actor-director Prashanta Nanda's blockbusters swept both box office and National Awards — Shesha Shrabana ran riot and was later remade by Nanda himself in Hindi as Naiyya."
+  },
+  {
+   "language": "odia",
+   "decade": 1980,
+   "headline": "Maya Miriga (1984) travels the world",
+   "story": "Nirad Mohapatra's joint-family elegy won international festival acclaim, while the star pair Uttam Mohanty and Aparajita ruled the Odia mainstream."
+  },
+  {
+   "language": "odia",
+   "decade": 1990,
+   "headline": "Siddhanta Mahapatra's action decade",
+   "story": "Masala vehicles made Siddhanta Mahapatra Ollywood's box-office king, while art films like Indradhanura Chhai (1995) carried Odisha to the festival circuit."
+  },
+  {
+   "language": "odia",
+   "decade": 2000,
+   "headline": "I Love You (2004) crowns Anubhav Mohanty",
+   "story": "Hara Patnaik's romance ran 100 days across Odisha, made debutant Anubhav Mohanty a superstar and set off the remake-era boom of Ollywood romances."
+  },
+  {
+   "language": "assamese",
+   "decade": 1950,
+   "headline": "Piyoli Phukan (1955) wins the first National honour",
+   "story": "Phani Sarma's freedom-fighter epic, scored by a young Bhupen Hazarika, won the President's medal; Hazarika then directed Era Bator Sur (1956), and Puberun (1959) travelled to Berlin."
   },
   {
    "language": "assamese",
    "decade": 1960,
-   "headline": "The Bhupen Hazarika era",
-   "story": "Assam's cinema grew around Dr. Bhupen Hazarika's voice and films — Shakuntala (1961) won national honours."
+   "headline": "Shakuntala (1961) — Bhupen Hazarika's milestone",
+   "story": "Hazarika's award-winning musical brought partial colour to Assamese film, and Maniram Dewan (1963) gave the decade its historical epic and the immortal song 'Buku Hom Hom Kore'."
+  },
+  {
+   "language": "assamese",
+   "decade": 1970,
+   "headline": "Chameli Memsaab (1975)",
+   "story": "Abdul Majid's tea-garden romance became a landmark blockbuster and won Bhupen Hazarika the National Award for music — its songs still drift across Assam."
+  },
+  {
+   "language": "assamese",
+   "decade": 1980,
+   "headline": "Halodhia Choraye Baodhan Khai (1987) wins the Golden Lotus",
+   "story": "Jahnu Barua's farmer's tale swept the National Awards and Locarno, while Bhabendra Nath Saikia's Agnisnan (1985) made this the critical peak of Assamese cinema."
+  },
+  {
+   "language": "assamese",
+   "decade": 1990,
+   "headline": "Xagoroloi Bohu Door (1995)",
+   "story": "Jahnu Barua's boatman elegy toured world festivals and Firingoti (1992) won national honours — art cinema kept the flag flying through a dark decade for the industry."
+  },
+  {
+   "language": "assamese",
+   "decade": 2000,
+   "headline": "Hiya Diya Niya (2000) revives the box office",
+   "story": "Munin Barua's blockbuster made Jatin Bora a superstar and debuted Zubeen Garg as composer; Zubeen's own Mon Jai (2008) sealed the pop-cinema comeback."
+  },
+  {
+   "language": "bhojpuri",
+   "decade": 1960,
+   "headline": "Ganga Maiyya Tohe Piyari Chadhaibo (1963) — a cinema is born",
+   "story": "Kundan Kumar's devotional drama, premiered in Patna in honour of President Rajendra Prasad, launched Bhojpuri cinema; Bidesiya (1963) and Loha Singh (1966) followed fast."
+  },
+  {
+   "language": "bhojpuri",
+   "decade": 1970,
+   "headline": "Dangal (1977) brings colour",
+   "story": "After a long lull, Dangal — the first colour Bhojpuri film — reignited the heartland circuit, and Balam Pardesia (1979) packed the single screens of Bihar and eastern UP."
+  },
+  {
+   "language": "bhojpuri",
+   "decade": 1980,
+   "headline": "Ganga Kinare Mora Gaon (1983)",
+   "story": "The second wave — Ganga Kinare Mora Gaon, Bitia Bhail Sayan and Hamar Bhauji drew huge rural crowds before the boom faded at decade's end."
+  },
+  {
+   "language": "bhojpuri",
+   "decade": 2000,
+   "headline": "Sasura Bada Paisawala (2004) — the great revival",
+   "story": "Manoj Tiwari's mega-hit out-grossed Bollywood across its belt; Saiyyan Hamar (2001) had made Ravi Kishan a star, and Panditji Batai Na Biyah Kab Hoi (2005) confirmed the boom."
   }
  ]
 }
