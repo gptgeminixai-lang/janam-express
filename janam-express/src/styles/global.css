@@ -296,6 +296,16 @@ footer a{color:rgba(244,232,206,.6)}
 .history-src{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
   color:rgba(244,232,206,.4);margin:18px 0 0;text-align:center}
 
+/* ---------- India / World scope toggle ---------- */
+.scope-toggle{display:inline-flex;gap:4px;background:rgba(244,232,206,.06);border:1px solid rgba(244,232,206,.22);
+  border-radius:999px;padding:4px;margin:0 auto 18px}
+.scope-btn{font-family:var(--mono);font-size:12px;letter-spacing:.08em;cursor:pointer;
+  color:rgba(244,232,206,.7);background:transparent;border:none;border-radius:999px;padding:8px 16px;
+  display:inline-flex;align-items:center;gap:6px;transition:background .12s,color .12s}
+.scope-btn:hover{color:var(--paper)}
+.scope-btn.active{background:var(--marigold);color:var(--night);font-weight:700}
+.scope-btn:focus-visible{outline:2px solid var(--marigold);outline-offset:2px}
+
 /* ---------- famous birthday twins ---------- */
 .famous{width:min(700px,94vw);text-align:center}
 .famous-intro{font-family:var(--serif);font-size:clamp(17px,3.2vw,22px);color:var(--paper);margin:0 0 22px;line-height:1.5}
@@ -407,6 +417,9 @@ footer a{color:rgba(244,232,206,.6)}
 .homeland{width:min(620px,94vw);display:flex;flex-direction:column;gap:14px}
 .hl-card{background:rgba(244,232,206,.06);border:1px solid rgba(244,232,206,.2);border-radius:14px;padding:18px 20px}
 .hl-label{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--marigold);margin:0 0 10px}
+.hl-known{background:linear-gradient(150deg,rgba(46,122,79,.2),rgba(30,60,45,.14));border-color:rgba(120,190,140,.35)}
+.hl-known-line{font-family:var(--serif);font-size:clamp(17px,3.2vw,22px);line-height:1.5;color:var(--paper);margin:0}
+.hl-known-line b{color:#9FD79A;font-weight:700}
 .hl-newyear{text-align:center}
 .hl-big{font-family:var(--disp);font-weight:400;font-size:clamp(30px,6.4vw,44px);color:var(--paper);margin:0 0 6px;line-height:1;text-transform:uppercase}
 .hl-sub{font-family:var(--serif);font-size:15px;color:rgba(244,232,206,.85);margin:0}

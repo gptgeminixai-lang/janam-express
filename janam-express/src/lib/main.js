@@ -2,11 +2,11 @@ import {
   CITIES, FIRSTS, econ, filmOf, songOf, cricketOf, milestoneOf,
   pmOn, presidentOn, population, findCity, tvEra, fmtIN, MONTHS,
   greetingOf, regionalCinemaOf, stateStoryOf, hinduYears, inflate,
-  stateSymbolsOf, stateCultureOf, regionalEra,
+  stateSymbolsOf, stateCultureOf, regionalEra, knownForOf,
 } from './lookup.js';
 import panchang from '../data/panchang.json';
 import { skyOn, panchangOn } from './astronomy.js';
-import { weatherOn, historyOn, famousBirthdays, postersOf } from './api.js';
+import { weatherOn, historyOn, historyIndia, famousBirthdays, famousBirthdaysGlobal, postersOf } from './api.js';
 import { rashiChart, RASHIS, GRAHA_NAMES } from './kundli.js';
 import nakInfo from '../data/nakshatras.json';
 import rashiInfo from '../data/rashis.json';
@@ -28,6 +28,7 @@ const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const YEAR_MIN = 1950, YEAR_MAX = 2010;
 let J = null; // current journey
 let RENDER = 0; // token: async beats ignore results from a superseded journey
+let famousScope = 'india', historyScope = 'india'; // India / World toggles (persist across journeys)
 
 // build-time map of birth-era → optimized banknote image URL
 let NOTE_MAP = {};
@@ -270,46 +271,12 @@ function render() {
   $('statep').hidden = !stateStory;
   if (stateStory) $('stateline').textContent = stateStory;
 
-  /* beat 6 · on this day in history (Wikimedia, live) */
+  /* beat 6 · on this day in history — scope-aware (India / World) */
   $('historydate').textContent = `${MONTHS[m - 1]} ${d}`;
-  $('historylist').innerHTML = '<li class="tl-loading">Leafing through the world’s calendar…</li>';
-  historyOn(m, d).then(events => {
-    if (!fresh()) return;
-    if (!events) {
-      $('historylist').innerHTML = '<li class="tl-loading">History is catching its breath — try again in a moment.</li>';
-      return;
-    }
-    $('historylist').innerHTML = events.map(e =>
-      `<li><span class="yr">${e.year}</span><span class="ev">` +
-      `${e.thumb ? `<img src="${e.thumb}" alt="" loading="lazy">` : ''}<span>${e.text}</span></span></li>`
-    ).join('');
-  });
+  renderHistory(historyScope);
 
-  /* beat 9 · famous birthday twins (Wikidata, live) */
-  $('famousintro').innerHTML = `Famous Indians born on <b>${MONTHS[m - 1]} ${d}</b> —`;
-  $('famousgrid').innerHTML = '<p class="famous-loading">Searching the record for your birthday twins…</p>';
-  famousBirthdays(m, d).then(list => {
-    if (!fresh()) return;
-    if (!list || !list.length) {
-      $('famousgrid').innerHTML = '<p class="famous-none">No famous namesakes on record for today — that makes your birthday rare.</p>';
-      return;
-    }
-    $('famousgrid').innerHTML = list.map(p => {
-      const pic = p.img
-        ? `<img class="pic" src="${p.img}" alt="${p.name}" loading="lazy">`
-        : `<div class="pic ph">${p.name[0]}</div>`;
-      return `<div class="famous-card">${pic}<span class="nm">${p.name}</span>` +
-        `${p.occ ? `<span class="oc">${p.occ}</span>` : ''}<span class="yr">b. ${p.year}</span></div>`;
-    }).join('');
-    $('famousgrid').querySelectorAll('img.pic').forEach(img => {
-      img.onerror = () => {
-        const ph = document.createElement('div');
-        ph.className = 'pic ph';
-        ph.textContent = (img.alt || '★')[0];
-        img.replaceWith(ph);
-      };
-    });
-  });
+  /* beat 9 · famous birthday twins — scope-aware (India / World) */
+  renderFamous(famousScope);
 
   /* beat 11 · birth chart / rashi kundli (astronomy-engine, computed) */
   document.querySelectorAll('#chart .cell').forEach(c => {
@@ -383,6 +350,13 @@ function render() {
   });
 
   /* beat 15 · your homeland */
+  const kf = knownForOf(city.name);
+  if (kf) {
+    $('hlknown').innerHTML = `<b>${city.name}</b> is known for ${kf}.`;
+    $('hlknown').closest('.hl-card').hidden = false;
+  } else {
+    $('hlknown').closest('.hl-card').hidden = true;
+  }
   const cult = stateCultureOf(city.state), sym = stateSymbolsOf(city.state), era = regionalEra(city.state, y);
   if (cult) {
     $('hlnewyear').textContent = cult.newYear;
@@ -544,6 +518,58 @@ const io = new IntersectionObserver(entries => entries.forEach(en => {
   }
 }), { threshold: 0.25 });
 document.querySelectorAll('.beat').forEach(b => io.observe(b));
+
+/* ---------- India / World scope for the history + famous beats ---------- */
+function setScopeActive(id, scope) {
+  document.querySelectorAll('#' + id + ' .scope-btn').forEach(b => b.classList.toggle('active', b.dataset.scope === scope));
+}
+function renderHistory(scope) {
+  historyScope = scope;
+  setScopeActive('historyscope', scope);
+  const { m, d } = J, mine = RENDER;
+  $('historylist').innerHTML = '<li class="tl-loading">Leafing through the calendar…</li>';
+  (scope === 'india' ? historyIndia : historyOn)(m, d).then(events => {
+    if (mine !== RENDER || historyScope !== scope) return;
+    if (!events || !events.length) {
+      $('historylist').innerHTML = `<li class="tl-loading">${scope === 'india'
+        ? 'No India-specific events on record for this date yet — try World.'
+        : 'History is catching its breath — try again in a moment.'}</li>`;
+      return;
+    }
+    $('historylist').innerHTML = events.map(e =>
+      `<li><span class="yr">${e.year}</span><span class="ev">` +
+      `${e.thumb ? `<img src="${e.thumb}" alt="" loading="lazy">` : ''}<span>${e.text}</span></span></li>`
+    ).join('');
+  });
+}
+function renderFamous(scope) {
+  famousScope = scope;
+  setScopeActive('famousscope', scope);
+  const { m, d } = J, mine = RENDER;
+  $('famousintro').innerHTML = scope === 'india'
+    ? `Famous Indians born on <b>${MONTHS[m - 1]} ${d}</b> —`
+    : `Famous people the world over, born on <b>${MONTHS[m - 1]} ${d}</b> —`;
+  $('famousgrid').innerHTML = '<p class="famous-loading">Searching the record for your birthday twins…</p>';
+  (scope === 'india' ? famousBirthdays : famousBirthdaysGlobal)(m, d).then(list => {
+    if (mine !== RENDER || famousScope !== scope) return;
+    if (!list || !list.length) {
+      $('famousgrid').innerHTML = '<p class="famous-none">No famous namesakes on record for today — that makes your birthday rare.</p>';
+      return;
+    }
+    $('famousgrid').innerHTML = list.map(p => {
+      const pic = p.img
+        ? `<img class="pic" src="${p.img}" alt="${p.name}" loading="lazy">`
+        : `<div class="pic ph">${p.name[0]}</div>`;
+      return `<div class="famous-card">${pic}<span class="nm">${p.name}</span>` +
+        `${p.occ ? `<span class="oc">${p.occ}</span>` : ''}<span class="yr">b. ${p.year}</span></div>`;
+    }).join('');
+    $('famousgrid').querySelectorAll('img.pic').forEach(img => {
+      img.onerror = () => { const ph = document.createElement('div'); ph.className = 'pic ph'; ph.textContent = (img.alt || '★')[0]; img.replaceWith(ph); };
+    });
+  });
+}
+document.querySelectorAll('#famousscope .scope-btn').forEach(b => b.addEventListener('click', () => { if (J) renderFamous(b.dataset.scope); }));
+document.querySelectorAll('#historyscope .scope-btn').forEach(b => b.addEventListener('click', () => { if (J) renderHistory(b.dataset.scope); }));
 
 /* ---------- ticket buttons ---------- */
 $('sharebtn').addEventListener('click', async () => {

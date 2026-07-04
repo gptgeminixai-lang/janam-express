@@ -47,6 +47,40 @@ export async function historyOn(m, d) {
   } catch { return null; }
 }
 
+/* Notable events in INDIAN history on this MM/DD. Reuses the same On-This-Day feed
+   as historyOn() and keyword-filters to India (verified approach — Wikidata SPARQL
+   for India events is 30-60s cold, too slow for a client call). */
+const INDIA_RX = /Indi(a|an)|Delhi|Mumbai|Bombay|Bengal|Kashmir|Gandhi|Mughal|Hindu|Sikh|Punjab|Madras|Calcutta|Kolkata|Chennai|Maratha|Rajput|Nehru|Ambedkar|Assam|Gujarat|Kerala|Tamil|Telugu|Hyderabad|Mysore|Odisha|Bihar|Rajasthan|Sikkim|\bGoa\b|ISRO|Ganges|Ganga|Himalaya|Sepoy|Partition/;
+export async function historyIndia(m, d) {
+  try {
+    const u = `https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/events/${String(m).padStart(2, '0')}/${String(d).padStart(2, '0')}`;
+    const j = await get(u);
+    const events = (j.events || [])
+      .filter(e => INDIA_RX.test(e.text))
+      .sort((a, b) => a.year - b.year)
+      .slice(0, 6)
+      .map(e => ({ year: e.year, text: e.text, thumb: e.pages?.[0]?.thumbnail?.source || null }));
+    return events.length ? events : null;
+  } catch { return null; }
+}
+
+/* Famous people worldwide who share the birthday — Wikimedia On This Day births feed. */
+export async function famousBirthdaysGlobal(m, d) {
+  try {
+    const u = `https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/births/${String(m).padStart(2, '0')}/${String(d).padStart(2, '0')}`;
+    const j = await get(u);
+    const items = (j.births || []).filter(b => b.pages && b.pages[0] && b.pages[0].thumbnail);
+    // notability proxy: longer article extract ~ better-known person
+    items.sort((a, b) => (b.pages[0].extract?.length || 0) - (a.pages[0].extract?.length || 0));
+    return items.slice(0, 12).map(b => {
+      const pg = b.pages[0];
+      const name = (pg.titles && pg.titles.normalized) || pg.normalizedtitle || b.text.split(',')[0];
+      const desc = b.text.replace(name, '').replace(/^[,\s]+/, '');
+      return { name, year: String(b.year), occ: desc.replace(/\s+/g, ' ').slice(0, 46), img: pg.thumbnail.source };
+    });
+  } catch { return null; }
+}
+
 /* Famous Indians who share the birthday (same MM/DD). Wikidata SPARQL, CORS *, no key.
    Ranked by fame (sitelinks), with Commons photos. */
 export async function famousBirthdays(m, d) {

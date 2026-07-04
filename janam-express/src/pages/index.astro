@@ -157,6 +157,10 @@ const noteImgs = {
   <!-- BEAT 6 · ON THIS DAY IN HISTORY -->
   <section class="beat" id="historybeat">
     <p class="kicker reveal">· Beat 06 · On this day in history ·</p>
+    <div class="scope-toggle reveal d1" id="historyscope" role="group" aria-label="History scope">
+      <button type="button" class="scope-btn" data-scope="india">🇮🇳 India</button>
+      <button type="button" class="scope-btn" data-scope="global">🌏 World</button>
+    </div>
     <div class="history reveal d1">
       <h3 class="history-h" id="historyh">The <span id="historydate"></span> through the ages</h3>
       <ol class="timeline" id="historylist">
@@ -193,6 +197,10 @@ const noteImgs = {
   <!-- BEAT 9 · BIRTHDAY TWINS -->
   <section class="beat" id="famousbeat">
     <p class="kicker reveal">· Beat 09 · You share your birthday with ·</p>
+    <div class="scope-toggle reveal d1" id="famousscope" role="group" aria-label="Birthday-twins scope">
+      <button type="button" class="scope-btn" data-scope="india">🇮🇳 India</button>
+      <button type="button" class="scope-btn" data-scope="global">🌏 World</button>
+    </div>
     <div class="famous reveal d1">
       <p class="famous-intro" id="famousintro">Famous Indians born on your day…</p>
       <div class="famous-grid" id="famousgrid">
@@ -319,6 +327,10 @@ const noteImgs = {
   <section class="beat" id="homelandbeat">
     <p class="kicker reveal">· Beat 15 · Your homeland ·</p>
     <div class="homeland reveal d1">
+      <div class="hl-card hl-known">
+        <p class="hl-label">Your city is known for</p>
+        <p class="hl-known-line" id="hlknown"></p>
+      </div>
       <div class="hl-card hl-newyear">
         <p class="hl-label">Your people's new year</p>
         <p class="hl-big" id="hlnewyear"></p>
