@@ -103,12 +103,24 @@ img{max-width:100%}
 /* ---------- rupee ---------- */
 #rupee{background:linear-gradient(180deg,var(--night) 0%,#241537 55%,var(--night) 100%)}
 .note{background:linear-gradient(105deg,#CBB9DF,#B7A6CE 45%,#C4B2D8);color:#2E2145;width:min(620px,94vw);
-  border-radius:10px;padding:22px 28px;border:2px solid #8E7BAA;
-  box-shadow:0 24px 60px rgba(0,0,0,.55);position:relative;overflow:hidden}
+  border-radius:10px;padding:22px 28px;border:2px solid #8E7BAA;min-height:210px;
+  box-shadow:0 24px 60px rgba(0,0,0,.55);position:relative;overflow:hidden;isolation:isolate}
 .note::after{content:"RESERVE BANK OF INDIA · भारतीय रिज़र्व बैंक";position:absolute;top:10px;left:0;right:0;
-  text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:.3em;color:#4A3868;opacity:.85}
-.note .val{font-family:var(--disp);font-size:clamp(64px,13vw,120px);text-align:center;margin:26px 0 2px;line-height:1;font-variant-numeric:tabular-nums}
-.note .lbl{font-family:var(--mono);font-size:12px;letter-spacing:.3em;text-align:center;text-transform:uppercase;color:#4A3868;margin-bottom:10px}
+  text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:.3em;color:#4A3868;opacity:.85;z-index:1}
+/* real era note image, chosen by birth year */
+#noteart{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+#noteart:not([src]){display:none}
+.note-scrim{position:absolute;inset:0;z-index:3;display:none;
+  background:linear-gradient(180deg,rgba(14,8,24,.5) 0%,rgba(14,8,24,.3) 42%,rgba(14,8,24,.72) 100%)}
+.note.has-art .note-scrim{display:block}
+.note.has-art::after{display:none}
+.note-specimen{position:absolute;bottom:7px;right:12px;z-index:4;font-family:var(--mono);
+  font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.note:not(.has-art) .note-specimen{display:none}
+.note .val{position:relative;z-index:4;font-family:var(--disp);font-size:clamp(64px,13vw,120px);text-align:center;margin:26px 0 2px;line-height:1;font-variant-numeric:tabular-nums}
+.note .lbl{position:relative;z-index:4;font-family:var(--mono);font-size:12px;letter-spacing:.3em;text-align:center;text-transform:uppercase;color:#4A3868;margin-bottom:10px}
+.note.has-art .val{color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.7)}
+.note.has-art .lbl{color:#F0E2C8;text-shadow:0 1px 8px rgba(0,0,0,.7)}
 .bigline{font-family:var(--serif);font-size:clamp(19px,3.4vw,26px);max-width:620px;text-align:center;line-height:1.5;margin:34px 0 0}
 .bigline b{color:var(--marigold)}
 .ticker{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:700px;margin-top:26px}
@@ -217,3 +229,133 @@ footer{padding:40px 20px 60px;text-align:center;font-family:var(--mono);font-siz
   letter-spacing:.14em;color:rgba(244,232,206,.4);line-height:2;text-transform:uppercase}
 footer a{color:rgba(244,232,206,.6)}
 #journey{display:none}
+
+/* ---------- your-own-amount calculator ---------- */
+.amount{width:min(560px,94vw);margin-top:26px;background:rgba(244,232,206,.07);
+  border:1px solid rgba(244,232,206,.28);border-radius:12px;padding:16px 20px 14px}
+.amount>label{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--marigold);margin-bottom:10px}
+.amount-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-family:var(--mono)}
+.amount .rs{font-size:22px;color:var(--paper)}
+.amount input{width:120px;font-family:var(--mono);font-size:20px;color:var(--paper);
+  background:transparent;border:none;border-bottom:2px solid var(--marigold);padding:4px 2px}
+.amount input:focus{outline:2px solid var(--marigold);outline-offset:3px}
+.amount input::-webkit-outer-spin-button,.amount input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.amount-then{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,232,206,.6)}
+.amount-arrow{color:var(--marigold);font-size:20px}
+.amount-out{font-family:var(--disp);font-size:34px;color:var(--marigold);font-variant-numeric:tabular-nums}
+.amount-note{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(244,232,206,.5);margin:8px 0 0}
+
+/* ---------- samvat stamp on matchbox ---------- */
+.mb-samvat{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:#7A4E10;border:1.5px solid #8A5A12;border-radius:4px;padding:4px 8px;display:inline-block;
+  margin:4px auto 2px;transform:rotate(-1.5deg)}
+
+/* ---------- weather beat ---------- */
+#weatherbeat{background:linear-gradient(180deg,var(--night),#182036 55%,var(--night))}
+.wx{width:min(560px,94vw);background:linear-gradient(160deg,#2B3A5C,#1B2540);border:1px solid #3C517E;
+  border-radius:18px;padding:26px 28px 20px;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,.55)}
+.wx-sky{font-size:66px;line-height:1;margin-bottom:6px}
+.wx-temps{display:flex;justify-content:center;gap:14px;margin:10px 0 18px}
+.wx-temps>div{flex:1;background:rgba(244,232,206,.06);border:1px solid rgba(244,232,206,.18);
+  border-radius:12px;padding:12px 6px}
+.wx-temps span{display:block;font-family:var(--disp);font-size:clamp(30px,7vw,44px);color:var(--paper);
+  line-height:1;font-variant-numeric:tabular-nums}
+.wx-temps b{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(244,232,206,.55);font-weight:400}
+.wx-hi span{color:#F6B45A}.wx-rain span{color:#7FB3E8}
+.wx-line{font-family:var(--serif);font-size:clamp(17px,3.2vw,22px);line-height:1.5;margin:0 0 14px;color:var(--paper)}
+.wx-line b{color:var(--marigold)}
+.wx-src{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,232,206,.4);margin:0}
+
+/* ---------- history / on-this-day ---------- */
+.history{width:min(640px,94vw)}
+.history-h{font-family:var(--serif);font-weight:700;font-size:clamp(20px,3.6vw,26px);text-align:center;
+  margin:0 0 22px;color:var(--paper)}
+.history-h span{color:var(--marigold)}
+.timeline{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px solid rgba(239,166,54,.4)}
+.timeline li{position:relative;padding:0 0 20px 20px}
+.timeline li::before{content:"";position:absolute;left:-31px;top:4px;width:12px;height:12px;border-radius:50%;
+  background:var(--marigold);box-shadow:0 0 0 4px var(--night)}
+.timeline .yr{font-family:var(--disp);font-size:24px;color:var(--marigold);line-height:1;display:block;margin-bottom:3px}
+.timeline .ev{font-family:var(--serif);font-size:15px;line-height:1.5;color:var(--paper);display:flex;gap:12px;align-items:flex-start}
+.timeline .ev img{width:58px;height:58px;object-fit:cover;border-radius:6px;flex:0 0 auto;border:1px solid rgba(244,232,206,.2)}
+.tl-loading{color:rgba(244,232,206,.5);font-family:var(--mono);font-size:12px;list-style:none;padding-left:0}
+.history-src{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(244,232,206,.4);margin:18px 0 0;text-align:center}
+
+/* ---------- famous birthday twins ---------- */
+.famous{width:min(700px,94vw);text-align:center}
+.famous-intro{font-family:var(--serif);font-size:clamp(17px,3.2vw,22px);color:var(--paper);margin:0 0 22px;line-height:1.5}
+.famous-intro b{color:var(--marigold)}
+.famous-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:14px}
+.famous-card{background:rgba(244,232,206,.06);border:1px solid rgba(244,232,206,.2);border-radius:12px;
+  padding:14px 10px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.famous-card .pic{width:74px;height:74px;border-radius:50%;object-fit:cover;object-position:top center;
+  border:2px solid var(--marigold);background:#2A2148}
+.famous-card .pic.ph{display:flex;align-items:center;justify-content:center;font-family:var(--disp);
+  font-size:30px;color:var(--marigold)}
+.famous-card .nm{font-family:var(--serif);font-size:14px;line-height:1.25;color:var(--paper);font-weight:700}
+.famous-card .oc{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:rgba(244,232,206,.6)}
+.famous-card .yr{font-family:var(--mono);font-size:11px;color:var(--marigold)}
+.famous-loading,.famous-none{grid-column:1/-1;color:rgba(244,232,206,.5);font-family:var(--mono);font-size:12px;padding:18px}
+.famous-src{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,232,206,.4);margin:20px 0 0}
+
+/* ---------- your astrology (nakshatra reading) ---------- */
+#astrobeat{background:radial-gradient(760px 460px at 50% 22%,#241A3E 0%,transparent 66%),var(--night)}
+.astro{width:min(620px,94vw);display:flex;flex-direction:column;gap:14px}
+.astro-totem{background:linear-gradient(150deg,#3A2A56,#241633);border:1px solid #4A3A66;border-radius:16px;
+  padding:22px 24px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.astro-star{font-family:var(--disp);font-weight:400;font-size:clamp(34px,7vw,52px);color:var(--paper);margin:0;line-height:1;text-transform:uppercase;letter-spacing:.02em}
+.astro-star .astro-dev{font-family:var(--serif);font-size:.5em;color:var(--marigold);letter-spacing:0;text-transform:none}
+.astro-deva{font-family:var(--serif);font-size:15px;color:rgba(244,232,206,.85);margin:8px 0 16px;line-height:1.5}
+.astro-deva b{color:var(--marigold);font-weight:400}
+.astro-chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.achip{font-family:var(--mono);font-size:12px;color:var(--paper);background:rgba(244,232,206,.08);
+  border:1px solid rgba(244,232,206,.24);border-radius:999px;padding:7px 13px;display:flex;gap:7px;align-items:baseline}
+.achip b{font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--marigold);font-weight:700}
+.astro-card{background:rgba(244,232,206,.06);border:1px solid rgba(244,232,206,.2);border-radius:14px;padding:18px 20px}
+.astro-label{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--marigold);margin:0 0 10px}
+.astro-trait{font-family:var(--serif);font-size:clamp(16px,3vw,20px);line-height:1.55;color:var(--paper);margin:0 0 12px}
+.gana-badge{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;
+  border-radius:999px;padding:6px 14px;border:1px solid}
+.gana-deva{color:#8FD0A0;border-color:#3E6E4C;background:rgba(80,150,100,.12)}
+.gana-manushya{color:#EBC97A;border-color:#7A5E24;background:rgba(200,160,60,.12)}
+.gana-rakshasa{color:#E39089;border-color:#7E3A34;background:rgba(190,80,70,.12)}
+.astro-rows{display:flex;flex-direction:column;gap:12px}
+.arow{display:flex;flex-direction:column;gap:3px}
+.arow>b{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,232,206,.55);font-weight:400}
+.arow>span{font-family:var(--serif);font-size:15px;line-height:1.5;color:var(--paper)}
+.arow b{color:var(--marigold);font-weight:400}
+.astro-tree{display:flex;gap:16px;align-items:center;background:linear-gradient(150deg,rgba(80,120,70,.16),rgba(40,60,40,.12));border-color:rgba(120,170,110,.35)}
+.tree-emoji{font-size:44px;line-height:1;flex:0 0 auto}
+.tree-line{font-family:var(--serif);font-size:15px;line-height:1.55;color:var(--paper);margin:0}
+.tree-line b{color:#9FD79A;font-weight:700}
+.astro-note{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(244,232,206,.4);text-align:center;margin:4px 0 0}
+
+/* ---------- kundli / rashi chart ---------- */
+#kundlibeat{background:radial-gradient(760px 420px at 50% 34%,#241A3E 0%,transparent 66%),var(--night)}
+.kundli{width:min(460px,94vw);text-align:center}
+.kundli-top{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--marigold);margin:0 0 16px}
+.chart{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(4,1fr);gap:2px;
+  aspect-ratio:1/1;background:#8A5A12;border:2px solid #8A5A12;border-radius:6px;overflow:hidden}
+.chart .cell{background:#1B1330;padding:5px 4px;display:flex;flex-direction:column;gap:2px;
+  align-items:center;justify-content:flex-start;min-width:0}
+.chart .cell-sign{font-family:var(--mono);font-size:8px;letter-spacing:.06em;text-transform:uppercase;color:rgba(244,232,206,.5)}
+.chart .cell-grahas{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--marigold);line-height:1.35;
+  display:flex;flex-wrap:wrap;gap:3px 5px;justify-content:center}
+.chart .cell-grahas .lg{color:#7FB3E8}
+.chart-center{grid-area:2/2/4/4;background:#120C24;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:3px;padding:6px}
+.chart-center span{font-family:var(--mono);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,232,206,.45)}
+.chart-center b{font-family:var(--disp);font-size:clamp(18px,4.6vw,24px);color:var(--paper);line-height:1.05}
+.chart-center i{font-family:var(--mono);font-size:9.5px;font-style:normal;color:var(--marigold);letter-spacing:.05em}
+.rc11{grid-area:1/1}.rc0{grid-area:1/2}.rc1{grid-area:1/3}.rc2{grid-area:1/4}
+.rc10{grid-area:2/1}.rc3{grid-area:2/4}
+.rc9{grid-area:3/1}.rc4{grid-area:3/4}
+.rc8{grid-area:4/1}.rc7{grid-area:4/2}.rc6{grid-area:4/3}.rc5{grid-area:4/4}
+.kundli-legend{display:flex;flex-wrap:wrap;gap:5px 12px;justify-content:center;margin:16px 0 0}
+.kundli-legend span{font-family:var(--mono);font-size:10.5px;color:rgba(244,232,206,.7)}
+.kundli-legend b{color:var(--marigold);font-weight:700}
+.kundli-note{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(244,232,206,.4);margin:14px 0 0}

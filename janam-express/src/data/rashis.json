@@ -1,0 +1,110 @@
+[
+ {
+  "sanskrit": "Mesha",
+  "english": "Aries",
+  "lord": "Mangala (Mars)",
+  "element": "Agni (fire)",
+  "quality": "Chara (movable)",
+  "symbol": "Ram",
+  "traits": "Bold, pioneering and impatient; a self-starter who charges head-first and leads from the front. Quick to act, quick to anger, generous once won over."
+ },
+ {
+  "sanskrit": "Vrishabha",
+  "english": "Taurus",
+  "lord": "Shukra (Venus)",
+  "element": "Prithvi (earth)",
+  "quality": "Sthira (fixed)",
+  "symbol": "Bull",
+  "traits": "Steady, sensual and patient; values comfort, beauty and security. Immovably loyal once committed, but stubborn and slow to change course."
+ },
+ {
+  "sanskrit": "Mithuna",
+  "english": "Gemini",
+  "lord": "Budha (Mercury)",
+  "element": "Vayu (air)",
+  "quality": "Dvisvabhava (dual)",
+  "symbol": "Twins (a couple)",
+  "traits": "Curious, quick-witted and communicative; a natural talker who juggles many interests. Adaptable and social, but restless and hard to pin down."
+ },
+ {
+  "sanskrit": "Karka",
+  "english": "Cancer",
+  "lord": "Chandra (Moon)",
+  "element": "Jala (water)",
+  "quality": "Chara (movable)",
+  "symbol": "Crab",
+  "traits": "Nurturing, emotional and protective; deeply tied to home, family and memory. Intuitive and caring, yet moody and quick to retreat into their shell."
+ },
+ {
+  "sanskrit": "Simha",
+  "english": "Leo",
+  "lord": "Surya (Sun)",
+  "element": "Agni (fire)",
+  "quality": "Sthira (fixed)",
+  "symbol": "Lion",
+  "traits": "Regal, warm-hearted and proud; a born leader who craves recognition and shines in the spotlight. Generous and loyal, but ego-driven when slighted."
+ },
+ {
+  "sanskrit": "Kanya",
+  "english": "Virgo",
+  "lord": "Budha (Mercury)",
+  "element": "Prithvi (earth)",
+  "quality": "Dvisvabhava (dual)",
+  "symbol": "Maiden (virgin girl holding grain)",
+  "traits": "Analytical, precise and service-minded; notices every detail and strives to improve things. Practical and helpful, but prone to worry and over-criticism."
+ },
+ {
+  "sanskrit": "Tula",
+  "english": "Libra",
+  "lord": "Shukra (Venus)",
+  "element": "Vayu (air)",
+  "quality": "Chara (movable)",
+  "symbol": "Balance (scales)",
+  "traits": "Charming, fair-minded and relationship-oriented; seeks harmony, beauty and balance in all things. Diplomatic and sociable, but indecisive when forced to choose."
+ },
+ {
+  "sanskrit": "Vrishchika",
+  "english": "Scorpio",
+  "lord": "Mangala (Mars)",
+  "element": "Jala (water)",
+  "quality": "Sthira (fixed)",
+  "symbol": "Scorpion",
+  "traits": "Intense, magnetic and secretive; feels everything deeply and probes beneath the surface. Fiercely loyal and transformative, but jealous and slow to forgive."
+ },
+ {
+  "sanskrit": "Dhanu",
+  "english": "Sagittarius",
+  "lord": "Guru (Jupiter)",
+  "element": "Agni (fire)",
+  "quality": "Dvisvabhava (dual)",
+  "symbol": "Bow and arrow (archer)",
+  "traits": "Optimistic, philosophical and freedom-loving; a seeker of truth, travel and higher meaning. Honest and enthusiastic, but blunt and averse to being tied down."
+ },
+ {
+  "sanskrit": "Makara",
+  "english": "Capricorn",
+  "lord": "Shani (Saturn)",
+  "element": "Prithvi (earth)",
+  "quality": "Chara (movable)",
+  "symbol": "Crocodile (sea-goat)",
+  "traits": "Ambitious, disciplined and patient; climbs steadily toward long-term goals through hard work. Responsible and enduring, but reserved and prone to pessimism."
+ },
+ {
+  "sanskrit": "Kumbha",
+  "english": "Aquarius",
+  "lord": "Shani (Saturn)",
+  "element": "Vayu (air)",
+  "quality": "Sthira (fixed)",
+  "symbol": "Water-bearer (pot-carrier)",
+  "traits": "Independent, humanitarian and unconventional; an original thinker drawn to ideas and collective causes. Friendly yet detached, marching to their own beat."
+ },
+ {
+  "sanskrit": "Meena",
+  "english": "Pisces",
+  "lord": "Guru (Jupiter)",
+  "element": "Jala (water)",
+  "quality": "Dvisvabhava (dual)",
+  "symbol": "Two fishes",
+  "traits": "Compassionate, dreamy and spiritual; boundlessly empathic and imaginative, dissolving the line between self and other. Gentle and artistic, but escapist and easily overwhelmed."
+ }
+]

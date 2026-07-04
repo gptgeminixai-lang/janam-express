@@ -107,6 +107,22 @@ export function tvEra(y) {
 export const fmtIN = n => Math.round(n).toLocaleString('en-IN');
 export const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
+/* Hindu-calendar year coordinates. The Vikram/Shaka new year falls on Chaitra
+   Shukla Pratipada (~late March); we approximate the switch at Mar 22, so the
+   value is a garnish, not an ephemeris. */
+export function hinduYears(y, m, d) {
+  const afterNewYear = m > 3 || (m === 3 && d >= 22);
+  return {
+    vikram: y + (afterNewYear ? 57 : 56),
+    shaka: y - (afterNewYear ? 78 : 79),
+  };
+}
+
+/* inflate a rupee amount from a birth year to today's money using the CPI multiplier */
+export function inflate(amount, mult) {
+  return amount * mult;
+}
+
 /* ---------- regional layer ---------- */
 const langByCode = new Map(regional.languages.map(l => [l.code, l]));
 const stateLangMap = new Map(regional.stateLang.map(s => [s.state, s]));

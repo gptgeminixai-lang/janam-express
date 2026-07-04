@@ -1,9 +1,15 @@
 /* Live data — every call is optional garnish: the page must render fully without network. */
 
-const get = async (url, opts) => {
-  const res = await fetch(url, opts);
-  if (!res.ok) throw new Error(`${res.status} ${url}`);
-  return res.json();
+const get = async (url, opts = {}, timeoutMs = 20000) => {
+  const ctrl = new AbortController();
+  const t = setTimeout(() => ctrl.abort(), timeoutMs);
+  try {
+    const res = await fetch(url, { ...opts, signal: ctrl.signal });
+    if (!res.ok) throw new Error(`${res.status} ${url}`);
+    return await res.json();
+  } finally {
+    clearTimeout(t);
+  }
 };
 
 /* Open-Meteo ERA5 archive — real weather at the birth coordinates, back to 1940. No key. */
@@ -18,17 +24,51 @@ export async function weatherOn(lat, lon, iso) {
   } catch { return null; }
 }
 
-/* Wikimedia On This Day — world events for the date. No key, CORS *. */
-export async function onThisDay(m, d, birthYear) {
+/* Wikimedia On This Day — notable world events on the birth date, across history.
+   No key, CORS *. Returns a curated spread with thumbnails where available. */
+export async function historyOn(m, d) {
   try {
     const u = `https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/events/${String(m).padStart(2, '0')}/${String(d).padStart(2, '0')}`;
     const j = await get(u);
-    const events = (j.events || [])
-      .filter(e => e.year <= birthYear && e.year > birthYear - 60)
-      .sort((a, b) => b.year - a.year)
-      .slice(0, 2)
-      .map(e => `${e.year} — ${e.text}`);
-    return events.length ? events : null;
+    let events = (j.events || []).map(e => ({
+      year: e.year,
+      text: e.text,
+      thumb: e.pages?.[0]?.thumbnail?.source || null,
+      link: e.pages?.[0]?.content_urls?.desktop?.page || null,
+    })).sort((a, b) => a.year - b.year);
+    // prefer events that carry a thumbnail (more notable), keep chronological, cap at 6
+    const withThumb = events.filter(e => e.thumb);
+    const chosen = (withThumb.length >= 4 ? withThumb : events);
+    // even spread across the timeline so it isn't all one century
+    const out = [];
+    const step = Math.max(1, Math.floor(chosen.length / 6));
+    for (let i = 0; i < chosen.length && out.length < 6; i += step) out.push(chosen[i]);
+    return out.length ? out : null;
+  } catch { return null; }
+}
+
+/* Famous Indians who share the birthday (same MM/DD). Wikidata SPARQL, CORS *, no key.
+   Ranked by fame (sitelinks), with Commons photos. */
+export async function famousBirthdays(m, d) {
+  const q = `SELECT ?personLabel ?dob ?sitelinks ?img (SAMPLE(?ol) AS ?occ) WHERE {
+  { SELECT ?person ?dob ?sitelinks WHERE {
+      ?person wdt:P31 wd:Q5; wdt:P27 wd:Q668; wdt:P569 ?dob; wikibase:sitelinks ?sitelinks .
+      FILTER(MONTH(?dob)=${m} && DAY(?dob)=${d} && ?sitelinks >= 9)
+    } ORDER BY DESC(?sitelinks) LIMIT 10 }
+  OPTIONAL { ?person wdt:P18 ?img }
+  OPTIONAL { ?person wdt:P106 ?o. ?o rdfs:label ?ol. FILTER(LANG(?ol)="en") }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+} GROUP BY ?personLabel ?dob ?sitelinks ?img ORDER BY DESC(?sitelinks)`;
+  try {
+    const url = `https://query.wikidata.org/sparql?format=json&query=${encodeURIComponent(q)}`;
+    const j = await get(url, { headers: { Accept: 'application/sparql-results+json' } });
+    const out = (j.results?.bindings || []).map(b => ({
+      name: b.personLabel?.value,
+      year: b.dob?.value?.slice(0, 4),
+      occ: b.occ?.value || '',
+      img: b.img ? b.img.value.replace(/^http:/, 'https:') + '?width=150' : null,
+    })).filter(p => p.name && !/^Q\d+$/.test(p.name));
+    return out.length ? out : null;
   } catch { return null; }
 }
 

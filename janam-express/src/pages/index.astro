@@ -1,5 +1,17 @@
 ---
 import '../styles/global.css';
+import { getImage } from 'astro:assets';
+import n1950 from '../assets/notes/note-1950.jpg';
+import n1967 from '../assets/notes/note-1967.jpg';
+import n1996 from '../assets/notes/note-1996.jpg';
+
+// One optimized WebP per note-series; the client picks by birth year.
+const NW = 900;
+const noteImgs = {
+  '1950': (await getImage({ src: n1950, width: NW, format: 'webp' })).src,
+  '1967': (await getImage({ src: n1967, width: NW, format: 'webp' })).src,
+  '1996': (await getImage({ src: n1996, width: NW, format: 'webp' })).src,
+};
 ---
 <html lang="en">
 <head>
@@ -65,22 +77,52 @@ import '../styles/global.css';
     </div>
   </section>
 
-  <!-- BEAT 2 · THE ₹100 NOTE -->
+  <!-- BEAT 2 · WEATHER -->
+  <section class="beat" id="weatherbeat">
+    <p class="kicker reveal">· Beat 02 · The weather that day ·</p>
+    <div class="wx reveal d1" id="wxcard">
+      <div class="wx-sky" id="wxsky">☀️</div>
+      <div class="wx-temps">
+        <div class="wx-hi"><span id="wxhi">—</span><b>high</b></div>
+        <div class="wx-lo"><span id="wxlo">—</span><b>low</b></div>
+        <div class="wx-rain"><span id="wxrain">—</span><b>rain</b></div>
+      </div>
+      <p class="wx-line" id="wxline">Reading the skies over your birthplace…</p>
+      <p class="wx-src">Open-Meteo ERA5 reanalysis · actual readings at your coordinates</p>
+    </div>
+  </section>
+
+  <!-- BEAT 3 · THE ₹100 NOTE -->
   <section class="beat" id="rupee">
-    <p class="kicker reveal">· Beat 02 · The value of money ·</p>
-    <div class="note reveal d1">
+    <p class="kicker reveal">· Beat 03 · The value of money ·</p>
+    <div class="note reveal d1" id="notecard">
+      <img id="noteart" alt="" aria-hidden="true" />
+      <div class="note-scrim"></div>
       <p class="lbl">This note, on the day you were born, was worth —</p>
       <div class="val" id="cpival">₹100</div>
       <p class="lbl" id="cpisub">of today's money</p>
+      <span class="note-specimen">Historical note image · not legal tender</span>
     </div>
+    <script type="application/json" id="notemap" set:html={JSON.stringify(noteImgs)}></script>
     <p class="bigline reveal d2" id="cpiline"></p>
     <div class="ticker reveal d3" id="pricechips"></div>
+    <form class="amount reveal d3" id="amountform">
+      <label for="amountin">Try your own amount</label>
+      <div class="amount-row">
+        <span class="rs">₹</span>
+        <input id="amountin" type="number" inputmode="numeric" min="1" max="10000000" placeholder="500" />
+        <span class="amount-then" id="amountthen">then</span>
+        <span class="amount-arrow">→</span>
+        <span class="amount-out" id="amountout">₹—</span>
+      </div>
+      <p class="amount-note" id="amountnote">that year is worth this today</p>
+    </form>
     <p class="src reveal d4">RBI Handbook · World Bank CPI · PPAC · Pay Commission records<br />dashed chips = prices people remember, not official series</p>
   </section>
 
-  <!-- BEAT 3 · THE CRT -->
+  <!-- BEAT 4 · THE CRT -->
   <section class="beat" id="tvbeat">
-    <p class="kicker reveal">· Beat 03 · Switch on the TV ·</p>
+    <p class="kicker reveal">· Beat 04 · Switch on the TV ·</p>
     <div class="crt reveal d1">
       <div class="screen" id="tvscreen">
         <p class="ch-tag" id="chtag"></p>
@@ -95,9 +137,9 @@ import '../styles/global.css';
     </div>
   </section>
 
-  <!-- BEAT 4 · SCOREBOARD -->
+  <!-- BEAT 5 · SCOREBOARD -->
   <section class="beat" id="cricket">
-    <p class="kicker reveal">· Beat 04 · Meanwhile, on the pitch ·</p>
+    <p class="kicker reveal">· Beat 05 · Meanwhile, on the pitch ·</p>
     <div class="sboard reveal d1">
       <div class="row"><span>Fixture</span><b id="ckyear"></b></div>
       <h3 id="ckhead"></h3>
@@ -105,9 +147,21 @@ import '../styles/global.css';
     </div>
   </section>
 
-  <!-- BEAT 5 · FRONT PAGE -->
+  <!-- BEAT 6 · ON THIS DAY IN HISTORY -->
+  <section class="beat" id="historybeat">
+    <p class="kicker reveal">· Beat 06 · On this day in history ·</p>
+    <div class="history reveal d1">
+      <h3 class="history-h" id="historyh">The <span id="historydate"></span> through the ages</h3>
+      <ol class="timeline" id="historylist">
+        <li class="tl-loading">Leafing through the world's calendar…</li>
+      </ol>
+      <p class="history-src">Wikimedia "On this day" · English Wikipedia (CC BY-SA)</p>
+    </div>
+  </section>
+
+  <!-- BEAT 7 · FRONT PAGE -->
   <section class="beat" id="frontpage">
-    <p class="kicker reveal">· Beat 05 · The morning paper ·</p>
+    <p class="kicker reveal">· Beat 07 · The morning paper ·</p>
     <div class="paperfold reveal d1">
       <div class="masthead"><h3 id="mast"></h3></div>
       <div class="dateline"><span id="dl-date"></span><span>PRICE: 25 PAISE</span></div>
@@ -119,22 +173,34 @@ import '../styles/global.css';
         <p><b>CENSUS DESK —</b> <span id="popline"></span></p>
         <p><b>CITY PAGE —</b> <span id="cityline"></span></p>
         <p id="statep" hidden><b>STATE PAGE —</b> <span id="stateline"></span></p>
-        <p id="worldp" hidden><b>AROUND THE WORLD —</b> <span id="worldline"></span></p>
       </div>
     </div>
   </section>
 
-  <!-- BEAT 6 · NOT YET -->
+  <!-- BEAT 8 · NOT YET -->
   <section class="beat" id="notyetbeat">
-    <p class="kicker reveal">· Beat 06 · India was still waiting for ·</p>
+    <p class="kicker reveal">· Beat 08 · India was still waiting for ·</p>
     <div class="notyet" id="nylist"></div>
   </section>
 
-  <!-- BEAT 7 · THE STARS -->
+  <!-- BEAT 9 · BIRTHDAY TWINS -->
+  <section class="beat" id="famousbeat">
+    <p class="kicker reveal">· Beat 09 · You share your birthday with ·</p>
+    <div class="famous reveal d1">
+      <p class="famous-intro" id="famousintro">Famous Indians born on your day…</p>
+      <div class="famous-grid" id="famousgrid">
+        <p class="famous-loading">Searching the record for your birthday twins…</p>
+      </div>
+      <p class="famous-src">Wikidata · ranked by fame · photos from Wikimedia Commons</p>
+    </div>
+  </section>
+
+  <!-- BEAT 10 · THE STARS -->
   <section class="beat" id="stars">
-    <p class="kicker reveal">· Beat 07 · What the sky said ·</p>
+    <p class="kicker reveal">· Beat 10 · What the sky said ·</p>
     <div class="matchbox reveal d1">
       <p class="mb-top">Safety Matches · Made in your birth year</p>
+      <p class="mb-samvat" id="mbsamvat"></p>
       <h3 id="mbtitle">The Sky Brand</h3>
       <p class="mb-sub" id="mbsub"></p>
       <div class="mb-grid" id="mbgrid"></div>
@@ -142,9 +208,67 @@ import '../styles/global.css';
     </div>
   </section>
 
-  <!-- BEAT 8 · THE TICKET -->
+  <!-- BEAT 11 · YOUR ASTROLOGY -->
+  <section class="beat" id="astrobeat">
+    <p class="kicker reveal">· Beat 11 · The star you were born under ·</p>
+    <div class="astro reveal d1">
+      <div class="astro-totem">
+        <p class="astro-star" id="astrostar">…</p>
+        <p class="astro-deva" id="astrodeva"></p>
+        <div class="astro-chips" id="astrochips"></div>
+      </div>
+      <div class="astro-card">
+        <p class="astro-label">The nature it's traditionally linked to</p>
+        <p class="astro-trait" id="astrotrait"></p>
+        <span class="gana-badge" id="astrogana"></span>
+      </div>
+      <div class="astro-card">
+        <p class="astro-label">Why you're you — read together, not one label</p>
+        <div class="astro-rows" id="astrorows"></div>
+      </div>
+      <div class="astro-card astro-tree">
+        <div class="tree-emoji">🌳</div>
+        <div class="tree-body">
+          <p class="astro-label">Plant your birth-star tree</p>
+          <p class="tree-line" id="astrotree"></p>
+        </div>
+      </div>
+      <p class="astro-note">A cultural garnish, described in the heritage of Jyotish — for delight, not prediction.</p>
+    </div>
+  </section>
+
+  <!-- BEAT 12 · BIRTH CHART / KUNDLI -->
+  <section class="beat" id="kundlibeat">
+    <p class="kicker reveal">· Beat 12 · Your birth chart ·</p>
+    <div class="kundli reveal d1">
+      <p class="kundli-top">Janma Rashi Chakra · जन्म राशि चक्र</p>
+      <div class="chart" id="chart">
+        <div class="cell rc11" data-r="11"></div>
+        <div class="cell rc0" data-r="0"></div>
+        <div class="cell rc1" data-r="1"></div>
+        <div class="cell rc2" data-r="2"></div>
+        <div class="cell rc10" data-r="10"></div>
+        <div class="chart-center" id="chartcenter">
+          <span>Rashi chart</span>
+          <b id="chartname"></b>
+          <i id="chartmoon"></i>
+        </div>
+        <div class="cell rc3" data-r="3"></div>
+        <div class="cell rc9" data-r="9"></div>
+        <div class="cell rc4" data-r="4"></div>
+        <div class="cell rc8" data-r="8"></div>
+        <div class="cell rc7" data-r="7"></div>
+        <div class="cell rc6" data-r="6"></div>
+        <div class="cell rc5" data-r="5"></div>
+      </div>
+      <div class="kundli-legend" id="kundlilegend"></div>
+      <p class="kundli-note">Sidereal (Lahiri) positions at midday · a full kundli also needs your exact birth time</p>
+    </div>
+  </section>
+
+  <!-- BEAT 13 · THE TICKET -->
   <section class="beat" id="ticketbeat">
-    <p class="kicker reveal">· Beat 08 · Your souvenir ·</p>
+    <p class="kicker reveal">· Beat 13 · Your souvenir ·</p>
     <div class="tkt reveal d1" id="tktcard">
       <div class="rail"><b>JANAM EXPRESS</b><span>SLEEPER · TIME MACHINE CLASS</span></div>
       <div class="route" id="tktroute"></div>
@@ -170,6 +294,7 @@ import '../styles/global.css';
   <footer>
     Made with data that belongs to everyone<br />
     RBI · World Bank · Wikimedia &amp; Wikidata (CC BY-SA) · Cricsheet (ODC-BY) · Open-Meteo (CC BY 4.0) · Census of India<br />
+    Banknote images via Wikimedia Commons — public domain, GODL-India &amp; CC BY-SA 4.0<br />
     <span id="tmdbcredit" hidden>Film posters courtesy TMDB — this product uses the TMDB API but is not endorsed by TMDB</span>
   </footer>
 

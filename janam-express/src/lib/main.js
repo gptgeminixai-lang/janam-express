@@ -1,16 +1,29 @@
 import {
   CITIES, FIRSTS, econ, filmOf, songOf, cricketOf, milestoneOf,
   pmOn, presidentOn, population, findCity, tvEra, fmtIN, MONTHS,
-  greetingOf, regionalCinemaOf, stateStoryOf,
+  greetingOf, regionalCinemaOf, stateStoryOf, hinduYears, inflate,
 } from './lookup.js';
 import { skyOn, panchangOn } from './astronomy.js';
-import { weatherOn, onThisDay, postersOf } from './api.js';
+import { weatherOn, historyOn, famousBirthdays, postersOf } from './api.js';
+import { rashiChart, RASHIS, GRAHA_NAMES } from './kundli.js';
+import nakInfo from '../data/nakshatras.json';
+import rashiInfo from '../data/rashis.json';
+import grahaGoverns from '../data/grahas.json';
 import { buildCaption, shareTicket, downloadTicket } from './share.js';
+
+const LORD_ABBR = { Sun: 'Su', Moon: 'Mo', Mars: 'Ma', Mercury: 'Me', Jupiter: 'Ju', Venus: 'Ve', Saturn: 'Sa', Rahu: 'Ra', Ketu: 'Ke' };
+const GANA_GLOSS = { Deva: 'divine, gentle nature', Manushya: 'human, balanced nature', Rakshasa: 'fierce, intense nature' };
+const lowerFirst = s => s ? s[0].toLowerCase() + s.slice(1) : s;
 
 const $ = id => document.getElementById(id);
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const YEAR_MIN = 1950, YEAR_MAX = 2010;
 let J = null; // current journey
+let RENDER = 0; // token: async beats ignore results from a superseded journey
+
+// build-time map of birth-era → optimized banknote image URL
+let NOTE_MAP = {};
+try { NOTE_MAP = JSON.parse(document.getElementById('notemap').textContent || '{}'); } catch { /* fallback CSS note */ }
 
 /* ---------- form setup ---------- */
 const dd = $('dd'), mm = $('mm'), yy = $('yy'), cityInput = $('city');
@@ -87,12 +100,18 @@ function arrive() {
 /* ---------- render ---------- */
 function render() {
   const { y, m, d, city, name, iso } = J;
+  const mine = ++RENDER; // this journey's token
+  const fresh = () => mine === RENDER; // false once a newer journey starts
   const dob = new Date(y, m - 1, d);
   const weekday = dob.toLocaleDateString('en-IN', { weekday: 'long' });
   const wasOldName = !!(city.oldName && iso < (city.renamedOn || '9999'));
   const bornCity = wasOldName ? city.oldName : city.name;
   const sky = skyOn(y, m, d, city.lat, city.lon);
   const e = econ(y);
+  J.mult = e.mult;
+  // shared sky computation — used by the stars, astrology and kundli beats
+  const chartP = rashiChart(y, m, d);
+  const panchP = panchangOn(y, m, d, city.lat, city.lon);
 
   /* beat 1 · telegram */
   const greet = greetingOf(city.state);
@@ -109,15 +128,42 @@ function render() {
   $('tgnote').textContent = wasOldName
     ? `Yes, really — your birth certificate says ${city.oldName.toUpperCase()}. The city officially became ${city.name} only on ${new Date(city.renamedOn).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}. You were born in a city whose name no longer exists.`
     : `Only one day in seven of ${y} was a ${weekday}. This one was yours.`;
+
+  /* beat 2 · weather that day (Open-Meteo ERA5, live) */
+  $('wxsky').textContent = '⏳';
+  $('wxhi').textContent = $('wxlo').textContent = $('wxrain').textContent = '—';
+  $('wxline').textContent = 'Reading the skies over your birthplace…';
   weatherOn(city.lat, city.lon, iso).then(w => {
-    if (!w || !$('tgweather')) return;
-    const line = w.rain >= 1
-      ? `IT RAINED ${Math.round(w.rain)} MM THAT DAY${'*'}`
-      : `HIGH OF ${Math.round(w.tmax)} DEGREES THAT DAY${'*'}`;
-    $('tgweather').innerHTML = line.replace('*', '') + stop;
+    if (!fresh()) return;
+    if (!w) {
+      $('wxsky').textContent = '🌤️';
+      $('wxline').textContent = `The weather record for ${bornCity} that day is just out of reach right now — but the sun rose all the same.`;
+      return;
+    }
+    const hi = Math.round(w.tmax), lo = Math.round(w.tmin), rain = Math.round(w.rain);
+    $('wxhi').textContent = hi + '°'; $('wxlo').textContent = lo + '°'; $('wxrain').textContent = rain + ' mm';
+    let sky = '☀️';
+    if (rain >= 15) sky = '🌧️'; else if (rain >= 2) sky = '🌦️';
+    else if (hi >= 38) sky = '🔥'; else if (hi <= 16) sky = '🌫️'; else if (hi >= 30) sky = '🌤️';
+    const rainTxt = rain >= 15 ? `a proper downpour — ${rain} mm fell` : rain >= 2 ? `${rain} mm of rain drifted through` : 'not a drop of rain';
+    const heat = hi >= 38 ? 'a scorcher' : hi >= 32 ? 'warm' : hi >= 24 ? 'pleasant' : hi >= 16 ? 'cool' : 'cold';
+    $('wxsky').textContent = sky;
+    $('wxline').innerHTML = `It was ${heat} in ${bornCity} — <b>${hi}°C</b> by afternoon, down to ${lo}°C overnight, and ${rainTxt}.`;
   });
 
-  /* beat 2 · rupee */
+  /* beat 2 · rupee — real era banknote behind the count-up */
+  const noteEra = y <= 1966 ? '1950' : y <= 1995 ? '1967' : '1996';
+  const noteCard = $('notecard'), noteArt = $('noteart');
+  const noteSrc = NOTE_MAP[noteEra];
+  if (noteSrc) {
+    noteArt.onerror = () => noteCard.classList.remove('has-art');
+    noteArt.src = noteSrc;
+    noteCard.classList.add('has-art');
+  } else {
+    noteArt.removeAttribute('src');
+    noteCard.classList.remove('has-art');
+  }
+
   const valToday = 100 * e.mult;
   $('cpival').dataset.target = Math.round(valToday);
   $('cpival').textContent = '₹100';
@@ -214,12 +260,64 @@ function render() {
   const stateStory = stateStoryOf(city.state, iso);
   $('statep').hidden = !stateStory;
   if (stateStory) $('stateline').textContent = stateStory;
-  $('worldp').hidden = true;
-  onThisDay(m, d, y).then(events => {
-    if (!events) return;
-    $('worldline').textContent = events.join(' · ');
-    $('worldp').hidden = false;
+
+  /* beat 6 · on this day in history (Wikimedia, live) */
+  $('historydate').textContent = `${MONTHS[m - 1]} ${d}`;
+  $('historylist').innerHTML = '<li class="tl-loading">Leafing through the world’s calendar…</li>';
+  historyOn(m, d).then(events => {
+    if (!fresh()) return;
+    if (!events) {
+      $('historylist').innerHTML = '<li class="tl-loading">History is catching its breath — try again in a moment.</li>';
+      return;
+    }
+    $('historylist').innerHTML = events.map(e =>
+      `<li><span class="yr">${e.year}</span><span class="ev">` +
+      `${e.thumb ? `<img src="${e.thumb}" alt="" loading="lazy">` : ''}<span>${e.text}</span></span></li>`
+    ).join('');
   });
+
+  /* beat 9 · famous birthday twins (Wikidata, live) */
+  $('famousintro').innerHTML = `Famous Indians born on <b>${MONTHS[m - 1]} ${d}</b> —`;
+  $('famousgrid').innerHTML = '<p class="famous-loading">Searching the record for your birthday twins…</p>';
+  famousBirthdays(m, d).then(list => {
+    if (!fresh()) return;
+    if (!list || !list.length) {
+      $('famousgrid').innerHTML = '<p class="famous-none">No famous namesakes on record for today — that makes your birthday rare.</p>';
+      return;
+    }
+    $('famousgrid').innerHTML = list.map(p => {
+      const pic = p.img
+        ? `<img class="pic" src="${p.img}" alt="${p.name}" loading="lazy">`
+        : `<div class="pic ph">${p.name[0]}</div>`;
+      return `<div class="famous-card">${pic}<span class="nm">${p.name}</span>` +
+        `${p.occ ? `<span class="oc">${p.occ}</span>` : ''}<span class="yr">b. ${p.year}</span></div>`;
+    }).join('');
+    $('famousgrid').querySelectorAll('img.pic').forEach(img => {
+      img.onerror = () => {
+        const ph = document.createElement('div');
+        ph.className = 'pic ph';
+        ph.textContent = (img.alt || '★')[0];
+        img.replaceWith(ph);
+      };
+    });
+  });
+
+  /* beat 11 · birth chart / rashi kundli (astronomy-engine, computed) */
+  document.querySelectorAll('#chart .cell').forEach(c => {
+    c.innerHTML = `<span class="cell-sign">${RASHIS[+c.dataset.r]}</span><span class="cell-grahas"></span>`;
+  });
+  $('chartname').textContent = name && name !== 'Traveller' ? name : 'You';
+  $('chartmoon').textContent = 'casting the chart…';
+  chartP.then(chart => {
+    if (!fresh()) return;
+    chart.signs.forEach((grahas, r) => {
+      const g = document.querySelector(`#chart .cell[data-r="${r}"] .cell-grahas`);
+      if (g) g.textContent = grahas.join(' ');
+    });
+    $('chartmoon').textContent = `Moon in ${RASHIS[chart.moonRashi]}`;
+    $('kundlilegend').innerHTML = Object.entries(GRAHA_NAMES)
+      .map(([ab, nm]) => `<span><b>${ab}</b> ${nm}</span>`).join('');
+  }).catch(() => { $('chartmoon').textContent = 'the sky is clouded over just now'; });
 
   /* beat 6 · not yet */
   $('nylist').innerHTML = FIRSTS.filter(f => f[0] > iso).slice(0, 5).map(f => {
@@ -228,23 +326,58 @@ function render() {
       `<div class="what">${f[1]}<i>${f[2]} · ${f[0].slice(0, 4)}</i></div></div>`;
   }).join('');
 
-  /* beat 7 · stars */
+  /* beat 10 · stars matchbox */
+  const hy = hinduYears(y, m, d);
+  $('mbsamvat').textContent = `Vikram Samvat ${hy.vikram} · Shaka ${hy.shaka}`;
   $('mbtitle').textContent = 'The Sky Brand';
   $('mbsub').textContent = `${sky.moonName}, ${sky.moonIllum}% lit · sunrise ${sky.sunrise} · sunset ${sky.sunset}`;
   $('mbgrid').innerHTML = '<div><b>Nakshatra</b>computing…</div>';
-  panchangOn(y, m, d, city.lat, city.lon).then(p => {
-    if (!p || !p.nakshatra) {
-      $('mbgrid').innerHTML =
-        `<div><b>Sunrise</b>${sky.sunrise} IST</div><div><b>Sunset</b>${sky.sunset} IST</div>` +
-        `<div><b>Moon</b>${sky.moonName}</div><div><b>Lit</b>${sky.moonIllum}%</div>`;
-      return;
-    }
-    $('mbtitle').textContent = p.nakshatra;
-    $('mbsub').textContent = 'Your janma nakshatra — the star the sky filed you under';
+  chartP.then(chart => {
+    if (!fresh()) return;
+    $('mbtitle').textContent = chart.moonNakshatra.name;
+    $('mbsub').textContent = `Janma nakshatra · pada ${chart.moonNakshatra.pada} — the star the sky filed you under`;
+  }).catch(() => {});
+  panchP.then(p => {
+    if (!fresh()) return;
+    const g = k => (p && p[k]) ? p[k] : '—';
     $('mbgrid').innerHTML =
-      `<div><b>Tithi</b>${p.tithi || '—'}</div><div><b>Paksha</b>${p.paksha || '—'}</div>` +
-      `<div><b>Masa</b>${p.masa || '—'}</div><div><b>Moon</b>${sky.moonName}, ${sky.moonIllum}%</div>`;
-  });
+      `<div><b>Tithi</b>${g('tithi')}</div><div><b>Paksha</b>${g('paksha')}</div>` +
+      `<div><b>Masa</b>${g('masa')}</div><div><b>Moon</b>${sky.moonName}, ${sky.moonIllum}%</div>`;
+  }).catch(() => {});
+
+  /* beat 11 · your astrology — nakshatra totem + heritage reading */
+  $('astrostar').textContent = '…';
+  $('astrodeva').textContent = '';
+  $('astrochips').innerHTML = '';
+  $('astrotrait').textContent = 'Reading the star you were born under…';
+  $('astrogana').textContent = '';
+  $('astrogana').className = 'gana-badge';
+  $('astrorows').innerHTML = '';
+  $('astrotree').textContent = '';
+  Promise.all([chartP, panchP.catch(() => null)]).then(([chart, p]) => {
+    if (!fresh()) return;
+    const nk = nakInfo[chart.moonNakshatra.index];
+    const rz = rashiInfo[chart.moonRashi];
+    const cleanTree = nk.tree.replace(/\s*\(.*\)/, '');
+    $('astrostar').innerHTML = `${nk.name} <span class="astro-dev">${nk.devanagari || ''}</span>`;
+    $('astrodeva').innerHTML = `Ruled by <b>${nk.lord}</b> · presiding deity <b>${nk.deity}</b>`;
+    $('astrochips').innerHTML = [['Symbol', nk.symbol], ['Animal', nk.animal], ['Tree', cleanTree]]
+      .map(([k, v]) => `<span class="achip"><b>${k}</b>${v}</span>`).join('');
+    $('astrotrait').textContent = `People born under ${nk.name} are traditionally described as ${lowerFirst(nk.traits)}`;
+    $('astrogana').innerHTML = `${nk.gana} — ${GANA_GLOSS[nk.gana] || ''}`;
+    $('astrogana').className = 'gana-badge gana-' + nk.gana.toLowerCase();
+    const lordGov = grahaGoverns[LORD_ABBR[nk.lord]] || '';
+    const rows = [
+      ['Moon sign', `Your Moon sat in <b>${rz.sanskrit} (${rz.english})</b> — in India this, not your Sun sign, is "your sign": the seat of the mind and emotions. ${rz.traits}`],
+      ['Ruling planet', `Your star answers to <b>${nk.lord}</b>${lordGov ? ' — ' + lowerFirst(lordGov) : ''}.`],
+    ];
+    if (p && p.paksha) {
+      const waxing = /shukla/i.test(p.paksha);
+      rows.push(['Moon’s phase', `You arrived on a <b>${p.paksha}</b> (${waxing ? 'waxing' : 'waning'}) tithi — the ${waxing ? 'brightening half, leaning outward, building and optimistic' : 'waning half, leaning inward, releasing and reflective'}.`]);
+    }
+    $('astrorows').innerHTML = rows.map(([k, v]) => `<div class="arow"><b>${k}</b><span>${v}</span></div>`).join('');
+    $('astrotree').innerHTML = `Your star's tree is the <b>${cleanTree}</b>. For centuries, a family planted the newborn's birth-star tree and tended it like the child — so the tree's health mirrored the child's. Plant one this birthday.`;
+  }).catch(() => { $('astrotrait').textContent = 'The sky is clouded over just now.'; });
 
   /* beat 8 · ticket */
   $('tktroute').textContent = `${bornCity} → ${d} ${MONTHS[m - 1].slice(0, 3).toUpperCase()} ${y}`;
@@ -274,7 +407,10 @@ function render() {
     wasOldName, oldName: city.oldName || '',
   };
 
-  /* reset reveal + counter state for repeat journeys */
+  /* reset interactive + reveal state for repeat journeys */
+  $('amountin').value = '';
+  $('amountout').textContent = '₹—';
+  $('amountnote').textContent = 'that year is worth this today';
   document.querySelectorAll('#journey .beat').forEach(b => {
     b.classList.remove('in');
     delete b.dataset.counted;
@@ -344,3 +480,14 @@ function flash(id, msg) {
   el.textContent = msg;
   setTimeout(() => { el.textContent = old; }, 2600);
 }
+
+/* ---------- your-own-amount calculator ---------- */
+function updateAmount() {
+  const raw = +$('amountin').value;
+  const out = $('amountout'), note = $('amountnote');
+  if (!J || !J.mult || !raw || raw < 1) { out.textContent = '₹—'; note.textContent = 'that year is worth this today'; return; }
+  out.textContent = '₹' + fmtIN(inflate(raw, J.mult));
+  note.textContent = `₹${fmtIN(raw)} in ${J.y} is worth this today`;
+}
+$('amountform').addEventListener('submit', e => { e.preventDefault(); updateAmount(); });
+$('amountin').addEventListener('input', updateAmount);
