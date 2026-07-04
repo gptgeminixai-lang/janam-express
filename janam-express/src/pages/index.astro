@@ -82,7 +82,7 @@ const noteImgs = {
   <!-- BEAT 2 · WEATHER -->
   <section class="beat" id="weatherbeat">
     <p class="kicker reveal">· Beat 02 · The weather that day ·</p>
-    <div class="wx reveal d1" id="wxcard">
+    <div class="wx reveal d1" id="wxcard" aria-live="polite">
       <div class="wx-sky" id="wxsky">☀️</div>
       <div class="wx-temps">
         <div class="wx-hi"><span id="wxhi">—</span><b>high</b></div>
@@ -168,7 +168,7 @@ const noteImgs = {
     </div>
     <div class="history reveal d1">
       <h3 class="history-h" id="historyh">The <span id="historydate"></span> through the ages</h3>
-      <ol class="timeline" id="historylist">
+      <ol class="timeline" id="historylist" aria-live="polite">
         <li class="tl-loading">Leafing through the world's calendar…</li>
       </ol>
       <p class="history-src">Wikimedia "On this day" · English Wikipedia (CC BY-SA)</p>
@@ -208,7 +208,7 @@ const noteImgs = {
     </div>
     <div class="famous reveal d1">
       <p class="famous-intro" id="famousintro">Famous Indians born on your day…</p>
-      <div class="famous-grid" id="famousgrid">
+      <div class="famous-grid" id="famousgrid" aria-live="polite">
         <p class="famous-loading">Searching the record for your birthday twins…</p>
       </div>
       <p class="famous-src">Wikidata · ranked by fame · photos from Wikimedia Commons</p>
@@ -344,6 +344,11 @@ const noteImgs = {
       <div class="hl-card hl-symbols">
         <p class="hl-label">Your state's emblems</p>
         <div class="hl-sym-grid" id="hlsymbols"></div>
+      </div>
+      <div class="hl-card hl-growth" id="hlgrowth" hidden>
+        <p class="hl-label">Your city grew up with you</p>
+        <p class="hl-growth-line" id="hlgrowthline"></p>
+        <div class="hl-spark" id="hlspark"></div>
       </div>
       <div class="hl-card hl-culture">
         <p class="hl-label">Your region's colours</p>

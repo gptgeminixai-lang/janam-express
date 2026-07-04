@@ -1,29 +1,42 @@
-import prices from '../data/prices.json';
-import filmsData from '../data/films.json';
-import cricketData from '../data/cricket.json';
-import milestonesData from '../data/milestones.json';
-import citiesData from '../data/cities.json';
-import staticData from '../data/static.json';
-import regional from '../data/regional.json';
-import statesymbols from '../data/statesymbols.json';
-import stateculture from '../data/stateculture.json';
-import knownfor from '../data/knownfor.json';
-import sports from '../data/sports.json';
-
+import citiesData from '../data/cities.json'; // eager: the only data the landing/booking form needs
 export const CITIES = citiesData.cities;
-export const PMS = staticData.pms;
-export const PRESIDENTS = staticData.presidents;
-export const FIRSTS = staticData.firsts;
+
+/* Everything else is dynamic-imported after the user books (during the ~2.75s departure
+   animation), so the landing JS stays tiny. Consumers await loadData() before rendering. */
+export let FIRSTS = [];                                  // live binding used directly by main.js
+export let NAK = [], RASHI_TBL = [], GRAHA_GOV = {}, PANCHANG = {}; // consumed by main.js
+let prices, staticData, regional, statesymbols, stateculture, knownfor, sports;
+let PMS = [], PRESIDENTS = [];
+let FILMS = new Map(), SONGS = new Map(), CRICKET = new Map(), MILESTONES = new Map();
+let langByCode = new Map(), stateLangMap = new Map();
 
 const byYear = rows => {
   const m = new Map();
   for (const r of rows) m.set(r.year, r);
   return m;
 };
-const FILMS = byYear(filmsData.films);
-const SONGS = byYear(filmsData.songs);
-const CRICKET = byYear(cricketData.moments);
-const MILESTONES = byYear(milestonesData.milestones);
+
+let _loaded = null;
+export function loadData() {
+  if (_loaded) return _loaded;
+  _loaded = Promise.all([
+    import('../data/prices.json'), import('../data/films.json'), import('../data/cricket.json'),
+    import('../data/milestones.json'), import('../data/static.json'), import('../data/regional.json'),
+    import('../data/statesymbols.json'), import('../data/stateculture.json'), import('../data/knownfor.json'),
+    import('../data/sports.json'), import('../data/nakshatras.json'), import('../data/rashis.json'),
+    import('../data/grahas.json'), import('../data/panchang.json'),
+  ]).then(mods => {
+    const [pr, films, cricket, milestones, st, reg, ss, sc, kf, sp, nak, rashi, graha, panch] = mods.map(m => m.default);
+    prices = pr; staticData = st; regional = reg; statesymbols = ss; stateculture = sc; knownfor = kf; sports = sp;
+    PMS = st.pms; PRESIDENTS = st.presidents; FIRSTS = st.firsts;
+    FILMS = byYear(films.films); SONGS = byYear(films.songs);
+    CRICKET = byYear(cricket.moments); MILESTONES = byYear(milestones.milestones);
+    langByCode = new Map(reg.languages.map(l => [l.code, l]));
+    stateLangMap = new Map(reg.stateLang.map(s => [s.state, s]));
+    NAK = nak; RASHI_TBL = rashi; GRAHA_GOV = graha; PANCHANG = panch;
+  });
+  return _loaded;
+}
 
 /* log-linear interpolation over sparse {year,value} rows */
 export function series(rows, year) {
@@ -148,10 +161,7 @@ export function regionalEra(state, year) {
   return { label: 'Vikram Samvat', value: `${year + 57} VS` };
 }
 
-/* ---------- regional layer ---------- */
-const langByCode = new Map(regional.languages.map(l => [l.code, l]));
-const stateLangMap = new Map(regional.stateLang.map(s => [s.state, s]));
-
+/* ---------- regional layer (langByCode / stateLangMap populated by loadData) ---------- */
 export function greetingOf(state) {
   const sl = stateLangMap.get(state);
   return langByCode.get(sl ? sl.lang : 'hi') || langByCode.get('hi');

@@ -3,14 +3,11 @@ import {
   pmOn, presidentOn, population, findCity, tvEra, fmtIN, MONTHS,
   greetingOf, regionalCinemaOf, stateStoryOf, hinduYears, inflate,
   stateSymbolsOf, stateCultureOf, regionalEra, knownForOf, sportOf,
+  loadData, NAK, RASHI_TBL, GRAHA_GOV, PANCHANG,
 } from './lookup.js';
-import panchang from '../data/panchang.json';
 import { skyOn, panchangOn } from './astronomy.js';
 import { weatherOn, historyOn, historyIndia, famousBirthdays, famousBirthdaysGlobal, postersOf } from './api.js';
 import { rashiChart, RASHIS, GRAHA_NAMES } from './kundli.js';
-import nakInfo from '../data/nakshatras.json';
-import rashiInfo from '../data/rashis.json';
-import grahaGoverns from '../data/grahas.json';
 import { mahadasha, numerology, weekdayOf } from './jyotish.js';
 import { buildCaption, shareTicket, downloadTicket } from './share.js';
 
@@ -74,31 +71,33 @@ function startJourney(y, m, d, city, name) {
   J = { y, m, d, city, name };
   J.iso = `${y}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
   history.replaceState(null, '', `?d=${J.iso}&c=${encodeURIComponent(city.name)}${name !== 'Traveller' ? `&n=${encodeURIComponent(name)}` : ''}`);
-  render();
-  depart(y);
+  // load the heavy data while the departure animation plays, then render + reveal
+  Promise.all([loadData(), departAnim(y)]).then(() => { render(); arrive(); });
 }
 
 /* ---------- departure board ---------- */
-function depart(year) {
-  if (reduceMotion) { arrive(); return; }
-  const board = $('board'), flap = $('flapyear');
-  board.classList.add('show');
-  let cur = 0;
-  const start = performance.now(), dur = 2100;
-  function tick(now) {
-    const f = Math.min(1, (now - start) / dur);
-    const eased = 1 - Math.pow(1 - f, 3);
-    const showY = Math.round(2026 - (2026 - year) * eased);
-    if (showY !== cur) {
-      cur = showY;
-      flap.innerHTML = String(showY).split('').map(ch => `<span>${ch}</span>`).join('');
+function departAnim(year) {
+  return new Promise(resolve => {
+    if (reduceMotion) { resolve(); return; }
+    const board = $('board'), flap = $('flapyear');
+    board.classList.add('show');
+    let cur = 0;
+    const start = performance.now(), dur = 2100;
+    function tick(now) {
+      const f = Math.min(1, (now - start) / dur);
+      const eased = 1 - Math.pow(1 - f, 3);
+      const showY = Math.round(2026 - (2026 - year) * eased);
+      if (showY !== cur) {
+        cur = showY;
+        flap.innerHTML = String(showY).split('').map(ch => `<span>${ch}</span>`).join('');
+      }
+      $('boardline').textContent = f < 1
+        ? `DEPARTING · PLATFORM 9 · DESTINATION ${year}`
+        : `ARRIVED · ${year} · MIND THE GAP IN TIME`;
+      if (f < 1) requestAnimationFrame(tick); else setTimeout(resolve, 650);
     }
-    $('boardline').textContent = f < 1
-      ? `DEPARTING · PLATFORM 9 · DESTINATION ${year}`
-      : `ARRIVED · ${year} · MIND THE GAP IN TIME`;
-    if (f < 1) requestAnimationFrame(tick); else setTimeout(arrive, 650);
-  }
-  requestAnimationFrame(tick);
+    requestAnimationFrame(tick);
+  });
 }
 function arrive() {
   $('board').classList.remove('show');
@@ -312,15 +311,15 @@ function render() {
   $('tithigod').textContent = ''; $('navagraha').textContent = '';
   chartP.then(chart => {
     if (!fresh()) return;
-    const nk = nakInfo[chart.moonNakshatra.index];
+    const nk = NAK[chart.moonNakshatra.index];
     $('deityname').textContent = cleanDeity(nk.deity);
     $('deitystory').textContent = nk.deityStory;
     $('deitytemple').innerHTML = `Honoured at the <b style="color:#EFC078">${nk.temple}</b>, ${nk.templeTown}.`;
     const isAma = chart.tithiNum === 29;
-    const td = isAma ? { tithi: 'Amavasya', deity: 'the Pitrs (the ancestors)' } : panchang.tithiDeity[chart.tithiNum % 15];
+    const td = isAma ? { tithi: 'Amavasya', deity: 'the Pitrs (the ancestors)' } : PANCHANG.tithiDeity[chart.tithiNum % 15];
     $('tithigod').textContent = td.deity;
     $('tithigodsub').textContent = `${chart.tithiNum < 15 ? 'Shukla' : 'Krishna'} ${td.tithi || ''}`.trim();
-    const nav = panchang.navagraha[nk.lord];
+    const nav = PANCHANG.navagraha[nk.lord];
     if (nav) {
       $('navagraha').innerHTML = `Your star answers to <b>${nk.lord}</b>, whose Navagraha temple is <b>${nav.temple}</b> at ${nav.town}.`;
       $('navagrahabeej').textContent = `Its seed-mantra: ${nav.beej}`;
@@ -349,7 +348,7 @@ function render() {
       return `<div class="dseg ${cls}" style="flex-grow:${span.toFixed(2)}"><span class="dp">${p.lord}</span><span class="dy">${Math.round(p.start)}–${Math.round(p.end)}</span></div>`;
     }).join('');
     $('dashanow').innerHTML = `Today, at ${Math.floor(md.age)}, the wheel has turned to <b>${md.current.lord}</b> — ${md.currentNote}.`;
-    const nk = nakInfo[chart.moonNakshatra.index];
+    const nk = NAK[chart.moonNakshatra.index];
     const syl = (nk.naamAkshar || [])[chart.moonNakshatra.pada - 1];
     if (syl) {
       const named = name && name !== 'Traveller';
@@ -365,6 +364,20 @@ function render() {
     $('hlknown').closest('.hl-card').hidden = false;
   } else {
     $('hlknown').closest('.hl-card').hidden = true;
+  }
+  const census = [[1951, city.pop1951], [1971, city.pop1971], [1991, city.pop1991], [2011, city.pop2011]].filter(x => x[1]);
+  if (census.length >= 2 && city.pop2011) {
+    const near = census.reduce((a, b) => Math.abs(b[0] - y) < Math.abs(a[0] - y) ? b : a);
+    const then = near[1], now = city.pop2011, mult = now / then;
+    $('hlgrowthline').innerHTML = mult >= 1.15
+      ? `Around ${near[0]}, ${city.name} was home to about <b>${fmtIN(then * 1000)}</b> people. By 2011 it was <b>${fmtIN(now * 1000)}</b> — <b>${mult.toFixed(1)}×</b> bigger within a lifetime.`
+      : `${city.name} counted about <b>${fmtIN(now * 1000)}</b> people by 2011 — a city that has held its shape.`;
+    const max = Math.max(...census.map(x => x[1]));
+    $('hlspark').innerHTML = census.map(([yr, v]) =>
+      `<div class="spark-bar" style="height:${Math.max(8, Math.round(v / max * 100))}%"><span>'${String(yr).slice(2)}</span></div>`).join('');
+    $('hlgrowth').hidden = false;
+  } else {
+    $('hlgrowth').hidden = true;
   }
   const cult = stateCultureOf(city.state), sym = stateSymbolsOf(city.state), era = regionalEra(city.state, y);
   if (cult) {
@@ -404,7 +417,7 @@ function render() {
   Promise.all([chartP, panchP.catch(() => null)]).then(([chart, p]) => {
     if (!fresh()) return;
     const g = k => (p && p[k]) ? p[k] : '—';
-    const yoga = (panchang.yoga[chart.yogaIndex] || {}).name || '—';
+    const yoga = (PANCHANG.yoga[chart.yogaIndex] || {}).name || '—';
     $('mbgrid').innerHTML =
       `<div><b>Tithi</b>${g('tithi')}</div><div><b>Yoga</b>${yoga}</div>` +
       `<div><b>Karana</b>${chart.karanaName}</div><div><b>Paksha</b>${g('paksha')}</div>` +
@@ -421,8 +434,8 @@ function render() {
   $('astrorows').innerHTML = '';
   Promise.all([chartP, panchP.catch(() => null)]).then(([chart, p]) => {
     if (!fresh()) return;
-    const nk = nakInfo[chart.moonNakshatra.index];
-    const rz = rashiInfo[chart.moonRashi];
+    const nk = NAK[chart.moonNakshatra.index];
+    const rz = RASHI_TBL[chart.moonRashi];
     const cleanTree = nk.tree.replace(/\s*\(.*\)/, '');
     $('astrostar').innerHTML = `${nk.name} <span class="astro-dev">${nk.devanagari || ''}</span>`;
     $('astrodeva').innerHTML = `Ruled by <b>${nk.lord}</b> · presiding deity <b>${nk.deity}</b>`;
@@ -431,7 +444,7 @@ function render() {
     $('astrotrait').textContent = `People born under ${nk.name} are traditionally described as ${lowerFirst(nk.traits)}`;
     $('astrogana').innerHTML = `${nk.gana} — ${GANA_GLOSS[nk.gana] || ''}`;
     $('astrogana').className = 'gana-badge gana-' + nk.gana.toLowerCase();
-    const lordGov = grahaGoverns[LORD_ABBR[nk.lord]] || '';
+    const lordGov = GRAHA_GOV[LORD_ABBR[nk.lord]] || '';
     const rows = [
       ['Moon sign', `Your Moon sat in <b>${rz.sanskrit} (${rz.english})</b> — in India this, not your Sun sign, is "your sign": the seat of the mind and emotions. ${rz.traits}`],
       ['Ruling planet', `Your star answers to <b>${nk.lord}</b>${lordGov ? ' — ' + lowerFirst(lordGov) : ''}.`],
