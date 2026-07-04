@@ -1,0 +1,799 @@
+{
+ "films": [
+  {
+   "year": 1950,
+   "film": "Samadhi",
+   "confidence": "verified",
+   "note": "Ashok Kumar's freedom-fighter spy thriller topped newly independent India's box office"
+  },
+  {
+   "year": 1951,
+   "film": "Awaara",
+   "confidence": "verified",
+   "note": "Raj Kapoor's lovable tramp charmed India, then Russia and China"
+  },
+  {
+   "year": 1952,
+   "film": "Aan",
+   "confidence": "verified",
+   "note": "India's first Technicolor spectacle; Dilip Kumar swashbuckling for Mehboob Khan"
+  },
+  {
+   "year": 1953,
+   "film": "Anarkali",
+   "confidence": "verified",
+   "note": "Bina Rai's doomed courtesan; C. Ramchandra's songs played on every street"
+  },
+  {
+   "year": 1954,
+   "film": "Nagin",
+   "confidence": "verified",
+   "note": "Vyjayanthimala's snake-charmer romance; that hypnotic been tune gripped the nation"
+  },
+  {
+   "year": 1955,
+   "film": "Shree 420",
+   "confidence": "verified",
+   "note": "Raj Kapoor's conman with a heart sang 'Mera Joota Hai Japani'"
+  },
+  {
+   "year": 1956,
+   "film": "C.I.D.",
+   "confidence": "verified",
+   "note": "Dev Anand's Bombay noir that introduced a luminous Waheeda Rehman"
+  },
+  {
+   "year": 1957,
+   "film": "Mother India",
+   "confidence": "verified",
+   "note": "Nargis's epic mother — India's first Oscar nominee and decade-defining blockbuster"
+  },
+  {
+   "year": 1958,
+   "film": "Madhumati",
+   "confidence": "verified",
+   "note": "Bimal Roy's reincarnation mystery swept nine Filmfare awards, a record"
+  },
+  {
+   "year": 1959,
+   "film": "Anari",
+   "confidence": "verified",
+   "note": "Raj Kapoor and Nutan's gentle romance about an honest simpleton"
+  },
+  {
+   "year": 1960,
+   "film": "Mughal-e-Azam",
+   "confidence": "verified",
+   "note": "K. Asif's decade-in-the-making Mughal epic; Anarkali defied an emperor"
+  },
+  {
+   "year": 1961,
+   "film": "Gunga Jumna",
+   "confidence": "verified",
+   "note": "Dilip Kumar wrote, produced and starred in this dacoit tragedy"
+  },
+  {
+   "year": 1962,
+   "film": "Bees Saal Baad",
+   "confidence": "verified",
+   "note": "Gothic whodunit; 'Kahin Deep Jale Kahin Dil' haunted radio nights"
+  },
+  {
+   "year": 1963,
+   "film": "Mere Mehboob",
+   "confidence": "verified",
+   "note": "Lucknow romance in Eastmancolor; Rafi's title ghazal melted a million hearts"
+  },
+  {
+   "year": 1964,
+   "film": "Sangam",
+   "confidence": "verified",
+   "note": "Raj Kapoor's love triangle took Bollywood to Europe for the first time"
+  },
+  {
+   "year": 1965,
+   "film": "Waqt",
+   "confidence": "verified",
+   "note": "Yash Chopra's lost-and-found family saga practically invented the multi-starrer"
+  },
+  {
+   "year": 1966,
+   "film": "Phool Aur Patthar",
+   "confidence": "verified",
+   "note": "Dharmendra's shirtless breakout opposite Meena Kumari made him a superstar"
+  },
+  {
+   "year": 1967,
+   "film": "Upkar",
+   "confidence": "verified",
+   "note": "Manoj Kumar's 'Jai Jawan Jai Kisan' patriotism swept post-war India"
+  },
+  {
+   "year": 1968,
+   "film": "Ankhen",
+   "confidence": "verified",
+   "note": "India's answer to Bond — spy thrills with Mala Sinha and Mehmood"
+  },
+  {
+   "year": 1969,
+   "film": "Aradhana",
+   "confidence": "verified",
+   "note": "Rajesh Khanna superstardom ignites; Kishore Kumar's voice reborn with 'Mere Sapnon Ki Rani'"
+  },
+  {
+   "year": 1970,
+   "film": "Johny Mera Naam",
+   "confidence": "verified",
+   "note": "Dev Anand's glossy caper; Vijay Anand's slickest crime confection"
+  },
+  {
+   "year": 1971,
+   "film": "Haathi Mere Saathi",
+   "confidence": "verified",
+   "note": "Rajesh Khanna and his four elephants — the friendship tale every child adored"
+  },
+  {
+   "year": 1972,
+   "film": "Pakeezah",
+   "confidence": "verified",
+   "note": "Meena Kumari's luminous swan song, fourteen years in the making"
+  },
+  {
+   "year": 1973,
+   "film": "Bobby",
+   "confidence": "verified",
+   "note": "Rishi and Dimple's teen romance launched a thousand school crushes"
+  },
+  {
+   "year": 1974,
+   "film": "Roti Kapda Aur Makaan",
+   "confidence": "verified",
+   "note": "Manoj Kumar's anthem for inflation-hit India: bread, cloth and shelter"
+  },
+  {
+   "year": 1975,
+   "film": "Sholay",
+   "confidence": "verified",
+   "note": "Jai, Veeru and Gabbar — ran five straight years at Minerva"
+  },
+  {
+   "year": 1976,
+   "film": "Nagin",
+   "confidence": "verified",
+   "note": "Reena Roy's shape-shifting serpent out-earned every superstar that year"
+  },
+  {
+   "year": 1977,
+   "film": "Amar Akbar Anthony",
+   "confidence": "verified",
+   "note": "Manmohan Desai's three lost brothers — masala cinema at full throttle"
+  },
+  {
+   "year": 1978,
+   "film": "Muqaddar Ka Sikandar",
+   "confidence": "verified",
+   "note": "Amitabh's brooding street orphan; the angry young man at his peak"
+  },
+  {
+   "year": 1979,
+   "film": "Suhaag",
+   "confidence": "verified",
+   "note": "Manmohan Desai and Amitabh again — the masala formula perfected"
+  },
+  {
+   "year": 1980,
+   "film": "Qurbani",
+   "confidence": "verified",
+   "note": "Feroz Khan's flashy thriller; 'Aap Jaisa Koi' sparked nationwide disco fever"
+  },
+  {
+   "year": 1981,
+   "film": "Kranti",
+   "confidence": "verified",
+   "note": "Manoj Kumar's freedom-struggle epic brought Dilip Kumar back to the screen"
+  },
+  {
+   "year": 1982,
+   "film": "Vidhaata",
+   "confidence": "verified",
+   "note": "Dilip Kumar mentors debutant Sanjay Dutt; Disco Dancer conquered the USSR"
+  },
+  {
+   "year": 1983,
+   "film": "Coolie",
+   "confidence": "verified",
+   "note": "Amitabh nearly died filming it; a nation prayed outside hospitals"
+  },
+  {
+   "year": 1984,
+   "film": "Tohfa",
+   "confidence": "verified",
+   "note": "Jeetendra, Sridevi and Jaya Prada — Madras-made masala at its commercial peak"
+  },
+  {
+   "year": 1985,
+   "film": "Ram Teri Ganga Maili",
+   "confidence": "verified",
+   "note": "Raj Kapoor's final film as director; Mandakini's waterfall scene scandalised India"
+  },
+  {
+   "year": 1986,
+   "film": "Karma",
+   "confidence": "verified",
+   "note": "Subhash Ghai's patriotic ensemble; Dilip Kumar versus Anupam Kher's Dr. Dang"
+  },
+  {
+   "year": 1987,
+   "film": "Hukumat",
+   "confidence": "verified",
+   "note": "Dharmendra's mass actioner outran even Mr. India that year"
+  },
+  {
+   "year": 1988,
+   "film": "Tezaab",
+   "confidence": "verified",
+   "note": "'Ek Do Teen' — Madhuri Dixit becomes an overnight national obsession"
+  },
+  {
+   "year": 1989,
+   "film": "Maine Pyar Kiya",
+   "confidence": "verified",
+   "note": "Salman Khan arrives; Sooraj Barjatya's sweet romance broke every record"
+  },
+  {
+   "year": 1990,
+   "film": "Dil",
+   "confidence": "verified",
+   "note": "Aamir and Madhuri's feisty campus romance ruled the new decade"
+  },
+  {
+   "year": 1991,
+   "film": "Saajan",
+   "confidence": "verified",
+   "note": "Love triangle by letters; Nadeem-Shravan melodies sold millions of cassettes"
+  },
+  {
+   "year": 1992,
+   "film": "Beta",
+   "confidence": "verified",
+   "note": "Anil Kapoor's film, but Madhuri's 'Dhak Dhak' claimed it forever"
+  },
+  {
+   "year": 1993,
+   "film": "Aankhen",
+   "confidence": "verified",
+   "note": "Govinda's double-role riot — David Dhawan comedy at its loudest"
+  },
+  {
+   "year": 1994,
+   "film": "Hum Aapke Hain Koun..!",
+   "confidence": "verified",
+   "note": "The wedding India replayed forever; biggest Hindi hit in history then"
+  },
+  {
+   "year": 1995,
+   "film": "Dilwale Dulhania Le Jayenge",
+   "confidence": "verified",
+   "note": "Raj and Simran — still running at Mumbai's Maratha Mandir today"
+  },
+  {
+   "year": 1996,
+   "film": "Raja Hindustani",
+   "confidence": "verified",
+   "note": "Aamir and Karisma's rain-drenched romance with a chart-devouring Nadeem-Shravan score"
+  },
+  {
+   "year": 1997,
+   "film": "Border",
+   "confidence": "verified",
+   "note": "J.P. Dutta's Longewala war epic; 'Sandese Aate Hai' made India weep"
+  },
+  {
+   "year": 1998,
+   "film": "Kuch Kuch Hota Hai",
+   "confidence": "verified",
+   "note": "Karan Johar's debut; friendship bands and Archies cards everywhere"
+  },
+  {
+   "year": 1999,
+   "film": "Hum Saath-Saath Hain",
+   "confidence": "verified",
+   "note": "Sooraj Barjatya's joint-family epic, Salman's third straight family blockbuster"
+  },
+  {
+   "year": 2000,
+   "film": "Kaho Naa... Pyaar Hai",
+   "confidence": "verified",
+   "note": "Hrithik Roshan erupts overnight — double role, dance moves, national mania"
+  },
+  {
+   "year": 2001,
+   "film": "Kabhi Khushi Kabhie Gham",
+   "confidence": "verified",
+   "note": "Karan Johar's six-star family pageant: it's all about loving your parents"
+  },
+  {
+   "year": 2002,
+   "film": "Devdas",
+   "confidence": "verified",
+   "note": "Bhansali's opulent tragedy premiered at Cannes; Madhuri and Aishwarya together"
+  },
+  {
+   "year": 2003,
+   "film": "Kal Ho Naa Ho",
+   "confidence": "verified",
+   "note": "SRK's dying charmer in New York; a generation's favourite tearjerker"
+  },
+  {
+   "year": 2004,
+   "film": "Veer-Zaara",
+   "confidence": "verified",
+   "note": "Yash Chopra's cross-border love story scored with Madan Mohan's lost tunes"
+  },
+  {
+   "year": 2005,
+   "film": "No Entry",
+   "confidence": "verified",
+   "note": "Anees Bazmee's infidelity farce laughed its way past every blockbuster"
+  },
+  {
+   "year": 2006,
+   "film": "Dhoom 2",
+   "confidence": "verified",
+   "note": "Hrithik's gentleman thief, Aishwarya in Rio — sequel swagger perfected"
+  },
+  {
+   "year": 2007,
+   "film": "Om Shanti Om",
+   "confidence": "verified",
+   "note": "Farah Khan's reincarnation masala introduced Deepika Padukone to India"
+  },
+  {
+   "year": 2008,
+   "film": "Ghajini",
+   "confidence": "verified",
+   "note": "Aamir's eight-pack revenge saga — Bollywood's first hundred-crore net earner"
+  },
+  {
+   "year": 2009,
+   "film": "3 Idiots",
+   "confidence": "verified",
+   "note": "'Aal izz well' — Hirani's campus comedy rewrote every box-office record"
+  },
+  {
+   "year": 2010,
+   "film": "Dabangg",
+   "confidence": "verified",
+   "note": "Salman's Chulbul Pandey swaggers in; 'Munni' played at every wedding"
+  }
+ ],
+ "songs": [
+  {
+   "year": 1950,
+   "song": "Gore Gore O Banke Chhore",
+   "film": "Samadhi",
+   "source": "Biggest hit of the year (pre-Binaca era)",
+   "confidence": "likely"
+  },
+  {
+   "year": 1951,
+   "song": "Awara Hoon",
+   "film": "Awaara",
+   "source": "Biggest hit of the year (pre-Binaca era); Mukesh's global anthem",
+   "confidence": "likely"
+  },
+  {
+   "year": 1952,
+   "song": "Tu Ganga Ki Mauj Main Jamuna Ka Dhara",
+   "film": "Baiju Bawra",
+   "source": "Biggest soundtrack of the year (pre-Binaca era)",
+   "confidence": "likely"
+  },
+  {
+   "year": 1953,
+   "song": "Ye Zindagi Usi Ki Hai",
+   "film": "Anarkali",
+   "source": "Binaca Geetmala #1 (Lata Mangeshkar)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1954,
+   "song": "Jayen To Jayen Kahan",
+   "film": "Taxi Driver",
+   "source": "Binaca Geetmala #1 (Talat Mahmood)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1955,
+   "song": "Mera Joota Hai Japani",
+   "film": "Shree 420",
+   "source": "Binaca Geetmala #1 (Mukesh)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1956,
+   "song": "Ae Dil Hai Mushkil Jeena Yahan",
+   "film": "C.I.D.",
+   "source": "Binaca Geetmala #1 (Mohammed Rafi, Geeta Dutt)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1957,
+   "song": "Zara Saamne To Aao Chhaliye",
+   "film": "Janam Janam Ke Phere",
+   "source": "Binaca Geetmala #1 (Lata Mangeshkar, Mohammed Rafi)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1958,
+   "song": "Hai Apna Dil To Awara",
+   "film": "Solva Saal",
+   "source": "Binaca Geetmala #1 (Hemant Kumar)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1959,
+   "song": "Haal Kaisa Hai Janab Ka",
+   "film": "Chalti Ka Naam Gaadi",
+   "source": "Binaca Geetmala #1 (Kishore Kumar, Asha Bhosle)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1960,
+   "song": "Zindagi Bhar Nahin Bhoolegi Woh Barsaat Ki Raat",
+   "film": "Barsaat Ki Raat",
+   "source": "Binaca Geetmala #1 (Mohammed Rafi)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1961,
+   "song": "Teri Pyari Pyari Surat Ko",
+   "film": "Sasural",
+   "source": "Binaca Geetmala #1 (Mohammed Rafi)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1962,
+   "song": "Ehsan Tera Hoga Mujh Par",
+   "film": "Junglee",
+   "source": "Binaca Geetmala #1 (Mohammed Rafi)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1963,
+   "song": "Jo Wada Kiya Woh Nibhana Padega",
+   "film": "Taj Mahal",
+   "source": "Binaca Geetmala #1 (Mohammed Rafi, Lata Mangeshkar)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1964,
+   "song": "Mere Man Ki Ganga Aur Tere Man Ki Jamuna (Bol Radha Bol)",
+   "film": "Sangam",
+   "source": "Binaca Geetmala #1 (Mukesh)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1965,
+   "song": "Jis Dil Mein Basa Tha Pyar Tera",
+   "film": "Saheli",
+   "source": "Binaca Geetmala #1 (Mukesh)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1966,
+   "song": "Baharon Phool Barsao",
+   "film": "Suraj",
+   "source": "Binaca Geetmala #1 (Mohammed Rafi)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1967,
+   "song": "Sawan Ka Mahina",
+   "film": "Milan",
+   "source": "Binaca Geetmala #1 (Lata Mangeshkar, Mukesh)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1968,
+   "song": "Dil Wil Pyar Vyar",
+   "film": "Shagird",
+   "source": "Binaca Geetmala #1 (Lata Mangeshkar)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1969,
+   "song": "Kaise Rahun Chup Ki Maine Pee Hi Kya Hai",
+   "film": "Intaqam",
+   "source": "Binaca Geetmala #1 (Lata Mangeshkar)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1970,
+   "song": "Bindiya Chamkegi",
+   "film": "Do Raaste",
+   "source": "Binaca Geetmala #1 (Lata Mangeshkar)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1971,
+   "song": "Zindagi Ek Safar Hai Suhana",
+   "film": "Andaz",
+   "source": "Binaca Geetmala #1 (Kishore Kumar)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1972,
+   "song": "Dum Maro Dum",
+   "film": "Hare Rama Hare Krishna",
+   "source": "Binaca Geetmala #1 (Asha Bhosle, Usha Iyer)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1973,
+   "song": "Yaari Hai Imaan Mera Yaar Meri Zindagi",
+   "film": "Zanjeer",
+   "source": "Binaca Geetmala #1 (Manna Dey)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1974,
+   "song": "Mera Jeevan Kora Kagaz",
+   "film": "Kora Kagaz",
+   "source": "Binaca Geetmala #1 (Kishore Kumar)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1975,
+   "song": "Mehngai Maar Gayi",
+   "film": "Roti Kapda Aur Makaan",
+   "source": "Binaca Geetmala #1",
+   "confidence": "verified"
+  },
+  {
+   "year": 1976,
+   "song": "Kabhi Kabhie Mere Dil Mein",
+   "film": "Kabhi Kabhie",
+   "source": "Binaca Geetmala #1 (Mukesh)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1977,
+   "song": "Husn Hazir Hai Muhabbat Ki Saza Pane Ko",
+   "film": "Laila Majnu",
+   "source": "Binaca Geetmala #1 (Lata Mangeshkar)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1978,
+   "song": "Ankhiyon Ke Jharokhon Se",
+   "film": "Ankhiyon Ke Jharokhon Se",
+   "source": "Binaca Geetmala #1 (Hemlata)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1979,
+   "song": "Khai Ke Paan Banaras Wala",
+   "film": "Don",
+   "source": "Binaca Geetmala #1 (Kishore Kumar)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1980,
+   "song": "Dafli Wale Dafli Baja",
+   "film": "Sargam",
+   "source": "Binaca Geetmala #1 (Lata Mangeshkar, Mohammed Rafi)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1981,
+   "song": "Mere Angne Mein Tumhara Kya Kaam Hai",
+   "film": "Laawaris",
+   "source": "Binaca Geetmala #1 (Amitabh Bachchan)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1982,
+   "song": "Angrezi Mein Kehte Hain Ke I Love You",
+   "film": "Khud-Daar",
+   "source": "Binaca Geetmala #1 (Kishore Kumar, Lata Mangeshkar)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1983,
+   "song": "Shayad Meri Shaadi Ka Khayal",
+   "film": "Souten",
+   "source": "Binaca Geetmala #1 (Lata Mangeshkar, Kishore Kumar)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1984,
+   "song": "Tu Mera Jaanu Hai",
+   "film": "Hero",
+   "source": "Binaca Geetmala #1 (Manhar Udhas, Anuradha Paudwal)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1985,
+   "song": "Sun Sahiba Sun",
+   "film": "Ram Teri Ganga Maili",
+   "source": "Binaca Geetmala #1 (Lata Mangeshkar)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1986,
+   "song": "Yashoda Ka Nandlala",
+   "film": "Sanjog",
+   "source": "Binaca Geetmala #1 (Lata Mangeshkar)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1987,
+   "song": "Chithi Aayi Hai",
+   "film": "Naam",
+   "source": "Binaca Geetmala #1 (Pankaj Udhas)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1988,
+   "song": "Papa Kehte Hain Bada Naam Karega",
+   "film": "Qayamat Se Qayamat Tak",
+   "source": "Binaca Geetmala #1 (Udit Narayan)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1989,
+   "song": "My Name Is Lakhan",
+   "film": "Ram Lakhan",
+   "source": "Binaca Geetmala #1 (Mohammed Aziz)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1990,
+   "song": "Gori Hain Kalaiyan",
+   "film": "Aaj Ka Arjun",
+   "source": "Binaca Geetmala #1 (Lata Mangeshkar, Shabbir Kumar)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1991,
+   "song": "Dekha Hai Pehli Baar",
+   "film": "Saajan",
+   "source": "Binaca Geetmala #1 (S. P. Balasubrahmanyam, Alka Yagnik)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1992,
+   "song": "Maine Pyar Tumhi Se Kiya Hai",
+   "film": "Phool Aur Kaante",
+   "source": "Binaca Geetmala #1 (Kumar Sanu, Anuradha Paudwal)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1993,
+   "song": "Choli Ke Peeche Kya Hai",
+   "film": "Khal Nayak",
+   "source": "Binaca Geetmala #1 (Alka Yagnik, Ila Arun) — the chart's final year",
+   "confidence": "verified"
+  },
+  {
+   "year": 1994,
+   "song": "Ek Ladki Ko Dekha",
+   "film": "1942: A Love Story",
+   "source": "Filmfare Best Male Playback winner (Kumar Sanu)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1995,
+   "song": "Mehndi Laga Ke Rakhna",
+   "film": "Dilwale Dulhania Le Jayenge",
+   "source": "Filmfare Best Male Playback winner (Udit Narayan)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1996,
+   "song": "Pardesi Pardesi",
+   "film": "Raja Hindustani",
+   "source": "Filmfare Best Male Playback winner (Udit Narayan)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1997,
+   "song": "Meri Mehbooba",
+   "film": "Pardes",
+   "source": "Filmfare Best Female Playback winner (Alka Yagnik)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1998,
+   "song": "Chaiyya Chaiyya",
+   "film": "Dil Se..",
+   "source": "Filmfare Best Male Playback winner (Sukhwinder Singh)",
+   "confidence": "verified"
+  },
+  {
+   "year": 1999,
+   "song": "Taal Se Taal Mila",
+   "film": "Taal",
+   "source": "Filmfare Best Female Playback winner (Alka Yagnik)",
+   "confidence": "verified"
+  },
+  {
+   "year": 2000,
+   "song": "Naa Tum Jaano Naa Hum",
+   "film": "Kaho Naa... Pyaar Hai",
+   "source": "Filmfare Best Male Playback winner (Lucky Ali)",
+   "confidence": "verified"
+  },
+  {
+   "year": 2001,
+   "song": "Mitwa",
+   "film": "Lagaan",
+   "source": "Filmfare Best Male Playback winner (Udit Narayan)",
+   "confidence": "verified"
+  },
+  {
+   "year": 2002,
+   "song": "Dola Re Dola",
+   "film": "Devdas",
+   "source": "Filmfare Best Female Playback winners (Shreya Ghoshal, Kavita Krishnamurthy)",
+   "confidence": "verified"
+  },
+  {
+   "year": 2003,
+   "song": "Kal Ho Naa Ho",
+   "film": "Kal Ho Naa Ho",
+   "source": "Filmfare Best Male Playback winner (Sonu Nigam)",
+   "confidence": "verified"
+  },
+  {
+   "year": 2004,
+   "song": "Hum Tum",
+   "film": "Hum Tum",
+   "source": "Filmfare Best Female Playback winner (Alka Yagnik)",
+   "confidence": "verified"
+  },
+  {
+   "year": 2005,
+   "song": "Kajra Re",
+   "film": "Bunty Aur Babli",
+   "source": "Filmfare Best Female Playback winner (Alisha Chinai)",
+   "confidence": "verified"
+  },
+  {
+   "year": 2006,
+   "song": "Chand Sifarish",
+   "film": "Fanaa",
+   "source": "Filmfare Best Male Playback winners (Shaan, Kailash Kher)",
+   "confidence": "verified"
+  },
+  {
+   "year": 2007,
+   "song": "Barso Re",
+   "film": "Guru",
+   "source": "Filmfare Best Female Playback winner (Shreya Ghoshal)",
+   "confidence": "verified"
+  },
+  {
+   "year": 2008,
+   "song": "Haule Haule",
+   "film": "Rab Ne Bana Di Jodi",
+   "source": "Filmfare Best Male Playback winner (Sukhwinder Singh)",
+   "confidence": "verified"
+  },
+  {
+   "year": 2009,
+   "song": "Masakali",
+   "film": "Delhi-6",
+   "source": "Filmfare Best Male Playback winner (Mohit Chauhan)",
+   "confidence": "verified"
+  },
+  {
+   "year": 2010,
+   "song": "Munni Badnaam Hui",
+   "film": "Dabangg",
+   "source": "Filmfare Best Female Playback winner (Mamta Sharma); from the year's #1 film",
+   "confidence": "verified"
+  }
+ ]
+}

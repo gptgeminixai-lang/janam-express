@@ -1,0 +1,178 @@
+---
+import '../styles/global.css';
+---
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Janam Express — the day you were born</title>
+  <meta name="description" content="Enter your date and place of birth and ride back to the India of your day zero — prices, films, cricket, headlines, weather and your souvenir railway ticket." />
+  <meta property="og:title" content="Janam Express — the day you were born" />
+  <meta property="og:description" content="Book a ticket back to your birthday. ₹100 then vs now, the film in cinemas, the cricket score, the weather over your hometown." />
+</head>
+<body>
+
+<div class="atmos"></div><div class="vign"></div>
+
+<!-- SCREEN 0 · BOOKING WINDOW -->
+<section class="beat" id="booking">
+  <div class="enamel reveal">
+    <p class="hindi">जन्म एक्सप्रेस</p>
+    <h1>Janam Express</h1>
+    <p class="sub">Time-Travel Reservation Office · Est. your birthday</p>
+  </div>
+  <form class="slip reveal d2" id="slipform">
+    <h2>Reservation Slip</h2>
+    <p class="formno">FORM T-1947 · JOURNEYS AVAILABLE 1950–2010 · ALL STATIONS, INDIA</p>
+    <div class="field">
+      <label for="pname">Passenger name</label>
+      <input id="pname" type="text" placeholder="e.g. Asha" autocomplete="off" maxlength="24" />
+    </div>
+    <div class="field">
+      <label id="doblabel">Date of birth</label>
+      <div class="dob-row" role="group" aria-labelledby="doblabel">
+        <select id="dd" aria-label="Day"></select>
+        <select id="mm" aria-label="Month"></select>
+        <select id="yy" aria-label="Year"></select>
+      </div>
+    </div>
+    <div class="field">
+      <label for="city">Place of birth</label>
+      <input id="city" list="citylist" placeholder="Start typing… e.g. Kanpur" autocomplete="off" />
+      <datalist id="citylist"></datalist>
+      <p class="hint" id="cityhint">130+ stations across every Indian state</p>
+    </div>
+    <button class="stampbtn" type="submit">Book ticket to the past</button>
+    <p class="fare">FARE: ONE MEMORY · RETURN JOURNEY GUARANTEED</p>
+  </form>
+</section>
+
+<!-- DEPARTURE BOARD OVERLAY -->
+<div id="board" aria-hidden="true">
+  <div class="flap" id="flapyear"><span>2</span><span>0</span><span>2</span><span>6</span></div>
+  <p id="boardline">DEPARTING · PLATFORM 9 · ALL TIME ZONES</p>
+</div>
+
+<div id="journey">
+
+  <!-- BEAT 1 · TELEGRAM -->
+  <section class="beat" id="arrival">
+    <p class="kicker reveal">· Beat 01 · You have arrived ·</p>
+    <div class="telegram reveal d1">
+      <div class="head"><b>TELEGRAM</b><i>POSTS &amp; TELEGRAPHS · GOVT OF INDIA</i></div>
+      <p id="tgtext"></p>
+      <p class="tg-note" id="tgnote"></p>
+    </div>
+  </section>
+
+  <!-- BEAT 2 · THE ₹100 NOTE -->
+  <section class="beat" id="rupee">
+    <p class="kicker reveal">· Beat 02 · The value of money ·</p>
+    <div class="note reveal d1">
+      <p class="lbl">This note, on the day you were born, was worth —</p>
+      <div class="val" id="cpival">₹100</div>
+      <p class="lbl" id="cpisub">of today's money</p>
+    </div>
+    <p class="bigline reveal d2" id="cpiline"></p>
+    <div class="ticker reveal d3" id="pricechips"></div>
+    <p class="src reveal d4">RBI Handbook · World Bank CPI · PPAC · Pay Commission records<br />dashed chips = prices people remember, not official series</p>
+  </section>
+
+  <!-- BEAT 3 · THE CRT -->
+  <section class="beat" id="tvbeat">
+    <p class="kicker reveal">· Beat 03 · Switch on the TV ·</p>
+    <div class="crt reveal d1">
+      <div class="screen" id="tvscreen">
+        <p class="ch-tag" id="chtag"></p>
+        <h3 id="chtitle"></h3>
+        <p id="chbody"></p>
+        <div class="posterwall" id="posterwall" hidden></div>
+      </div>
+      <div class="crt-controls">
+        <span class="brand">DYANORA · SOLID STATE</span>
+        <button class="knob" id="chknob" type="button">Change channel ▸</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEAT 4 · SCOREBOARD -->
+  <section class="beat" id="cricket">
+    <p class="kicker reveal">· Beat 04 · Meanwhile, on the pitch ·</p>
+    <div class="sboard reveal d1">
+      <div class="row"><span>Fixture</span><b id="ckyear"></b></div>
+      <h3 id="ckhead"></h3>
+      <p class="story" id="ckstory"></p>
+    </div>
+  </section>
+
+  <!-- BEAT 5 · FRONT PAGE -->
+  <section class="beat" id="frontpage">
+    <p class="kicker reveal">· Beat 05 · The morning paper ·</p>
+    <div class="paperfold reveal d1">
+      <div class="masthead"><h3 id="mast"></h3></div>
+      <div class="dateline"><span id="dl-date"></span><span>PRICE: 25 PAISE</span></div>
+      <p class="headline" id="hl"></p>
+      <p class="deck" id="deck"></p>
+      <div class="cols">
+        <p><b>FROM THE CAPITAL —</b> <span id="pmline"></span></p>
+        <p><b>RASHTRAPATI BHAVAN —</b> <span id="presline"></span></p>
+        <p><b>CENSUS DESK —</b> <span id="popline"></span></p>
+        <p><b>CITY PAGE —</b> <span id="cityline"></span></p>
+        <p id="worldp" hidden><b>AROUND THE WORLD —</b> <span id="worldline"></span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEAT 6 · NOT YET -->
+  <section class="beat" id="notyetbeat">
+    <p class="kicker reveal">· Beat 06 · India was still waiting for ·</p>
+    <div class="notyet" id="nylist"></div>
+  </section>
+
+  <!-- BEAT 7 · THE STARS -->
+  <section class="beat" id="stars">
+    <p class="kicker reveal">· Beat 07 · What the sky said ·</p>
+    <div class="matchbox reveal d1">
+      <p class="mb-top">Safety Matches · Made in your birth year</p>
+      <h3 id="mbtitle">The Sky Brand</h3>
+      <p class="mb-sub" id="mbsub"></p>
+      <div class="mb-grid" id="mbgrid"></div>
+      <p class="mb-note">Computed for your exact place &amp; date · Panchang, Sivakasi label style</p>
+    </div>
+  </section>
+
+  <!-- BEAT 8 · THE TICKET -->
+  <section class="beat" id="ticketbeat">
+    <p class="kicker reveal">· Beat 08 · Your souvenir ·</p>
+    <div class="tkt reveal d1" id="tktcard">
+      <div class="rail"><b>JANAM EXPRESS</b><span>SLEEPER · TIME MACHINE CLASS</span></div>
+      <div class="route" id="tktroute"></div>
+      <div class="meta">
+        <div><b>Passenger</b><span id="tktname"></span></div>
+        <div><b>Traveller No.</b><span id="tktno"></span></div>
+        <div><b>Date of journey</b><span id="tktdate"></span></div>
+        <div><b>Berth</b><span id="tktberth"></span></div>
+      </div>
+      <div class="stamp2">Verified · Time Travelled</div>
+    </div>
+    <div class="tktbtns reveal d2">
+      <button class="ghost" id="sharebtn" type="button">Share ticket 🎟️</button>
+      <button class="ghost" id="downloadbtn" type="button">Download ticket image</button>
+      <button class="ghost" id="copybtn" type="button">Copy WhatsApp caption</button>
+      <button class="ghost" id="againbtn" type="button">Book another journey</button>
+    </div>
+  </section>
+
+  <footer>
+    Made with data that belongs to everyone<br />
+    RBI · World Bank · Wikimedia &amp; Wikidata (CC BY-SA) · Cricsheet (ODC-BY) · Open-Meteo (CC BY 4.0) · Census of India<br />
+    <span id="tmdbcredit" hidden>Film posters courtesy TMDB — this product uses the TMDB API but is not endorsed by TMDB</span>
+  </footer>
+
+</div>
+
+<script>
+  import '../lib/main.js';
+</script>
+</body>
+</html>

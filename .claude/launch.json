@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "janam-express",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "janam-express", "run", "dev"],
+      "port": 4321
+    }
+  ]
+}

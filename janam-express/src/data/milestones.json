@@ -1,0 +1,388 @@
+{
+ "milestones": [
+  {
+   "year": 1947,
+   "date": "1947-08-15",
+   "headline": "FREEDOM AT MIDNIGHT: INDIA IS BORN",
+   "blurb": "At the stroke of midnight on 15 August 1947, India awoke to independence as Nehru delivered his 'Tryst with Destiny' speech and the tricolour rose over Delhi."
+  },
+  {
+   "year": 1948,
+   "date": "1948-08-12",
+   "headline": "FREE INDIA'S FIRST GOLD AT WEMBLEY",
+   "blurb": "On 12 August 1948, India's hockey team beat Great Britain 4-0 at Wembley — the first Olympic gold under the tricolour, won in the land of its former rulers."
+  },
+  {
+   "year": 1949,
+   "date": "1949-11-26",
+   "headline": "WE, THE PEOPLE, ADOPT A CONSTITUTION",
+   "blurb": "On 26 November 1949, the Constituent Assembly adopted the Constitution of India — the world's longest, hand-crafted over nearly three years under Dr. B.R. Ambedkar."
+  },
+  {
+   "year": 1950,
+   "date": "1950-01-26",
+   "headline": "INDIA BECOMES A REPUBLIC",
+   "blurb": "On 26 January 1950, the Constitution came into force and Dr. Rajendra Prasad was sworn in as first President — the world's largest democracy was officially born."
+  },
+  {
+   "year": 1951,
+   "date": "1951-03-04",
+   "headline": "NEW DELHI HOSTS FIRST-EVER ASIAN GAMES",
+   "blurb": "On 4 March 1951, the inaugural Asian Games opened in New Delhi with India finishing second overall. That same year, IIT Kharagpur opened its doors as the first IIT."
+  },
+  {
+   "year": 1952,
+   "date": "1952-05-13",
+   "headline": "WORLD'S BIGGEST ELECTION CROWNS INDIAN DEMOCRACY",
+   "blurb": "Over 173 million voters, most voting for the first time in history, completed the world's largest democratic exercise; the first Lok Sabha convened on 13 May 1952."
+  },
+  {
+   "year": 1953,
+   "date": "1953-05-29",
+   "headline": "TENZING STANDS ON TOP OF THE WORLD",
+   "blurb": "On 29 May 1953, Tenzing Norgay of Darjeeling and Edmund Hillary became the first humans atop Everest. That August, Air India became the nation's flag carrier."
+  },
+  {
+   "year": 1954,
+   "date": "1954-01-26",
+   "headline": "BHARAT RATNA HONOURS ITS FIRST HEROES",
+   "blurb": "India instituted its highest civilian honour in 1954, first celebrating C. Rajagopalachari, S. Radhakrishnan and C.V. Raman; the mighty Bhakra-Nangal canals opened on 8 July."
+  },
+  {
+   "year": 1955,
+   "date": "1955-07-01",
+   "headline": "STATE BANK OF INDIA OPENS FOR BUSINESS",
+   "blurb": "On 1 July 1955, the Imperial Bank was reborn as the State Bank of India, taking banking out of the cities and into villages across the young republic."
+  },
+  {
+   "year": 1956,
+   "date": "1956-11-01",
+   "headline": "NEW MAP OF INDIA: STATES REDRAWN",
+   "blurb": "On 1 November 1956, the States Reorganisation Act redrew India along linguistic lines, creating 14 states and giving millions a state that spoke their language."
+  },
+  {
+   "year": 1957,
+   "date": "1957-04-01",
+   "headline": "GOODBYE ANNAS, HELLO NAYA PAISA",
+   "blurb": "On 1 April 1957, India switched to decimal coinage — 100 naye paise to the rupee. That October, 'Mother India' hit screens and marched to an Oscar nomination."
+  },
+  {
+   "year": 1958,
+   "date": "1958-07-26",
+   "headline": "FLYING SIKH SPRINTS TO CARDIFF GOLD",
+   "blurb": "At the 1958 Cardiff Commonwealth Games, Milkha Singh won the 440 yards in 45.9 seconds — independent India's first athletics gold, and Nehru declared a national holiday."
+  },
+  {
+   "year": 1959,
+   "date": "1959-09-15",
+   "headline": "TELEVISION ARRIVES: DOORDARSHAN SIGNS ON",
+   "blurb": "On 15 September 1959, Doordarshan began experimental broadcasts from a makeshift Delhi studio — the flicker that would one day glow in half a billion homes."
+  },
+  {
+   "year": 1960,
+   "date": "1960-05-01",
+   "headline": "MAHARASHTRA AND GUJARAT ARE BORN",
+   "blurb": "On 1 May 1960, Bombay State split into Maharashtra and Gujarat — two proud new states celebrated to this day as Maharashtra Day and Gujarat Day."
+  },
+  {
+   "year": 1961,
+   "date": "1961-12-19",
+   "headline": "GOA COMES HOME AFTER 451 YEARS",
+   "blurb": "On 19 December 1961, Operation Vijay ended four and a half centuries of Portuguese rule in 36 hours, and Goa, Daman and Diu joined the Indian Union."
+  },
+  {
+   "year": 1962,
+   "date": "1962-09-04",
+   "headline": "GOLDEN GOAL: INDIA CONQUERS ASIAN FOOTBALL",
+   "blurb": "On 4 September 1962, India beat South Korea 2-1 before 100,000 in Jakarta to win Asian Games football gold — the crowning glory of Indian football's golden era."
+  },
+  {
+   "year": 1963,
+   "date": "1963-11-21",
+   "headline": "INDIA'S SPACE DREAM LIFTS OFF THUMBA",
+   "blurb": "On 21 November 1963, India's first rocket rose from a fishing village in Kerala — its parts carried to the launch pad by bicycle and bullock cart."
+  },
+  {
+   "year": 1964,
+   "date": "1964-10-23",
+   "headline": "HOCKEY CROWN RECLAIMED IN TOKYO",
+   "blurb": "On 23 October 1964, India beat Pakistan 1-0 in the Tokyo Olympic final to reclaim hockey gold — the nation's seventh, and sweetest, Olympic hockey title."
+  },
+  {
+   "year": 1965,
+   "date": "1965-10-01",
+   "headline": "JAI JAWAN JAI KISAN RALLIES A NATION",
+   "blurb": "In 1965, Prime Minister Lal Bahadur Shastri gave India its beloved rallying cry — 'Hail the soldier, hail the farmer' — saluting the two hands that fed and guarded the nation."
+  },
+  {
+   "year": 1966,
+   "date": "1966-01-24",
+   "headline": "INDIRA LEADS, REITA CONQUERS THE WORLD",
+   "blurb": "On 24 January 1966, Indira Gandhi became India's first woman Prime Minister; on 17 November, medical student Reita Faria became the first Asian crowned Miss World."
+  },
+  {
+   "year": 1967,
+   "date": "1967-05-13",
+   "headline": "DR. ZAKIR HUSAIN RISES TO RASHTRAPATI BHAVAN",
+   "blurb": "On 13 May 1967, scholar Zakir Husain became India's first Muslim President, weeks after the nation's fourth general election reaffirmed its young democracy."
+  },
+  {
+   "year": 1968,
+   "date": "1968-07-17",
+   "headline": "WHEAT REVOLUTION: INDIA'S FIELDS TURN GOLD",
+   "blurb": "The Green Revolution delivered a record 16.5-million-tonne wheat harvest, celebrated with a special 'Wheat Revolution' stamp in July 1968 — the same year India won its first overseas Test series, in New Zealand."
+  },
+  {
+   "year": 1969,
+   "date": "1969-08-15",
+   "headline": "BANKS FOR THE PEOPLE, ROCKETS FOR TOMORROW",
+   "blurb": "On 19 July 1969, fourteen major banks were nationalised to take credit to the masses; on 15 August, ISRO was founded under Vikram Sarabhai to take India to the stars."
+  },
+  {
+   "year": 1970,
+   "date": "1970-01-13",
+   "headline": "OPERATION FLOOD: WHITE REVOLUTION BEGINS",
+   "blurb": "In 1970, Verghese Kurien launched Operation Flood, the world's largest dairy programme — village cooperatives that would make India the planet's biggest milk producer."
+  },
+  {
+   "year": 1971,
+   "date": "1971-12-16",
+   "headline": "VICTORY IN THE EAST: BANGLADESH IS BORN",
+   "blurb": "On 16 December 1971, Pakistani forces surrendered in Dhaka after a 13-day war — India's most decisive military victory, midwifing the new nation of Bangladesh."
+  },
+  {
+   "year": 1972,
+   "date": "1972-09-09",
+   "headline": "INDIA VOWS TO PROTECT ITS WILD",
+   "blurb": "In September 1972, the Wildlife (Protection) Act became law, throwing a shield around tigers, elephants and a million wild things — the foundation of India's conservation story."
+  },
+  {
+   "year": 1973,
+   "date": "1973-04-01",
+   "headline": "PROJECT TIGER ROARS TO LIFE",
+   "blurb": "On 1 April 1973, Project Tiger launched at Jim Corbett National Park with nine reserves — a bold gamble that pulled the national animal back from the brink."
+  },
+  {
+   "year": 1974,
+   "date": "1974-05-18",
+   "headline": "THE BUDDHA SMILES AT POKHRAN",
+   "blurb": "On 18 May 1974, India conducted its first nuclear test in the Rajasthan desert, code-named 'Smiling Buddha' — becoming the sixth nation to join the nuclear club."
+  },
+  {
+   "year": 1975,
+   "date": "1975-04-19",
+   "headline": "ARYABHATA IN ORBIT, SHOLAY IN THEATRES",
+   "blurb": "On 19 April 1975, India's first satellite Aryabhata reached orbit; on 15 August, 'Sholay' opened in cinemas and rode into legend as Bollywood's greatest blockbuster."
+  },
+  {
+   "year": 1976,
+   "date": "1976-01-01",
+   "headline": "FIVE LAKH FARMERS MAKE A MOVIE",
+   "blurb": "In 1976, half a million Gujarat dairy farmers chipped in two rupees each to fund Shyam Benegal's 'Manthan' — India's first crowdfunded film, and they arrived by truckload to watch it."
+  },
+  {
+   "year": 1977,
+   "date": "1977-03-24",
+   "headline": "DEMOCRACY SPEAKS: FIRST NON-CONGRESS GOVERNMENT",
+   "blurb": "On 24 March 1977, Morarji Desai was sworn in at the head of the Janata government — the ballot box ended the Emergency and proved Indian democracy unbreakable."
+  },
+  {
+   "year": 1978,
+   "date": "1978-10-03",
+   "headline": "MIRACLE BABY DURGA MAKES HISTORY",
+   "blurb": "On 3 October 1978, Durga (Kanupriya Agarwal) was born in Kolkata — India's first test-tube baby and only the world's second, just 70 days after Britain's Louise Brown."
+  },
+  {
+   "year": 1979,
+   "date": "1979-10-17",
+   "headline": "NOBEL PEACE PRIZE FOR MOTHER TERESA",
+   "blurb": "On 17 October 1979, the Nobel Peace Prize was awarded to Mother Teresa of Calcutta for her work among the poorest of the poor — she asked that the banquet money feed them instead."
+  },
+  {
+   "year": 1980,
+   "date": "1980-07-18",
+   "headline": "ROHINI RISES: INDIA JOINS SPACE CLUB",
+   "blurb": "On 18 July 1980, the SLV-3 rocket carried the Rohini satellite to orbit from Sriharikota, making India only the sixth nation to launch a satellite on its own rocket."
+  },
+  {
+   "year": 1981,
+   "date": "1981-07-02",
+   "headline": "SEVEN ENGINEERS, ONE DREAM: INFOSYS FOUNDED",
+   "blurb": "On 2 July 1981, N.R. Narayana Murthy and six engineers founded Infosys with Rs 10,000 borrowed from his wife Sudha — seed money for India's software revolution."
+  },
+  {
+   "year": 1982,
+   "date": "1982-11-19",
+   "headline": "ASIAD '82 BEAMS INDIA INTO COLOUR",
+   "blurb": "On 19 November 1982, the Asian Games opened in New Delhi with mascot Appu the elephant — and colour television arrived in Indian homes just in time to watch."
+  },
+  {
+   "year": 1983,
+   "date": "1983-06-25",
+   "headline": "KAPIL'S DEVILS LIFT THE WORLD CUP",
+   "blurb": "On 25 June 1983, underdogs India stunned the mighty West Indies at Lord's to win the Cricket World Cup; on 14 December, the first Maruti 800 rolled out to put India on wheels."
+  },
+  {
+   "year": 1984,
+   "date": "1984-04-03",
+   "headline": "SAARE JAHAN SE ACHHA, SAYS INDIA'S SPACEMAN",
+   "blurb": "On 3 April 1984, Rakesh Sharma became the first Indian in space aboard Soyuz T-11. Asked how India looked from orbit, he replied: 'Saare Jahan Se Achha.'"
+  },
+  {
+   "year": 1985,
+   "date": "1985-03-10",
+   "headline": "WORLD CHAMPIONS AGAIN — AND AN AUDI",
+   "blurb": "On 10 March 1985, India beat Pakistan in Melbourne to win the World Championship of Cricket unbeaten — and man of the series Ravi Shastri drove the Audi home with the team aboard."
+  },
+  {
+   "year": 1986,
+   "date": "1986-06-10",
+   "headline": "LORD'S FALLS TO KAPIL'S INDIA",
+   "blurb": "On 10 June 1986, India won a Test match at Lord's for the first time, Kapil Dev sealing it with a six — the launchpad of a famous 2-0 series triumph in England."
+  },
+  {
+   "year": 1987,
+   "date": "1987-01-25",
+   "headline": "RAMAYAN BRINGS INDIA TO A STANDSTILL",
+   "blurb": "From 25 January 1987, Ramanand Sagar's 'Ramayan' aired Sunday mornings on Doordarshan — streets emptied and an estimated 100 million viewers made it a television epic."
+  },
+  {
+   "year": 1988,
+   "date": "1988-06-01",
+   "headline": "ANAND, 18, IS INDIA'S FIRST GRANDMASTER",
+   "blurb": "In 1988, eighteen-year-old Viswanathan Anand became India's first chess grandmaster in Coimbatore — the opening move of a five-time world champion and a chess superpower."
+  },
+  {
+   "year": 1989,
+   "date": "1989-11-15",
+   "headline": "A 16-YEAR-OLD NAMED SACHIN DEBUTS",
+   "blurb": "On 15 November 1989, sixteen-year-old Sachin Tendulkar walked out for his first Test in Karachi — the opening chapter of cricket's greatest 24-year love story."
+  },
+  {
+   "year": 1990,
+   "date": "1990-08-14",
+   "headline": "BOY WONDER SACHIN'S FIRST TEST CENTURY",
+   "blurb": "On 14 August 1990, a 17-year-old Sachin Tendulkar struck an unbeaten 119 at Old Trafford to save the Test — the first of a world-record 100 international hundreds."
+  },
+  {
+   "year": 1991,
+   "date": "1991-07-24",
+   "headline": "INDIA OPENS ITS ECONOMY TO THE WORLD",
+   "blurb": "On 24 July 1991, Finance Minister Manmohan Singh's budget swept away the licence raj, declaring 'no power on earth can stop an idea whose time has come.'"
+  },
+  {
+   "year": 1992,
+   "date": "1992-03-30",
+   "headline": "AN OSCAR FOR SATYAJIT RAY",
+   "blurb": "On 30 March 1992, Satyajit Ray received an honorary Academy Award for lifetime achievement — accepting from his Calcutta hospital bed, the same year India gave him the Bharat Ratna."
+  },
+  {
+   "year": 1993,
+   "date": "1993-05-05",
+   "headline": "INDIAN SKIES OPEN: JET AIRWAYS TAKES OFF",
+   "blurb": "On 5 May 1993, Jet Airways flew its first flight as economic reforms opened Indian skies to private airlines — flying was no longer only for the few."
+  },
+  {
+   "year": 1994,
+   "date": "1994-11-19",
+   "headline": "SUSHMITA AND AISHWARYA CONQUER THE WORLD",
+   "blurb": "In a fairytale double, Sushmita Sen was crowned Miss Universe on 21 May 1994 and Aishwarya Rai Miss World on 19 November — both global crowns in one Indian year."
+  },
+  {
+   "year": 1995,
+   "date": "1995-08-15",
+   "headline": "INDIA DIALS INTO THE DIGITAL AGE",
+   "blurb": "On 31 July 1995, Jyoti Basu made India's first mobile phone call to Sukh Ram; on 15 August, VSNL switched on public internet — the connected century had begun."
+  },
+  {
+   "year": 1996,
+   "date": "1996-08-03",
+   "headline": "PAES ENDS 44-YEAR OLYMPIC MEDAL WAIT",
+   "blurb": "On 3 August 1996, Leander Paes battled to tennis bronze in Atlanta — India's first individual Olympic medal in 44 years, won on heart as much as skill."
+  },
+  {
+   "year": 1997,
+   "date": "1997-08-15",
+   "headline": "FIFTY YEARS FREE, BARRIERS STILL FALLING",
+   "blurb": "India celebrated 50 years of independence on 15 August 1997, weeks after K.R. Narayanan was sworn in on 25 July as the first Dalit President of the republic."
+  },
+  {
+   "year": 1998,
+   "date": "1998-05-11",
+   "headline": "POKHRAN ROARS, AMARTYA SEN WINS NOBEL",
+   "blurb": "On 11 May 1998, India declared itself a nuclear power with the Pokhran-II tests; on 14 October, Amartya Sen won the Nobel in Economics for his work on welfare and famine."
+  },
+  {
+   "year": 1999,
+   "date": "1999-03-11",
+   "headline": "INFOSYS RINGS THE NASDAQ BELL",
+   "blurb": "On 11 March 1999, Infosys became the first Indian company listed on America's NASDAQ — Bangalore's software engineers announced India's IT century to Wall Street."
+  },
+  {
+   "year": 2000,
+   "date": "2000-05-11",
+   "headline": "ONE BILLION INDIANS — AND ONE CROREPATI SHOW",
+   "blurb": "On 11 May 2000, baby Aastha Arora was welcomed as India's billionth citizen; on 3 July, Amitabh Bachchan asked his first 'Kaun Banega Crorepati' question — lock kiya jaye?"
+  },
+  {
+   "year": 2001,
+   "date": "2001-06-15",
+   "headline": "LAGAAN HITS INDIA FOR SIX",
+   "blurb": "On 15 June 2001, 'Lagaan' opened in cinemas — its village XI beat the British at cricket and batted all the way to an Academy Award nomination."
+  },
+  {
+   "year": 2002,
+   "date": "2002-12-24",
+   "headline": "MISSILE MAN BECOMES PRESIDENT, METRO ROLLS",
+   "blurb": "On 25 July 2002, scientist A.P.J. Abdul Kalam became the People's President; on 24 December, the Delhi Metro carried its first passengers into a new urban age."
+  },
+  {
+   "year": 2003,
+   "date": "2003-08-30",
+   "headline": "ANJU LEAPS INTO WORLD HISTORY",
+   "blurb": "On 30 August 2003, Anju Bobby George jumped 6.70 metres in Paris to win long jump bronze — the first world athletics championship medal ever for India."
+  },
+  {
+   "year": 2004,
+   "date": "2004-08-17",
+   "headline": "RATHORE SHOOTS INDIA'S FIRST INDIVIDUAL SILVER",
+   "blurb": "On 17 August 2004, Army marksman Rajyavardhan Singh Rathore won double-trap silver in Athens — India's first individual Olympic silver, and a starting gun for a shooting boom."
+  },
+  {
+   "year": 2005,
+   "date": "2005-10-12",
+   "headline": "RIGHT TO INFORMATION HANDS POWER TO PEOPLE",
+   "blurb": "On 12 October 2005, the Right to Information Act came into force — for ten rupees, any citizen could now ask the government to open its files."
+  },
+  {
+   "year": 2006,
+   "date": "2006-10-10",
+   "headline": "KIRAN DESAI WINS THE BOOKER PRIZE",
+   "blurb": "On 10 October 2006, Kiran Desai won the Man Booker Prize for 'The Inheritance of Loss' at 35 — the youngest woman ever to take literature's famous prize."
+  },
+  {
+   "year": 2007,
+   "date": "2007-09-24",
+   "headline": "DHONI'S YOUNG INDIA WINS FIRST T20 CUP",
+   "blurb": "On 24 September 2007, M.S. Dhoni's young side beat Pakistan in Johannesburg to win the first-ever T20 World Cup, the year Pratibha Patil became India's first woman President on 25 July."
+  },
+  {
+   "year": 2008,
+   "date": "2008-10-22",
+   "headline": "GOLD, GLITZ AND A SHOT AT THE MOON",
+   "blurb": "In 2008, Abhinav Bindra shot India's first individual Olympic gold on 11 August, the IPL exploded onto the scene in April, and Chandrayaan-1 left for the Moon on 22 October."
+  },
+  {
+   "year": 2009,
+   "date": "2009-02-22",
+   "headline": "JAI HO! RAHMAN WINS TWO OSCARS",
+   "blurb": "On 22 February 2009, A.R. Rahman won two Academy Awards in one night for 'Slumdog Millionaire' — and 'Jai Ho' became the whole world's victory chant."
+  },
+  {
+   "year": 2010,
+   "date": "2010-09-29",
+   "headline": "AADHAAR BEGINS, DELHI THROWS A GAMES",
+   "blurb": "On 29 September 2010, villager Ranjana Sonawane received the first Aadhaar number, launching the world's largest ID project; days later Delhi hosted the Commonwealth Games, where India bagged 101 medals."
+  }
+ ]
+}

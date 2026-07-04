@@ -1,0 +1,1360 @@
+{
+ "cities": [
+  {
+   "name": "Mumbai",
+   "state": "Maharashtra",
+   "lat": 19.08,
+   "lon": 72.88,
+   "oldName": "Bombay",
+   "renamedOn": "1995-11-01",
+   "pop1951": 2967,
+   "pop1971": 5971,
+   "pop1991": 12596,
+   "pop2011": 18395,
+   "milestones": [
+    {
+     "year": 1999,
+     "what": "its first mall, Crossroads at Haji Ali"
+    },
+    {
+     "year": 2009,
+     "what": "the Bandra–Worli Sea Link"
+    },
+    {
+     "year": 2014,
+     "what": "the Metro (Versova–Ghatkopar Line 1)"
+    }
+   ]
+  },
+  {
+   "name": "Delhi",
+   "state": "Delhi",
+   "lat": 28.65,
+   "lon": 77.22,
+   "pop1951": 1437,
+   "pop1971": 3647,
+   "pop1991": 8419,
+   "pop2011": 16350,
+   "milestones": [
+    {
+     "year": 1982,
+     "what": "the Asian Games (and India's colour-TV debut)"
+    },
+    {
+     "year": 1999,
+     "what": "its first mall, Ansal Plaza"
+    },
+    {
+     "year": 2002,
+     "what": "the Delhi Metro's first line"
+    },
+    {
+     "year": 2010,
+     "what": "airport Terminal 3 and the Commonwealth Games"
+    }
+   ]
+  },
+  {
+   "name": "Kolkata",
+   "state": "West Bengal",
+   "lat": 22.57,
+   "lon": 88.36,
+   "oldName": "Calcutta",
+   "renamedOn": "2001-01-01",
+   "pop1951": 4670,
+   "pop1971": 7420,
+   "pop1991": 11022,
+   "pop2011": 14058,
+   "milestones": [
+    {
+     "year": 1984,
+     "what": "India's first metro, under Chowringhee"
+    },
+    {
+     "year": 2008,
+     "what": "South City Mall, then eastern India's biggest"
+    }
+   ]
+  },
+  {
+   "name": "Chennai",
+   "state": "Tamil Nadu",
+   "lat": 13.08,
+   "lon": 80.27,
+   "oldName": "Madras",
+   "renamedOn": "1996-07-17",
+   "pop1951": 1542,
+   "pop1971": 3170,
+   "pop1991": 5422,
+   "pop2011": 8654,
+   "milestones": [
+    {
+     "year": 1991,
+     "what": "Spencer Plaza, India's first big mall"
+    },
+    {
+     "year": 2000,
+     "what": "Tidel Park, the city's IT flagship"
+    },
+    {
+     "year": 2015,
+     "what": "the Chennai Metro"
+    }
+   ]
+  },
+  {
+   "name": "Bengaluru",
+   "state": "Karnataka",
+   "lat": 12.97,
+   "lon": 77.59,
+   "oldName": "Bangalore",
+   "renamedOn": "2014-11-01",
+   "pop1951": 786,
+   "pop1971": 1664,
+   "pop1991": 4130,
+   "pop2011": 8520,
+   "milestones": [
+    {
+     "year": 1978,
+     "what": "Electronic City, seed of the IT capital"
+    },
+    {
+     "year": 1983,
+     "what": "Infosys moving its headquarters to town"
+    },
+    {
+     "year": 2004,
+     "what": "its first big mall, The Forum Koramangala"
+    },
+    {
+     "year": 2008,
+     "what": "the new international airport at Devanahalli"
+    },
+    {
+     "year": 2011,
+     "what": "Namma Metro"
+    }
+   ]
+  },
+  {
+   "name": "Hyderabad",
+   "state": "Telangana",
+   "lat": 17.38,
+   "lon": 78.48,
+   "pop1951": 1128,
+   "pop1971": 1796,
+   "pop1991": 4344,
+   "pop2011": 7677,
+   "milestones": [
+    {
+     "year": 1998,
+     "what": "HITEC City, Cyberabad's cornerstone"
+    },
+    {
+     "year": 2008,
+     "what": "Rajiv Gandhi International Airport at Shamshabad"
+    },
+    {
+     "year": 2017,
+     "what": "the Hyderabad Metro"
+    }
+   ]
+  },
+  {
+   "name": "Ahmedabad",
+   "state": "Gujarat",
+   "lat": 23.03,
+   "lon": 72.58,
+   "pop1951": 877,
+   "pop1971": 1742,
+   "pop1991": 3312,
+   "pop2011": 6358,
+   "milestones": [
+    {
+     "year": 2009,
+     "what": "Janmarg, India's first full bus rapid transit"
+    },
+    {
+     "year": 2012,
+     "what": "the Sabarmati Riverfront"
+    },
+    {
+     "year": 2019,
+     "what": "the Ahmedabad Metro"
+    }
+   ]
+  },
+  {
+   "name": "Pune",
+   "state": "Maharashtra",
+   "lat": 18.52,
+   "lon": 73.86,
+   "oldName": "Poona",
+   "renamedOn": "1978-01-01",
+   "pop1951": 609,
+   "pop1971": 1135,
+   "pop1991": 2494,
+   "pop2011": 5058,
+   "milestones": [
+    {
+     "year": 1981,
+     "what": "Infosys, founded in the city"
+    },
+    {
+     "year": 2002,
+     "what": "the Mumbai–Pune Expressway, India's first"
+    },
+    {
+     "year": 2022,
+     "what": "the Pune Metro"
+    }
+   ]
+  },
+  {
+   "name": "Surat",
+   "state": "Gujarat",
+   "lat": 21.17,
+   "lon": 72.83,
+   "pop1951": 237,
+   "pop1971": 493,
+   "pop1991": 1519,
+   "pop2011": 4591
+  },
+  {
+   "name": "Jaipur",
+   "state": "Rajasthan",
+   "lat": 26.91,
+   "lon": 75.79,
+   "pop1951": 291,
+   "pop1971": 637,
+   "pop1991": 1518,
+   "pop2011": 3046,
+   "milestones": [
+    {
+     "year": 2012,
+     "what": "World Trade Park, its glass-box mega-mall"
+    },
+    {
+     "year": 2015,
+     "what": "the Jaipur Metro"
+    }
+   ]
+  },
+  {
+   "name": "Kanpur",
+   "state": "Uttar Pradesh",
+   "lat": 26.45,
+   "lon": 80.33,
+   "oldName": "Cawnpore",
+   "renamedOn": "1948-01-01",
+   "pop1951": 705,
+   "pop1971": 1275,
+   "pop1991": 2030,
+   "pop2011": 2920,
+   "milestones": [
+    {
+     "year": 2010,
+     "what": "Z Square, among north India's largest malls"
+    },
+    {
+     "year": 2021,
+     "what": "the Kanpur Metro"
+    }
+   ]
+  },
+  {
+   "name": "Lucknow",
+   "state": "Uttar Pradesh",
+   "lat": 26.85,
+   "lon": 80.95,
+   "pop1951": 497,
+   "pop1971": 814,
+   "pop1991": 1669,
+   "pop2011": 2903,
+   "milestones": [
+    {
+     "year": 2005,
+     "what": "Sahara Ganj, its first mall"
+    },
+    {
+     "year": 2017,
+     "what": "the Lucknow Metro"
+    }
+   ]
+  },
+  {
+   "name": "Nagpur",
+   "state": "Maharashtra",
+   "lat": 21.15,
+   "lon": 79.09,
+   "pop1951": 480,
+   "pop1971": 930,
+   "pop1991": 1664,
+   "pop2011": 2498,
+   "milestones": [
+    {
+     "year": 2010,
+     "what": "Empress Mall, its first big mall"
+    },
+    {
+     "year": 2019,
+     "what": "the Nagpur Metro"
+    }
+   ]
+  },
+  {
+   "name": "Ghaziabad",
+   "state": "Uttar Pradesh",
+   "lat": 28.67,
+   "lon": 77.43,
+   "pop1951": 44,
+   "pop1971": 128,
+   "pop1991": 512,
+   "pop2011": 2376
+  },
+  {
+   "name": "Indore",
+   "state": "Madhya Pradesh",
+   "lat": 22.72,
+   "lon": 75.86,
+   "pop1951": 311,
+   "pop1971": 573,
+   "pop1991": 1109,
+   "pop2011": 2170,
+   "milestones": [
+    {
+     "year": 2005,
+     "what": "Treasure Island, central India's first mall"
+    },
+    {
+     "year": 2017,
+     "what": "its first 'India's cleanest city' crown"
+    }
+   ]
+  },
+  {
+   "name": "Coimbatore",
+   "state": "Tamil Nadu",
+   "lat": 11.02,
+   "lon": 76.96,
+   "pop1951": 286,
+   "pop1971": 736,
+   "pop1991": 1101,
+   "pop2011": 2137
+  },
+  {
+   "name": "Kochi",
+   "state": "Kerala",
+   "lat": 9.93,
+   "lon": 76.26,
+   "oldName": "Cochin",
+   "renamedOn": "1996-01-01",
+   "pop1951": 166,
+   "pop1971": 439,
+   "pop1991": 1141,
+   "pop2011": 2120,
+   "milestones": [
+    {
+     "year": 1999,
+     "what": "Cochin International Airport, India's first PPP airport"
+    },
+    {
+     "year": 2013,
+     "what": "Lulu Mall, then India's largest"
+    },
+    {
+     "year": 2017,
+     "what": "the Kochi Metro"
+    }
+   ]
+  },
+  {
+   "name": "Patna",
+   "state": "Bihar",
+   "lat": 25.6,
+   "lon": 85.14,
+   "pop1951": 325,
+   "pop1971": 473,
+   "pop1991": 1100,
+   "pop2011": 2049
+  },
+  {
+   "name": "Bhopal",
+   "state": "Madhya Pradesh",
+   "lat": 23.26,
+   "lon": 77.41,
+   "pop1951": 102,
+   "pop1971": 385,
+   "pop1991": 1063,
+   "pop2011": 1886
+  },
+  {
+   "name": "Vadodara",
+   "state": "Gujarat",
+   "lat": 22.31,
+   "lon": 73.19,
+   "oldName": "Baroda",
+   "renamedOn": "1974-01-01",
+   "pop1951": 211,
+   "pop1971": 467,
+   "pop1991": 1127,
+   "pop2011": 1822
+  },
+  {
+   "name": "Visakhapatnam",
+   "state": "Andhra Pradesh",
+   "lat": 17.69,
+   "lon": 83.22,
+   "pop1951": 108,
+   "pop1971": 363,
+   "pop1991": 1057,
+   "pop2011": 1728
+  },
+  {
+   "name": "Agra",
+   "state": "Uttar Pradesh",
+   "lat": 27.18,
+   "lon": 78.01,
+   "pop1951": 375,
+   "pop1971": 635,
+   "pop1991": 948,
+   "pop2011": 1760
+  },
+  {
+   "name": "Ludhiana",
+   "state": "Punjab",
+   "lat": 30.9,
+   "lon": 75.86,
+   "pop1951": 153,
+   "pop1971": 401,
+   "pop1991": 1043,
+   "pop2011": 1619
+  },
+  {
+   "name": "Nashik",
+   "state": "Maharashtra",
+   "lat": 20,
+   "lon": 73.79,
+   "pop1951": 155,
+   "pop1971": 272,
+   "pop1991": 725,
+   "pop2011": 1562
+  },
+  {
+   "name": "Vijayawada",
+   "state": "Andhra Pradesh",
+   "lat": 16.51,
+   "lon": 80.65,
+   "oldName": "Bezwada",
+   "pop1951": 161,
+   "pop1971": 317,
+   "pop1991": 846,
+   "pop2011": 1477
+  },
+  {
+   "name": "Madurai",
+   "state": "Tamil Nadu",
+   "lat": 9.93,
+   "lon": 78.12,
+   "pop1951": 361,
+   "pop1971": 549,
+   "pop1991": 1086,
+   "pop2011": 1466
+  },
+  {
+   "name": "Varanasi",
+   "state": "Uttar Pradesh",
+   "lat": 25.32,
+   "lon": 82.99,
+   "oldName": "Benares",
+   "renamedOn": "1956-05-24",
+   "pop1951": 355,
+   "pop1971": 607,
+   "pop1991": 1031,
+   "pop2011": 1432
+  },
+  {
+   "name": "Meerut",
+   "state": "Uttar Pradesh",
+   "lat": 28.98,
+   "lon": 77.71,
+   "pop1951": 233,
+   "pop1971": 368,
+   "pop1991": 850,
+   "pop2011": 1421
+  },
+  {
+   "name": "Faridabad",
+   "state": "Haryana",
+   "lat": 28.41,
+   "lon": 77.31,
+   "pop1971": 123,
+   "pop1991": 618,
+   "pop2011": 1414
+  },
+  {
+   "name": "Rajkot",
+   "state": "Gujarat",
+   "lat": 22.3,
+   "lon": 70.8,
+   "pop1951": 132,
+   "pop1971": 301,
+   "pop1991": 654,
+   "pop2011": 1391
+  },
+  {
+   "name": "Jamshedpur",
+   "state": "Jharkhand",
+   "lat": 22.8,
+   "lon": 86.2,
+   "pop1951": 218,
+   "pop1971": 456,
+   "pop1991": 829,
+   "pop2011": 1339
+  },
+  {
+   "name": "Jabalpur",
+   "state": "Madhya Pradesh",
+   "lat": 23.17,
+   "lon": 79.94,
+   "oldName": "Jubbulpore",
+   "renamedOn": "1947-01-01",
+   "pop1951": 256,
+   "pop1971": 534,
+   "pop1991": 889,
+   "pop2011": 1269
+  },
+  {
+   "name": "Srinagar",
+   "state": "Jammu and Kashmir",
+   "lat": 34.08,
+   "lon": 74.8,
+   "pop1971": 423,
+   "pop2011": 1264
+  },
+  {
+   "name": "Asansol",
+   "state": "West Bengal",
+   "lat": 23.68,
+   "lon": 86.97,
+   "pop1951": 76,
+   "pop1971": 156,
+   "pop1991": 764,
+   "pop2011": 1243
+  },
+  {
+   "name": "Prayagraj",
+   "state": "Uttar Pradesh",
+   "lat": 25.44,
+   "lon": 81.85,
+   "oldName": "Allahabad",
+   "renamedOn": "2018-10-18",
+   "pop1951": 332,
+   "pop1971": 513,
+   "pop1991": 845,
+   "pop2011": 1212
+  },
+  {
+   "name": "Dhanbad",
+   "state": "Jharkhand",
+   "lat": 23.8,
+   "lon": 86.44,
+   "pop1971": 434,
+   "pop1991": 815,
+   "pop2011": 1196
+  },
+  {
+   "name": "Chhatrapati Sambhajinagar",
+   "state": "Maharashtra",
+   "lat": 19.88,
+   "lon": 75.34,
+   "oldName": "Aurangabad",
+   "renamedOn": "2023-02-24",
+   "pop1951": 87,
+   "pop1971": 165,
+   "pop1991": 593,
+   "pop2011": 1193
+  },
+  {
+   "name": "Amritsar",
+   "state": "Punjab",
+   "lat": 31.63,
+   "lon": 74.87,
+   "pop1951": 325,
+   "pop1971": 458,
+   "pop1991": 709,
+   "pop2011": 1184
+  },
+  {
+   "name": "Jodhpur",
+   "state": "Rajasthan",
+   "lat": 26.29,
+   "lon": 73.02,
+   "pop1951": 180,
+   "pop1971": 319,
+   "pop1991": 666,
+   "pop2011": 1138
+  },
+  {
+   "name": "Ranchi",
+   "state": "Jharkhand",
+   "lat": 23.36,
+   "lon": 85.33,
+   "pop1951": 106,
+   "pop1971": 256,
+   "pop1991": 615,
+   "pop2011": 1120
+  },
+  {
+   "name": "Raipur",
+   "state": "Chhattisgarh",
+   "lat": 21.25,
+   "lon": 81.63,
+   "pop1951": 90,
+   "pop1971": 206,
+   "pop1991": 463,
+   "pop2011": 1124
+  },
+  {
+   "name": "Gwalior",
+   "state": "Madhya Pradesh",
+   "lat": 26.22,
+   "lon": 78.18,
+   "pop1951": 241,
+   "pop1971": 406,
+   "pop1991": 718,
+   "pop2011": 1103
+  },
+  {
+   "name": "Chandigarh",
+   "state": "Chandigarh",
+   "lat": 30.73,
+   "lon": 76.78,
+   "pop1951": 24,
+   "pop1971": 233,
+   "pop1991": 576,
+   "pop2011": 1026
+  },
+  {
+   "name": "Thiruvananthapuram",
+   "state": "Kerala",
+   "lat": 8.52,
+   "lon": 76.94,
+   "oldName": "Trivandrum",
+   "renamedOn": "1991-01-01",
+   "pop1951": 187,
+   "pop1971": 410,
+   "pop1991": 826,
+   "pop2011": 1680
+  },
+  {
+   "name": "Kozhikode",
+   "state": "Kerala",
+   "lat": 11.26,
+   "lon": 75.78,
+   "oldName": "Calicut",
+   "pop1951": 158,
+   "pop1971": 334,
+   "pop1991": 801,
+   "pop2011": 2028
+  },
+  {
+   "name": "Mysuru",
+   "state": "Karnataka",
+   "lat": 12.3,
+   "lon": 76.64,
+   "oldName": "Mysore",
+   "renamedOn": "2014-11-01",
+   "pop1951": 244,
+   "pop1971": 356,
+   "pop1991": 653,
+   "pop2011": 991
+  },
+  {
+   "name": "Guwahati",
+   "state": "Assam",
+   "lat": 26.14,
+   "lon": 91.74,
+   "oldName": "Gauhati",
+   "renamedOn": "1983-01-01",
+   "pop1991": 584,
+   "pop2011": 962
+  },
+  {
+   "name": "Tiruchirappalli",
+   "state": "Tamil Nadu",
+   "lat": 10.79,
+   "lon": 78.7,
+   "oldName": "Trichinopoly",
+   "pop1951": 218,
+   "pop1971": 464,
+   "pop1991": 712,
+   "pop2011": 1023
+  },
+  {
+   "name": "Kota",
+   "state": "Rajasthan",
+   "lat": 25.21,
+   "lon": 75.86,
+   "pop1951": 65,
+   "pop1971": 213,
+   "pop1991": 537,
+   "pop2011": 1002
+  },
+  {
+   "name": "Bhubaneswar",
+   "state": "Odisha",
+   "lat": 20.3,
+   "lon": 85.82,
+   "pop1951": 16,
+   "pop1971": 105,
+   "pop1991": 412,
+   "pop2011": 885
+  },
+  {
+   "name": "Gurugram",
+   "state": "Haryana",
+   "lat": 28.46,
+   "lon": 77.03,
+   "oldName": "Gurgaon",
+   "renamedOn": "2016-09-27",
+   "pop1971": 57,
+   "pop1991": 136,
+   "pop2011": 902,
+   "milestones": [
+    {
+     "year": 1997,
+     "what": "GE's back office that sparked India's BPO boom"
+    },
+    {
+     "year": 2002,
+     "what": "the first wave of MG Road malls"
+    },
+    {
+     "year": 2013,
+     "what": "the Rapid Metro looping Cyber City"
+    }
+   ]
+  },
+  {
+   "name": "Noida",
+   "state": "Uttar Pradesh",
+   "lat": 28.57,
+   "lon": 77.32,
+   "pop1991": 146,
+   "pop2011": 642
+  },
+  {
+   "name": "Solapur",
+   "state": "Maharashtra",
+   "lat": 17.66,
+   "lon": 75.91,
+   "pop1951": 277,
+   "pop1971": 398,
+   "pop1991": 621,
+   "pop2011": 952
+  },
+  {
+   "name": "Hubballi-Dharwad",
+   "state": "Karnataka",
+   "lat": 15.36,
+   "lon": 75.12,
+   "oldName": "Hubli-Dharwad",
+   "renamedOn": "2014-11-01",
+   "pop1951": 130,
+   "pop1971": 379,
+   "pop1991": 648,
+   "pop2011": 944
+  },
+  {
+   "name": "Salem",
+   "state": "Tamil Nadu",
+   "lat": 11.66,
+   "lon": 78.15,
+   "pop1951": 202,
+   "pop1971": 416,
+   "pop1991": 578,
+   "pop2011": 917
+  },
+  {
+   "name": "Bareilly",
+   "state": "Uttar Pradesh",
+   "lat": 28.36,
+   "lon": 79.42,
+   "pop1951": 195,
+   "pop1971": 296,
+   "pop1991": 617,
+   "pop2011": 986
+  },
+  {
+   "name": "Moradabad",
+   "state": "Uttar Pradesh",
+   "lat": 28.84,
+   "lon": 78.77,
+   "pop1951": 161,
+   "pop1971": 259,
+   "pop1991": 444,
+   "pop2011": 888
+  },
+  {
+   "name": "Aligarh",
+   "state": "Uttar Pradesh",
+   "lat": 27.88,
+   "lon": 78.08,
+   "pop1951": 141,
+   "pop1971": 252,
+   "pop1991": 481,
+   "pop2011": 911
+  },
+  {
+   "name": "Jalandhar",
+   "state": "Punjab",
+   "lat": 31.33,
+   "lon": 75.58,
+   "pop1951": 168,
+   "pop1971": 296,
+   "pop1991": 510,
+   "pop2011": 874
+  },
+  {
+   "name": "Bhilai",
+   "state": "Chhattisgarh",
+   "lat": 21.21,
+   "lon": 81.38,
+   "pop1991": 685,
+   "pop2011": 1064
+  },
+  {
+   "name": "Thane",
+   "state": "Maharashtra",
+   "lat": 19.22,
+   "lon": 72.98
+  },
+  {
+   "name": "Navi Mumbai",
+   "state": "Maharashtra",
+   "lat": 19.03,
+   "lon": 73.03
+  },
+  {
+   "name": "Howrah",
+   "state": "West Bengal",
+   "lat": 22.59,
+   "lon": 88.31
+  },
+  {
+   "name": "Amravati",
+   "state": "Maharashtra",
+   "lat": 20.93,
+   "lon": 77.75
+  },
+  {
+   "name": "Kolhapur",
+   "state": "Maharashtra",
+   "lat": 16.7,
+   "lon": 74.24
+  },
+  {
+   "name": "Gorakhpur",
+   "state": "Uttar Pradesh",
+   "lat": 26.76,
+   "lon": 83.37
+  },
+  {
+   "name": "Jhansi",
+   "state": "Uttar Pradesh",
+   "lat": 25.45,
+   "lon": 78.57
+  },
+  {
+   "name": "Ayodhya",
+   "state": "Uttar Pradesh",
+   "lat": 26.8,
+   "lon": 82.2,
+   "oldName": "Faizabad",
+   "renamedOn": "2018-11-06"
+  },
+  {
+   "name": "Siliguri",
+   "state": "West Bengal",
+   "lat": 26.72,
+   "lon": 88.43
+  },
+  {
+   "name": "Durgapur",
+   "state": "West Bengal",
+   "lat": 23.52,
+   "lon": 87.31
+  },
+  {
+   "name": "Darjeeling",
+   "state": "West Bengal",
+   "lat": 27.04,
+   "lon": 88.26
+  },
+  {
+   "name": "Tirunelveli",
+   "state": "Tamil Nadu",
+   "lat": 8.73,
+   "lon": 77.71,
+   "oldName": "Tinnevelly"
+  },
+  {
+   "name": "Thanjavur",
+   "state": "Tamil Nadu",
+   "lat": 10.79,
+   "lon": 79.14,
+   "oldName": "Tanjore"
+  },
+  {
+   "name": "Vellore",
+   "state": "Tamil Nadu",
+   "lat": 12.92,
+   "lon": 79.13
+  },
+  {
+   "name": "Mangaluru",
+   "state": "Karnataka",
+   "lat": 12.91,
+   "lon": 74.86,
+   "oldName": "Mangalore",
+   "renamedOn": "2014-11-01"
+  },
+  {
+   "name": "Belagavi",
+   "state": "Karnataka",
+   "lat": 15.85,
+   "lon": 74.5,
+   "oldName": "Belgaum",
+   "renamedOn": "2014-11-01"
+  },
+  {
+   "name": "Kalaburagi",
+   "state": "Karnataka",
+   "lat": 17.33,
+   "lon": 76.83,
+   "oldName": "Gulbarga",
+   "renamedOn": "2014-11-01"
+  },
+  {
+   "name": "Thrissur",
+   "state": "Kerala",
+   "lat": 10.53,
+   "lon": 76.21,
+   "oldName": "Trichur"
+  },
+  {
+   "name": "Kollam",
+   "state": "Kerala",
+   "lat": 8.89,
+   "lon": 76.61,
+   "oldName": "Quilon"
+  },
+  {
+   "name": "Kannur",
+   "state": "Kerala",
+   "lat": 11.87,
+   "lon": 75.37,
+   "oldName": "Cannanore"
+  },
+  {
+   "name": "Warangal",
+   "state": "Telangana",
+   "lat": 17.98,
+   "lon": 79.59
+  },
+  {
+   "name": "Nizamabad",
+   "state": "Telangana",
+   "lat": 18.67,
+   "lon": 78.09
+  },
+  {
+   "name": "Karimnagar",
+   "state": "Telangana",
+   "lat": 18.44,
+   "lon": 79.13
+  },
+  {
+   "name": "Guntur",
+   "state": "Andhra Pradesh",
+   "lat": 16.31,
+   "lon": 80.44
+  },
+  {
+   "name": "Tirupati",
+   "state": "Andhra Pradesh",
+   "lat": 13.63,
+   "lon": 79.42
+  },
+  {
+   "name": "Nellore",
+   "state": "Andhra Pradesh",
+   "lat": 14.44,
+   "lon": 79.99
+  },
+  {
+   "name": "Kurnool",
+   "state": "Andhra Pradesh",
+   "lat": 15.83,
+   "lon": 78.04
+  },
+  {
+   "name": "Rajamahendravaram",
+   "state": "Andhra Pradesh",
+   "lat": 17,
+   "lon": 81.78,
+   "oldName": "Rajahmundry",
+   "renamedOn": "2015-01-01"
+  },
+  {
+   "name": "Bhavnagar",
+   "state": "Gujarat",
+   "lat": 21.76,
+   "lon": 72.15
+  },
+  {
+   "name": "Jamnagar",
+   "state": "Gujarat",
+   "lat": 22.47,
+   "lon": 70.07
+  },
+  {
+   "name": "Gandhinagar",
+   "state": "Gujarat",
+   "lat": 23.22,
+   "lon": 72.65
+  },
+  {
+   "name": "Udaipur",
+   "state": "Rajasthan",
+   "lat": 24.58,
+   "lon": 73.68
+  },
+  {
+   "name": "Ajmer",
+   "state": "Rajasthan",
+   "lat": 26.45,
+   "lon": 74.64
+  },
+  {
+   "name": "Bikaner",
+   "state": "Rajasthan",
+   "lat": 28.02,
+   "lon": 73.31
+  },
+  {
+   "name": "Ujjain",
+   "state": "Madhya Pradesh",
+   "lat": 23.18,
+   "lon": 75.78
+  },
+  {
+   "name": "Gaya",
+   "state": "Bihar",
+   "lat": 24.79,
+   "lon": 85
+  },
+  {
+   "name": "Bhagalpur",
+   "state": "Bihar",
+   "lat": 25.24,
+   "lon": 86.97
+  },
+  {
+   "name": "Muzaffarpur",
+   "state": "Bihar",
+   "lat": 26.12,
+   "lon": 85.39
+  },
+  {
+   "name": "Patiala",
+   "state": "Punjab",
+   "lat": 30.34,
+   "lon": 76.39
+  },
+  {
+   "name": "Bathinda",
+   "state": "Punjab",
+   "lat": 30.21,
+   "lon": 74.95
+  },
+  {
+   "name": "Mohali",
+   "state": "Punjab",
+   "lat": 30.7,
+   "lon": 76.72
+  },
+  {
+   "name": "Panipat",
+   "state": "Haryana",
+   "lat": 29.39,
+   "lon": 76.97
+  },
+  {
+   "name": "Ambala",
+   "state": "Haryana",
+   "lat": 30.38,
+   "lon": 76.78
+  },
+  {
+   "name": "Bokaro Steel City",
+   "state": "Jharkhand",
+   "lat": 23.67,
+   "lon": 86.15
+  },
+  {
+   "name": "Bilaspur",
+   "state": "Chhattisgarh",
+   "lat": 22.08,
+   "lon": 82.15
+  },
+  {
+   "name": "Cuttack",
+   "state": "Odisha",
+   "lat": 20.46,
+   "lon": 85.88
+  },
+  {
+   "name": "Rourkela",
+   "state": "Odisha",
+   "lat": 22.25,
+   "lon": 84.88
+  },
+  {
+   "name": "Sambalpur",
+   "state": "Odisha",
+   "lat": 21.47,
+   "lon": 83.97
+  },
+  {
+   "name": "Puri",
+   "state": "Odisha",
+   "lat": 19.8,
+   "lon": 85.82
+  },
+  {
+   "name": "Brahmapur",
+   "state": "Odisha",
+   "lat": 19.31,
+   "lon": 84.79,
+   "oldName": "Berhampur"
+  },
+  {
+   "name": "Silchar",
+   "state": "Assam",
+   "lat": 24.83,
+   "lon": 92.78
+  },
+  {
+   "name": "Dibrugarh",
+   "state": "Assam",
+   "lat": 27.47,
+   "lon": 94.91
+  },
+  {
+   "name": "Jorhat",
+   "state": "Assam",
+   "lat": 26.75,
+   "lon": 94.22
+  },
+  {
+   "name": "Shimla",
+   "state": "Himachal Pradesh",
+   "lat": 31.1,
+   "lon": 77.17,
+   "oldName": "Simla"
+  },
+  {
+   "name": "Dharamshala",
+   "state": "Himachal Pradesh",
+   "lat": 32.22,
+   "lon": 76.32
+  },
+  {
+   "name": "Dehradun",
+   "state": "Uttarakhand",
+   "lat": 30.32,
+   "lon": 78.03
+  },
+  {
+   "name": "Haridwar",
+   "state": "Uttarakhand",
+   "lat": 29.95,
+   "lon": 78.16
+  },
+  {
+   "name": "Rishikesh",
+   "state": "Uttarakhand",
+   "lat": 30.09,
+   "lon": 78.27
+  },
+  {
+   "name": "Nainital",
+   "state": "Uttarakhand",
+   "lat": 29.38,
+   "lon": 79.46
+  },
+  {
+   "name": "Jammu",
+   "state": "Jammu and Kashmir",
+   "lat": 32.73,
+   "lon": 74.86
+  },
+  {
+   "name": "Leh",
+   "state": "Ladakh",
+   "lat": 34.16,
+   "lon": 77.58
+  },
+  {
+   "name": "Kargil",
+   "state": "Ladakh",
+   "lat": 34.56,
+   "lon": 76.13
+  },
+  {
+   "name": "Panaji",
+   "state": "Goa",
+   "lat": 15.5,
+   "lon": 73.83,
+   "oldName": "Panjim"
+  },
+  {
+   "name": "Margao",
+   "state": "Goa",
+   "lat": 15.27,
+   "lon": 73.96
+  },
+  {
+   "name": "Vasco da Gama",
+   "state": "Goa",
+   "lat": 15.4,
+   "lon": 73.81
+  },
+  {
+   "name": "Itanagar",
+   "state": "Arunachal Pradesh",
+   "lat": 27.09,
+   "lon": 93.61
+  },
+  {
+   "name": "Tawang",
+   "state": "Arunachal Pradesh",
+   "lat": 27.59,
+   "lon": 91.87
+  },
+  {
+   "name": "Imphal",
+   "state": "Manipur",
+   "lat": 24.82,
+   "lon": 93.94
+  },
+  {
+   "name": "Churachandpur",
+   "state": "Manipur",
+   "lat": 24.33,
+   "lon": 93.68
+  },
+  {
+   "name": "Shillong",
+   "state": "Meghalaya",
+   "lat": 25.57,
+   "lon": 91.88
+  },
+  {
+   "name": "Tura",
+   "state": "Meghalaya",
+   "lat": 25.51,
+   "lon": 90.22
+  },
+  {
+   "name": "Aizawl",
+   "state": "Mizoram",
+   "lat": 23.73,
+   "lon": 92.72
+  },
+  {
+   "name": "Lunglei",
+   "state": "Mizoram",
+   "lat": 22.88,
+   "lon": 92.73
+  },
+  {
+   "name": "Kohima",
+   "state": "Nagaland",
+   "lat": 25.67,
+   "lon": 94.1
+  },
+  {
+   "name": "Dimapur",
+   "state": "Nagaland",
+   "lat": 25.91,
+   "lon": 93.73
+  },
+  {
+   "name": "Agartala",
+   "state": "Tripura",
+   "lat": 23.83,
+   "lon": 91.28
+  },
+  {
+   "name": "Dharmanagar",
+   "state": "Tripura",
+   "lat": 24.37,
+   "lon": 92.17
+  },
+  {
+   "name": "Gangtok",
+   "state": "Sikkim",
+   "lat": 27.33,
+   "lon": 88.61
+  },
+  {
+   "name": "Namchi",
+   "state": "Sikkim",
+   "lat": 27.17,
+   "lon": 88.36
+  },
+  {
+   "name": "Puducherry",
+   "state": "Puducherry",
+   "lat": 11.93,
+   "lon": 79.83,
+   "oldName": "Pondicherry",
+   "renamedOn": "2006-10-01"
+  },
+  {
+   "name": "Karaikal",
+   "state": "Puducherry",
+   "lat": 10.93,
+   "lon": 79.84
+  },
+  {
+   "name": "Sri Vijaya Puram",
+   "state": "Andaman and Nicobar Islands",
+   "lat": 11.67,
+   "lon": 92.74,
+   "oldName": "Port Blair",
+   "renamedOn": "2024-09-13"
+  },
+  {
+   "name": "Kavaratti",
+   "state": "Lakshadweep",
+   "lat": 10.57,
+   "lon": 72.64
+  },
+  {
+   "name": "Daman",
+   "state": "Dadra and Nagar Haveli and Daman and Diu",
+   "lat": 20.42,
+   "lon": 72.85
+  },
+  {
+   "name": "Silvassa",
+   "state": "Dadra and Nagar Haveli and Daman and Diu",
+   "lat": 20.27,
+   "lon": 73.02
+  }
+ ]
+}
