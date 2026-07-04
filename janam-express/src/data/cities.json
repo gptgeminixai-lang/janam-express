@@ -24,7 +24,10 @@
      "year": 2014,
      "what": "the Metro (Versova–Ghatkopar Line 1)"
     }
-   ]
+   ],
+   "station": "Chhatrapati Shivaji Maharaj Terminus",
+   "stationCode": "CSMT",
+   "railZone": "CR"
   },
   {
    "name": "Delhi",
@@ -52,7 +55,10 @@
      "year": 2010,
      "what": "airport Terminal 3 and the Commonwealth Games"
     }
-   ]
+   ],
+   "station": "New Delhi",
+   "stationCode": "NDLS",
+   "railZone": "NR"
   },
   {
    "name": "Kolkata",
@@ -74,7 +80,10 @@
      "year": 2008,
      "what": "South City Mall, then eastern India's biggest"
     }
-   ]
+   ],
+   "station": "Howrah Junction",
+   "stationCode": "HWH",
+   "railZone": "ER"
   },
   {
    "name": "Chennai",
@@ -100,7 +109,10 @@
      "year": 2015,
      "what": "the Chennai Metro"
     }
-   ]
+   ],
+   "station": "MGR Chennai Central",
+   "stationCode": "MAS",
+   "railZone": "SR"
   },
   {
    "name": "Bengaluru",
@@ -134,7 +146,10 @@
      "year": 2011,
      "what": "Namma Metro"
     }
-   ]
+   ],
+   "station": "KSR Bengaluru City Junction",
+   "stationCode": "SBC",
+   "railZone": "SWR"
   },
   {
    "name": "Hyderabad",
@@ -158,7 +173,10 @@
      "year": 2017,
      "what": "the Hyderabad Metro"
     }
-   ]
+   ],
+   "station": "Secunderabad Junction",
+   "stationCode": "SC",
+   "railZone": "SCR"
   },
   {
    "name": "Ahmedabad",
@@ -182,7 +200,10 @@
      "year": 2019,
      "what": "the Ahmedabad Metro"
     }
-   ]
+   ],
+   "station": "Ahmedabad Junction",
+   "stationCode": "ADI",
+   "railZone": "WR"
   },
   {
    "name": "Pune",
@@ -208,7 +229,10 @@
      "year": 2022,
      "what": "the Pune Metro"
     }
-   ]
+   ],
+   "station": "Pune Junction",
+   "stationCode": "PUNE",
+   "railZone": "CR"
   },
   {
    "name": "Surat",
@@ -218,7 +242,10 @@
    "pop1951": 237,
    "pop1971": 493,
    "pop1991": 1519,
-   "pop2011": 4591
+   "pop2011": 4591,
+   "station": "Surat",
+   "stationCode": "ST",
+   "railZone": "WR"
   },
   {
    "name": "Jaipur",
@@ -238,7 +265,10 @@
      "year": 2015,
      "what": "the Jaipur Metro"
     }
-   ]
+   ],
+   "station": "Jaipur Junction",
+   "stationCode": "JP",
+   "railZone": "NWR"
   },
   {
    "name": "Kanpur",
@@ -260,7 +290,10 @@
      "year": 2021,
      "what": "the Kanpur Metro"
     }
-   ]
+   ],
+   "station": "Kanpur Central",
+   "stationCode": "CNB",
+   "railZone": "NCR"
   },
   {
    "name": "Lucknow",
@@ -280,7 +313,10 @@
      "year": 2017,
      "what": "the Lucknow Metro"
     }
-   ]
+   ],
+   "station": "Lucknow Charbagh",
+   "stationCode": "LKO",
+   "railZone": "NR"
   },
   {
    "name": "Nagpur",
@@ -300,7 +336,10 @@
      "year": 2019,
      "what": "the Nagpur Metro"
     }
-   ]
+   ],
+   "station": "Nagpur Junction",
+   "stationCode": "NGP",
+   "railZone": "CR"
   },
   {
    "name": "Ghaziabad",
@@ -310,7 +349,10 @@
    "pop1951": 44,
    "pop1971": 128,
    "pop1991": 512,
-   "pop2011": 2376
+   "pop2011": 2376,
+   "station": "Ghaziabad Junction",
+   "stationCode": "GZB",
+   "railZone": "NR"
   },
   {
    "name": "Indore",
@@ -330,7 +372,10 @@
      "year": 2017,
      "what": "its first 'India's cleanest city' crown"
     }
-   ]
+   ],
+   "station": "Indore Junction",
+   "stationCode": "INDB",
+   "railZone": "WR"
   },
   {
    "name": "Coimbatore",
@@ -340,7 +385,10 @@
    "pop1951": 286,
    "pop1971": 736,
    "pop1991": 1101,
-   "pop2011": 2137
+   "pop2011": 2137,
+   "station": "Coimbatore Junction",
+   "stationCode": "CBE",
+   "railZone": "SR"
   },
   {
    "name": "Kochi",
@@ -366,7 +414,10 @@
      "year": 2017,
      "what": "the Kochi Metro"
     }
-   ]
+   ],
+   "station": "Ernakulam Junction",
+   "stationCode": "ERS",
+   "railZone": "SR"
   },
   {
    "name": "Patna",
@@ -376,7 +427,10 @@
    "pop1951": 325,
    "pop1971": 473,
    "pop1991": 1100,
-   "pop2011": 2049
+   "pop2011": 2049,
+   "station": "Patna Junction",
+   "stationCode": "PNBE",
+   "railZone": "ECR"
   },
   {
    "name": "Bhopal",
@@ -386,7 +440,10 @@
    "pop1951": 102,
    "pop1971": 385,
    "pop1991": 1063,
-   "pop2011": 1886
+   "pop2011": 1886,
+   "station": "Bhopal Junction",
+   "stationCode": "BPL",
+   "railZone": "WCR"
   },
   {
    "name": "Vadodara",
@@ -398,7 +455,10 @@
    "pop1951": 211,
    "pop1971": 467,
    "pop1991": 1127,
-   "pop2011": 1822
+   "pop2011": 1822,
+   "station": "Vadodara Junction",
+   "stationCode": "BRC",
+   "railZone": "WR"
   },
   {
    "name": "Visakhapatnam",
@@ -408,7 +468,10 @@
    "pop1951": 108,
    "pop1971": 363,
    "pop1991": 1057,
-   "pop2011": 1728
+   "pop2011": 1728,
+   "station": "Visakhapatnam Junction",
+   "stationCode": "VSKP",
+   "railZone": "SCoR"
   },
   {
    "name": "Agra",
@@ -418,7 +481,10 @@
    "pop1951": 375,
    "pop1971": 635,
    "pop1991": 948,
-   "pop2011": 1760
+   "pop2011": 1760,
+   "station": "Agra Cantt",
+   "stationCode": "AGC",
+   "railZone": "NCR"
   },
   {
    "name": "Ludhiana",
@@ -428,7 +494,10 @@
    "pop1951": 153,
    "pop1971": 401,
    "pop1991": 1043,
-   "pop2011": 1619
+   "pop2011": 1619,
+   "station": "Ludhiana Junction",
+   "stationCode": "LDH",
+   "railZone": "NR"
   },
   {
    "name": "Nashik",
@@ -438,7 +507,10 @@
    "pop1951": 155,
    "pop1971": 272,
    "pop1991": 725,
-   "pop2011": 1562
+   "pop2011": 1562,
+   "station": "Nashik Road",
+   "stationCode": "NK",
+   "railZone": "CR"
   },
   {
    "name": "Vijayawada",
@@ -449,7 +521,10 @@
    "pop1951": 161,
    "pop1971": 317,
    "pop1991": 846,
-   "pop2011": 1477
+   "pop2011": 1477,
+   "station": "Vijayawada Junction",
+   "stationCode": "BZA",
+   "railZone": "SCoR"
   },
   {
    "name": "Madurai",
@@ -459,7 +534,10 @@
    "pop1951": 361,
    "pop1971": 549,
    "pop1991": 1086,
-   "pop2011": 1466
+   "pop2011": 1466,
+   "station": "Madurai Junction",
+   "stationCode": "MDU",
+   "railZone": "SR"
   },
   {
    "name": "Varanasi",
@@ -471,7 +549,10 @@
    "pop1951": 355,
    "pop1971": 607,
    "pop1991": 1031,
-   "pop2011": 1432
+   "pop2011": 1432,
+   "station": "Varanasi Junction",
+   "stationCode": "BSB",
+   "railZone": "NR"
   },
   {
    "name": "Meerut",
@@ -481,7 +562,10 @@
    "pop1951": 233,
    "pop1971": 368,
    "pop1991": 850,
-   "pop2011": 1421
+   "pop2011": 1421,
+   "station": "Meerut City Junction",
+   "stationCode": "MTC",
+   "railZone": "NR"
   },
   {
    "name": "Faridabad",
@@ -490,7 +574,10 @@
    "lon": 77.31,
    "pop1971": 123,
    "pop1991": 618,
-   "pop2011": 1414
+   "pop2011": 1414,
+   "station": "Faridabad",
+   "stationCode": "FDB",
+   "railZone": "NR"
   },
   {
    "name": "Rajkot",
@@ -500,7 +587,10 @@
    "pop1951": 132,
    "pop1971": 301,
    "pop1991": 654,
-   "pop2011": 1391
+   "pop2011": 1391,
+   "station": "Rajkot Junction",
+   "stationCode": "RJT",
+   "railZone": "WR"
   },
   {
    "name": "Jamshedpur",
@@ -510,7 +600,10 @@
    "pop1951": 218,
    "pop1971": 456,
    "pop1991": 829,
-   "pop2011": 1339
+   "pop2011": 1339,
+   "station": "Tatanagar Junction",
+   "stationCode": "TATA",
+   "railZone": "SER"
   },
   {
    "name": "Jabalpur",
@@ -522,7 +615,10 @@
    "pop1951": 256,
    "pop1971": 534,
    "pop1991": 889,
-   "pop2011": 1269
+   "pop2011": 1269,
+   "station": "Jabalpur Junction",
+   "stationCode": "JBP",
+   "railZone": "WCR"
   },
   {
    "name": "Srinagar",
@@ -530,7 +626,10 @@
    "lat": 34.08,
    "lon": 74.8,
    "pop1971": 423,
-   "pop2011": 1264
+   "pop2011": 1264,
+   "station": "Srinagar",
+   "stationCode": "SINA",
+   "railZone": "NR"
   },
   {
    "name": "Asansol",
@@ -540,7 +639,10 @@
    "pop1951": 76,
    "pop1971": 156,
    "pop1991": 764,
-   "pop2011": 1243
+   "pop2011": 1243,
+   "station": "Asansol Junction",
+   "stationCode": "ASN",
+   "railZone": "ER"
   },
   {
    "name": "Prayagraj",
@@ -552,7 +654,10 @@
    "pop1951": 332,
    "pop1971": 513,
    "pop1991": 845,
-   "pop2011": 1212
+   "pop2011": 1212,
+   "station": "Prayagraj Junction",
+   "stationCode": "PRYJ",
+   "railZone": "NCR"
   },
   {
    "name": "Dhanbad",
@@ -561,7 +666,10 @@
    "lon": 86.44,
    "pop1971": 434,
    "pop1991": 815,
-   "pop2011": 1196
+   "pop2011": 1196,
+   "station": "Dhanbad Junction",
+   "stationCode": "DHN",
+   "railZone": "ECR"
   },
   {
    "name": "Chhatrapati Sambhajinagar",
@@ -583,7 +691,10 @@
    "pop1951": 325,
    "pop1971": 458,
    "pop1991": 709,
-   "pop2011": 1184
+   "pop2011": 1184,
+   "station": "Amritsar Junction",
+   "stationCode": "ASR",
+   "railZone": "NR"
   },
   {
    "name": "Jodhpur",
@@ -593,7 +704,10 @@
    "pop1951": 180,
    "pop1971": 319,
    "pop1991": 666,
-   "pop2011": 1138
+   "pop2011": 1138,
+   "station": "Jodhpur Junction",
+   "stationCode": "JU",
+   "railZone": "NWR"
   },
   {
    "name": "Ranchi",
@@ -603,7 +717,10 @@
    "pop1951": 106,
    "pop1971": 256,
    "pop1991": 615,
-   "pop2011": 1120
+   "pop2011": 1120,
+   "station": "Ranchi Junction",
+   "stationCode": "RNC",
+   "railZone": "SER"
   },
   {
    "name": "Raipur",
@@ -613,7 +730,10 @@
    "pop1951": 90,
    "pop1971": 206,
    "pop1991": 463,
-   "pop2011": 1124
+   "pop2011": 1124,
+   "station": "Raipur Junction",
+   "stationCode": "R",
+   "railZone": "SECR"
   },
   {
    "name": "Gwalior",
@@ -623,7 +743,10 @@
    "pop1951": 241,
    "pop1971": 406,
    "pop1991": 718,
-   "pop2011": 1103
+   "pop2011": 1103,
+   "station": "Gwalior Junction",
+   "stationCode": "GWL",
+   "railZone": "NCR"
   },
   {
    "name": "Chandigarh",
@@ -633,7 +756,10 @@
    "pop1951": 24,
    "pop1971": 233,
    "pop1991": 576,
-   "pop2011": 1026
+   "pop2011": 1026,
+   "station": "Chandigarh Junction",
+   "stationCode": "CDG",
+   "railZone": "NR"
   },
   {
    "name": "Thiruvananthapuram",
@@ -645,7 +771,10 @@
    "pop1951": 187,
    "pop1971": 410,
    "pop1991": 826,
-   "pop2011": 1680
+   "pop2011": 1680,
+   "station": "Thiruvananthapuram Central",
+   "stationCode": "TVC",
+   "railZone": "SR"
   },
   {
    "name": "Kozhikode",
@@ -656,7 +785,10 @@
    "pop1951": 158,
    "pop1971": 334,
    "pop1991": 801,
-   "pop2011": 2028
+   "pop2011": 2028,
+   "station": "Kozhikode",
+   "stationCode": "CLT",
+   "railZone": "SR"
   },
   {
    "name": "Mysuru",
@@ -668,7 +800,10 @@
    "pop1951": 244,
    "pop1971": 356,
    "pop1991": 653,
-   "pop2011": 991
+   "pop2011": 991,
+   "station": "Mysuru Junction",
+   "stationCode": "MYS",
+   "railZone": "SWR"
   },
   {
    "name": "Guwahati",
@@ -678,7 +813,10 @@
    "oldName": "Gauhati",
    "renamedOn": "1983-01-01",
    "pop1991": 584,
-   "pop2011": 962
+   "pop2011": 962,
+   "station": "Guwahati",
+   "stationCode": "GHY",
+   "railZone": "NFR"
   },
   {
    "name": "Tiruchirappalli",
@@ -689,7 +827,10 @@
    "pop1951": 218,
    "pop1971": 464,
    "pop1991": 712,
-   "pop2011": 1023
+   "pop2011": 1023,
+   "station": "Tiruchirappalli Junction",
+   "stationCode": "TPJ",
+   "railZone": "SR"
   },
   {
    "name": "Kota",
@@ -699,7 +840,10 @@
    "pop1951": 65,
    "pop1971": 213,
    "pop1991": 537,
-   "pop2011": 1002
+   "pop2011": 1002,
+   "station": "Kota Junction",
+   "stationCode": "KOTA",
+   "railZone": "WCR"
   },
   {
    "name": "Bhubaneswar",
@@ -709,7 +853,10 @@
    "pop1951": 16,
    "pop1971": 105,
    "pop1991": 412,
-   "pop2011": 885
+   "pop2011": 885,
+   "station": "Bhubaneswar",
+   "stationCode": "BBS",
+   "railZone": "ECoR"
   },
   {
    "name": "Gurugram",
@@ -734,7 +881,10 @@
      "year": 2013,
      "what": "the Rapid Metro looping Cyber City"
     }
-   ]
+   ],
+   "station": "Gurgaon",
+   "stationCode": "GGN",
+   "railZone": "NR"
   },
   {
    "name": "Noida",
@@ -742,7 +892,10 @@
    "lat": 28.57,
    "lon": 77.32,
    "pop1991": 146,
-   "pop2011": 642
+   "pop2011": 642,
+   "station": "Ghaziabad Junction (nearest)",
+   "stationCode": "GZB",
+   "railZone": "NR"
   },
   {
    "name": "Solapur",
@@ -752,7 +905,10 @@
    "pop1951": 277,
    "pop1971": 398,
    "pop1991": 621,
-   "pop2011": 952
+   "pop2011": 952,
+   "station": "Solapur",
+   "stationCode": "SUR",
+   "railZone": "CR"
   },
   {
    "name": "Hubballi-Dharwad",
@@ -774,7 +930,10 @@
    "pop1951": 202,
    "pop1971": 416,
    "pop1991": 578,
-   "pop2011": 917
+   "pop2011": 917,
+   "station": "Salem Junction",
+   "stationCode": "SA",
+   "railZone": "SR"
   },
   {
    "name": "Bareilly",
@@ -784,7 +943,10 @@
    "pop1951": 195,
    "pop1971": 296,
    "pop1991": 617,
-   "pop2011": 986
+   "pop2011": 986,
+   "station": "Bareilly Junction",
+   "stationCode": "BE",
+   "railZone": "NR"
   },
   {
    "name": "Moradabad",
@@ -794,7 +956,10 @@
    "pop1951": 161,
    "pop1971": 259,
    "pop1991": 444,
-   "pop2011": 888
+   "pop2011": 888,
+   "station": "Moradabad",
+   "stationCode": "MB",
+   "railZone": "NR"
   },
   {
    "name": "Aligarh",
@@ -804,7 +969,10 @@
    "pop1951": 141,
    "pop1971": 252,
    "pop1991": 481,
-   "pop2011": 911
+   "pop2011": 911,
+   "station": "Aligarh Junction",
+   "stationCode": "ALJN",
+   "railZone": "NCR"
   },
   {
    "name": "Jalandhar",
@@ -814,7 +982,10 @@
    "pop1951": 168,
    "pop1971": 296,
    "pop1991": 510,
-   "pop2011": 874
+   "pop2011": 874,
+   "station": "Jalandhar City Junction",
+   "stationCode": "JUC",
+   "railZone": "NR"
   },
   {
    "name": "Bhilai",
@@ -822,13 +993,19 @@
    "lat": 21.21,
    "lon": 81.38,
    "pop1991": 685,
-   "pop2011": 1064
+   "pop2011": 1064,
+   "station": "Bhilai Power House",
+   "stationCode": "BPHB",
+   "railZone": "SECR"
   },
   {
    "name": "Thane",
    "state": "Maharashtra",
    "lat": 19.22,
-   "lon": 72.98
+   "lon": 72.98,
+   "station": "Thane",
+   "stationCode": "TNA",
+   "railZone": "CR"
   },
   {
    "name": "Navi Mumbai",
@@ -846,25 +1023,37 @@
    "name": "Amravati",
    "state": "Maharashtra",
    "lat": 20.93,
-   "lon": 77.75
+   "lon": 77.75,
+   "station": "Amravati",
+   "stationCode": "AMI",
+   "railZone": "CR"
   },
   {
    "name": "Kolhapur",
    "state": "Maharashtra",
    "lat": 16.7,
-   "lon": 74.24
+   "lon": 74.24,
+   "station": "Chhatrapati Shahu Maharaj Terminus, Kolhapur",
+   "stationCode": "KOP",
+   "railZone": "CR"
   },
   {
    "name": "Gorakhpur",
    "state": "Uttar Pradesh",
    "lat": 26.76,
-   "lon": 83.37
+   "lon": 83.37,
+   "station": "Gorakhpur Junction",
+   "stationCode": "GKP",
+   "railZone": "NER"
   },
   {
    "name": "Jhansi",
    "state": "Uttar Pradesh",
    "lat": 25.45,
-   "lon": 78.57
+   "lon": 78.57,
+   "station": "Virangana Lakshmibai Jhansi Junction",
+   "stationCode": "VGLJ",
+   "railZone": "NCR"
   },
   {
    "name": "Ayodhya",
@@ -872,19 +1061,28 @@
    "lat": 26.8,
    "lon": 82.2,
    "oldName": "Faizabad",
-   "renamedOn": "2018-11-06"
+   "renamedOn": "2018-11-06",
+   "station": "Ayodhya Dham Junction",
+   "stationCode": "AY",
+   "railZone": "NR"
   },
   {
    "name": "Siliguri",
    "state": "West Bengal",
    "lat": 26.72,
-   "lon": 88.43
+   "lon": 88.43,
+   "station": "New Jalpaiguri Junction",
+   "stationCode": "NJP",
+   "railZone": "NFR"
   },
   {
    "name": "Durgapur",
    "state": "West Bengal",
    "lat": 23.52,
-   "lon": 87.31
+   "lon": 87.31,
+   "station": "Durgapur",
+   "stationCode": "DGR",
+   "railZone": "ER"
   },
   {
    "name": "Darjeeling",
@@ -897,20 +1095,29 @@
    "state": "Tamil Nadu",
    "lat": 8.73,
    "lon": 77.71,
-   "oldName": "Tinnevelly"
+   "oldName": "Tinnevelly",
+   "station": "Tirunelveli Junction",
+   "stationCode": "TEN",
+   "railZone": "SR"
   },
   {
    "name": "Thanjavur",
    "state": "Tamil Nadu",
    "lat": 10.79,
    "lon": 79.14,
-   "oldName": "Tanjore"
+   "oldName": "Tanjore",
+   "station": "Thanjavur Junction",
+   "stationCode": "TJ",
+   "railZone": "SR"
   },
   {
    "name": "Vellore",
    "state": "Tamil Nadu",
    "lat": 12.92,
-   "lon": 79.13
+   "lon": 79.13,
+   "station": "Katpadi Junction",
+   "stationCode": "KPD",
+   "railZone": "SR"
   },
   {
    "name": "Mangaluru",
@@ -918,7 +1125,10 @@
    "lat": 12.91,
    "lon": 74.86,
    "oldName": "Mangalore",
-   "renamedOn": "2014-11-01"
+   "renamedOn": "2014-11-01",
+   "station": "Mangaluru Central",
+   "stationCode": "MAQ",
+   "railZone": "SR"
   },
   {
    "name": "Belagavi",
@@ -926,7 +1136,10 @@
    "lat": 15.85,
    "lon": 74.5,
    "oldName": "Belgaum",
-   "renamedOn": "2014-11-01"
+   "renamedOn": "2014-11-01",
+   "station": "Belagavi",
+   "stationCode": "BGM",
+   "railZone": "SWR"
   },
   {
    "name": "Kalaburagi",
@@ -934,70 +1147,103 @@
    "lat": 17.33,
    "lon": 76.83,
    "oldName": "Gulbarga",
-   "renamedOn": "2014-11-01"
+   "renamedOn": "2014-11-01",
+   "station": "Kalaburagi Junction",
+   "stationCode": "KLBG",
+   "railZone": "CR"
   },
   {
    "name": "Thrissur",
    "state": "Kerala",
    "lat": 10.53,
    "lon": 76.21,
-   "oldName": "Trichur"
+   "oldName": "Trichur",
+   "station": "Thrissur",
+   "stationCode": "TCR",
+   "railZone": "SR"
   },
   {
    "name": "Kollam",
    "state": "Kerala",
    "lat": 8.89,
    "lon": 76.61,
-   "oldName": "Quilon"
+   "oldName": "Quilon",
+   "station": "Kollam Junction",
+   "stationCode": "QLN",
+   "railZone": "SR"
   },
   {
    "name": "Kannur",
    "state": "Kerala",
    "lat": 11.87,
    "lon": 75.37,
-   "oldName": "Cannanore"
+   "oldName": "Cannanore",
+   "station": "Kannur",
+   "stationCode": "CAN",
+   "railZone": "SR"
   },
   {
    "name": "Warangal",
    "state": "Telangana",
    "lat": 17.98,
-   "lon": 79.59
+   "lon": 79.59,
+   "station": "Warangal",
+   "stationCode": "WL",
+   "railZone": "SCR"
   },
   {
    "name": "Nizamabad",
    "state": "Telangana",
    "lat": 18.67,
-   "lon": 78.09
+   "lon": 78.09,
+   "station": "Nizamabad Junction",
+   "stationCode": "NZB",
+   "railZone": "SCR"
   },
   {
    "name": "Karimnagar",
    "state": "Telangana",
    "lat": 18.44,
-   "lon": 79.13
+   "lon": 79.13,
+   "station": "Karimnagar",
+   "stationCode": "KRMR",
+   "railZone": "SCR"
   },
   {
    "name": "Guntur",
    "state": "Andhra Pradesh",
    "lat": 16.31,
-   "lon": 80.44
+   "lon": 80.44,
+   "station": "Guntur Junction",
+   "stationCode": "GNT",
+   "railZone": "SCoR"
   },
   {
    "name": "Tirupati",
    "state": "Andhra Pradesh",
    "lat": 13.63,
-   "lon": 79.42
+   "lon": 79.42,
+   "station": "Tirupati",
+   "stationCode": "TPTY",
+   "railZone": "SCoR"
   },
   {
    "name": "Nellore",
    "state": "Andhra Pradesh",
    "lat": 14.44,
-   "lon": 79.99
+   "lon": 79.99,
+   "station": "Nellore",
+   "stationCode": "NLR",
+   "railZone": "SCoR"
   },
   {
    "name": "Kurnool",
    "state": "Andhra Pradesh",
    "lat": 15.83,
-   "lon": 78.04
+   "lon": 78.04,
+   "station": "Kurnool City",
+   "stationCode": "KRNT",
+   "railZone": "SCoR"
   },
   {
    "name": "Rajamahendravaram",
@@ -1011,73 +1257,109 @@
    "name": "Bhavnagar",
    "state": "Gujarat",
    "lat": 21.76,
-   "lon": 72.15
+   "lon": 72.15,
+   "station": "Bhavnagar Terminus",
+   "stationCode": "BVC",
+   "railZone": "WR"
   },
   {
    "name": "Jamnagar",
    "state": "Gujarat",
    "lat": 22.47,
-   "lon": 70.07
+   "lon": 70.07,
+   "station": "Jamnagar",
+   "stationCode": "JAM",
+   "railZone": "WR"
   },
   {
    "name": "Gandhinagar",
    "state": "Gujarat",
    "lat": 23.22,
-   "lon": 72.65
+   "lon": 72.65,
+   "station": "Gandhinagar Capital",
+   "stationCode": "GNC",
+   "railZone": "WR"
   },
   {
    "name": "Udaipur",
    "state": "Rajasthan",
    "lat": 24.58,
-   "lon": 73.68
+   "lon": 73.68,
+   "station": "Udaipur City",
+   "stationCode": "UDZ",
+   "railZone": "NWR"
   },
   {
    "name": "Ajmer",
    "state": "Rajasthan",
    "lat": 26.45,
-   "lon": 74.64
+   "lon": 74.64,
+   "station": "Ajmer Junction",
+   "stationCode": "AII",
+   "railZone": "NWR"
   },
   {
    "name": "Bikaner",
    "state": "Rajasthan",
    "lat": 28.02,
-   "lon": 73.31
+   "lon": 73.31,
+   "station": "Bikaner Junction",
+   "stationCode": "BKN",
+   "railZone": "NWR"
   },
   {
    "name": "Ujjain",
    "state": "Madhya Pradesh",
    "lat": 23.18,
-   "lon": 75.78
+   "lon": 75.78,
+   "station": "Ujjain Junction",
+   "stationCode": "UJN",
+   "railZone": "WR"
   },
   {
    "name": "Gaya",
    "state": "Bihar",
    "lat": 24.79,
-   "lon": 85
+   "lon": 85,
+   "station": "Gaya Junction",
+   "stationCode": "GAYA",
+   "railZone": "ECR"
   },
   {
    "name": "Bhagalpur",
    "state": "Bihar",
    "lat": 25.24,
-   "lon": 86.97
+   "lon": 86.97,
+   "station": "Bhagalpur Junction",
+   "stationCode": "BGP",
+   "railZone": "ER"
   },
   {
    "name": "Muzaffarpur",
    "state": "Bihar",
    "lat": 26.12,
-   "lon": 85.39
+   "lon": 85.39,
+   "station": "Muzaffarpur Junction",
+   "stationCode": "MFP",
+   "railZone": "ECR"
   },
   {
    "name": "Patiala",
    "state": "Punjab",
    "lat": 30.34,
-   "lon": 76.39
+   "lon": 76.39,
+   "station": "Patiala",
+   "stationCode": "PTA",
+   "railZone": "NR"
   },
   {
    "name": "Bathinda",
    "state": "Punjab",
    "lat": 30.21,
-   "lon": 74.95
+   "lon": 74.95,
+   "station": "Bathinda Junction",
+   "stationCode": "BTI",
+   "railZone": "NR"
   },
   {
    "name": "Mohali",
@@ -1089,13 +1371,19 @@
    "name": "Panipat",
    "state": "Haryana",
    "lat": 29.39,
-   "lon": 76.97
+   "lon": 76.97,
+   "station": "Panipat Junction",
+   "stationCode": "PNP",
+   "railZone": "NR"
   },
   {
    "name": "Ambala",
    "state": "Haryana",
    "lat": 30.38,
-   "lon": 76.78
+   "lon": 76.78,
+   "station": "Ambala Cantt Junction",
+   "stationCode": "UMB",
+   "railZone": "NR"
   },
   {
    "name": "Bokaro Steel City",
@@ -1107,63 +1395,93 @@
    "name": "Bilaspur",
    "state": "Chhattisgarh",
    "lat": 22.08,
-   "lon": 82.15
+   "lon": 82.15,
+   "station": "Bilaspur Junction",
+   "stationCode": "BSP",
+   "railZone": "SECR"
   },
   {
    "name": "Cuttack",
    "state": "Odisha",
    "lat": 20.46,
-   "lon": 85.88
+   "lon": 85.88,
+   "station": "Cuttack Junction",
+   "stationCode": "CTC",
+   "railZone": "ECoR"
   },
   {
    "name": "Rourkela",
    "state": "Odisha",
    "lat": 22.25,
-   "lon": 84.88
+   "lon": 84.88,
+   "station": "Rourkela Junction",
+   "stationCode": "ROU",
+   "railZone": "SER"
   },
   {
    "name": "Sambalpur",
    "state": "Odisha",
    "lat": 21.47,
-   "lon": 83.97
+   "lon": 83.97,
+   "station": "Sambalpur Junction",
+   "stationCode": "SBP",
+   "railZone": "ECoR"
   },
   {
    "name": "Puri",
    "state": "Odisha",
    "lat": 19.8,
-   "lon": 85.82
+   "lon": 85.82,
+   "station": "Puri",
+   "stationCode": "PURI",
+   "railZone": "ECoR"
   },
   {
    "name": "Brahmapur",
    "state": "Odisha",
    "lat": 19.31,
    "lon": 84.79,
-   "oldName": "Berhampur"
+   "oldName": "Berhampur",
+   "station": "Brahmapur",
+   "stationCode": "BAM",
+   "railZone": "ECoR"
   },
   {
    "name": "Silchar",
    "state": "Assam",
    "lat": 24.83,
-   "lon": 92.78
+   "lon": 92.78,
+   "station": "Silchar",
+   "stationCode": "SCL",
+   "railZone": "NFR"
   },
   {
    "name": "Dibrugarh",
    "state": "Assam",
    "lat": 27.47,
-   "lon": 94.91
+   "lon": 94.91,
+   "station": "Dibrugarh",
+   "stationCode": "DBRG",
+   "railZone": "NFR"
   },
   {
    "name": "Jorhat",
    "state": "Assam",
    "lat": 26.75,
-   "lon": 94.22
+   "lon": 94.22,
+   "station": "Jorhat Town",
+   "stationCode": "JTTN",
+   "railZone": "NFR"
   },
   {
    "name": "Shimla",
    "state": "Himachal Pradesh",
    "lat": 31.1,
    "lon": 77.17,
-   "oldName": "Simla"
+   "oldName": "Simla",
+   "station": "Shimla",
+   "stationCode": "SML",
+   "railZone": "NR"
   },
   {
    "name": "Dharamshala",
@@ -1175,13 +1493,19 @@
    "name": "Dehradun",
    "state": "Uttarakhand",
    "lat": 30.32,
-   "lon": 78.03
+   "lon": 78.03,
+   "station": "Dehradun",
+   "stationCode": "DDN",
+   "railZone": "NR"
   },
   {
    "name": "Haridwar",
    "state": "Uttarakhand",
    "lat": 29.95,
-   "lon": 78.16
+   "lon": 78.16,
+   "station": "Haridwar Junction",
+   "stationCode": "HW",
+   "railZone": "NR"
   },
   {
    "name": "Rishikesh",
@@ -1199,13 +1523,19 @@
    "name": "Jammu",
    "state": "Jammu and Kashmir",
    "lat": 32.73,
-   "lon": 74.86
+   "lon": 74.86,
+   "station": "Jammu Tawi",
+   "stationCode": "JAT",
+   "railZone": "NR"
   },
   {
    "name": "Leh",
    "state": "Ladakh",
    "lat": 34.16,
-   "lon": 77.58
+   "lon": 77.58,
+   "station": "Srinagar (nearest)",
+   "stationCode": "SINA",
+   "railZone": "NR"
   },
   {
    "name": "Kargil",
@@ -1218,7 +1548,10 @@
    "state": "Goa",
    "lat": 15.5,
    "lon": 73.83,
-   "oldName": "Panjim"
+   "oldName": "Panjim",
+   "station": "Madgaon Junction (nearest)",
+   "stationCode": "MAO",
+   "railZone": "KR"
   },
   {
    "name": "Margao",
@@ -1236,7 +1569,10 @@
    "name": "Itanagar",
    "state": "Arunachal Pradesh",
    "lat": 27.09,
-   "lon": 93.61
+   "lon": 93.61,
+   "station": "Naharlagun (nearest)",
+   "stationCode": "NHLN",
+   "railZone": "NFR"
   },
   {
    "name": "Tawang",
@@ -1248,7 +1584,10 @@
    "name": "Imphal",
    "state": "Manipur",
    "lat": 24.82,
-   "lon": 93.94
+   "lon": 93.94,
+   "station": "Khongsang (nearest)",
+   "stationCode": "KGBP",
+   "railZone": "NFR"
   },
   {
    "name": "Churachandpur",
@@ -1260,7 +1599,10 @@
    "name": "Shillong",
    "state": "Meghalaya",
    "lat": 25.57,
-   "lon": 91.88
+   "lon": 91.88,
+   "station": "Guwahati (nearest)",
+   "stationCode": "GHY",
+   "railZone": "NFR"
   },
   {
    "name": "Tura",
@@ -1272,7 +1614,10 @@
    "name": "Aizawl",
    "state": "Mizoram",
    "lat": 23.73,
-   "lon": 92.72
+   "lon": 92.72,
+   "station": "Sairang (nearest)",
+   "stationCode": "SANG",
+   "railZone": "NFR"
   },
   {
    "name": "Lunglei",
@@ -1284,7 +1629,10 @@
    "name": "Kohima",
    "state": "Nagaland",
    "lat": 25.67,
-   "lon": 94.1
+   "lon": 94.1,
+   "station": "Dimapur (nearest)",
+   "stationCode": "DMV",
+   "railZone": "NFR"
   },
   {
    "name": "Dimapur",
@@ -1296,7 +1644,10 @@
    "name": "Agartala",
    "state": "Tripura",
    "lat": 23.83,
-   "lon": 91.28
+   "lon": 91.28,
+   "station": "Agartala",
+   "stationCode": "AGTL",
+   "railZone": "NFR"
   },
   {
    "name": "Dharmanagar",
@@ -1308,7 +1659,10 @@
    "name": "Gangtok",
    "state": "Sikkim",
    "lat": 27.33,
-   "lon": 88.61
+   "lon": 88.61,
+   "station": "New Jalpaiguri (nearest)",
+   "stationCode": "NJP",
+   "railZone": "NFR"
   },
   {
    "name": "Namchi",
@@ -1322,7 +1676,10 @@
    "lat": 11.93,
    "lon": 79.83,
    "oldName": "Pondicherry",
-   "renamedOn": "2006-10-01"
+   "renamedOn": "2006-10-01",
+   "station": "Puducherry",
+   "stationCode": "PDY",
+   "railZone": "SR"
   },
   {
    "name": "Karaikal",

@@ -1,0 +1,992 @@
+{
+ "languages": [
+  {
+   "code": "hi",
+   "name": "Hindi",
+   "script": "Devanagari",
+   "greetingNative": "नमस्ते",
+   "greetingLatin": "Namaste",
+   "bornNative": "जन्मदिन मुबारक",
+   "bornLatin": "Janamdin Mubarak"
+  },
+  {
+   "code": "ta",
+   "name": "Tamil",
+   "script": "Tamil",
+   "greetingNative": "வணக்கம்",
+   "greetingLatin": "Vanakkam",
+   "bornNative": "பிறந்தநாள் வாழ்த்துக்கள்",
+   "bornLatin": "Piranthanaal Vazhthukkal"
+  },
+  {
+   "code": "te",
+   "name": "Telugu",
+   "script": "Telugu",
+   "greetingNative": "నమస్కారం",
+   "greetingLatin": "Namaskaram",
+   "bornNative": "పుట్టినరోజు శుభాకాంక్షలు",
+   "bornLatin": "Puttinaroju Shubhakankshalu"
+  },
+  {
+   "code": "ml",
+   "name": "Malayalam",
+   "script": "Malayalam",
+   "greetingNative": "നമസ്കാരം",
+   "greetingLatin": "Namaskaram",
+   "bornNative": "ജന്മദിനാശംസകൾ",
+   "bornLatin": "Janmadinashamsakal"
+  },
+  {
+   "code": "kn",
+   "name": "Kannada",
+   "script": "Kannada",
+   "greetingNative": "ನಮಸ್ಕಾರ",
+   "greetingLatin": "Namaskara",
+   "bornNative": "ಹುಟ್ಟುಹಬ್ಬದ ಶುಭಾಶಯಗಳು",
+   "bornLatin": "Huttuhabbada Shubhashayagalu"
+  },
+  {
+   "code": "bn",
+   "name": "Bengali",
+   "script": "Bengali",
+   "greetingNative": "নমস্কার",
+   "greetingLatin": "Nomoshkar",
+   "bornNative": "শুভ জন্মদিন",
+   "bornLatin": "Shubho Jonmodin"
+  },
+  {
+   "code": "mr",
+   "name": "Marathi",
+   "script": "Devanagari",
+   "greetingNative": "नमस्कार",
+   "greetingLatin": "Namaskar",
+   "bornNative": "वाढदिवसाच्या हार्दिक शुभेच्छा",
+   "bornLatin": "Vadhdivasachya Hardik Shubhechha"
+  },
+  {
+   "code": "pa",
+   "name": "Punjabi",
+   "script": "Gurmukhi",
+   "greetingNative": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ",
+   "greetingLatin": "Sat Sri Akal",
+   "bornNative": "ਜਨਮਦਿਨ ਮੁਬਾਰਕ",
+   "bornLatin": "Janamdin Mubarak"
+  },
+  {
+   "code": "gu",
+   "name": "Gujarati",
+   "script": "Gujarati",
+   "greetingNative": "કેમ છો",
+   "greetingLatin": "Kem Chho",
+   "bornNative": "જન્મદિવસ મુબારક",
+   "bornLatin": "Janmadivas Mubarak"
+  },
+  {
+   "code": "or",
+   "name": "Odia",
+   "script": "Odia",
+   "greetingNative": "ନମସ୍କାର",
+   "greetingLatin": "Namaskar",
+   "bornNative": "ଜନ୍ମଦିନର ଶୁଭେଚ୍ଛା",
+   "bornLatin": "Janmadinara Shubhechha"
+  },
+  {
+   "code": "as",
+   "name": "Assamese",
+   "script": "Assamese (Bengali-Assamese)",
+   "greetingNative": "নমস্কাৰ",
+   "greetingLatin": "Nomoskar",
+   "bornNative": "জন্মদিনৰ শুভেচ্ছা",
+   "bornLatin": "Jonmodinor Xubhessa"
+  },
+  {
+   "code": "ur",
+   "name": "Urdu",
+   "script": "Perso-Arabic (Nastaliq)",
+   "greetingNative": "آداب",
+   "greetingLatin": "Adaab",
+   "bornNative": "سالگرہ مبارک",
+   "bornLatin": "Salgirah Mubarak"
+  },
+  {
+   "code": "ks",
+   "name": "Kashmiri",
+   "script": "Perso-Arabic (Koshur)",
+   "greetingNative": "السلام علیکم",
+   "greetingLatin": "Assalam-u-Alaikum",
+   "bornNative": "سالگرہ مبارک",
+   "bornLatin": "Salgirah Mubarak (Wohorwod Mubarak)"
+  },
+  {
+   "code": "ne",
+   "name": "Nepali",
+   "script": "Devanagari",
+   "greetingNative": "नमस्ते",
+   "greetingLatin": "Namaste",
+   "bornNative": "जन्मदिनको शुभकामना",
+   "bornLatin": "Janmadinko Shubhakamana"
+  },
+  {
+   "code": "kok",
+   "name": "Konkani",
+   "script": "Devanagari",
+   "greetingNative": "देव बरें करूं",
+   "greetingLatin": "Dev Borem Korum",
+   "bornNative": "जल्म दिसाची परबी",
+   "bornLatin": "Zolm Disachi Porbi"
+  },
+  {
+   "code": "mai",
+   "name": "Maithili",
+   "script": "Devanagari",
+   "greetingNative": "प्रणाम",
+   "greetingLatin": "Pranam",
+   "bornNative": "जन्मदिनक शुभकामना",
+   "bornLatin": "Janmadinak Shubhkamna"
+  },
+  {
+   "code": "mni",
+   "name": "Manipuri (Meiteilon)",
+   "script": "Meetei Mayek",
+   "greetingNative": "ꯈꯨꯔꯨꯝꯖꯔꯤ",
+   "greetingLatin": "Khurumjari",
+   "bornNative": "ꯅꯄꯣꯛ ꯅꯨꯃꯤꯠꯇ ꯌꯥꯏꯐꯔꯣ",
+   "bornLatin": "Napok Numitta Yaipharo"
+  },
+  {
+   "code": "kha",
+   "name": "Khasi",
+   "script": "Latin (Roman)",
+   "greetingNative": "Khublei",
+   "greetingLatin": "Khublei",
+   "bornNative": "Khublei ha ka sngi kha",
+   "bornLatin": "Khublei ha ka sngi kha"
+  },
+  {
+   "code": "lus",
+   "name": "Mizo",
+   "script": "Latin (Roman)",
+   "greetingNative": "Chibai",
+   "greetingLatin": "Chibai",
+   "bornNative": "Piancham Chibai",
+   "bornLatin": "Piancham Chibai"
+  },
+  {
+   "code": "en",
+   "name": "English",
+   "script": "Latin",
+   "greetingNative": "Hello",
+   "greetingLatin": "Hello",
+   "bornNative": "Happy Birthday — the day you were born",
+   "bornLatin": "Happy Birthday"
+  }
+ ],
+ "stateLang": [
+  {
+   "state": "Andhra Pradesh",
+   "lang": "te"
+  },
+  {
+   "state": "Arunachal Pradesh",
+   "lang": "en",
+   "lang2": "hi"
+  },
+  {
+   "state": "Assam",
+   "lang": "as",
+   "lang2": "bn"
+  },
+  {
+   "state": "Bihar",
+   "lang": "hi",
+   "lang2": "mai"
+  },
+  {
+   "state": "Chhattisgarh",
+   "lang": "hi"
+  },
+  {
+   "state": "Goa",
+   "lang": "kok",
+   "lang2": "en"
+  },
+  {
+   "state": "Gujarat",
+   "lang": "gu",
+   "lang2": "hi"
+  },
+  {
+   "state": "Haryana",
+   "lang": "hi",
+   "lang2": "pa"
+  },
+  {
+   "state": "Himachal Pradesh",
+   "lang": "hi"
+  },
+  {
+   "state": "Jharkhand",
+   "lang": "hi",
+   "lang2": "bn"
+  },
+  {
+   "state": "Karnataka",
+   "lang": "kn"
+  },
+  {
+   "state": "Kerala",
+   "lang": "ml"
+  },
+  {
+   "state": "Madhya Pradesh",
+   "lang": "hi"
+  },
+  {
+   "state": "Maharashtra",
+   "lang": "mr",
+   "lang2": "hi"
+  },
+  {
+   "state": "Manipur",
+   "lang": "mni",
+   "lang2": "en"
+  },
+  {
+   "state": "Meghalaya",
+   "lang": "en",
+   "lang2": "kha"
+  },
+  {
+   "state": "Mizoram",
+   "lang": "lus",
+   "lang2": "en"
+  },
+  {
+   "state": "Nagaland",
+   "lang": "en"
+  },
+  {
+   "state": "Odisha",
+   "lang": "or"
+  },
+  {
+   "state": "Punjab",
+   "lang": "pa",
+   "lang2": "hi"
+  },
+  {
+   "state": "Rajasthan",
+   "lang": "hi"
+  },
+  {
+   "state": "Sikkim",
+   "lang": "ne",
+   "lang2": "en"
+  },
+  {
+   "state": "Tamil Nadu",
+   "lang": "ta"
+  },
+  {
+   "state": "Telangana",
+   "lang": "te",
+   "lang2": "ur"
+  },
+  {
+   "state": "Tripura",
+   "lang": "bn",
+   "lang2": "en"
+  },
+  {
+   "state": "Uttar Pradesh",
+   "lang": "hi",
+   "lang2": "ur"
+  },
+  {
+   "state": "Uttarakhand",
+   "lang": "hi"
+  },
+  {
+   "state": "West Bengal",
+   "lang": "bn",
+   "lang2": "ne"
+  },
+  {
+   "state": "Andaman and Nicobar Islands",
+   "lang": "hi",
+   "lang2": "bn"
+  },
+  {
+   "state": "Chandigarh",
+   "lang": "pa",
+   "lang2": "hi"
+  },
+  {
+   "state": "Dadra and Nagar Haveli and Daman and Diu",
+   "lang": "gu",
+   "lang2": "hi"
+  },
+  {
+   "state": "Delhi",
+   "lang": "hi",
+   "lang2": "pa"
+  },
+  {
+   "state": "Jammu and Kashmir",
+   "lang": "ur",
+   "lang2": "ks"
+  },
+  {
+   "state": "Ladakh",
+   "lang": "ur",
+   "lang2": "hi"
+  },
+  {
+   "state": "Lakshadweep",
+   "lang": "ml"
+  },
+  {
+   "state": "Puducherry",
+   "lang": "ta",
+   "lang2": "ml"
+  }
+ ],
+ "stateFormation": [
+  {
+   "state": "Andhra Pradesh",
+   "formed": "1956-11-01",
+   "from": "Andhra State (carved out of Madras State 1-Oct-1953) merged with the Telugu districts of Hyderabad State; born in coastal Andhra before Oct 1953 = born in Madras State. Lost Telangana on 2-Jun-2014"
+  },
+  {
+   "state": "Arunachal Pradesh",
+   "formed": "1987-02-20",
+   "from": "was NEFA (North-East Frontier Agency), administered as part of Assam until 1972, then a Union Territory",
+   "oldName": "NEFA / North-East Frontier Agency",
+   "renamedOn": "1972-01-21"
+  },
+  {
+   "state": "Assam",
+   "formed": "1950-01-26",
+   "from": "Assam Province of British India; since gave away Nagaland (1963), Meghalaya (1972), Mizoram and Arunachal (1972 as UTs)"
+  },
+  {
+   "state": "Bihar",
+   "formed": "1950-01-26",
+   "from": "Bihar Province; its entire southern half became Jharkhand on 15-Nov-2000"
+  },
+  {
+   "state": "Chhattisgarh",
+   "formed": "2000-11-01",
+   "from": "carved out of Madhya Pradesh"
+  },
+  {
+   "state": "Goa",
+   "formed": "1987-05-30",
+   "from": "Portuguese territory until 19-Dec-1961, then part of the UT of Goa, Daman and Diu; born in Goa before Dec 1961 = born under Portuguese rule"
+  },
+  {
+   "state": "Gujarat",
+   "formed": "1960-05-01",
+   "from": "carved out of bilingual Bombay State; born in Ahmedabad before May 1960 = born in Bombay State"
+  },
+  {
+   "state": "Haryana",
+   "formed": "1966-11-01",
+   "from": "carved out of Punjab"
+  },
+  {
+   "state": "Himachal Pradesh",
+   "formed": "1971-01-25",
+   "from": "a Union Territory (earlier Part C state of merged hill princely states); gained Kangra and other hill areas of Punjab on 1-Nov-1966"
+  },
+  {
+   "state": "Jharkhand",
+   "formed": "2000-11-15",
+   "from": "carved out of Bihar"
+  },
+  {
+   "state": "Karnataka",
+   "formed": "1956-11-01",
+   "from": "unified Mysore State — old Mysore princely state plus Kannada areas of Bombay, Hyderabad and Madras States and Coorg",
+   "oldName": "Mysore State",
+   "renamedOn": "1973-11-01"
+  },
+  {
+   "state": "Kerala",
+   "formed": "1956-11-01",
+   "from": "merger of Travancore-Cochin with the Malabar district of Madras State; born in Kozhikode before Nov 1956 = born in Madras State"
+  },
+  {
+   "state": "Madhya Pradesh",
+   "formed": "1956-11-01",
+   "from": "merger of old Madhya Pradesh (ex Central Provinces and Berar), Madhya Bharat, Vindhya Pradesh and Bhopal State; lost Chhattisgarh on 1-Nov-2000"
+  },
+  {
+   "state": "Maharashtra",
+   "formed": "1960-05-01",
+   "from": "carved out of bilingual Bombay State; born in Bombay before May 1960 = born in Bombay State"
+  },
+  {
+   "state": "Manipur",
+   "formed": "1972-01-21",
+   "from": "princely kingdom until Oct 1949, then a Part C state / Union Territory"
+  },
+  {
+   "state": "Meghalaya",
+   "formed": "1972-01-21",
+   "from": "carved out of Assam (autonomous state within Assam from 2-Apr-1970); born in Shillong before 1972 = born in Assam's capital"
+  },
+  {
+   "state": "Mizoram",
+   "formed": "1987-02-20",
+   "from": "was the Lushai Hills / Mizo Hills district of Assam until 1972, then a Union Territory"
+  },
+  {
+   "state": "Nagaland",
+   "formed": "1963-12-01",
+   "from": "carved out of Assam (Naga Hills district and Tuensang Area)"
+  },
+  {
+   "state": "Odisha",
+   "formed": "1950-01-26",
+   "from": "Orissa Province of British India; spelling anglicised as Orissa for 61 years of the republic",
+   "oldName": "Orissa",
+   "renamedOn": "2011-11-01"
+  },
+  {
+   "state": "Punjab",
+   "formed": "1966-11-01",
+   "from": "trifurcation of the larger East Punjab (which had absorbed PEPSU in 1956) — Haryana split off, hill areas went to Himachal, Chandigarh became a UT"
+  },
+  {
+   "state": "Rajasthan",
+   "formed": "1956-11-01",
+   "from": "union of the Rajputana princely states (integrated 1949); took current boundaries when Ajmer State merged in on 1-Nov-1956"
+  },
+  {
+   "state": "Sikkim",
+   "formed": "1975-05-16",
+   "from": "independent Himalayan kingdom under the Chogyal (an Indian protectorate); born in Gangtok before May 1975 = not born in India at all"
+  },
+  {
+   "state": "Tamil Nadu",
+   "formed": "1950-01-26",
+   "from": "Madras Presidency became Madras State; Telugu districts left for Andhra State on 1-Oct-1953, Malabar left and Kanyakumari joined on 1-Nov-1956",
+   "oldName": "Madras State",
+   "renamedOn": "1969-01-14"
+  },
+  {
+   "state": "Telangana",
+   "formed": "2014-06-02",
+   "from": "carved out of Andhra Pradesh; anyone born in Hyderabad 1956–2014 was born in Andhra Pradesh — and before 1-Nov-1956, in Hyderabad State"
+  },
+  {
+   "state": "Tripura",
+   "formed": "1972-01-21",
+   "from": "princely kingdom until Oct 1949, then a Part C state / Union Territory"
+  },
+  {
+   "state": "Uttar Pradesh",
+   "formed": "1950-01-24",
+   "from": "was the United Provinces of British India, renamed two days before the republic; lost its hill districts to Uttarakhand on 9-Nov-2000",
+   "oldName": "United Provinces",
+   "renamedOn": "1950-01-24"
+  },
+  {
+   "state": "Uttarakhand",
+   "formed": "2000-11-09",
+   "from": "carved out of Uttar Pradesh as Uttaranchal",
+   "oldName": "Uttaranchal",
+   "renamedOn": "2007-01-01"
+  },
+  {
+   "state": "West Bengal",
+   "formed": "1950-01-26",
+   "from": "the Indian half of partitioned Bengal Province; absorbed Cooch Behar (1950) and French Chandernagore (1954)"
+  },
+  {
+   "state": "Andaman and Nicobar Islands",
+   "formed": "1956-11-01",
+   "from": "a Part D territory of the new republic, made a Union Territory by the States Reorganisation Act"
+  },
+  {
+   "state": "Chandigarh",
+   "formed": "1966-11-01",
+   "from": "carved out of Punjab as a Union Territory to serve as shared capital of Punjab and Haryana"
+  },
+  {
+   "state": "Dadra and Nagar Haveli and Daman and Diu",
+   "formed": "2020-01-26",
+   "from": "merger of two UTs — Dadra & Nagar Haveli (freed from Portugal 1954, UT from 11-Aug-1961) and Daman & Diu (Portuguese until Dec 1961, part of Goa UT until 30-May-1987)"
+  },
+  {
+   "state": "Delhi",
+   "formed": "1992-02-01",
+   "from": "Part C state until 1956, then a plain Union Territory; became the National Capital Territory with its own assembly under the 69th Amendment"
+  },
+  {
+   "state": "Jammu and Kashmir",
+   "formed": "2019-10-31",
+   "from": "was a full state with special status under Article 370 for the entire 1950–2010 window; downgraded to a Union Territory and split from Ladakh"
+  },
+  {
+   "state": "Ladakh",
+   "formed": "2019-10-31",
+   "from": "was the Leh and Kargil districts of Jammu and Kashmir state; anyone born there 1950–2010 was born in J&K"
+  },
+  {
+   "state": "Lakshadweep",
+   "formed": "1956-11-01",
+   "from": "detached from Madras State as the UT of Laccadive, Minicoy and Amindivi Islands",
+   "oldName": "Laccadive, Minicoy and Amindivi Islands",
+   "renamedOn": "1973-11-01"
+  },
+  {
+   "state": "Puducherry",
+   "formed": "1962-08-16",
+   "from": "French India — de facto handover 1-Nov-1954, de jure only on 16-Aug-1962; born there before Nov 1954 = born in France's India",
+   "oldName": "Pondicherry",
+   "renamedOn": "2006-10-01"
+  }
+ ],
+ "cinema": {
+  "ta": [
+   {
+    "year": 1952,
+    "film": "Parasakthi",
+    "note": "Sivaji Ganesan's thunderous debut — Dravidian cinema finds its voice",
+    "confidence": "likely"
+   },
+   {
+    "year": 1955,
+    "film": "Missiamma",
+    "note": "The comedy every Tamil household can still quote",
+    "confidence": "likely"
+   },
+   {
+    "year": 1958,
+    "film": "Nadodi Mannan",
+    "note": "MGR directs MGR — a phenomenon, not just a film",
+    "confidence": "likely"
+   },
+   {
+    "year": 1959,
+    "film": "Veerapandiya Kattabomman",
+    "note": "Sivaji's roaring freedom-fighter epic",
+    "confidence": "likely"
+   },
+   {
+    "year": 1961,
+    "film": "Pasamalar",
+    "note": "Brother-sister tearjerker; Tamil cinema at its most beloved",
+    "confidence": "likely"
+   },
+   {
+    "year": 1964,
+    "film": "Kadhalikka Neramillai",
+    "note": "The colour comedy that never aged",
+    "confidence": "likely"
+   },
+   {
+    "year": 1965,
+    "film": "Enga Veettu Pillai",
+    "note": "MGR's double role ruled the year",
+    "confidence": "likely"
+   },
+   {
+    "year": 1968,
+    "film": "Thillana Mohanambal",
+    "note": "Sivaji and Padmini — dance versus nadaswaram",
+    "confidence": "likely"
+   },
+   {
+    "year": 1973,
+    "film": "Ulagam Sutrum Valiban",
+    "note": "MGR circles the globe; box-office records fall",
+    "confidence": "likely"
+   },
+   {
+    "year": 1975,
+    "film": "Apoorva Raagangal",
+    "note": "A young Rajinikanth walks through the gate — cinema history",
+    "confidence": "likely"
+   },
+   {
+    "year": 1977,
+    "film": "16 Vayathinile",
+    "note": "Bharathiraja takes Tamil film out of the studio into the village",
+    "confidence": "likely"
+   },
+   {
+    "year": 1978,
+    "film": "Mullum Malarum",
+    "note": "Rajinikanth's first great performance",
+    "confidence": "likely"
+   },
+   {
+    "year": 1980,
+    "film": "Billa",
+    "note": "Rajini remakes Don and becomes a superstar for good",
+    "confidence": "likely"
+   },
+   {
+    "year": 1982,
+    "film": "Moondram Pirai",
+    "note": "Kamal's heartbreak classic — that final scene at the level crossing",
+    "confidence": "likely"
+   },
+   {
+    "year": 1986,
+    "film": "Mouna Ragam",
+    "note": "Mani Ratnam arrives; the modern Tamil romance is born",
+    "confidence": "likely"
+   },
+   {
+    "year": 1987,
+    "film": "Nayakan",
+    "note": "Kamal's godfather — in TIME's all-time 100 films",
+    "confidence": "likely"
+   },
+   {
+    "year": 1989,
+    "film": "Apoorva Sagodharargal",
+    "note": "Kamal as Appu — every child of 1989 remembers",
+    "confidence": "likely"
+   },
+   {
+    "year": 1991,
+    "film": "Thalapathi",
+    "note": "Rajini and Mani Ratnam, Karna retold in the slums",
+    "confidence": "likely"
+   },
+   {
+    "year": 1992,
+    "film": "Roja",
+    "note": "A. R. Rahman erupts; India gets a new sound",
+    "confidence": "likely"
+   },
+   {
+    "year": 1995,
+    "film": "Baashha",
+    "note": "Auto-driver with a past — the definitive Rajini mass film",
+    "confidence": "likely"
+   },
+   {
+    "year": 1996,
+    "film": "Indian",
+    "note": "Kamal doubles as freedom fighter and vigilante",
+    "confidence": "likely"
+   },
+   {
+    "year": 1999,
+    "film": "Padayappa",
+    "note": "'En vazhi thani vazhi' — Rajini at full wattage",
+    "confidence": "likely"
+   },
+   {
+    "year": 2000,
+    "film": "Alaipayuthey",
+    "note": "Mani Ratnam's marriage story; Rahman's spring-water score",
+    "confidence": "likely"
+   },
+   {
+    "year": 2004,
+    "film": "Ghilli",
+    "note": "Vijay sprints into superstardom",
+    "confidence": "likely"
+   },
+   {
+    "year": 2005,
+    "film": "Chandramukhi",
+    "note": "Rajini versus the haunted room; a year-long run",
+    "confidence": "likely"
+   },
+   {
+    "year": 2007,
+    "film": "Sivaji: The Boss",
+    "note": "Shankar + Rajini — the costliest Indian film of its day",
+    "confidence": "likely"
+   },
+   {
+    "year": 2008,
+    "film": "Dasavathaaram",
+    "note": "Kamal Haasan plays ten roles",
+    "confidence": "likely"
+   },
+   {
+    "year": 2010,
+    "film": "Enthiran",
+    "note": "Rajini the robot — Indian cinema goes sci-fi blockbuster",
+    "confidence": "likely"
+   }
+  ],
+  "ml": [
+   {
+    "year": 1954,
+    "film": "Neelakuyil",
+    "note": "The film that put Malayalam cinema on the national map",
+    "confidence": "likely"
+   },
+   {
+    "year": 1965,
+    "film": "Chemmeen",
+    "note": "Kerala's sea-spray classic — first South film to win the President's Gold Medal",
+    "confidence": "likely"
+   },
+   {
+    "year": 1986,
+    "film": "Rajavinte Makan",
+    "note": "Mohanlal becomes The Complete Actor",
+    "confidence": "likely"
+   },
+   {
+    "year": 1987,
+    "film": "Nadodikkattu",
+    "note": "Mohanlal and Sreenivasan — the unemployment comedy Kerala never stopped quoting",
+    "confidence": "likely"
+   },
+   {
+    "year": 1988,
+    "film": "Chithram",
+    "note": "Ran 366 days straight — a Kerala record",
+    "confidence": "likely"
+   },
+   {
+    "year": 1989,
+    "film": "Kireedam",
+    "note": "Mohanlal's broken-dream policeman's son; a generation wept",
+    "confidence": "likely"
+   },
+   {
+    "year": 1991,
+    "film": "Godfather",
+    "note": "Feuding families, endless laughs — ran over a year",
+    "confidence": "likely"
+   },
+   {
+    "year": 1993,
+    "film": "Manichitrathazhu",
+    "note": "The psychological classic remade by every other industry",
+    "confidence": "likely"
+   },
+   {
+    "year": 2000,
+    "film": "Narasimham",
+    "note": "Mohanlal mass mode; Mollywood learns the word blockbuster",
+    "confidence": "likely"
+   },
+   {
+    "year": 2006,
+    "film": "Classmates",
+    "note": "The campus reunion that started the nostalgia wave",
+    "confidence": "likely"
+   }
+  ],
+  "te": [
+   {
+    "year": 1951,
+    "film": "Patala Bhairavi",
+    "note": "NTR and the sorcerer — fantasy filmmaking decades ahead",
+    "confidence": "likely"
+   },
+   {
+    "year": 1955,
+    "film": "Missamma",
+    "note": "NTR, ANR and Savitri in one frame",
+    "confidence": "likely"
+   },
+   {
+    "year": 1957,
+    "film": "Mayabazar",
+    "note": "Voted India's greatest film ever in a CNN-IBN poll — Ghatotkacha's feast",
+    "confidence": "likely"
+   },
+   {
+    "year": 1963,
+    "film": "Lava Kusa",
+    "note": "First Telugu colour film; mythological box-office thunder",
+    "confidence": "likely"
+   },
+   {
+    "year": 1980,
+    "film": "Sankarabharanam",
+    "note": "A classical-music film that outran every mass entertainer",
+    "confidence": "likely"
+   },
+   {
+    "year": 1983,
+    "film": "Khaidi",
+    "note": "Chiranjeevi breaks out — the angry young Telugu decade begins",
+    "confidence": "likely"
+   },
+   {
+    "year": 1990,
+    "film": "Jagadeka Veerudu Athiloka Sundari",
+    "note": "Chiranjeevi and a goddess on earth — pure magic",
+    "confidence": "likely"
+   },
+   {
+    "year": 1992,
+    "film": "Gharana Mogudu",
+    "note": "First Telugu film to gross ₹10 crore; Chiranjeevi is Megastar",
+    "confidence": "likely"
+   },
+   {
+    "year": 2002,
+    "film": "Indra",
+    "note": "Chiranjeevi thunder at the peak of mass cinema",
+    "confidence": "likely"
+   },
+   {
+    "year": 2003,
+    "film": "Simhadri",
+    "note": "A young Rajamouli and Jr NTR announce themselves",
+    "confidence": "likely"
+   },
+   {
+    "year": 2006,
+    "film": "Pokiri",
+    "note": "Mahesh Babu's era-defining hit",
+    "confidence": "likely"
+   },
+   {
+    "year": 2009,
+    "film": "Magadheera",
+    "note": "Rajamouli reincarnation epic — the road to Baahubali starts here",
+    "confidence": "likely"
+   }
+  ],
+  "kn": [
+   {
+    "year": 1954,
+    "film": "Bedara Kannappa",
+    "note": "Dr. Rajkumar debuts — Kannada cinema finds its Annavru",
+    "confidence": "likely"
+   },
+   {
+    "year": 1972,
+    "film": "Bangarada Manushya",
+    "note": "Rajkumar's farmer epic ran two straight years",
+    "confidence": "likely"
+   },
+   {
+    "year": 1975,
+    "film": "Mayura",
+    "note": "Rajkumar as the Kadamba king — pride of Karnataka",
+    "confidence": "likely"
+   },
+   {
+    "year": 1995,
+    "film": "Om",
+    "note": "Upendra's cult film — re-released more times than anyone can count",
+    "confidence": "likely"
+   },
+   {
+    "year": 2006,
+    "film": "Mungaru Male",
+    "note": "The monsoon romance that ran a full year and revived Sandalwood",
+    "confidence": "likely"
+   }
+  ],
+  "bn": [
+   {
+    "year": 1955,
+    "film": "Pather Panchali",
+    "note": "Satyajit Ray's debut — Cannes bows to Apu and Durga",
+    "confidence": "likely"
+   },
+   {
+    "year": 1957,
+    "film": "Harano Sur",
+    "note": "Uttam-Suchitra at their most luminous",
+    "confidence": "likely"
+   },
+   {
+    "year": 1960,
+    "film": "Meghe Dhaka Tara",
+    "note": "Ghatak's partition masterpiece",
+    "confidence": "likely"
+   },
+   {
+    "year": 1961,
+    "film": "Saptapadi",
+    "note": "THE Uttam-Suchitra romance",
+    "confidence": "likely"
+   },
+   {
+    "year": 1964,
+    "film": "Charulata",
+    "note": "Ray's own favourite of all his films",
+    "confidence": "likely"
+   },
+   {
+    "year": 1966,
+    "film": "Nayak",
+    "note": "Uttam Kumar plays a matinee idol for Ray — meta before meta",
+    "confidence": "likely"
+   },
+   {
+    "year": 1969,
+    "film": "Goopy Gyne Bagha Byne",
+    "note": "Ray's singing-ghost fantasy every Bengali child knows by heart",
+    "confidence": "likely"
+   },
+   {
+    "year": 1974,
+    "film": "Sonar Kella",
+    "note": "Feluda rides to Jaisalmer — detective fiction on golden sand",
+    "confidence": "likely"
+   },
+   {
+    "year": 1980,
+    "film": "Hirak Rajar Deshe",
+    "note": "'Dori dhore maro taan' — satire Bengal still quotes at politicians",
+    "confidence": "likely"
+   }
+  ]
+ },
+ "eras": [
+  {
+   "language": "marathi",
+   "decade": 1950,
+   "headline": "Shyamchi Aai and the sant tradition",
+   "story": "Shyamchi Aai (1953) won India's first-ever National Film Award; Marathi cinema was the conscience of the young republic."
+  },
+  {
+   "language": "marathi",
+   "decade": 1970,
+   "headline": "Pinjra and the Dada Kondke decade",
+   "story": "V. Shantaram's Pinjra (1972) and Dada Kondke's record run of silver-jubilee comedies packed Maharashtra's single screens."
+  },
+  {
+   "language": "marathi",
+   "decade": 2000,
+   "headline": "Shwaas revives Marathi cinema",
+   "story": "Shwaas (2004) went to the Oscars as India's official entry and lit the fuse of the Marathi new wave."
+  },
+  {
+   "language": "punjabi",
+   "decade": 1960,
+   "headline": "Nanak Naam Jahaz Hai",
+   "story": "The 1969 devotional landmark — Punjab queued for months; a National Award followed."
+  },
+  {
+   "language": "punjabi",
+   "decade": 1980,
+   "headline": "Chann Pardesi",
+   "story": "The 1981 National Award winner anchored Punjabi cinema through a difficult decade."
+  },
+  {
+   "language": "gujarati",
+   "decade": 1970,
+   "headline": "Gujarati cinema's golden run",
+   "story": "Jesal Toral (1971) kicked off the boom years — mythologicals and folk tales filled Gujarat theatres."
+  },
+  {
+   "language": "assamese",
+   "decade": 1960,
+   "headline": "The Bhupen Hazarika era",
+   "story": "Assam's cinema grew around Dr. Bhupen Hazarika's voice and films — Shakuntala (1961) won national honours."
+  }
+ ]
+}

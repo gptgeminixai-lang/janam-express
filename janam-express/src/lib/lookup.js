@@ -4,6 +4,7 @@ import cricketData from '../data/cricket.json';
 import milestonesData from '../data/milestones.json';
 import citiesData from '../data/cities.json';
 import staticData from '../data/static.json';
+import regional from '../data/regional.json';
 
 export const CITIES = citiesData.cities;
 export const PMS = staticData.pms;
@@ -105,3 +106,61 @@ export function tvEra(y) {
 
 export const fmtIN = n => Math.round(n).toLocaleString('en-IN');
 export const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+/* ---------- regional layer ---------- */
+const langByCode = new Map(regional.languages.map(l => [l.code, l]));
+const stateLangMap = new Map(regional.stateLang.map(s => [s.state, s]));
+
+export function greetingOf(state) {
+  const sl = stateLangMap.get(state);
+  return langByCode.get(sl ? sl.lang : 'hi') || langByCode.get('hi');
+}
+
+/* which regional film industry (with per-year data) does this state watch? */
+const CINEMA_LANGS = {
+  ta: ['Tamil', 'Kollywood'], te: ['Telugu', 'Tollywood'], ml: ['Malayalam', 'Mollywood'],
+  kn: ['Kannada', 'Sandalwood'], bn: ['Bengali', 'Tollygunge'],
+};
+const ERA_LANGS = { mr: 'marathi', pa: 'punjabi', gu: 'gujarati', or: 'odia', as: 'assamese' };
+
+export function regionalCinemaOf(state, year) {
+  const sl = stateLangMap.get(state);
+  if (!sl) return null;
+  for (const code of [sl.lang, sl.lang2]) {
+    if (code && CINEMA_LANGS[code]) {
+      const rows = regional.cinema[code] || [];
+      const m = byYear(rows.map ? rows : []);
+      const film = nearestYear(m, year, 4);
+      if (film) return { kind: 'film', industry: CINEMA_LANGS[code][0], nickname: CINEMA_LANGS[code][1], ...film };
+    }
+    if (code && ERA_LANGS[code]) {
+      const decade = Math.floor(year / 10) * 10;
+      const era = regional.eras.find(e => e.language === ERA_LANGS[code] && Math.abs(e.decade - decade) <= 10);
+      if (era) return { kind: 'era', industry: code, ...era };
+    }
+  }
+  return null;
+}
+
+/* "your state didn't exist yet" twist */
+export function stateStoryOf(state, iso) {
+  const sf = regional.stateFormation.find(s => s.state === state);
+  if (!sf || !sf.formed) return null;
+  const birthYear = +iso.slice(0, 4);
+  if (iso < sf.formed) {
+    const formedOn = new Date(sf.formed).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
+    if (sf.oldName) {
+      return `${state} did not exist yet — you were born in ${sf.oldName}. The state as you know it arrived on ${formedOn}.`;
+    }
+    const from = (sf.from || '').replace(/^carved (out of|from) /i, 'part of ');
+    return `${state} did not exist yet — your birthplace was still ${from || 'on a different map of India'}. The state arrived on ${formedOn}.`;
+  }
+  if (sf.oldName && sf.renamedOn && iso < sf.renamedOn) {
+    return `Your state was still called ${sf.oldName} — it became ${state} only in ${sf.renamedOn.slice(0, 4)}.`;
+  }
+  const age = birthYear - +sf.formed.slice(0, 4);
+  if (age >= 0 && age <= 25) {
+    return `${state} itself was only ${age === 0 ? 'months' : age + ' years'} old when you arrived.`;
+  }
+  return null;
+}

@@ -1,6 +1,7 @@
 import {
   CITIES, FIRSTS, econ, filmOf, songOf, cricketOf, milestoneOf,
   pmOn, presidentOn, population, findCity, tvEra, fmtIN, MONTHS,
+  greetingOf, regionalCinemaOf, stateStoryOf,
 } from './lookup.js';
 import { skyOn, panchangOn } from './astronomy.js';
 import { weatherOn, onThisDay, postersOf } from './api.js';
@@ -94,12 +95,15 @@ function render() {
   const e = econ(y);
 
   /* beat 1 · telegram */
+  const greet = greetingOf(city.state);
   const stop = '<span class="stopword"> STOP </span>';
   const cityHtml = wasOldName
     ? `<span class="oldname"><span class="dead">${city.name.toUpperCase()}</span> <span class="stamped">${city.oldName.toUpperCase()}</span></span>`
     : city.name.toUpperCase();
+  const greetHtml = greet && greet.code !== 'en'
+    ? `${greet.greetingNative} · ${greet.greetingLatin.toUpperCase()}${stop}` : '';
   $('tgtext').innerHTML =
-    `ARRIVED SAFELY ${cityHtml}${stop}${weekday.toUpperCase()} THE ${d} OF ${MONTHS[m - 1].toUpperCase()} ${y}${stop}` +
+    `${greetHtml}ARRIVED SAFELY ${cityHtml}${stop}${weekday.toUpperCase()} THE ${d} OF ${MONTHS[m - 1].toUpperCase()} ${y}${stop}` +
     `SUN ROSE ${sky.sunrise} IST${stop}${sky.moonName.toUpperCase()} OVERHEAD, ${sky.moonIllum} PC LIT${stop}` +
     `<span id="tgweather"></span>BABY DOING FINE${stop}`;
   $('tgnote').textContent = wasOldName
@@ -136,6 +140,7 @@ function render() {
 
   /* beat 3 · CRT */
   const film = filmOf(y), song = songOf(y);
+  const regional = regionalCinemaOf(city.state, y);
   J.channels = [
     ['CH 1 · DD NATIONAL · FILM OF YOUR YEAR',
       film ? film.film : 'A golden year for the movies',
@@ -152,6 +157,18 @@ function render() {
       false],
     ['CH 3 · YOUR TELEVISION ERA', y < 1959 ? 'Before television' : 'What India watched', tvEra(y), false],
   ];
+  if (regional) {
+    const ch = regional.kind === 'film'
+      ? [`CH 2 · ${regional.industry.toUpperCase()} CINEMA · YOUR STATE'S SCREEN`,
+         regional.film + (regional.year !== y ? ` (${regional.year})` : ''),
+         (regional.note || `The talk of every ${regional.industry} household.`) +
+         ` In ${city.state}, the single screens belonged to ${regional.nickname} as much as Bollywood.`, false]
+      : [`CH 2 · ${regional.language.toUpperCase()} CINEMA · YOUR STATE'S SCREEN`,
+         regional.headline, regional.story, false];
+    J.channels.splice(1, 0, ch);
+    J.channels[2][0] = 'CH 3 · VIVIDH BHARATI · SONG OF YOUR YEAR';
+    J.channels[3][0] = 'CH 4 · YOUR TELEVISION ERA';
+  }
   J.ch = 0;
   showChannel();
   $('posterwall').hidden = true;
@@ -194,6 +211,9 @@ function render() {
   $('cityline').textContent = futureCity.length
     ? `${bornCity} was still waiting for ${futureCity.map(f => `${f.what} (${f.year})`).join(', ')}.${growth}`
     : `${bornCity}, ${city.state} — like all of India, a city about to change beyond recognition.${growth}`;
+  const stateStory = stateStoryOf(city.state, iso);
+  $('statep').hidden = !stateStory;
+  if (stateStory) $('stateline').textContent = stateStory;
   $('worldp').hidden = true;
   onThisDay(m, d, y).then(events => {
     if (!events) return;
@@ -236,9 +256,15 @@ function render() {
   $('tktdate').textContent = iso;
   const berth = `S-${dob.getDay() + 1} · COACH ${String(y).slice(2)}`;
   $('tktberth').textContent = berth;
+  $('tktstation').textContent = city.stationCode
+    ? `${city.stationCode} · ${city.station}` : `${bornCity.toUpperCase()} STN`;
+  $('tktzone').textContent = city.railZone ? `${city.railZone} RAILWAY` : 'ALL INDIA';
+  $('tktwish').innerHTML = greet && greet.bornNative
+    ? `${greet.bornNative}<i>${greet.bornLatin} · ${greet.name}</i>` : '';
 
   J.shareData = {
     iso, city: city.name, bornCity, name, ttNo, berth,
+    station: city.stationCode || '', zone: city.railZone || '',
     dateLong: `${d} ${MONTHS[m - 1]} ${y}`,
     dateShort: `${d} ${MONTHS[m - 1].slice(0, 3)} ${y}`,
     valToday: fmtIN(valToday),

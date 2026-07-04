@@ -118,6 +118,7 @@ import '../styles/global.css';
         <p><b>RASHTRAPATI BHAVAN —</b> <span id="presline"></span></p>
         <p><b>CENSUS DESK —</b> <span id="popline"></span></p>
         <p><b>CITY PAGE —</b> <span id="cityline"></span></p>
+        <p id="statep" hidden><b>STATE PAGE —</b> <span id="stateline"></span></p>
         <p id="worldp" hidden><b>AROUND THE WORLD —</b> <span id="worldline"></span></p>
       </div>
     </div>
@@ -152,10 +153,13 @@ import '../styles/global.css';
         <div><b>Traveller No.</b><span id="tktno"></span></div>
         <div><b>Date of journey</b><span id="tktdate"></span></div>
         <div><b>Berth</b><span id="tktberth"></span></div>
+        <div><b>Boarding station</b><span id="tktstation"></span></div>
+        <div><b>Zone</b><span id="tktzone"></span></div>
       </div>
       <div class="stamp2">Verified · Time Travelled</div>
     </div>
-    <div class="tktbtns reveal d2">
+    <p class="wish reveal d2" id="tktwish"></p>
+    <div class="tktbtns reveal d3">
       <button class="ghost" id="sharebtn" type="button">Share ticket 🎟️</button>
       <button class="ghost" id="downloadbtn" type="button">Download ticket image</button>
       <button class="ghost" id="copybtn" type="button">Copy WhatsApp caption</button>

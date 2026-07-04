@@ -59,9 +59,10 @@ export function drawTicket(j) {
     ['PASSENGER', j.name.toUpperCase()], ['TRAVELLER NO.', j.ttNo],
     ['DATE OF JOURNEY', j.iso], ['BERTH', j.berth],
   ];
+  if (j.station) meta.push(['BOARDING STATION', j.station], ['ZONE', (j.zone || '') + ' RAILWAY']);
   meta.forEach(([k, v], i) => {
     const mx = T.x + 60 + (i % 2) * (T.w / 2 - 40);
-    const my = T.y + 460 + Math.floor(i / 2) * 120;
+    const my = T.y + 440 + Math.floor(i / 2) * 92;
     x.fillStyle = soft; x.letterSpacing = '6px';
     x.font = '400 22px "Courier New",monospace';
     x.fillText(k, mx, my);
