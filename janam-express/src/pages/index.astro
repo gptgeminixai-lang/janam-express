@@ -4,6 +4,13 @@ import { getImage } from 'astro:assets';
 import n1950 from '../assets/notes/note-1950.jpg';
 import n1967 from '../assets/notes/note-1967.jpg';
 import n1996 from '../assets/notes/note-1996.jpg';
+import dLakshmi from '../assets/deities/lakshmi.webp';
+import dBrahma from '../assets/deities/brahma.webp';
+import dShiva from '../assets/deities/shiva.webp';
+import dDurga from '../assets/deities/durga.webp';
+import dGanesha from '../assets/deities/ganesha.webp';
+import dHanuman from '../assets/deities/hanuman.webp';
+import dVishnu from '../assets/deities/vishnu.webp';
 
 const base = import.meta.env.BASE_URL; // '/janam-express/' in prod, '/' in dev
 
@@ -13,6 +20,17 @@ const noteImgs = {
   '1950': (await getImage({ src: n1950, width: NW, format: 'webp' })).src,
   '1967': (await getImage({ src: n1967, width: NW, format: 'webp' })).src,
   '1996': (await getImage({ src: n1996, width: NW, format: 'webp' })).src,
+};
+
+// Public-domain Ravi Varma-era deity paintings; the client shows one per god it can match.
+const deityImgs = {
+  lakshmi: (await getImage({ src: dLakshmi, format: 'webp' })).src,
+  brahma:  (await getImage({ src: dBrahma,  format: 'webp' })).src,
+  shiva:   (await getImage({ src: dShiva,   format: 'webp' })).src,
+  durga:   (await getImage({ src: dDurga,   format: 'webp' })).src,
+  ganesha: (await getImage({ src: dGanesha, format: 'webp' })).src,
+  hanuman: (await getImage({ src: dHanuman, format: 'webp' })).src,
+  vishnu:  (await getImage({ src: dVishnu,  format: 'webp' })).src,
 };
 ---
 <html lang="en">
@@ -106,6 +124,7 @@ const noteImgs = {
       <span class="note-specimen">Historical note image · not legal tender</span>
     </div>
     <script type="application/json" id="notemap" set:html={JSON.stringify(noteImgs)}></script>
+    <script type="application/json" id="deityartmap" set:html={JSON.stringify(deityImgs)}></script>
     <p class="bigline reveal d2" id="cpiline"></p>
     <div class="ticker reveal d3" id="pricechips"></div>
     <form class="amount reveal d3" id="amountform">
@@ -289,6 +308,10 @@ const noteImgs = {
     <p class="kicker reveal">· Beat 13 · The gods of your birth ·</p>
     <div class="gods reveal d1">
       <div class="deity-hero">
+        <figure class="deity-portrait" id="deityfig" hidden>
+          <img id="deityart" alt="" loading="lazy" decoding="async" />
+          <figcaption id="deityartcap"></figcaption>
+        </figure>
         <p class="deity-eyebrow">Guardian of your birth-star</p>
         <h3 class="deity-name" id="deityname">…</h3>
         <p class="deity-story" id="deitystory"></p>
@@ -296,11 +319,13 @@ const noteImgs = {
       </div>
       <div class="gods-row">
         <div class="god-card">
+          <img class="god-thumb" id="weekdaythumb" alt="" hidden loading="lazy" decoding="async" />
           <p class="god-label">Your weekday god</p>
           <p class="god-big" id="weekdaygod"></p>
           <p class="god-sub" id="weekdaysub"></p>
         </div>
         <div class="god-card">
+          <img class="god-thumb" id="tithithumb" alt="" hidden loading="lazy" decoding="async" />
           <p class="god-label">Your tithi's deity</p>
           <p class="god-big" id="tithigod"></p>
           <p class="god-sub" id="tithigodsub"></p>

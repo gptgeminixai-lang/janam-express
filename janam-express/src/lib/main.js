@@ -31,6 +31,35 @@ let famousScope = 'india', historyScope = 'india'; // India / World toggles (per
 let NOTE_MAP = {};
 try { NOTE_MAP = JSON.parse(document.getElementById('notemap').textContent || '{}'); } catch { /* fallback CSS note */ }
 
+// build-time map of deity-file → optimized painting URL; wired to gods by cleaned name below
+let DEITY_ART = {};
+try { DEITY_ART = JSON.parse(document.getElementById('deityartmap').textContent || '{}'); } catch { /* text-only */ }
+const DEITY_FILE = { // cleaned deity name → painting file (several gods share the closest painting)
+  Lakshmi: 'lakshmi', Brahma: 'brahma', Shiva: 'shiva', Rudra: 'shiva',
+  Durga: 'durga', Kali: 'durga', Gauri: 'durga', Ganesha: 'ganesha', Hanuman: 'hanuman',
+  Vishnu: 'vishnu', Brihaspati: 'vishnu', Nagas: 'vishnu', Naga: 'vishnu', 'Ahir Budhnya': 'vishnu',
+};
+const DEITY_META = { // what each painting actually depicts + a modest public-domain credit
+  lakshmi: ['Lakshmi', 'Raja Ravi Varma · public domain'],
+  brahma: ['Brahma', '19th-c. gouache · public domain'],
+  shiva: ['Shiva & Parvati', 'Ravi Varma Press · public domain'],
+  durga: ['Durga', 'Raja Ravi Varma · public domain'],
+  ganesha: ['Ganesha', 'Devotional oleograph · public domain'],
+  hanuman: ['Hanuman', 'Devotional oleograph · public domain'],
+  vishnu: ['Vishnu on Shesha', 'Ravi Varma Press · public domain'],
+};
+const artFor = deity => { // deity string (raw) → {src,title,credit} or null
+  const file = DEITY_FILE[cleanDeity(deity)];
+  const src = file && DEITY_ART[file];
+  return src ? { src, title: DEITY_META[file][0], credit: DEITY_META[file][1] } : null;
+};
+const setGodThumb = (id, art) => { // small framed thumbnail on a god-card
+  const el = $(id);
+  if (!el) return;
+  if (art) { el.src = art.src; el.alt = art.title; el.title = `${art.title} — ${art.credit}`; el.hidden = false; }
+  else el.hidden = true;
+};
+
 /* ---------- form setup ---------- */
 const dd = $('dd'), mm = $('mm'), yy = $('yy'), cityInput = $('city');
 for (let i = 1; i <= 31; i++) dd.add(new Option(String(i).padStart(2, '0'), i));
@@ -281,7 +310,7 @@ function render() {
 
   /* beat 6 · on this day in history — scope-aware (India / World) */
   $('historydate').textContent = `${MONTHS[m - 1]} ${d}`;
-  renderHistory(historyScope);
+  renderHistory(historyScope, historyScope === 'india'); // default India may auto-fall-back; explicit clicks never do
 
   /* beat 9 · famous birthday twins — scope-aware (India / World) */
   renderFamous(famousScope);
@@ -307,18 +336,27 @@ function render() {
   const wd = weekdayOf(dob);
   $('weekdaygod').textContent = wd.deity;
   $('weekdaysub').textContent = `Born on a ${wd.day} — ${wd.name}, the day of ${wd.graha}. Tradition keeps ${wd.vrat}.`;
+  setGodThumb('weekdaythumb', artFor(wd.deity));
   $('deityname').textContent = '…'; $('deitystory').textContent = ''; $('deitytemple').textContent = '';
   $('tithigod').textContent = ''; $('navagraha').textContent = '';
+  $('deityfig').hidden = true; $('tithithumb').hidden = true;
   chartP.then(chart => {
     if (!fresh()) return;
     const nk = NAK[chart.moonNakshatra.index];
     $('deityname').textContent = cleanDeity(nk.deity);
     $('deitystory').textContent = nk.deityStory;
     $('deitytemple').innerHTML = `Honoured at the <b style="color:#EFC078">${nk.temple}</b>, ${nk.templeTown}.`;
+    const nkArt = artFor(nk.deity);
+    if (nkArt) {
+      $('deityart').src = nkArt.src; $('deityart').alt = nkArt.title;
+      $('deityartcap').textContent = `${nkArt.title} · ${nkArt.credit}`;
+      $('deityfig').hidden = false;
+    } else $('deityfig').hidden = true;
     const isAma = chart.tithiNum === 29;
     const td = isAma ? { tithi: 'Amavasya', deity: 'the Pitrs (the ancestors)' } : PANCHANG.tithiDeity[chart.tithiNum % 15];
     $('tithigod').textContent = td.deity;
     $('tithigodsub').textContent = `${chart.tithiNum < 15 ? 'Shukla' : 'Krishna'} ${td.tithi || ''}`.trim();
+    setGodThumb('tithithumb', artFor(td.deity));
     const nav = PANCHANG.navagraha[nk.lord];
     if (nav) {
       $('navagraha').innerHTML = `Your star answers to <b>${nk.lord}</b>, whose Navagraha temple is <b>${nav.temple}</b> at ${nav.town}.`;
@@ -545,19 +583,24 @@ document.querySelectorAll('.beat').forEach(b => io.observe(b));
 function setScopeActive(id, scope) {
   document.querySelectorAll('#' + id + ' .scope-btn').forEach(b => b.classList.toggle('active', b.dataset.scope === scope));
 }
-function renderHistory(scope) {
+function renderHistory(scope, auto = false) {
   historyScope = scope;
   setScopeActive('historyscope', scope);
   const { m, d } = J, mine = RENDER;
   $('historylist').innerHTML = '<li class="tl-loading">Leafing through the calendar…</li>';
   (scope === 'india' ? historyIndia : historyOn)(m, d).then(events => {
     if (mine !== RENDER || historyScope !== scope) return;
-    if ((!events || !events.length) && scope === 'india') {
-      renderHistory('global'); // no India events for this date — show the world instead
+    if ((!events || !events.length) && scope === 'india' && auto) {
+      renderHistory('global', true); // initial default only: quietly show the world if India is bare
       return;
     }
     if (!events || !events.length) {
-      $('historylist').innerHTML = '<li class="tl-loading">History is catching its breath — try again in a moment.</li>';
+      // an explicit India click with nothing on record — stay on India, offer the world (never silently flip)
+      $('historylist').innerHTML = scope === 'india'
+        ? '<li class="tl-empty">No notable events in Indian history are on record for this exact date. <button type="button" class="tl-toworld">See the world on this day →</button></li>'
+        : '<li class="tl-loading">History is catching its breath — try again in a moment.</li>';
+      const toWorld = $('historylist').querySelector('.tl-toworld');
+      if (toWorld) toWorld.onclick = () => renderHistory('global');
       return;
     }
     $('historylist').innerHTML = events.map(e =>

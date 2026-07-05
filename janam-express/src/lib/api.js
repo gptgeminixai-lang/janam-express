@@ -47,22 +47,47 @@ export async function historyOn(m, d) {
   } catch { return null; }
 }
 
-/* Notable events in INDIAN history on this MM/DD. Reuses the same On-This-Day feed
-   as historyOn() and keyword-filters to India (verified approach — Wikidata SPARQL
-   for India events is 30-60s cold, too slow for a client call). */
-const INDIA_RX = /Indi(a|an)|Delhi|Mumbai|Bombay|Bengal|Kashmir|Gandhi|Mughal|Hindu|Sikh|Punjab|Madras|Calcutta|Kolkata|Chennai|Maratha|Rajput|Nehru|Ambedkar|Assam|Gujarat|Kerala|Tamil|Telugu|Hyderabad|Mysore|Odisha|Bihar|Rajasthan|Sikkim|\bGoa\b|ISRO|Ganges|Ganga|Himalaya|Sepoy|Partition/;
+/* Notable moments in INDIAN history on this MM/DD. The events feed alone is far too
+   sparse for India (avg ~1/date, many dates empty), so we merge four authoritative
+   On-This-Day feeds — events, selected, births and deaths — and keyword-filter to
+   India. All no-key, CORS *. (Wikidata SPARQL for India events is 30-60s cold.) */
+const INDIA_RX = /Indi(a|an)|Delhi|Mumbai|Bombay|Bengal|Kashmir|Gandhi|Mughal|Hindu|Sikh|Punjab|Madras|Calcutta|Kolkata|Chennai|Maratha|Rajput|Nehru|Ambedkar|Assam|Gujarat|Kerala|Tamil|Telugu|Hyderabad|Mysore|Odisha|Bihar|Rajasthan|Sikkim|\bGoa\b|ISRO|Ganges|Ganga|Himalaya|Sepoy|Partition|Bharat|Bollywood|Vedic|Maurya|Chola|Pandya|Pallava|Vijayanagara|Bangalore|Bengaluru|Pune|Poona|Lucknow|Kanpur|Jaipur|Nagpur|Patna|Bhopal|Indore|Ahmedabad|Varanasi|Amritsar|Rupee|Lok Sabha|Rajya Sabha|Ashoka|Tagore|\bBose\b|Patel|Shastri|Vajpayee|Indira|Rajiv|Nagaland|Manipur|Mizoram|Tripura|Meghalaya|Arunachal|Jharkhand|Chhattisgarh|Uttarakhand|Uttar Pradesh|Madhya Pradesh|Andhra|Karnataka|Maharashtra|Rashtrapati|Jawaharlal|Vivekananda|Aurobindo|Bhagat Singh|Netaji/;
 // strip out clear non-India false positives ("American Indians", Indiana, West Indies, etc.)
 const NOT_INDIA_RX = /American Indian|Native American|Red Indian|Indian reservation|Indian Territory|Indiana\b|Indianapolis|West Indies|Indian Wells/i;
+const isIndia = t => !!t && INDIA_RX.test(t) && !NOT_INDIA_RX.test(t);
+// turn a births/deaths feed item ("Mahatma Gandhi, Indian freedom fighter (died 1948)")
+// into a timeline line ("Birth of Mahatma Gandhi — Indian freedom fighter")
+const bioLine = (b, verb) => {
+  const name = b.pages?.[0]?.titles?.normalized || b.pages?.[0]?.normalizedtitle || (b.text || '').split(',')[0];
+  let desc = b.text || '';
+  if (desc.startsWith(name)) desc = desc.slice(name.length);
+  desc = desc.replace(/^[,\s]+/, '').replace(/\s*\((born|died)\s+\d+\)\s*$/i, '').replace(/[,;:\s]+$/, '').trim();
+  return `${verb} ${name}${desc ? ' — ' + desc : ''}`;
+};
 export async function historyIndia(m, d) {
+  const mm = String(m).padStart(2, '0'), dd = String(d).padStart(2, '0');
+  const grab = async f => {
+    try { const j = await get(`https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/${f}/${mm}/${dd}`); return j[f] || []; }
+    catch { return []; }
+  };
   try {
-    const u = `https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/events/${String(m).padStart(2, '0')}/${String(d).padStart(2, '0')}`;
-    const j = await get(u);
-    const events = (j.events || [])
-      .filter(e => INDIA_RX.test(e.text) && !NOT_INDIA_RX.test(e.text))
-      .sort((a, b) => a.year - b.year)
-      .slice(0, 6)
-      .map(e => ({ year: e.year, text: e.text, thumb: e.pages?.[0]?.thumbnail?.source || null }));
-    return events.length ? events : null;
+    const [events, selected, births, deaths] = await Promise.all(['events', 'selected', 'births', 'deaths'].map(grab));
+    const seen = new Set(), pool = [];
+    const add = (year, text, thumb, prio, filterText) => {
+      if (year == null || !isIndia(filterText || text)) return;
+      const key = year + '|' + text.slice(0, 42).toLowerCase();
+      if (seen.has(key)) return;
+      seen.add(key);
+      pool.push({ year: +year, text, thumb: thumb || null, prio });
+    };
+    for (const e of selected) add(e.year, e.text, e.pages?.[0]?.thumbnail?.source, 0);
+    for (const e of events) add(e.year, e.text, e.pages?.[0]?.thumbnail?.source, 0);
+    for (const b of births) add(b.year, bioLine(b, 'Birth of'), b.pages?.[0]?.thumbnail?.source, 1, b.text);
+    for (const b of deaths) add(b.year, bioLine(b, 'Death of'), b.pages?.[0]?.thumbnail?.source, 1, b.text);
+    if (!pool.length) return null;
+    // real happenings first, thumbnailed first — then display the chosen set chronologically
+    pool.sort((a, b) => a.prio - b.prio || (b.thumb ? 1 : 0) - (a.thumb ? 1 : 0) || a.year - b.year);
+    return pool.slice(0, 7).sort((a, b) => a.year - b.year).map(({ year, text, thumb }) => ({ year, text, thumb }));
   } catch { return null; }
 }
 
