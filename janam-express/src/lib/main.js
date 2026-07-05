@@ -143,6 +143,9 @@ function render() {
   const weekday = dob.toLocaleDateString('en-IN', { weekday: 'long' });
   const wasOldName = !!(city.oldName && iso < (city.renamedOn || '9999'));
   const bornCity = wasOldName ? city.oldName : city.name;
+  // carry this journey's date/place/name into the detailed-reading page (it also asks for birth time)
+  const rc = $('readingcta');
+  if (rc) rc.href = rc.getAttribute('href').split('?')[0] + `?d=${iso}&c=${encodeURIComponent(city.name)}${name !== 'Traveller' ? `&n=${encodeURIComponent(name)}` : ''}`;
   const sky = skyOn(y, m, d, city.lat, city.lon);
   const e = econ(y);
   J.mult = e.mult;

@@ -6,54 +6,202 @@ const base = import.meta.env.BASE_URL;
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your detailed reading — Janam Express</title>
-  <meta name="description" content="A full personalised Jyotish reading — weekly and monthly planetary transits — coming soon to Janam Express." />
+  <title>Your birth chart &amp; reading — Janam Express</title>
+  <meta name="description" content="A factual Vedic birth chart from your date, time and place of birth — Lagna, houses, planetary positions and nakshatra, computed honestly. Premium reading coming to the Jyotish Desk." />
 </head>
 <body>
 <div class="atmos"></div><div class="vign"></div>
 
 <section class="beat" id="readingpage">
-  <div class="rd-card">
-    <p class="rd-kicker">· The Jyotish Desk ·</p>
-    <span class="rd-soon">Coming soon</span>
-    <h1 class="rd-title">Your detailed reading</h1>
-    <p class="rd-lead">A full, personalised Jyotish reading of how the nine grahas are moving through
-      your chart — right now, this week, and this month.</p>
+  <div class="rd-wrap">
+    <header class="rd-head">
+      <p class="rd-kicker">· The Jyotish Desk ·</p>
+      <h1 class="rd-title">Your birth chart</h1>
+      <p class="rd-lead">Enter the exact moment and place you were born and we'll cast your sidereal (Lahiri) chart — your rising sign, your houses, every graha to the degree. The astronomy is exact; the tradition is labelled as tradition.</p>
+    </header>
 
-    <ul class="rd-list">
-      <li><b>This week</b> — the transits touching your Moon and lagna, and what they stir up.</li>
-      <li><b>This month</b> — the slower planets shaping the weeks ahead, in plain language.</li>
-      <li><b>Your dashas</b> — which planetary period you're living through, and its flavour.</li>
-      <li><b>Gentle guidance</b> — favourable days and directions, framed as heritage, never as fate.</li>
-    </ul>
+    <form class="rd-form" id="rd-form" novalidate>
+      <div class="rd-row">
+        <div class="rd-field">
+          <label for="rd-name">Name <span class="rd-opt">(optional)</span></label>
+          <input id="rd-name" type="text" autocomplete="off" maxlength="24" placeholder="e.g. Asha" />
+        </div>
+        <div class="rd-field">
+          <label for="rd-date">Date of birth</label>
+          <input id="rd-date" type="date" min="1950-01-01" max="2010-12-31" />
+        </div>
+      </div>
+      <div class="rd-row">
+        <div class="rd-field">
+          <label for="rd-place">Place of birth</label>
+          <input id="rd-place" list="rd-citylist" autocomplete="off" placeholder="Start typing… e.g. Kanpur" />
+          <datalist id="rd-citylist"></datalist>
+        </div>
+        <div class="rd-field">
+          <label for="rd-time">Time of birth</label>
+          <input id="rd-time" type="time" />
+          <label class="rd-check"><input id="rd-unknown" type="checkbox" /> I don't know my birth time</label>
+        </div>
+      </div>
+      <p class="rd-livelagna" id="rd-livelagna" aria-live="polite"></p>
+      <p class="rd-timehint">Even a few minutes changes your chart — the rising sign moves about one sign every two hours.</p>
+      <button class="rd-cast" type="submit">Cast my chart</button>
+      <p class="rd-formmsg" id="rd-formmsg" role="alert" hidden></p>
+    </form>
 
-    <p class="rd-note">We're building this carefully and respectfully. Leave your journey running —
-      it'll be here when the desk opens.</p>
+    <div class="rd-result" id="rd-result" hidden></div>
+
+    <p class="rd-disclaimer">
+      <b>How to read this.</b> Positions marked <span class="rd-badge fact">Computed fact</span> come from NASA-grade ephemeris and are astronomically checkable. Anything marked <span class="rd-badge trad">Jyotish tradition</span> is a traditional interpretation offered for reflection and cultural heritage — <b>not</b> a prediction, and not a substitute for professional medical, legal or financial advice. No outcome is guaranteed; your decisions are your own.
+    </p>
 
     <a class="rd-back" href={base}>← Back to your journey</a>
   </div>
 </section>
 
-<style>
-  #readingpage{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:8svh 20px}
-  .rd-card{width:min(600px,94vw);background:linear-gradient(155deg,#2C1E48,#1A1230);
-    border:1px solid #46345F;border-radius:20px;padding:34px 32px 30px;
-    box-shadow:0 30px 70px rgba(0,0,0,.6);text-align:center}
-  .rd-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--marigold);margin:0 0 16px}
-  .rd-soon{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;
-    color:var(--night);background:var(--marigold);border-radius:999px;padding:6px 14px;margin-bottom:14px}
-  .rd-title{font-family:var(--disp);font-weight:400;font-size:clamp(38px,8vw,60px);margin:0 0 14px;
-    color:var(--paper);line-height:.98;text-transform:uppercase;letter-spacing:.02em;text-wrap:balance}
-  .rd-lead{font-family:var(--serif);font-size:clamp(16px,3vw,20px);line-height:1.55;color:rgba(244,232,206,.9);margin:0 auto 24px;max-width:46ch}
-  .rd-list{list-style:none;margin:0 0 24px;padding:0;text-align:left;display:flex;flex-direction:column;gap:12px}
-  .rd-list li{font-family:var(--serif);font-size:15px;line-height:1.5;color:var(--paper);
-    background:rgba(244,232,206,.06);border:1px solid rgba(244,232,206,.18);border-radius:12px;padding:13px 16px}
-  .rd-list b{color:var(--marigold);font-weight:400}
-  .rd-note{font-family:var(--serif);font-style:italic;font-size:14px;color:rgba(244,232,206,.65);line-height:1.55;margin:0 0 26px}
+<style is:global>
+  #readingpage{min-height:100svh;display:block;padding:7svh 18px 12svh}
+  .rd-wrap{width:min(760px,96vw);margin:0 auto}
+  .rd-head{text-align:center;margin-bottom:26px}
+  .rd-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--marigold);margin:0 0 14px}
+  .rd-title{font-family:var(--disp);font-weight:400;font-size:clamp(38px,8vw,60px);margin:0 0 14px;color:var(--paper);line-height:.98;text-transform:uppercase;letter-spacing:.02em;text-wrap:balance}
+  .rd-lead{font-family:var(--serif);font-size:clamp(15px,2.6vw,18px);line-height:1.55;color:rgba(244,232,206,.82);margin:0 auto;max-width:56ch}
+
+  /* form */
+  .rd-form{background:linear-gradient(155deg,#2C1E48,#1A1230);border:1px solid #46345F;border-radius:18px;
+    padding:22px 22px 24px;box-shadow:0 24px 60px rgba(0,0,0,.5);margin-bottom:22px}
+  .rd-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+  @media (max-width:560px){.rd-row{grid-template-columns:1fr}}
+  .rd-field{display:flex;flex-direction:column;gap:6px}
+  .rd-field label{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C9B7E8}
+  .rd-opt{color:rgba(201,183,232,.55);text-transform:none;letter-spacing:0}
+  .rd-field input[type=text],.rd-field input[type=date],.rd-field input[type=time]{
+    font-family:var(--serif);font-size:16px;color:var(--paper);background:rgba(244,232,206,.06);
+    border:1px solid #56447035;border:1px solid rgba(201,183,232,.3);border-radius:10px;padding:11px 12px;width:100%}
+  .rd-field input:focus{outline:2px solid var(--marigold);outline-offset:1px;border-color:transparent}
+  .rd-check{display:flex;align-items:center;gap:8px;font-family:var(--serif)!important;font-size:13px!important;
+    letter-spacing:0!important;text-transform:none!important;color:rgba(244,232,206,.7)!important;cursor:pointer;margin-top:2px}
+  .rd-check input{width:auto;accent-color:var(--marigold)}
+  .rd-livelagna{font-family:var(--mono);font-size:13px;letter-spacing:.03em;color:var(--paper);text-align:center;
+    margin:4px 0 2px;min-height:19px;padding:9px;background:rgba(239,192,120,.08);border-radius:10px}
+  .rd-livelagna b{color:var(--marigold)}
+  .rd-dim{color:rgba(201,183,232,.55)}
+  .rd-timehint{font-family:var(--serif);font-style:italic;font-size:12.5px;color:rgba(201,183,232,.6);text-align:center;margin:8px 0 16px}
+  .rd-cast{width:100%;font-family:var(--mono);font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;
+    color:var(--night);background:var(--marigold);border:0;border-radius:11px;padding:14px;cursor:pointer}
+  .rd-cast:hover{filter:brightness(1.06)}
+  .rd-cast:focus-visible{outline:3px solid var(--paper);outline-offset:2px}
+  .rd-formmsg{font-family:var(--mono);font-size:12px;color:#F3B0A0;text-align:center;margin:12px 0 0}
+
+  /* result */
+  .rd-result{margin-bottom:22px}
+  .rd-casting{font-family:var(--mono);font-size:13px;color:rgba(244,232,206,.6);text-align:center;padding:30px}
+  .rd-birthline{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;color:var(--marigold);text-align:center;margin:0 0 16px}
+  .rd-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}
+  @media (max-width:560px){.rd-facts{grid-template-columns:1fr}}
+  .rd-fact{background:rgba(244,232,206,.05);border:1px solid rgba(201,183,232,.22);border-radius:14px;padding:15px 16px;position:relative}
+  .rd-fact h3{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#C9B7E8;margin:10px 0 8px;font-weight:400}
+  .rd-big{font-family:var(--disp);font-weight:400;font-size:24px;color:var(--paper);margin:0;line-height:1.05}
+  .rd-big span{font-size:14px;color:rgba(244,232,206,.55)}
+  .rd-sub{font-family:var(--serif);font-size:13px;color:rgba(244,232,206,.8);margin:6px 0 0;line-height:1.45}
+
+  .rd-badge{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+    border-radius:5px;padding:3px 7px;font-weight:700;vertical-align:middle}
+  .rd-badge.fact{background:rgba(126,167,134,.22);color:#A9D6AF;border:1px solid rgba(126,167,134,.4)}
+  .rd-badge.trad{background:rgba(239,192,120,.16);color:var(--marigold);border:1px solid rgba(239,192,120,.35)}
+  .rd-badge.soon{background:rgba(201,183,232,.14);color:#C9B7E8;border:1px solid rgba(201,183,232,.3)}
+
+  /* South-Indian chart */
+  .rd-chartwrap{display:flex;justify-content:center;margin:6px 0 20px}
+  .rd-si{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(4,1fr);
+    width:min(420px,92vw);aspect-ratio:1;gap:0;border:2px solid #6B5691;border-radius:10px;overflow:hidden;background:#160E28}
+  .rd-cell{border:1px solid #3A2C55;padding:5px 6px;position:relative;min-height:0;display:flex;flex-direction:column}
+  .rd-cell.asc{background:rgba(239,192,120,.10);box-shadow:inset 0 0 0 1.5px var(--marigold)}
+  .rd-cellsign{font-family:var(--mono);font-size:8.5px;letter-spacing:.05em;color:rgba(201,183,232,.6);text-transform:uppercase}
+  .rd-cellhouse{position:absolute;top:4px;right:6px;font-family:var(--mono);font-size:9px;color:rgba(201,183,232,.45)}
+  .rd-ascmark{font-family:var(--mono);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--marigold)}
+  .rd-cellpl{display:flex;flex-wrap:wrap;gap:3px 6px;margin-top:auto;padding-top:4px}
+  .rd-pl{font-family:var(--mono);font-size:12.5px;color:var(--paper);line-height:1}
+  .rd-pl sup{font-size:8px;color:var(--marigold);margin-left:1px}
+  .rd-pl.combust{color:#E9A08C}
+  .rd-pl.exalt{color:#A9D6AF}
+  .rd-pl.debil{color:#D79BC0}
+  .rd-sicenter{grid-row:2/4;grid-column:2/4;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    font-family:var(--disp);font-size:16px;color:rgba(201,183,232,.7);border:1px solid #3A2C55;text-align:center;gap:3px}
+  .rd-sicenter small{font-family:var(--mono);font-size:8.5px;letter-spacing:.05em;color:rgba(201,183,232,.45);text-transform:uppercase}
+
+  /* planet table */
+  .rd-tablewrap{overflow-x:auto;margin-bottom:16px}
+  .rd-table{width:100%;border-collapse:collapse;font-family:var(--serif);font-size:13.5px;color:var(--paper)}
+  .rd-table th{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#C9B7E8;
+    text-align:left;padding:8px 10px;border-bottom:1px solid rgba(201,183,232,.3);font-weight:400}
+  .rd-table td{padding:8px 10px;border-bottom:1px solid rgba(201,183,232,.12)}
+  .rd-table td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;color:rgba(244,232,206,.85)}
+  .rd-flags{font-size:12px;color:rgba(244,232,206,.7)}
+  .rd-ayan{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:rgba(201,183,232,.55);text-align:center;margin:0 0 18px}
+
+  .rd-timewarn{background:rgba(239,192,120,.08);border:1px solid rgba(239,192,120,.3);border-radius:12px;
+    padding:14px 16px;font-family:var(--serif);font-size:14px;line-height:1.55;color:rgba(244,232,206,.88);margin-bottom:16px}
+  .rd-timewarn b{color:var(--marigold);font-weight:400}
+
+  .rd-tradition,.rd-premium{border-radius:14px;padding:15px 17px;margin-bottom:14px}
+  .rd-tradition{background:rgba(239,192,120,.06);border:1px solid rgba(239,192,120,.25)}
+  .rd-premium{background:rgba(201,183,232,.05);border:1px dashed rgba(201,183,232,.35)}
+  .rd-tradition p,.rd-premium p{font-family:var(--serif);font-size:14px;line-height:1.6;color:rgba(244,232,206,.88);margin:9px 0 0}
+  .rd-tradition b{color:var(--marigold);font-weight:400}
+
+  .rd-disclaimer{font-family:var(--serif);font-size:12.5px;line-height:1.6;color:rgba(201,183,232,.66);
+    background:rgba(0,0,0,.18);border:1px solid rgba(201,183,232,.16);border-radius:12px;padding:14px 16px;margin:0 0 22px}
+  .rd-disclaimer b{color:rgba(244,232,206,.85);font-weight:400}
+  .rd-disclaimer .rd-badge{font-size:8px;padding:2px 5px}
+
+  /* interpretation sections */
+  .rd-sec{margin:26px 0 0;padding-top:22px;border-top:1px solid rgba(201,183,232,.14)}
+  .rd-sechead{display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+  .rd-sechead h2{font-family:var(--disp);font-weight:400;font-size:clamp(20px,4vw,26px);color:var(--paper);margin:0;line-height:1.1}
+  .rd-sec p{font-family:var(--serif);font-size:14.5px;line-height:1.62;color:rgba(244,232,206,.86);margin:0 0 10px}
+  .rd-sec p b{color:var(--paper);font-weight:400}
+  .rd-sec .rd-sub2{font-size:12.5px;font-style:italic;color:rgba(201,183,232,.62);line-height:1.5}
+  .rd-sec em{color:var(--marigold);font-style:italic}
+  .rd-dashwrap{margin:6px 0 8px}
+  .rd-dashhdr{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--marigold);margin:11px 0 4px}
+  .rd-dashrow{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;align-items:baseline;background:rgba(244,232,206,.05);border:1px solid rgba(201,183,232,.16);border-radius:10px;padding:9px 13px}
+  .rd-dashlord{font-family:var(--disp);font-size:17px;color:var(--paper)}
+  .rd-dashwin{font-family:var(--mono);font-size:11px;color:var(--marigold);text-align:right;font-variant-numeric:tabular-nums}
+  .rd-dashtheme{grid-column:1/3;font-family:var(--serif);font-size:12.5px;color:rgba(244,232,206,.7);line-height:1.4;margin:0}
+  .rd-dashnow{font-family:var(--serif);font-size:14px;margin-top:10px}
+  .rd-dashnow b{color:var(--marigold)}
+  .rd-dosha{background:rgba(244,232,206,.05);border:1px solid rgba(201,183,232,.16);border-radius:12px;padding:12px 15px;margin-bottom:10px}
+  .rd-dosha h4{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--marigold);margin:0 0 6px;font-weight:400}
+  .rd-dosha p{font-size:13.5px;margin:0;line-height:1.55}
+  .rd-luckgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0}
+  @media (max-width:480px){.rd-luckgrid{grid-template-columns:repeat(2,1fr)}}
+  .rd-luck{background:rgba(239,192,120,.08);border:1px solid rgba(239,192,120,.22);border-radius:10px;padding:11px 12px;text-align:center}
+  .rd-luck span{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,183,232,.6);margin-bottom:4px}
+  .rd-luck b{font-family:var(--serif);font-size:14px;color:var(--paper);font-weight:400;line-height:1.25}
+  .rd-dodont{background:rgba(0,0,0,.16);border-radius:10px;padding:12px 14px;font-size:13.5px}
+  .rd-do,.rd-dont{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;border-radius:5px;padding:2px 7px}
+  .rd-do{background:rgba(126,167,134,.25);color:#A9D6AF}
+  .rd-dont{background:rgba(214,126,88,.2);color:#E9A08C;margin-left:8px}
+  .rd-remgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+  @media (max-width:520px){.rd-remgrid{grid-template-columns:1fr}}
+  .rd-remedy{background:rgba(201,183,232,.05);border:1px solid rgba(201,183,232,.2);border-radius:12px;padding:12px 14px}
+  .rd-remedy h4{font-family:var(--disp);font-size:16px;color:var(--paper);margin:0 0 6px;font-weight:400}
+  .rd-remedy p{font-size:12.5px;margin:0 0 5px;color:rgba(244,232,206,.78);line-height:1.5}
+  .rd-remedy b{color:var(--marigold)}
+  .rd-vargas{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:560px){.rd-vargas{grid-template-columns:1fr}}
+  .rd-vargas .rd-chartwrap{margin:0}
+  .rd-vargas .rd-si{width:100%}
+
   .rd-back{display:inline-block;font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--paper);text-decoration:none;border:1.5px solid rgba(244,232,206,.5);border-radius:999px;padding:12px 22px}
+    color:var(--paper);text-decoration:none;border:1.5px solid rgba(244,232,206,.4);border-radius:999px;padding:11px 20px}
   .rd-back:hover{border-color:var(--marigold);color:var(--marigold)}
   .rd-back:focus-visible{outline:3px solid var(--marigold);outline-offset:2px}
 </style>
+
+<script>
+  import '../lib/reading.js';
+</script>
 </body>
 </html>

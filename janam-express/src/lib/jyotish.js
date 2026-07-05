@@ -31,6 +31,39 @@ export function mahadasha(moonNakshatra, dob, today = new Date()) {
   };
 }
 
+/* Vimshottari ladder — the running Mahadasha → Antardasha → Pratyantardasha with real
+   dates. Sub-period length = parent × (lord's years / 120). Birth-time sharpens the
+   dates; without the hour they still drift by weeks, so we say so. */
+export function dashaLadder(moonNakshatra, dob, today = new Date()) {
+  const { order, years, note } = dashas;
+  const md = mahadasha(moonNakshatra, dob, today);
+  const toDate = yrs => new Date(dob.getTime() + yrs * YEAR_MS);
+  const subPeriods = (lord, startYrs, lenYrs) => {
+    const list = [];
+    let cur = startYrs, idx = order.indexOf(lord);
+    for (let i = 0; i < 9; i++) {
+      const l = order[(idx + i) % 9];
+      const len = lenYrs * years[l] / 120;
+      list.push({ lord: l, startYrs: cur, endYrs: cur + len, start: toDate(cur), end: toDate(cur + len), note: note[l] });
+      cur += len;
+    }
+    return list;
+  };
+  const maha = md.current;                       // {lord,start,end} in years
+  const mahaLen = years[maha.lord];
+  const mahaFullStart = maha.end - mahaLen;       // notional full start (negative for the birth period)
+  const antars = subPeriods(maha.lord, mahaFullStart, mahaLen);
+  const currentAntar = antars.find(a => md.age >= a.startYrs && md.age < a.endYrs) || antars[antars.length - 1];
+  const pratys = subPeriods(currentAntar.lord, currentAntar.startYrs, currentAntar.endYrs - currentAntar.startYrs);
+  const currentPraty = pratys.find(p => md.age >= p.startYrs && md.age < p.endYrs) || pratys[pratys.length - 1];
+  return {
+    age: md.age,
+    maha: { lord: maha.lord, start: toDate(mahaFullStart), end: toDate(maha.end), note: note[maha.lord] },
+    antars, currentAntar,
+    pratys, currentPraty,
+  };
+}
+
 /* Ank Jyotish — Moolank (birth day), Bhagyank (full DOB), Naamank (Chaldean name value). */
 export function numerology(y, m, d, name) {
   const reduce = n => { n = Math.abs(n); while (n > 9) n = String(n).split('').reduce((a, c) => a + +c, 0); return n; };

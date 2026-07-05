@@ -1,0 +1,67 @@
+{
+  "_note": "Authored interpretation tables for the /reading page. Every string is Jyotish tradition (Parashari/classical), offered for reflection — never a prediction, medical/financial/legal claim, or guarantee. Keyed by rule (sign/house/planet) so each line traces to a documented rule.",
+  "lagnaTraits": [
+    "a pioneering, energetic and direct nature — quick to begin, courageous, happiest when leading from the front.",
+    "a steady, patient and sensual nature — value comfort, beauty and security, and build slowly but surely.",
+    "a curious, communicative and versatile nature — quick-witted, restless, and gifted with words and ideas.",
+    "a caring, sensitive and protective nature — deeply tied to home, family and memory, with a strong inner tide.",
+    "a warm, dignified and generous nature — natural warmth and pride, drawn to recognition and creative expression.",
+    "an analytical, precise and service-minded nature — practical, discerning, and happiest when useful and organised.",
+    "a graceful, fair-minded and relational nature — drawn to harmony, partnership, art and balance.",
+    "an intense, private and determined nature — deep feeling, strong will, and a gift for regeneration and research.",
+    "an optimistic, philosophical and freedom-loving nature — a seeker of meaning, truth, travel and higher learning.",
+    "a disciplined, ambitious and enduring nature — patient, responsible, and built for the long climb.",
+    "an original, humane and independent nature — forward-looking, unconventional, and moved by ideals and community.",
+    "a compassionate, imaginative and gentle nature — intuitive, artistic, and quietly drawn to the spiritual and the boundless."
+  ],
+  "house": [
+    "the self, body, temperament and the way you meet the world",
+    "wealth, family, speech and what you value",
+    "courage, effort, siblings and self-expression",
+    "home, mother, land, vehicles and inner peace",
+    "intelligence, creativity, children, romance and learning",
+    "daily work, health, service, and the overcoming of obstacles",
+    "partnership, marriage, and dealings with others",
+    "transformation, depth, longevity and hidden matters",
+    "fortune, dharma, father, teachers and long journeys",
+    "career, status, action in the world and public standing",
+    "gains, income, friendships and aspirations fulfilled",
+    "seclusion, letting-go, foreign lands and the inner life"
+  ],
+  "planet": {
+    "Su": { "keyword": "authority & the self", "career": "government, administration, leadership, medicine, politics or any field of authority and public standing", "colour": "deep red, orange and gold", "gem": "ruby (manikya)", "metal": "gold or copper", "day": "Sunday", "number": "1", "direction": "the East", "deity": "Surya", "mantra": "Om Ghrini Suryaya Namaha", "remedy": "offering water to the rising Sun at dawn and honouring one's father", "dashaTheme": "authority, recognition, vitality and matters of the father and the self", "do": "lead with integrity and let your work be seen", "dont": "let pride or ego harden into stubbornness" },
+    "Mo": { "keyword": "mind & feeling", "career": "public-facing work, hospitality, care and nursing, food and dairy, travel, or anything to do with the mind and the public", "colour": "white, silver and soft cream", "gem": "pearl (moti)", "metal": "silver", "day": "Monday", "number": "2", "direction": "the North-West", "deity": "Chandra", "mantra": "Om Som Somaya Namaha", "remedy": "honouring the mother and keeping a gentle Monday observance", "dashaTheme": "emotions, home, the mother, public life and the ebb and flow of the mind", "do": "tend your inner peace and your close relationships", "dont": "let passing moods make lasting decisions" },
+    "Ma": { "keyword": "energy & courage", "career": "engineering, the armed forces or police, surgery, sport, real estate, or work involving metal, machines and fire", "colour": "red and coral", "gem": "red coral (moonga)", "metal": "copper", "day": "Tuesday", "number": "9", "direction": "the South", "deity": "Hanuman", "mantra": "Om Ang Angarakaya Namaha", "remedy": "reciting the Hanuman Chalisa on Tuesdays and channelling energy into effort, not conflict", "dashaTheme": "energy, courage, drive, competition and matters of land and siblings", "do": "put your drive into disciplined, worthwhile effort", "dont": "act in anger or rush into needless conflict" },
+    "Me": { "keyword": "intellect & speech", "career": "business and trade, writing and media, accounts and analysis, communication, technology or teaching", "colour": "green", "gem": "emerald (panna)", "metal": "bronze", "day": "Wednesday", "number": "5", "direction": "the North", "deity": "Vishnu (as Budha)", "mantra": "Om Bum Budhaya Namaha", "remedy": "supporting students, keeping your word, and green offerings on Wednesday", "dashaTheme": "intellect, commerce, learning, speech and adaptability", "do": "learn, write and put your ideas to practical use", "dont": "scatter your focus or bend the truth for convenience" },
+    "Ju": { "keyword": "wisdom & growth", "career": "teaching, law, finance and banking, counselling, academia, priesthood or advisory work", "colour": "yellow and gold", "gem": "yellow sapphire (pukhraj)", "metal": "gold", "day": "Thursday", "number": "3", "direction": "the North-East", "deity": "Brihaspati", "mantra": "Om Gram Grim Grom Sah Gurave Namaha", "remedy": "respecting teachers and elders and quiet charity on Thursdays", "dashaTheme": "wisdom, growth, fortune, teachers, children and dharma", "do": "seek knowledge and give generously of what you know", "dont": "let optimism become excess or dogma" },
+    "Ve": { "keyword": "love & beauty", "career": "the arts, music and film, design and fashion, beauty, luxury goods, or hospitality and relationships", "colour": "white, pastels and soft pink", "gem": "diamond (heera) or white sapphire", "metal": "silver or platinum", "day": "Friday", "number": "6", "direction": "the South-East", "deity": "Lakshmi (as Shukra)", "mantra": "Om Shum Shukraya Namaha", "remedy": "honouring the women in your life and white offerings on Friday", "dashaTheme": "love, beauty, comfort, relationships and the arts", "do": "cultivate beauty, art and warm relationships", "dont": "let comfort and pleasure drift into indulgence" },
+    "Sa": { "keyword": "discipline & time", "career": "long-term institutions, service and labour, law, agriculture, mining and oil, or any patient, structural work", "colour": "dark blue and black", "gem": "blue sapphire (neelam)", "metal": "iron", "day": "Saturday", "number": "8", "direction": "the West", "deity": "Shani", "mantra": "Om Sham Shanaischaraya Namaha", "remedy": "serving the elderly and the needy and quiet Saturday service", "dashaTheme": "discipline, patience, karma, endurance and hard-won maturity", "do": "be patient, honest and steady — Saturn rewards the long road", "dont": "cut corners or shirk your responsibilities" },
+    "Ra": { "keyword": "ambition & the unconventional", "career": "technology, aviation, research, foreign lands and cultures, media, or unconventional and pioneering fields", "colour": "smoky grey", "gem": "hessonite (gomed)", "metal": "lead", "day": "Saturday", "number": "4", "direction": "the South-West", "deity": "Durga", "mantra": "Om Bhram Bhrim Bhraum Sah Rahave Namaha", "remedy": "keeping cleanliness, honouring Goddess Durga, and staying grounded", "dashaTheme": "ambition, foreign connections, sudden change and unconventional paths", "do": "aim high but keep one foot firmly on the ground", "dont": "chase shortcuts or let obsession blur your judgement" },
+    "Ke": { "keyword": "insight & detachment", "career": "research and investigation, spirituality and healing, technology, medicine or the occult", "colour": "grey and mixed hues", "gem": "cat's eye (lehsunia)", "metal": "an alloy of eight metals", "day": "Tuesday", "number": "7", "direction": "the South-West", "deity": "Ganesha", "mantra": "Om Sram Srim Sraum Sah Ketave Namaha", "remedy": "honouring Lord Ganesha and cultivating a quiet inner practice", "dashaTheme": "detachment, insight, spirituality and the resolving of old karma", "do": "trust your intuition and pursue depth over surface", "dont": "withdraw so far that you neglect the practical" }
+  },
+  "mangal": {
+    "intro": "In the tradition, Mangal (Kuja / Manglik) Dosha is read when Mars sits in the 1st, 2nd, 4th, 7th, 8th or 12th house counted from the Lagna, the Moon or Venus. It is classically associated with extra fire and independence in relationships and a call for patience in marriage — and it is one of the most over-dramatised ideas in popular astrology.",
+    "calm": "Importantly, the classical texts record many cancellations (bhanga) that soften or nullify it entirely, and it is not a verdict on your marriage. It is offered here as heritage, not as fate."
+  },
+  "kaalSarp": {
+    "intro": "Kaal Sarp yoga is read when all seven grahas are hemmed on one side of the Rahu–Ketu axis. Tradition associates it with an intense, effort-driven life whose rewards often arrive after a struggle — and, like Manglik, it is far more nuanced than popular fear suggests, with many mitigating placements.",
+    "absent": "Your seven grahas are not fully hemmed within the Rahu–Ketu axis, so a full Kaal Sarp yoga is not formed."
+  },
+  "sadeSati": {
+    "intro": "Sade Sati is the roughly seven-and-a-half-year passage of Saturn (Shani) through the 12th, 1st and 2nd signs from your natal Moon. Tradition treats it as a demanding but deeply maturing teacher — a time of responsibility, honesty and slow, real growth — not a punishment.",
+    "rising": "You are in the first (rising) phase — Saturn in the 12th from your Moon. Tradition reads this as a time of endings, inward turning and releasing what no longer serves.",
+    "peak": "You are in the peak phase — Saturn over your natal Moon. Tradition reads this as the most testing but transformative stretch, asking for patience, discipline and honest self-work.",
+    "setting": "You are in the third (setting) phase — Saturn in the 2nd from your Moon. Tradition reads this as consolidation: steadying finances, family and speech as the passage eases.",
+    "dhaiya": "Saturn is transiting the 4th or 8th from your Moon — the shorter 'dhaiya' (Kantaka / Ashtama Shani). Tradition reads this as a smaller, focused period of responsibility touching home or transformation.",
+    "none": "Saturn is not currently in the 12th, 1st or 2nd from your Moon, so you are not in Sade Sati at this time."
+  },
+  "gochara": {
+    "jupiterGood": [2, 5, 7, 9, 11],
+    "jupiterGoodText": "Jupiter (Guru) is transiting a supportive house from your Moon — tradition reads this as a favourable, growth-bringing influence over the coming months, good for learning, opportunity and goodwill.",
+    "jupiterHardText": "Jupiter (Guru) is transiting a more mixed house from your Moon — tradition counsels patience and care with commitments for a while, and trusting the longer arc of its ~year-long stay in each sign.",
+    "chandraGood": [1, 3, 6, 7, 10, 11],
+    "chandraGoodText": "the Moon is passing through a favourable house from your birth Moon — a lighter, more supportive few days for mood and initiative",
+    "chandraHardText": "the Moon is passing through a more sensitive house from your birth Moon — a good few days to rest and go gently, as the mood shifts every couple of days",
+    "note": "These are the actual sidereal positions of the planets right now; the reading of them is Jyotish tradition."
+  }
+}
