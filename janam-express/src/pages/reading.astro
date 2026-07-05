@@ -15,47 +15,49 @@ const base = import.meta.env.BASE_URL;
 <section class="beat" id="readingpage">
   <div class="rd-wrap">
     <header class="rd-head">
-      <p class="rd-kicker">· The Jyotish Desk ·</p>
-      <h1 class="rd-title">Your birth chart</h1>
-      <p class="rd-lead">Enter the exact moment and place you were born and we'll cast your sidereal (Lahiri) chart — your rising sign, your houses, every graha to the degree. The astronomy is exact; the tradition is labelled as tradition.</p>
+      <p class="rd-kicker" data-i18n="kicker">· The Jyotish Desk ·</p>
+      <h1 class="rd-title" data-i18n="title">Your birth chart</h1>
+      <p class="rd-lead" data-i18n="lead">Enter the exact moment and place you were born and we'll cast your sidereal (Lahiri) chart — your rising sign, your houses, every graha to the degree. The astronomy is exact; the tradition is labelled as tradition.</p>
     </header>
 
     <form class="rd-form" id="rd-form" novalidate>
+      <div class="rd-langrow">
+        <label for="rd-lang" data-i18n="langLabel">Read in</label>
+        <select id="rd-lang" aria-label="Reading language"></select>
+      </div>
       <div class="rd-row">
         <div class="rd-field">
-          <label for="rd-name">Name <span class="rd-opt">(optional)</span></label>
-          <input id="rd-name" type="text" autocomplete="off" maxlength="24" placeholder="e.g. Asha" />
+          <label for="rd-name"><span data-i18n="nameLabel">Name</span> <span class="rd-opt" data-i18n="nameOpt">(optional)</span></label>
+          <input id="rd-name" type="text" autocomplete="off" maxlength="24" placeholder="e.g. Asha" data-i18n="namePlaceholder" data-i18n-attr="placeholder" />
         </div>
         <div class="rd-field">
-          <label for="rd-date">Date of birth</label>
+          <label for="rd-date" data-i18n="dateLabel">Date of birth</label>
           <input id="rd-date" type="date" min="1950-01-01" max="2010-12-31" />
         </div>
       </div>
       <div class="rd-row">
         <div class="rd-field">
-          <label for="rd-place">Place of birth</label>
-          <input id="rd-place" list="rd-citylist" autocomplete="off" placeholder="Start typing… e.g. Kanpur" />
+          <label for="rd-place" data-i18n="placeLabel">Place of birth</label>
+          <input id="rd-place" list="rd-citylist" autocomplete="off" placeholder="Start typing… e.g. Kanpur" data-i18n="placePlaceholder" data-i18n-attr="placeholder" />
           <datalist id="rd-citylist"></datalist>
         </div>
         <div class="rd-field">
-          <label for="rd-time">Time of birth</label>
+          <label for="rd-time" data-i18n="timeLabel">Time of birth</label>
           <input id="rd-time" type="time" />
-          <label class="rd-check"><input id="rd-unknown" type="checkbox" /> I don't know my birth time</label>
+          <label class="rd-check"><input id="rd-unknown" type="checkbox" /> <span data-i18n="unknownLabel">I don't know my birth time</span></label>
         </div>
       </div>
       <p class="rd-livelagna" id="rd-livelagna" aria-live="polite"></p>
-      <p class="rd-timehint">Even a few minutes changes your chart — the rising sign moves about one sign every two hours.</p>
-      <button class="rd-cast" type="submit">Cast my chart</button>
+      <p class="rd-timehint" data-i18n="timeHint">Even a few minutes changes your chart — the rising sign moves about one sign every two hours.</p>
+      <button class="rd-cast" type="submit" data-i18n="castBtn">Cast my chart</button>
       <p class="rd-formmsg" id="rd-formmsg" role="alert" hidden></p>
     </form>
 
     <div class="rd-result" id="rd-result" hidden></div>
 
-    <p class="rd-disclaimer">
-      <b>How to read this.</b> Positions marked <span class="rd-badge fact">Computed fact</span> come from NASA-grade ephemeris and are astronomically checkable. Anything marked <span class="rd-badge trad">Jyotish tradition</span> is a traditional interpretation offered for reflection and cultural heritage — <b>not</b> a prediction, and not a substitute for professional medical, legal or financial advice. No outcome is guaranteed; your decisions are your own.
-    </p>
+    <p class="rd-disclaimer" data-i18n="disclaimer">How to read this. Positions marked “Computed fact” come from NASA-grade ephemeris and are astronomically checkable. Anything marked “Jyotish tradition” is a traditional interpretation offered for reflection and cultural heritage — not a prediction, and not a substitute for professional medical, legal or financial advice. No outcome is guaranteed; your decisions are your own.</p>
 
-    <a class="rd-back" href={base}>← Back to your journey</a>
+    <a class="rd-back" href={base} data-i18n="back">← Back to your journey</a>
   </div>
 </section>
 
@@ -70,15 +72,26 @@ const base = import.meta.env.BASE_URL;
   /* form */
   .rd-form{background:linear-gradient(155deg,#2C1E48,#1A1230);border:1px solid #46345F;border-radius:18px;
     padding:22px 22px 24px;box-shadow:0 24px 60px rgba(0,0,0,.5);margin-bottom:22px}
+  .rd-langrow{display:flex;align-items:center;justify-content:flex-end;gap:9px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(201,183,232,.18)}
+  .rd-langrow label{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#C9B7E8}
+  #rd-lang{font-family:var(--serif);font-size:15px;color:var(--paper);background:#241a3f;
+    border:1px solid rgba(201,183,232,.35);border-radius:9px;padding:8px 34px 8px 12px;cursor:pointer;min-width:130px;color-scheme:dark;
+    -webkit-appearance:none;appearance:none;
+    background-image:linear-gradient(45deg,transparent 50%,#C9B7E8 50%),linear-gradient(135deg,#C9B7E8 50%,transparent 50%);
+    background-position:calc(100% - 16px) 52%,calc(100% - 11px) 52%;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+  #rd-lang:hover{border-color:var(--marigold)}
+  #rd-lang:focus{outline:2px solid var(--marigold);outline-offset:1px}
+  #rd-lang option{background:#1e1533;color:var(--paper);font-family:var(--serif)}
   .rd-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
   @media (max-width:560px){.rd-row{grid-template-columns:1fr}}
   .rd-field{display:flex;flex-direction:column;gap:6px}
   .rd-field label{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C9B7E8}
   .rd-opt{color:rgba(201,183,232,.55);text-transform:none;letter-spacing:0}
-  .rd-field input[type=text],.rd-field input[type=date],.rd-field input[type=time]{
+  .rd-field input:not([type=checkbox]){
     font-family:var(--serif);font-size:16px;color:var(--paper);background:rgba(244,232,206,.06);
-    border:1px solid #56447035;border:1px solid rgba(201,183,232,.3);border-radius:10px;padding:11px 12px;width:100%}
-  .rd-field input:focus{outline:2px solid var(--marigold);outline-offset:1px;border-color:transparent}
+    border:1px solid rgba(201,183,232,.3);border-radius:10px;padding:11px 12px;width:100%;color-scheme:dark}
+  .rd-field input::placeholder{color:rgba(201,183,232,.5)}
+  .rd-field input:focus{outline:2px solid var(--marigold);outline-offset:1px;border-color:var(--marigold)}
   .rd-check{display:flex;align-items:center;gap:8px;font-family:var(--serif)!important;font-size:13px!important;
     letter-spacing:0!important;text-transform:none!important;color:rgba(244,232,206,.7)!important;cursor:pointer;margin-top:2px}
   .rd-check input{width:auto;accent-color:var(--marigold)}

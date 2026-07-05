@@ -207,18 +207,20 @@ export async function fullChart(y, m, d, hh, mm, lat, lon) {
   const byDeg = ['Su', 'Mo', 'Ma', 'Me', 'Ju', 'Ve', 'Sa'].map(ab => ({ ab, deg: G(ab).degInSign })).sort((a, b) => b.deg - a.deg);
   const atmakaraka = byDeg[0].ab, amatyakaraka = byDeg[1].ab;
 
-  // Mangal (Kuja) Dosha — Mars in 1/2/4/7/8/12 from Lagna, Moon or Venus, with documented softenings
+  // Mangal (Kuja) Dosha — Mars in 1/2/4/7/8/12 from Lagna, Moon or Venus, with documented softenings.
+  // Returns STRUCTURED data (refs + house numbers, cancellation KEYS) so the page can localise the text.
   const marsSign = G('Ma').sign;
   const hFrom = from => ((marsSign - from + 12) % 12) + 1;
   const BAD = new Set([1, 2, 4, 7, 8, 12]);
-  const mRefs = { 'the Lagna': hFrom(lagnaSign), 'the Moon': hFrom(moonSign), 'Venus': hFrom(G('Ve').sign) };
-  const mFrom = Object.entries(mRefs).filter(([, h]) => BAD.has(h)).map(([k, h]) => `${k} (${h}${['st', 'nd', 'rd'][h - 1] || (h === 1 ? 'st' : h === 2 ? 'nd' : h === 3 ? 'rd' : 'th')} house)`);
-  const mCancels = [];
+  const fromRefs = [['lagna', hFrom(lagnaSign)], ['moon', hFrom(moonSign)], ['venus', hFrom(G('Ve').sign)]]
+    .filter(([, h]) => BAD.has(h)).map(([ref, house]) => ({ ref, house }));
+  const cancelKeys = [];
   const marsDig = dignityOf('Ma', marsSign);
-  if (marsDig === 'own' || marsDig === 'exalted') mCancels.push(`Mars is in its ${marsDig} sign, which tradition holds strongly softens the dosha`);
-  if (G('Ju').sign === marsSign) mCancels.push('Mars is joined by Jupiter, a classical cancellation');
-  if (G('Mo').sign === marsSign) mCancels.push('Mars is joined by the Moon, which tradition counts as easing');
-  const mangal = { present: mFrom.length > 0, from: mFrom, cancels: mCancels };
+  if (marsDig === 'own') cancelKeys.push('ownSign');
+  else if (marsDig === 'exalted') cancelKeys.push('exalted');
+  if (G('Ju').sign === marsSign) cancelKeys.push('withJupiter');
+  if (G('Mo').sign === marsSign) cancelKeys.push('withMoon');
+  const mangal = { present: fromRefs.length > 0, fromRefs, cancelKeys };
 
   // Kaal Sarp — all seven grahas hemmed on one side of the Rahu–Ketu axis
   const rahuLon = G('Ra').lon, ketuLon = G('Ke').lon;
