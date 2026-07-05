@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Janam Express — Build Roadmap</title>
+<style>
+  html,body{margin:0;padding:0;background:#140d04}
+  :root{
+    --night:#140d04; --night2:#1c1307; --card:#241a0b; --card2:#2b2010; --edge:#4a3619; --edge-soft:#3a2b15;
+    --marigold:#EFC078; --marigold-deep:#E0A73E;
+    --paper:#F5EACF; --muted:#B39C71; --muted2:#8f7c58;
+    --ready:#8FBE93; --static:#EAC06A; --build:#93B4C7; --avoid:#D07E58;
+    --disp:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  .wrap{
+    max-width:1120px;margin:0 auto;padding:30px 20px 80px;
+    background:
+      radial-gradient(1200px 500px at 50% -220px,rgba(239,192,120,.10),transparent 60%),
+      linear-gradient(180deg,var(--night),var(--night2) 40%,var(--night));
+    color:var(--paper);font-family:var(--disp);
+    -webkit-font-smoothing:antialiased;line-height:1.5;
+  }
+  a{color:inherit}
+  .perf{height:14px;border-radius:3px 3px 0 0;
+    background:radial-gradient(circle at 8px 50%,var(--night) 0 3.2px,transparent 3.6px) 0 0/16px 14px repeat-x;
+    border-bottom:1px dashed var(--edge);opacity:.9;margin-bottom:22px}
+
+  header.hero{text-align:center;padding:6px 0 8px}
+  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--marigold);margin:0 0 14px}
+  .hero h1{font-size:clamp(30px,6vw,52px);font-weight:400;letter-spacing:.01em;line-height:1.02;margin:0;text-wrap:balance;color:#FCEBC8}
+  .hero .lede{font-size:clamp(15px,2.4vw,18px);color:var(--muted);max-width:60ch;margin:14px auto 0;text-wrap:pretty}
+  .stats{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 10px;margin:22px 0 4px;font-family:var(--mono)}
+  .stat{font-size:11px;letter-spacing:.05em;color:var(--paper);background:rgba(244,232,206,.05);
+    border:1px solid var(--edge-soft);border-radius:999px;padding:6px 12px}
+  .stat b{color:var(--marigold);font-weight:700}
+
+  .rule{display:flex;align-items:center;gap:14px;margin:40px 0 6px}
+  .rule::before,.rule::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--edge),transparent)}
+  .rule span{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--marigold-deep);white-space:nowrap}
+  .rule span small{color:var(--muted2);letter-spacing:.12em;margin-left:8px;text-transform:none}
+
+  /* top pick — a "platform ticket" */
+  .toppick{position:relative;margin:16px 0 6px;border:1px solid var(--marigold-deep);border-radius:16px;overflow:hidden;
+    background:linear-gradient(150deg,#3a280f,#241809);box-shadow:0 22px 60px rgba(0,0,0,.5),inset 0 0 60px rgba(239,166,54,.06)}
+  .toppick .band{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--night);
+    background:var(--marigold);padding:7px 16px;display:flex;justify-content:space-between;align-items:center}
+  .toppick .body{padding:20px 22px 22px;display:grid;grid-template-columns:1fr;gap:10px}
+  .toppick h2{margin:0;font-size:clamp(22px,3.4vw,30px);font-weight:400;color:#FCEBC8;text-wrap:balance}
+  .toppick p{margin:0;color:#Ebdcbb;font-size:15.5px;line-height:1.62;max-width:78ch}
+  .toppick .why{font-family:var(--mono);font-size:12px;color:var(--marigold);letter-spacing:.04em}
+
+  /* controls */
+  .controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;margin:10px 0 4px}
+  .controls .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted2);margin-right:2px}
+  .chip{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:var(--muted);cursor:pointer;
+    background:transparent;border:1px solid var(--edge-soft);border-radius:999px;padding:6px 12px}
+  .chip:hover{color:var(--paper);border-color:var(--edge)}
+  .chip[aria-pressed="true"]{background:var(--marigold);color:var(--night);border-color:var(--marigold);font-weight:700}
+  .chip:focus-visible{outline:2px solid var(--marigold);outline-offset:2px}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-top:14px}
+  .card{background:linear-gradient(170deg,var(--card2),var(--card));border:1px solid var(--edge-soft);border-radius:14px;
+    padding:16px 17px 15px;display:flex;flex-direction:column;gap:9px;min-height:100%}
+  .card.hide{display:none}
+  .meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+    border:1px solid var(--edge-soft);border-radius:5px;padding:3px 7px}
+  .eff{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.1em;color:var(--night);background:var(--muted);border-radius:5px;padding:3px 7px}
+  .eff.S{background:var(--ready)} .eff.M{background:var(--static)} .eff.L{background:var(--build)}
+  .imp{margin-left:auto;font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--muted2);display:flex;align-items:center;gap:5px}
+  .dots i{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--edge);margin-left:2px}
+  .dots i.on{background:var(--marigold)}
+  code{font-family:var(--mono);font-size:.86em;color:var(--marigold);background:rgba(239,192,120,.08);border-radius:4px;padding:.5px 4px}
+  .toppick code{background:rgba(239,192,120,.12)}
+  .card h3{margin:0;font-size:17.5px;font-weight:400;line-height:1.22;color:#FBEAC7;text-wrap:balance}
+  .card p{margin:0;font-size:13.5px;line-height:1.55;color:var(--muted)}
+  .card p b{color:var(--paper);font-weight:400}
+  .foot{margin-top:auto;display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding-top:4px}
+  .feas{font-family:var(--mono);font-size:10px;letter-spacing:.06em;display:inline-flex;align-items:center;gap:6px}
+  .feas::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--m)}
+  .feas.ready{--m:var(--ready)} .feas.static{--m:var(--static)} .feas.build{--m:var(--build)} .feas.worker{--m:var(--avoid)}
+  .src{font-family:var(--mono);font-size:10px;color:var(--muted2);letter-spacing:.02em}
+
+  .avoidgrid .card{background:linear-gradient(170deg,#2a1a12,#221610);border-color:#4a2c1e}
+  .avoidgrid .card h3{color:#F0C3A9}
+  .avoidgrid .tag{border-color:#4a2c1e;color:#c08b6f}
+
+  .legend{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin:16px 0 2px;font-family:var(--mono);font-size:10.5px;color:var(--muted2)}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .legend i{width:8px;height:8px;border-radius:50%}
+  footer.foot-note{margin-top:44px;text-align:center;font-family:var(--mono);font-size:11px;color:var(--muted2);letter-spacing:.03em;line-height:1.7}
+  @media (prefers-reduced-motion: no-preference){
+    .card{transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}
+    .card:hover{transform:translateY(-3px);border-color:var(--edge);box-shadow:0 16px 34px rgba(0,0,0,.4)}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="perf"></div>
+  <header class="hero">
+    <p class="eyebrow">Time-Travel Reservation Office · Build Roadmap</p>
+    <h1>The next journeys</h1>
+    <p class="lede">Everything Janam Express could add next — researched across eight fronts, every data source fact-checked for <em>free, no-key, India-covering &amp; legally reusable</em>. India-first, respectful, no ads, fast on a Jio 4G phone.</p>
+    <div class="stats">
+      <span class="stat"><b>70</b> ideas that survived the check</span>
+      <span class="stat"><b>8</b> research fronts</span>
+      <span class="stat"><b>17</b> agents</span>
+      <span class="stat"><b>7</b> ruled out (with reasons)</span>
+    </div>
+  </header>
+
+  <div class="rule"><span>⭐ Top pick</span></div>
+  <div class="toppick">
+    <div class="band"><span>Recommended next departure</span><span>Pure compute · no key · no server</span></div>
+    <div class="body">
+      <h2>The real reading page — your grahas, right now</h2>
+      <p>The site already <b>ships a <code>/reading</code> "coming soon" stub</b> promising this. Feed <code>rashiChart()</code> today's date for live sidereal transits against your natal Moon (gochara), extend <code>mahadasha()</code> to the running antardasha, and compute Sade Sati as sign-arithmetic — all descriptive heritage, never prediction. It turns a promised-empty page users <em>already see</em> into real value, reusing code you've already shipped.</p>
+      <p class="why">Highest value-per-effort · reuses rashiChart() + mahadasha() · no new data, key, or infra</p>
+    </div>
+  </div>
+
+  <div class="legend">
+    <span><i style="background:var(--ready)"></i>Ready now</span>
+    <span><i style="background:var(--static)"></i>Static / compute</span>
+    <span><i style="background:var(--build)"></i>Build-time bake</span>
+    <span><i style="background:var(--avoid)"></i>Needs a worker</span>
+  </div>
+
+  <div class="controls" id="controls">
+    <span class="lbl">Filter</span>
+    <button class="chip" data-cat="all" aria-pressed="true">All</button>
+    <button class="chip" data-cat="Share/SEO" aria-pressed="false">Share/SEO</button>
+    <button class="chip" data-cat="Jyotish" aria-pressed="false">Jyotish</button>
+    <button class="chip" data-cat="Sky" aria-pressed="false">Sky</button>
+    <button class="chip" data-cat="Interactive" aria-pressed="false">Interactive</button>
+    <button class="chip" data-cat="Regional" aria-pressed="false">Regional</button>
+    <button class="chip" data-cat="Imagery" aria-pressed="false">Imagery</button>
+    <button class="chip" data-cat="Data" aria-pressed="false">Data</button>
+    <button class="chip" data-cat="Tech/UX" aria-pressed="false">Tech/UX</button>
+  </div>
+
+  <section>
+    <div class="rule"><span>🟢 Now boarding<small>quick wins · S effort</small></span></div>
+    <div class="grid" id="g-quick"></div>
+  </section>
+  <section>
+    <div class="rule"><span>🟡 Scheduled<small>medium bets · clear payoff</small></span></div>
+    <div class="grid" id="g-med"></div>
+  </section>
+  <section>
+    <div class="rule"><span>🔭 On the horizon<small>big bets · high ceiling</small></span></div>
+    <div class="grid" id="g-big"></div>
+  </section>
+  <section>
+    <div class="rule"><span>🔴 Not on the timetable<small>ruled out — and why</small></span></div>
+    <div class="grid avoidgrid" id="g-avoid"></div>
+  </section>
+
+  <footer class="foot-note">
+    Researched 5 July 2026 · multi-agent sweep with adversarial source-verification · full detail in <code>concept/ideas-roadmap.md</code><br>
+    Sharpest catches: the share loop is silently broken today (no og:image) · Open-Meteo attribution is mandatory &amp; missing · <code>ritu.json</code> ships but is dead · astronomy-engine has no reverse eclipse search · Aksharamukha is AGPL.
+  </footer>
+</div>
+
+<script>
+  const IDEAS = [
+    // tier: quick | med | big  ·  feas: ready | static | build | worker
+    {t:"quick",c:"Share/SEO",e:"S",i:3,f:"ready",title:"og:image + full social meta",p:"The head has og:title but <b>no og:image</b> — pasted links unfurl as bare text. One branded 1200×630 PNG (seed from the ticket) makes every share preview.",s:"static PNG + meta tags"},
+    {t:"quick",c:"Share/SEO",e:"S",i:3,f:"ready",title:"One-tap WhatsApp share",p:"<code>buildCaption()</code> already emits the permalink — add a green “Send on WhatsApp” anchor to <code>api.whatsapp.com/send</code>. India's dominant share surface.",s:"pure client"},
+    {t:"quick",c:"Tech/UX",e:"S",i:3,f:"ready",title:"Skip the animation · continue last journey",p:"“Skip →” resolves <code>departAnim()</code> early; auto-skip on data-saver/2g. Persist inputs → offer “Continue your journey to {city}, {date}?”",s:"pure client"},
+    {t:"quick",c:"Tech/UX",e:"S",i:2,f:"ready",title:"Data-source credits (licence fix)",p:"Open-Meteo is <b>CC-BY 4.0 and requires</b> a visible credit; weather/history/twins show none today — a real compliance gap. Tiny sources line.",s:"in-repo"},
+    {t:"quick",c:"Sky",e:"S",i:2,f:"static",title:"Which ritu India was breathing",p:"<code>sunLon</code> already computed → <code>floor(sunLon/60)</code> picks the season; a six-arc wheel. Activates the shipped-but-dead <code>ritu.json</code>.",s:"compute + ritu.json"},
+    {t:"quick",c:"Interactive",e:"S",i:3,f:"static",title:"Your life, counted",p:"Days &amp; weeks alive, full-moons witnessed, countdown to your next round-number day. A light early interstitial that builds dwell while heavy beats load.",s:"pure compute"},
+    {t:"quick",c:"Jyotish",e:"S",i:2,f:"static",title:"Your birthstone &amp; rudraksha",p:"<code>nakshatras.json</code> has a <code>lord</code> per star → 9-row planet→gem→mukhi lookup. Gems as CSS gradients. Framed as heritage, <b>not</b> remedy.",s:"nakshatras.json + table"},
+    {t:"quick",c:"Jyotish",e:"S",i:2,f:"ready",title:"Your beej mantra",p:"Join the nakshatra lord to its navagraha seed-syllable (already in <code>panchang.json</code>) + presiding deity — a text-only Devanagari + IAST “sound of your star”.",s:"panchang + nakshatras"},
+    {t:"quick",c:"Interactive",e:"S",i:2,f:"ready",title:"Scratch-to-reveal",p:"Canvas destination-out over data the app already makes (headline, twin, milestone) for tactile dwell. Instant reveal under reduced-motion.",s:"pure canvas"},
+
+    {t:"med",c:"Sky",e:"M",i:3,f:"static",title:"The Moon exactly as it hung over your city",p:"<code>Illumination('Moon')</code> → exact %lit + phase angle; an SVG terminator with latitude-correct horn tilt. A flagship single-fact beat — verified for 1950s dates.",s:"pure compute"},
+    {t:"med",c:"Share/SEO",e:"M",i:3,f:"build",title:"/born-on/[date] SEO pages (366)",p:"<code>getStaticPaths()</code> emits 366 crawlable pages with real OG tags. Bake Wikimedia On-This-Day + Wikidata births <b>once at build</b>. Deep-links back with <code>?d=</code>.",s:"build-baked JSON"},
+    {t:"med",c:"Jyotish",e:"M",i:3,f:"static",title:"The festival you were born nearest",p:"mhah-panchang resolves masa/tithi 1950–2010 → derive Diwali/Holi/Sankranti dates, find the nearest to your DOB. Needs a festival→meaning table + static Eid table.",s:"mhah-panchang + table"},
+    {t:"med",c:"Imagery",e:"M",i:3,f:"build",title:"Real PM &amp; President faces on the paper",p:"Finite set (~15 PMs, ~14 Presidents). Build-time Wikidata P18 → Commons thumb + per-file licence → static JSON. PD-India/GODL/CC only, initials fallback.",s:"Wikidata P18 (build)"},
+    {t:"med",c:"Regional",e:"M",i:3,f:"static",title:"Full Hindi UI toggle (पूरा हिंदी)",p:"Keyed en/hi strings + a persistent EN|हि toggle, ~6–8 KB lazy-loaded. The Devanagari path is already proven. Real cost is authoring fluent Hindi, not code.",s:"in-repo t() layer"},
+    {t:"med",c:"Interactive",e:"M",i:3,f:"static",title:"Guess-the-price mini-quiz",p:"Gate the money beat: pick, then reveal with the count-up + “off by 4×”. Only quiz items with a real value near that year (petrol/gold denser than chai).",s:"prices.json"},
+    {t:"med",c:"Regional",e:"M",i:3,f:"build",title:"GI-tagged craft/food of your district",p:"Static district→product JSON from the Wikipedia “Geographical indications in India” table (~603 items). Note: P6248 is <b>not</b> a GI property — the table is the spine.",s:"Wikipedia GI table"},
+    {t:"med",c:"Data",e:"M",i:3,f:"build",title:"India-in-space by your birthday",p:"Curated ISRO timeline (Aryabhata 1975→2010): most-recent launch before your DOB + a running count + the next as a teaser; pre-1975 → the Thumba-1963 dream.",s:"Wikipedia ISRO lists"},
+    {t:"med",c:"Data",e:"M",i:3,f:"build",title:"Bharat Ratna &amp; Padma honour roll",p:"Static {year:[recipients]} verified vs Wikipedia + MHA. The award <b>isn't annual</b> — make “most recent when you were born” primary, with “none conferred in YYYY”.",s:"Wikipedia + verified QIDs"},
+    {t:"med",c:"Interactive",e:"M",i:3,f:"build",title:"Your life in headlines",p:"One India headline per year DOB→today, ending “today”. Real work is curating the 2011–2025 rows — <code>milestones.json</code> stops at 2010.",s:"milestones.json (extend)"},
+    {t:"med",c:"Share/SEO",e:"M",i:3,f:"static",title:"Vertical 9:16 story card",p:"A second canvas at 1080×1920 with city/date + stats + totem + QR. WhatsApp Status &amp; IG Stories are 9:16 — the current 4:5 ticket letterboxes there.",s:"share.js"},
+    {t:"med",c:"Imagery",e:"M",i:3,f:"build",title:"Period-correct map of India",p:"~6 era buckets (pre-1956 → 2000 states); inline hand-picked Commons SVG basemaps, highlight your city, caption the twist. Work is per-file licence vetting.",s:"Commons SVG maps"},
+    {t:"med",c:"Regional",e:"M",i:3,f:"build",title:"A freedom-fighter from your district",p:"Build-time Wikidata (occupation Q30242234, birthplace→district). Only ~201/619 resolve to district, so most cities gracefully fall back to state.",s:"Wikidata (build)"},
+    {t:"med",c:"Regional",e:"M",i:2,f:"build",title:"Nearest famous temple/shrine",p:"Build-time Wikidata P625 (3,432 Hindu temples; more incl. other faiths), nearest per city by haversine, ranked by notability. Respects plurality.",s:"Wikidata P625"},
+    {t:"med",c:"Tech/UX",e:"S",i:3,f:"ready",title:"Blur-up images + a11y pass",p:"Remote thumbs lack dimensions (layout shift on 4g) → aspect wrapper + blur box. A11y: aria-live on the silent async cards, a skip-to-result link, radiogroup toggles.",s:"in-repo"},
+    {t:"med",c:"Tech/UX",e:"M",i:3,f:"static",title:"Installable PWA + offline replay",p:"<code>@vite-pwa/astro</code> precaches the shell + data, SWR-caches the APIs. Gotcha: the GitHub Pages base path is a known plugin pain point — budget for it.",s:"@vite-pwa/astro"},
+
+    {t:"big",c:"Share/SEO",e:"L",i:3,f:"worker",title:"Per-journey dynamic OG image",p:"A free Cloudflare Worker renders a 1200×630 PNG with the user's real city/₹ figure + an HTML shell so WhatsApp's crawler sees it. Do the <em>static</em> og:image first.",s:"Cloudflare Worker + Satori"},
+    {t:"big",c:"Sky",e:"L",i:3,f:"static",title:"The night sky over your city (capstone)",p:"A polar-azimuthal SVG dome at midnight IST: ~40 bright stars + real Moon + 5 planets, Agastya/Canopus highlighted by latitude. Depends on the moon &amp; planet beats.",s:"pure compute + star table"},
+    {t:"big",c:"Sky",e:"L",i:3,f:"static",title:"Planets visible after sunset",p:"From sunset, loop the 5 bright planets via horizon geometry, keep those above the horizon, place by azimuth. “Shukra was the evening star, unmissable in the west.”",s:"pure compute"},
+    {t:"big",c:"Sky",e:"L",i:3,f:"static",title:"The nearest eclipse — did your city see it?",p:"Per-city eclipse altitude → “the Sun was 22° up, visible from your town.” Framed as wonder, never fear. Note: there's no reverse search — scan forward.",s:"pure compute"},
+    {t:"big",c:"Interactive",e:"L",i:3,f:"static",title:"Your name in every Indian script",p:"Type once → blooms in 10–12 Indic scripts, screenshottable. <b>Licence fix:</b> use <code>sanscript.js</code> (MIT), not AGPL Aksharamukha; subset + lazy-load fonts.",s:"sanscript.js (MIT)"},
+    {t:"big",c:"Regional",e:"L",i:3,f:"static",title:"Bhasha switch — your mother tongue",p:"Reuse the Hindi layer, default to the birth state's language via <code>regional.json</code>. Bottleneck is real, non-machine-translated copy in 7–8 scripts.",s:"in-repo"},
+    {t:"big",c:"Imagery",e:"L",i:3,f:"build",title:"“Your city, back then” — a real period photo",p:"One genuine pre-1965 B&amp;W photo per city (India's 60-yr rule). Build-time Commons query, PD only. Coverage is metros-only — degrade gracefully.",s:"Commons (build)"},
+
+    // avoid — p is the reason
+    {t:"avoid",c:"Data",title:"Sensex snapshot",p:"Sensex only begins Jan 1986, excluding the older half of 1950–2010 by construction; no free no-key live feed. Partial-audience for real effort.",s:"why not"},
+    {t:"avoid",c:"Data",title:"Biggest film of your year",p:"India has <b>no official box-office</b> — only inflated single-source estimates. Overlaps the existing CRT “film of the year”.",s:"why not"},
+    {t:"avoid",c:"Data",title:"Cost-of-living basket per year",p:"No single clean six-decade source for milk/tea/scooter prices — you'd interpolate heavily. The money beat + price quiz already deliver the payoff.",s:"why not"},
+    {t:"avoid",c:"Share/SEO",title:"Pretty permalink path /j/mumbai-1990",p:"A true pretty path needs the worker; static Pages only gives a hash/query. The current <code>?d=&amp;c=</code> already works. Low value.",s:"why not"},
+    {t:"avoid",c:"Imagery",title:"Folk-art photo layer (Warli/Madhubani)",p:"Most modern folk-art works on Commons are <b>still in copyright</b>. Ship the text override; images text-only fallback, not a headline.",s:"why not"},
+    {t:"avoid",c:"Jyotish",title:"Deity-art for “nearly every nakshatra”",p:"Ravi Varma painted popular Puranic gods, <b>not</b> the obscure Vedic star-guardians (Aryaman, Bhaga, Pushan…). Add only a handful more verified PD works.",s:"why not"},
+    {t:"avoid",c:"Imagery",title:"GODL leader photo filmstrip",p:"144k files, but each needs provenance + GODL/CC + attribution vetting. Lower signal than the finite PM/President P18 set.",s:"why not"},
+  ];
+
+  const feasLabel = {ready:"Ready now",static:"Static / compute",build:"Build-time",worker:"Needs a worker"};
+  const dots = n => `<span class="dots" title="${n===3?'High':'Medium'} impact">${[1,2,3].map(k=>`<i class="${k<=n?'on':''}"></i>`).join('')}</span>`;
+
+  function cardHTML(x){
+    if(x.t==="avoid"){
+      return `<article class="card" data-cat="${x.c}">
+        <div class="meta"><span class="tag">${x.c}</span><span class="imp">ruled out</span></div>
+        <h3>${x.title}</h3><p>${x.p}</p></article>`;
+    }
+    return `<article class="card" data-cat="${x.c}">
+      <div class="meta">
+        <span class="tag">${x.c}</span>
+        <span class="eff ${x.e}" title="${x.e==='S'?'Small':x.e==='M'?'Medium':'Large'} effort">${x.e}</span>
+        <span class="imp">${dots(x.i)}</span>
+      </div>
+      <h3>${x.title}</h3>
+      <p>${x.p}</p>
+      <div class="foot">
+        <span class="feas ${x.f}">${feasLabel[x.f]}</span>
+        <span class="src">${x.s}</span>
+      </div>
+    </article>`;
+  }
+
+  const mount = (id,tier)=>{ document.getElementById(id).innerHTML = IDEAS.filter(x=>x.t===tier).map(cardHTML).join(''); };
+  mount('g-quick','quick'); mount('g-med','med'); mount('g-big','big'); mount('g-avoid','avoid');
+
+  const controls = document.getElementById('controls');
+  controls.addEventListener('click', e=>{
+    const btn = e.target.closest('.chip'); if(!btn) return;
+    const cat = btn.dataset.cat;
+    controls.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed', String(c===btn)));
+    document.querySelectorAll('.card').forEach(card=>{
+      card.classList.toggle('hide', cat!=='all' && card.dataset.cat!==cat);
+    });
+  });
+</script>
+</body>
+</html>
