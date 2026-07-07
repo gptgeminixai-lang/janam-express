@@ -526,6 +526,7 @@ function render() {
     film: film ? film.film : null,
     wasOldName, oldName: city.oldName || '',
   };
+  $('wabtn').href = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(buildCaption(J.shareData));
 
   /* reset interactive + reveal state for repeat journeys */
   $('amountin').value = '';

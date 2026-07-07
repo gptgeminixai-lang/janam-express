@@ -74,7 +74,11 @@
     "d9Sub": "soul, dharma & marriage",
     "d10Title": "Daśāṁśa · D10",
     "d10Sub": "career & action",
-    "lagnaMark": "Lagna"
+    "lagnaMark": "Lagna",
+    "shareLead": "Keep this chart, or send it to someone it will delight —",
+    "shareCopy": "Copy link to this chart",
+    "shareCopied": "Copied ✓",
+    "shareWa": "Send on WhatsApp"
   },
   "tpl": {
     "previewAsc": "Ascendant (Lagna): {rashi} · {rashiEn} {deg}",

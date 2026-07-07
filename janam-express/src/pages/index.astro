@@ -32,6 +32,9 @@ const deityImgs = {
   hanuman: (await getImage({ src: dHanuman, format: 'webp' })).src,
   vishnu:  (await getImage({ src: dVishnu,  format: 'webp' })).src,
 };
+const SITE = Astro.site ?? 'https://gptgeminixai-lang.github.io';
+const ogImg = new URL(`${base}og.png`, SITE).href;
+const ogUrl = new URL(base, SITE).href;
 ---
 <html lang="en">
 <head>
@@ -39,8 +42,17 @@ const deityImgs = {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Janam Express — the day you were born</title>
   <meta name="description" content="Enter your date and place of birth and ride back to the India of your day zero — prices, films, cricket, headlines, weather and your souvenir railway ticket." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={ogUrl} />
   <meta property="og:title" content="Janam Express — the day you were born" />
   <meta property="og:description" content="Book a ticket back to your birthday. ₹100 then vs now, the film in cinemas, the cricket score, the weather over your hometown." />
+  <meta property="og:image" content={ogImg} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content={ogImg} />
+  <meta name="theme-color" content="#140d04" />
+  <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
 </head>
 <body>
 
@@ -108,7 +120,7 @@ const deityImgs = {
         <div class="wx-rain"><span id="wxrain">—</span><b>rain</b></div>
       </div>
       <p class="wx-line" id="wxline">Reading the skies over your birthplace…</p>
-      <p class="wx-src">Open-Meteo ERA5 reanalysis · actual readings at your coordinates</p>
+      <p class="wx-src">Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo.com</a> (CC BY 4.0) · ERA5 reanalysis at your coordinates</p>
     </div>
   </section>
 
@@ -391,6 +403,7 @@ const deityImgs = {
     </div>
     <p class="wish reveal d2" id="tktwish"></p>
     <div class="tktbtns reveal d3">
+      <a class="ghost wa" id="wabtn" href="#" target="_blank" rel="noopener">Send on WhatsApp</a>
       <button class="ghost" id="sharebtn" type="button">Share ticket 🎟️</button>
       <button class="ghost" id="downloadbtn" type="button">Download ticket image</button>
       <button class="ghost" id="copybtn" type="button">Copy WhatsApp caption</button>

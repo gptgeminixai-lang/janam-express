@@ -1,13 +1,27 @@
 ---
 import '../styles/global.css';
 const base = import.meta.env.BASE_URL;
+const SITE = Astro.site ?? 'https://gptgeminixai-lang.github.io';
+const ogImg = new URL(`${base}og.png`, SITE).href;
+const ogUrl = new URL(`${base}reading/`, SITE).href;
 ---
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Your birth chart &amp; reading — Janam Express</title>
-  <meta name="description" content="A factual Vedic birth chart from your date, time and place of birth — Lagna, houses, planetary positions and nakshatra, computed honestly. Premium reading coming to the Jyotish Desk." />
+  <meta name="description" content="A factual Vedic birth chart from your date, time and place of birth — Lagna, houses, planetary positions and nakshatra, computed honestly, in nine Indian languages." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={ogUrl} />
+  <meta property="og:title" content="Your birth chart &amp; reading — Janam Express" />
+  <meta property="og:description" content="Your Lagna, houses, dasha and this week's real transits — cast from your exact birth time, honestly labelled, in nine Indian languages." />
+  <meta property="og:image" content={ogImg} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content={ogImg} />
+  <meta name="theme-color" content="#140d04" />
+  <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
 </head>
 <body>
 <div class="atmos"></div><div class="vign"></div>
@@ -207,6 +221,17 @@ const base = import.meta.env.BASE_URL;
   .rd-vargas .rd-chartwrap{margin:0}
   .rd-vargas .rd-si{width:100%}
 
+  .rd-sharerow{margin:28px 0 4px;padding:18px;text-align:center;background:rgba(239,192,120,.07);
+    border:1px dashed rgba(239,192,120,.4);border-radius:14px}
+  .rd-sharerow p{font-family:var(--serif);font-size:14px;color:rgba(244,232,206,.85);margin:0 0 12px}
+  .rd-sharebtns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .rd-sharecopy,.rd-sharewa{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;
+    border-radius:999px;padding:12px 20px;cursor:pointer;text-decoration:none;display:inline-block}
+  .rd-sharecopy{color:var(--night);background:var(--marigold);border:0}
+  .rd-sharecopy:hover{filter:brightness(1.07)}
+  .rd-sharewa{color:#0e1b13;background:#25D366;border:0}
+  .rd-sharewa:hover{filter:brightness(1.08)}
+  .rd-sharecopy:focus-visible,.rd-sharewa:focus-visible{outline:2px solid var(--paper);outline-offset:2px}
   .rd-back{display:inline-block;font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
     color:var(--paper);text-decoration:none;border:1.5px solid rgba(244,232,206,.4);border-radius:999px;padding:11px 20px}
   .rd-back:hover{border-color:var(--marigold);color:var(--marigold)}

@@ -241,6 +241,10 @@ img{max-width:100%}
   color:var(--paper);background:transparent;border:1.5px solid rgba(244,232,206,.5);border-radius:999px;padding:11px 20px}
 .ghost:hover{border-color:var(--marigold);color:var(--marigold)}
 .ghost:focus-visible{outline:3px solid var(--marigold);outline-offset:2px}
+a.ghost.wa{display:inline-block;text-decoration:none;text-align:center;color:#0e1b13;background:#25D366;border-color:#25D366;font-weight:700}
+a.ghost.wa:hover{filter:brightness(1.08);color:#0e1b13}
+.wx-src a{color:inherit;text-decoration:underline}
+.wx-src a:hover{color:var(--marigold)}
 footer{padding:40px 20px 60px;text-align:center;font-family:var(--mono);font-size:10.5px;
   letter-spacing:.14em;color:rgba(244,232,206,.6);line-height:2;text-transform:uppercase}
 footer a{color:rgba(244,232,206,.6)}

@@ -74,11 +74,14 @@ function savedLang() {
   return (s && AUTHORED.includes(s)) ? s : 'en';
 }
 
-/* ---------- prefill ---------- */
+/* ---------- prefill (a full link with time auto-casts the chart) ---------- */
 const params = new URLSearchParams(location.search);
 if (params.get('d')) $('rd-date').value = params.get('d');
 if (params.get('c')) $('rd-place').value = params.get('c');
 if (params.get('n') && params.get('n') !== 'Traveller') $('rd-name').value = params.get('n');
+const tParam = params.get('t');
+if (tParam === 'na') { $('rd-unknown').checked = true; $('rd-time').disabled = true; }
+else if (tParam && /^\d{2}:\d{2}$/.test(tParam)) $('rd-time').value = tParam;
 $('rd-citylist').innerHTML = CITIES.map(c => `<option value="${c.name}, ${c.state}"></option>`).join('');
 // language dropdown = authored languages, shown in their own script
 $('rd-lang').innerHTML = AUTHORED.map(code => `<option value="${code}">${NATIVE_NAME[code] || code}</option>`).join('');
@@ -143,6 +146,9 @@ async function cast(e) {
       const trans = await transits(new Date());
       last = { kind: 'full', chart, meta: { y, m, d, hh, mm, city }, ladder, trans };
     }
+    // shareable permalink that reproduces this exact chart (date + place + time)
+    const nm = $('rd-name').value.trim();
+    history.replaceState(null, '', `?d=${dv}&c=${encodeURIComponent(city.name)}${nm ? `&n=${encodeURIComponent(nm)}` : ''}&t=${timeUnknown ? 'na' : tv}`);
     renderLast();
     out.scrollIntoView({ behavior: 'smooth', block: 'start' });
   } catch (err) {
@@ -294,6 +300,15 @@ function remediesSection(chart, trans) {
   return tradSection(t.ui.secRemedies, `<p>${t.ui.remediesIntro}</p><div class="rd-remgrid">${cards}</div>`);
 }
 
+function shareRow() {
+  return `<div class="rd-sharerow">
+    <p>${t.ui.shareLead}</p>
+    <div class="rd-sharebtns">
+      <button type="button" class="rd-sharecopy">${t.ui.shareCopy}</button>
+      <a class="rd-sharewa" href="https://api.whatsapp.com/send?text=${encodeURIComponent(location.href)}" target="_blank" rel="noopener">${t.ui.shareWa}</a>
+    </div></div>`;
+}
+
 function vargaCharts(chart) {
   const d9 = southIndianChart(chart.grahas.map(g => ({ graha: g.graha, sign: g.navamsa })), navamsaSign(chart.lagna.lon), t.ui.d9Title, t.ui.d9Sub, false);
   const d10 = southIndianChart(chart.grahas.map(g => ({ graha: g.graha, sign: g.dasamsa })), dasamsaSign(chart.lagna.lon), t.ui.d10Title, t.ui.d10Sub, false);
@@ -315,7 +330,7 @@ function renderFull(chart, meta, ladder, trans) {
     + planetTable(chart.grahas, true) + notice
     + personalitySection(chart) + careerSection(chart) + dashaSection(ladder)
     + gocharaSection(chart, trans) + doshaSection(chart, trans)
-    + luckySection(chart) + remediesSection(chart, trans) + vargaCharts(chart);
+    + luckySection(chart) + remediesSection(chart, trans) + vargaCharts(chart) + shareRow();
 }
 
 function renderNoTime(chart, meta, ladder) {
@@ -335,7 +350,8 @@ function renderNoTime(chart, meta, ladder) {
     ${factSection(t.ui.secDasha, `
       <p class="rd-sub2">${t.ui.dashaIntroNoTime}</p>
       <div class="rd-dashwrap"><div class="rd-dashhdr"><span>${t.ui.dashaMaha}</span></div>${dashRow(ladder.maha)}<div class="rd-dashhdr"><span>${t.ui.dashaAntar}</span></div>${dashRow(ladder.currentAntar)}</div>
-      <p class="rd-dashnow">${format(t.tpl.dashaNowNoTime, { lords: b([ladder.maha, ladder.currentAntar].map(p => dashaLord(p.lord)).join(' – ')) })}</p>`)}`;
+      <p class="rd-dashnow">${format(t.tpl.dashaNowNoTime, { lords: b([ladder.maha, ladder.currentAntar].map(p => dashaLord(p.lord)).join(' – ')) })}</p>`)}
+    ${shareRow()}`;
 }
 
 /* ---------- language switch + wire up ---------- */
@@ -353,10 +369,20 @@ $('rd-form').addEventListener('submit', cast);
 $('rd-lang').addEventListener('change', e => switchLang(e.target.value));
 ['rd-time', 'rd-date', 'rd-place'].forEach(id => $(id).addEventListener('input', schedulePreview));
 $('rd-unknown').addEventListener('change', () => { $('rd-time').disabled = $('rd-unknown').checked; schedulePreview(); });
+// copy-link / WhatsApp in the result (delegated — the result re-renders on language switch)
+$('rd-result').addEventListener('click', async e => {
+  const btn = e.target.closest('.rd-sharecopy');
+  if (!btn) return;
+  try { await navigator.clipboard.writeText(location.href); } catch {}
+  btn.textContent = t.ui.shareCopied;
+  setTimeout(() => { btn.textContent = t.ui.shareCopy; }, 2500);
+});
 // English by default; restore an explicit earlier choice if one was saved
 (async () => {
   const saved = savedLang();
   if (saved !== 'en') { const dict = await loadLang(saved); if (dict) { t = dict; lang = saved; } }
   applyUi();
   runPreview();
+  // a complete shared link (date + place + time) casts itself
+  if (params.get('d') && params.get('c') && tParam) cast();
 })();
