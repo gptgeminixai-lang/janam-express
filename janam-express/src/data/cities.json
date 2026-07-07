@@ -1712,6 +1712,1633 @@
    "state": "Dadra and Nagar Haveli and Daman and Diu",
    "lat": 20.27,
    "lon": 73.02
+  },
+  {
+   "name": "Alappuzha",
+   "state": "Kerala",
+   "lat": 9.49,
+   "lon": 76.33,
+   "oldName": "Alleppey",
+   "renamedOn": "1990-02-07",
+   "pop2011": 241,
+   "station": "Alappuzha",
+   "stationCode": "ALLP",
+   "railZone": "SR"
+  },
+  {
+   "name": "Kottayam",
+   "state": "Kerala",
+   "lat": 9.59,
+   "lon": 76.52,
+   "pop2011": 137,
+   "station": "Kottayam",
+   "stationCode": "KTYM",
+   "railZone": "SR"
+  },
+  {
+   "name": "Palakkad",
+   "state": "Kerala",
+   "lat": 10.78,
+   "lon": 76.65,
+   "oldName": "Palghat",
+   "pop2011": 131,
+   "station": "Palakkad Junction",
+   "stationCode": "PGT",
+   "railZone": "SR"
+  },
+  {
+   "name": "Malappuram",
+   "state": "Kerala",
+   "lat": 11.05,
+   "lon": 76.07,
+   "pop2011": 101
+  },
+  {
+   "name": "Kasaragod",
+   "state": "Kerala",
+   "lat": 12.5,
+   "lon": 75,
+   "pop2011": 54,
+   "station": "Kasaragod",
+   "stationCode": "KGQ",
+   "railZone": "SR"
+  },
+  {
+   "name": "Pathanamthitta",
+   "state": "Kerala",
+   "lat": 9.26,
+   "lon": 76.79,
+   "pop2011": 38
+  },
+  {
+   "name": "Kalpetta",
+   "state": "Kerala",
+   "lat": 11.62,
+   "lon": 76.08,
+   "pop2011": 32
+  },
+  {
+   "name": "Thodupuzha",
+   "state": "Kerala",
+   "lat": 9.9,
+   "lon": 76.72,
+   "pop2011": 52
+  },
+  {
+   "name": "Thalassery",
+   "state": "Kerala",
+   "lat": 11.75,
+   "lon": 75.49,
+   "oldName": "Tellicherry",
+   "pop2011": 93,
+   "station": "Thalassery",
+   "stationCode": "TLY",
+   "railZone": "SR"
+  },
+  {
+   "name": "Vatakara",
+   "state": "Kerala",
+   "lat": 11.57,
+   "lon": 75.6,
+   "oldName": "Badagara",
+   "pop2011": 75,
+   "station": "Vadakara",
+   "stationCode": "BDJ",
+   "railZone": "SR"
+  },
+  {
+   "name": "Payyanur",
+   "state": "Kerala",
+   "lat": 12.11,
+   "lon": 75.19,
+   "pop2011": 72,
+   "station": "Payyanur",
+   "stationCode": "PAY",
+   "railZone": "SR"
+  },
+  {
+   "name": "Kanhangad",
+   "state": "Kerala",
+   "lat": 12.3,
+   "lon": 75.09,
+   "pop2011": 73,
+   "station": "Kanhangad",
+   "stationCode": "KZE",
+   "railZone": "SR"
+  },
+  {
+   "name": "Manjeri",
+   "state": "Kerala",
+   "lat": 11.12,
+   "lon": 76.12,
+   "pop2011": 97
+  },
+  {
+   "name": "Tirur",
+   "state": "Kerala",
+   "lat": 10.9,
+   "lon": 75.92,
+   "pop2011": 56,
+   "station": "Tirur",
+   "stationCode": "TIR",
+   "railZone": "SR"
+  },
+  {
+   "name": "Ponnani",
+   "state": "Kerala",
+   "lat": 10.77,
+   "lon": 75.93,
+   "pop2011": 90
+  },
+  {
+   "name": "Perinthalmanna",
+   "state": "Kerala",
+   "lat": 10.98,
+   "lon": 76.23,
+   "pop2011": 50
+  },
+  {
+   "name": "Guruvayur",
+   "state": "Kerala",
+   "lat": 10.59,
+   "lon": 76.04,
+   "pop2011": 67,
+   "station": "Guruvayur",
+   "stationCode": "GUV",
+   "railZone": "SR"
+  },
+  {
+   "name": "Kunnamkulam",
+   "state": "Kerala",
+   "lat": 10.65,
+   "lon": 76.08,
+   "pop2011": 54
+  },
+  {
+   "name": "Chalakudy",
+   "state": "Kerala",
+   "lat": 10.3,
+   "lon": 76.33,
+   "pop2011": 50,
+   "station": "Chalakudi",
+   "stationCode": "CKI",
+   "railZone": "SR"
+  },
+  {
+   "name": "Irinjalakuda",
+   "state": "Kerala",
+   "lat": 10.34,
+   "lon": 76.21,
+   "pop2011": 63,
+   "station": "Irinjalakuda",
+   "stationCode": "IJK",
+   "railZone": "SR"
+  },
+  {
+   "name": "Kodungallur",
+   "state": "Kerala",
+   "lat": 10.23,
+   "lon": 76.19,
+   "oldName": "Cranganore",
+   "pop2011": 34
+  },
+  {
+   "name": "Aluva",
+   "state": "Kerala",
+   "lat": 10.12,
+   "lon": 76.35,
+   "oldName": "Alwaye",
+   "pop2011": 22,
+   "station": "Aluva",
+   "stationCode": "AWY",
+   "railZone": "SR"
+  },
+  {
+   "name": "Perumbavoor",
+   "state": "Kerala",
+   "lat": 10.11,
+   "lon": 76.48,
+   "pop2011": 28
+  },
+  {
+   "name": "Muvattupuzha",
+   "state": "Kerala",
+   "lat": 9.99,
+   "lon": 76.58,
+   "pop2011": 30
+  },
+  {
+   "name": "Kothamangalam",
+   "state": "Kerala",
+   "lat": 10.07,
+   "lon": 76.6,
+   "pop2011": 39
+  },
+  {
+   "name": "Cherthala",
+   "state": "Kerala",
+   "lat": 9.69,
+   "lon": 76.34,
+   "pop2011": 46,
+   "station": "Cherthala",
+   "stationCode": "SRTL",
+   "railZone": "SR"
+  },
+  {
+   "name": "Kayamkulam",
+   "state": "Kerala",
+   "lat": 9.17,
+   "lon": 76.5,
+   "pop2011": 69,
+   "station": "Kayamkulam Junction",
+   "stationCode": "KYJ",
+   "railZone": "SR"
+  },
+  {
+   "name": "Mavelikkara",
+   "state": "Kerala",
+   "lat": 9.27,
+   "lon": 76.55,
+   "pop2011": 26,
+   "station": "Mavelikara",
+   "stationCode": "MVLK",
+   "railZone": "SR"
+  },
+  {
+   "name": "Thiruvalla",
+   "state": "Kerala",
+   "lat": 9.39,
+   "lon": 76.58,
+   "pop2011": 53,
+   "station": "Tiruvalla",
+   "stationCode": "TRVL",
+   "railZone": "SR"
+  },
+  {
+   "name": "Changanassery",
+   "state": "Kerala",
+   "lat": 9.47,
+   "lon": 76.55,
+   "oldName": "Changanacherry",
+   "pop2011": 47,
+   "station": "Changanasseri",
+   "stationCode": "CGY",
+   "railZone": "SR"
+  },
+  {
+   "name": "Pala",
+   "state": "Kerala",
+   "lat": 9.71,
+   "lon": 76.68,
+   "pop2011": 22
+  },
+  {
+   "name": "Adoor",
+   "state": "Kerala",
+   "lat": 9.16,
+   "lon": 76.73,
+   "pop2011": 29
+  },
+  {
+   "name": "Punalur",
+   "state": "Kerala",
+   "lat": 9.02,
+   "lon": 76.93,
+   "pop2011": 47,
+   "station": "Punalur",
+   "stationCode": "PUU",
+   "railZone": "SR"
+  },
+  {
+   "name": "Attingal",
+   "state": "Kerala",
+   "lat": 8.68,
+   "lon": 76.83,
+   "pop2011": 37
+  },
+  {
+   "name": "Varkala",
+   "state": "Kerala",
+   "lat": 8.74,
+   "lon": 76.7,
+   "pop2011": 40,
+   "station": "Varkala Sivagiri",
+   "stationCode": "VAK",
+   "railZone": "SR"
+  },
+  {
+   "name": "Neyyattinkara",
+   "state": "Kerala",
+   "lat": 8.4,
+   "lon": 77.08,
+   "pop2011": 71,
+   "station": "Neyyattinkara",
+   "stationCode": "NYY",
+   "railZone": "SR"
+  },
+  {
+   "name": "Nedumangad",
+   "state": "Kerala",
+   "lat": 8.6,
+   "lon": 77,
+   "pop2011": 60
+  },
+  {
+   "name": "Ottapalam",
+   "state": "Kerala",
+   "lat": 10.77,
+   "lon": 76.38,
+   "pop2011": 54,
+   "station": "Ottapalam",
+   "stationCode": "OTP",
+   "railZone": "SR"
+  },
+  {
+   "name": "Shoranur",
+   "state": "Kerala",
+   "lat": 10.77,
+   "lon": 76.28,
+   "pop2011": 44,
+   "station": "Shoranur Junction",
+   "stationCode": "SRR",
+   "railZone": "SR"
+  },
+  {
+   "name": "Nilambur",
+   "state": "Kerala",
+   "lat": 11.28,
+   "lon": 76.23,
+   "pop2011": 46,
+   "station": "Nilambur Road",
+   "stationCode": "NIL",
+   "railZone": "SR"
+  },
+  {
+   "name": "Koyilandy",
+   "state": "Kerala",
+   "lat": 11.44,
+   "lon": 75.7,
+   "oldName": "Quilandy",
+   "pop2011": 72,
+   "station": "Koyilandy",
+   "stationCode": "QLD",
+   "railZone": "SR"
+  },
+  {
+   "name": "Erode",
+   "state": "Tamil Nadu",
+   "lat": 11.34,
+   "lon": 77.72,
+   "pop1991": 159,
+   "pop2011": 157,
+   "station": "Erode Junction",
+   "stationCode": "ED",
+   "railZone": "SR"
+  },
+  {
+   "name": "Tiruppur",
+   "state": "Tamil Nadu",
+   "lat": 11.11,
+   "lon": 77.34,
+   "pop2011": 444,
+   "station": "Tiruppur",
+   "stationCode": "TUP",
+   "railZone": "SR"
+  },
+  {
+   "name": "Thoothukudi",
+   "state": "Tamil Nadu",
+   "lat": 8.81,
+   "lon": 78.15,
+   "oldName": "Tuticorin",
+   "renamedOn": "1998-01-01",
+   "pop2011": 238,
+   "station": "Tuticorin",
+   "stationCode": "TN",
+   "railZone": "SR"
+  },
+  {
+   "name": "Nagercoil",
+   "state": "Tamil Nadu",
+   "lat": 8.18,
+   "lon": 77.43,
+   "pop1991": 190,
+   "pop2011": 225,
+   "station": "Nagercoil Junction",
+   "stationCode": "NCJ",
+   "railZone": "SR"
+  },
+  {
+   "name": "Kanchipuram",
+   "state": "Tamil Nadu",
+   "lat": 12.83,
+   "lon": 79.7,
+   "pop1991": 145,
+   "pop2011": 164,
+   "station": "Kanchipuram",
+   "stationCode": "CJ",
+   "railZone": "SR"
+  },
+  {
+   "name": "Cuddalore",
+   "state": "Tamil Nadu",
+   "lat": 11.75,
+   "lon": 79.75,
+   "pop1991": 145,
+   "pop2011": 174,
+   "station": "Cuddalore Port Junction",
+   "stationCode": "CUPJ",
+   "railZone": "SR"
+  },
+  {
+   "name": "Dindigul",
+   "state": "Tamil Nadu",
+   "lat": 10.35,
+   "lon": 77.95,
+   "pop1991": 182,
+   "pop2011": 207,
+   "station": "Dindigul Junction",
+   "stationCode": "DG",
+   "railZone": "SR"
+  },
+  {
+   "name": "Kumbakonam",
+   "state": "Tamil Nadu",
+   "lat": 10.96,
+   "lon": 79.38,
+   "pop1991": 139,
+   "pop2011": 140,
+   "station": "Kumbakonam",
+   "stationCode": "KMU",
+   "railZone": "SR"
+  },
+  {
+   "name": "Rajapalayam",
+   "state": "Tamil Nadu",
+   "lat": 9.45,
+   "lon": 77.55,
+   "pop2011": 130,
+   "station": "Rajapalayam",
+   "stationCode": "RJPM",
+   "railZone": "SR"
+  },
+  {
+   "name": "Sivakasi",
+   "state": "Tamil Nadu",
+   "lat": 9.45,
+   "lon": 77.8,
+   "pop2011": 71,
+   "station": "Sivakasi",
+   "stationCode": "SVKS",
+   "railZone": "SR"
+  },
+  {
+   "name": "Shivamogga",
+   "state": "Karnataka",
+   "lat": 13.93,
+   "lon": 75.57,
+   "oldName": "Shimoga",
+   "renamedOn": "2014-11-01",
+   "pop1991": 193,
+   "pop2011": 323,
+   "station": "Shivamogga Town",
+   "stationCode": "SMET",
+   "railZone": "SWR"
+  },
+  {
+   "name": "Davanagere",
+   "state": "Karnataka",
+   "lat": 14.47,
+   "lon": 75.92,
+   "pop1991": 266,
+   "pop2011": 435,
+   "station": "Davangere",
+   "stationCode": "DVG",
+   "railZone": "SWR"
+  },
+  {
+   "name": "Ballari",
+   "state": "Karnataka",
+   "lat": 15.1,
+   "lon": 76.92,
+   "oldName": "Bellary",
+   "renamedOn": "2014-11-01",
+   "pop1991": 245,
+   "pop2011": 410,
+   "station": "Ballari Junction",
+   "stationCode": "BAY",
+   "railZone": "SWR"
+  },
+  {
+   "name": "Tumakuru",
+   "state": "Karnataka",
+   "lat": 13.34,
+   "lon": 77.1,
+   "oldName": "Tumkur",
+   "renamedOn": "2014-11-01",
+   "pop1991": 180,
+   "pop2011": 302,
+   "station": "Tumakuru",
+   "stationCode": "TK",
+   "railZone": "SWR"
+  },
+  {
+   "name": "Udupi",
+   "state": "Karnataka",
+   "lat": 13.34,
+   "lon": 74.75,
+   "pop1991": 78,
+   "pop2011": 145,
+   "station": "Udupi",
+   "stationCode": "UD",
+   "railZone": "KR"
+  },
+  {
+   "name": "Hassan",
+   "state": "Karnataka",
+   "lat": 13,
+   "lon": 76.1,
+   "pop1991": 91,
+   "pop2011": 155,
+   "station": "Hassan Junction",
+   "stationCode": "HAS",
+   "railZone": "SWR"
+  },
+  {
+   "name": "Vijayapura",
+   "state": "Karnataka",
+   "lat": 16.83,
+   "lon": 75.71,
+   "oldName": "Bijapur",
+   "renamedOn": "2014-11-01",
+   "pop1991": 187,
+   "pop2011": 327,
+   "station": "Vijayapura",
+   "stationCode": "BJP",
+   "railZone": "SWR"
+  },
+  {
+   "name": "Raichur",
+   "state": "Karnataka",
+   "lat": 16.2,
+   "lon": 77.37,
+   "pop1991": 171,
+   "pop2011": 234,
+   "station": "Raichur Junction",
+   "stationCode": "RC",
+   "railZone": "SCR"
+  },
+  {
+   "name": "Mandya",
+   "state": "Karnataka",
+   "lat": 12.52,
+   "lon": 76.9,
+   "pop1991": 120,
+   "pop2011": 137,
+   "station": "Mandya",
+   "stationCode": "MYA",
+   "railZone": "SWR"
+  },
+  {
+   "name": "Chikkamagaluru",
+   "state": "Karnataka",
+   "lat": 13.33,
+   "lon": 75.79,
+   "oldName": "Chikmagalur",
+   "renamedOn": "2014-11-01",
+   "pop1991": 61,
+   "pop2011": 118,
+   "station": "Chikkamagaluru",
+   "stationCode": "CMGR",
+   "railZone": "SWR"
+  },
+  {
+   "name": "Kakinada",
+   "state": "Andhra Pradesh",
+   "lat": 16.97,
+   "lon": 82.25,
+   "oldName": "Cocanada",
+   "pop1991": 280,
+   "pop2011": 384,
+   "station": "Kakinada Town",
+   "stationCode": "CCT",
+   "railZone": "SCR"
+  },
+  {
+   "name": "Anantapur",
+   "state": "Andhra Pradesh",
+   "lat": 14.68,
+   "lon": 77.6,
+   "pop1991": 175,
+   "pop2011": 267,
+   "station": "Anantapur",
+   "stationCode": "ATP",
+   "railZone": "SCR"
+  },
+  {
+   "name": "Kadapa",
+   "state": "Andhra Pradesh",
+   "lat": 14.47,
+   "lon": 78.82,
+   "oldName": "Cuddapah",
+   "renamedOn": "2005-08-19",
+   "pop1991": 197,
+   "pop2011": 345,
+   "station": "Kadapa",
+   "stationCode": "HX",
+   "railZone": "SCR"
+  },
+  {
+   "name": "Eluru",
+   "state": "Andhra Pradesh",
+   "lat": 16.71,
+   "lon": 81.1,
+   "pop1991": 213,
+   "pop2011": 218,
+   "station": "Eluru",
+   "stationCode": "EE",
+   "railZone": "SCR"
+  },
+  {
+   "name": "Ongole",
+   "state": "Andhra Pradesh",
+   "lat": 15.51,
+   "lon": 80.05,
+   "pop1991": 101,
+   "pop2011": 208,
+   "station": "Ongole",
+   "stationCode": "OGL",
+   "railZone": "SCR"
+  },
+  {
+   "name": "Srikakulam",
+   "state": "Andhra Pradesh",
+   "lat": 18.3,
+   "lon": 83.9,
+   "pop1991": 89,
+   "pop2011": 138,
+   "station": "Srikakulam Road",
+   "stationCode": "CHE",
+   "railZone": "ECoR"
+  },
+  {
+   "name": "Chittoor",
+   "state": "Andhra Pradesh",
+   "lat": 13.22,
+   "lon": 79.1,
+   "pop1991": 133,
+   "pop2011": 161,
+   "station": "Chittoor",
+   "stationCode": "CTO",
+   "railZone": "SCR"
+  },
+  {
+   "name": "Machilipatnam",
+   "state": "Andhra Pradesh",
+   "lat": 16.17,
+   "lon": 81.13,
+   "oldName": "Masulipatnam",
+   "pop1991": 159,
+   "pop2011": 170,
+   "station": "Machilipatnam",
+   "stationCode": "MTM",
+   "railZone": "SCR"
+  },
+  {
+   "name": "Khammam",
+   "state": "Telangana",
+   "lat": 17.25,
+   "lon": 80.15,
+   "pop1991": 128,
+   "pop2011": 196,
+   "station": "Khammam",
+   "stationCode": "KMT",
+   "railZone": "SCR"
+  },
+  {
+   "name": "Mahbubnagar",
+   "state": "Telangana",
+   "lat": 16.75,
+   "lon": 78,
+   "pop1991": 117,
+   "pop2011": 190,
+   "station": "Mahbubnagar",
+   "stationCode": "MBNR",
+   "railZone": "SCR"
+  },
+  {
+   "name": "Nalgonda",
+   "state": "Telangana",
+   "lat": 17.06,
+   "lon": 79.27,
+   "pop1991": 85,
+   "pop2011": 154,
+   "station": "Nalgonda",
+   "stationCode": "NLDA",
+   "railZone": "SCR"
+  },
+  {
+   "name": "Suryapet",
+   "state": "Telangana",
+   "lat": 17.14,
+   "lon": 79.62,
+   "pop1991": 61,
+   "pop2011": 107
+  },
+  {
+   "name": "Siddipet",
+   "state": "Telangana",
+   "lat": 18.1,
+   "lon": 78.85,
+   "pop1991": 54,
+   "pop2011": 67,
+   "station": "Siddipet",
+   "stationCode": "SIPT",
+   "railZone": "SCR"
+  },
+  {
+   "name": "Saharanpur",
+   "state": "Uttar Pradesh",
+   "lat": 29.96,
+   "lon": 77.55,
+   "pop1951": 148,
+   "pop1971": 225,
+   "pop1991": 375,
+   "pop2011": 705,
+   "station": "Saharanpur Junction",
+   "stationCode": "SRE",
+   "railZone": "NR"
+  },
+  {
+   "name": "Mathura",
+   "state": "Uttar Pradesh",
+   "lat": 27.49,
+   "lon": 77.67,
+   "pop2011": 442,
+   "station": "Mathura Junction",
+   "stationCode": "MTJ",
+   "railZone": "NCR"
+  },
+  {
+   "name": "Firozabad",
+   "state": "Uttar Pradesh",
+   "lat": 27.15,
+   "lon": 78.42,
+   "pop2011": 604,
+   "station": "Firozabad",
+   "stationCode": "FZD",
+   "railZone": "NCR"
+  },
+  {
+   "name": "Muzaffarnagar",
+   "state": "Uttar Pradesh",
+   "lat": 29.48,
+   "lon": 77.7,
+   "pop2011": 495,
+   "station": "Muzaffarnagar",
+   "stationCode": "MOZ",
+   "railZone": "NR"
+  },
+  {
+   "name": "Rampur",
+   "state": "Uttar Pradesh",
+   "lat": 28.81,
+   "lon": 79.03,
+   "pop2011": 325,
+   "station": "Rampur Junction",
+   "stationCode": "RMU",
+   "railZone": "NR"
+  },
+  {
+   "name": "Shahjahanpur",
+   "state": "Uttar Pradesh",
+   "lat": 27.88,
+   "lon": 79.91,
+   "pop2011": 346,
+   "station": "Shahjahanpur",
+   "stationCode": "SPN",
+   "railZone": "NR"
+  },
+  {
+   "name": "Farrukhabad",
+   "state": "Uttar Pradesh",
+   "lat": 27.39,
+   "lon": 79.58,
+   "pop2011": 277,
+   "station": "Farrukhabad Junction",
+   "stationCode": "FBD",
+   "railZone": "NER"
+  },
+  {
+   "name": "Mirzapur",
+   "state": "Uttar Pradesh",
+   "lat": 25.15,
+   "lon": 82.57,
+   "pop2011": 235,
+   "station": "Mirzapur",
+   "stationCode": "MZP",
+   "railZone": "NCR"
+  },
+  {
+   "name": "Darbhanga",
+   "state": "Bihar",
+   "lat": 26.17,
+   "lon": 85.9,
+   "pop2011": 296,
+   "station": "Darbhanga Junction",
+   "stationCode": "DBG",
+   "railZone": "ECR"
+  },
+  {
+   "name": "Purnia",
+   "state": "Bihar",
+   "lat": 25.78,
+   "lon": 87.48,
+   "pop2011": 311,
+   "station": "Purnea Junction",
+   "stationCode": "PRNA",
+   "railZone": "NFR"
+  },
+  {
+   "name": "Arrah",
+   "state": "Bihar",
+   "lat": 25.55,
+   "lon": 84.66,
+   "pop2011": 261,
+   "station": "Ara Junction",
+   "stationCode": "ARA",
+   "railZone": "ECR"
+  },
+  {
+   "name": "Begusarai",
+   "state": "Bihar",
+   "lat": 25.42,
+   "lon": 86.13,
+   "pop2011": 252,
+   "station": "Begusarai",
+   "stationCode": "BGS",
+   "railZone": "ECR"
+  },
+  {
+   "name": "Katihar",
+   "state": "Bihar",
+   "lat": 25.53,
+   "lon": 87.58,
+   "pop1951": 42,
+   "pop1971": 80,
+   "pop1991": 154,
+   "pop2011": 241,
+   "station": "Katihar Junction",
+   "stationCode": "KIR",
+   "railZone": "NFR"
+  },
+  {
+   "name": "Chhapra",
+   "state": "Bihar",
+   "lat": 25.78,
+   "lon": 84.73,
+   "pop2011": 213,
+   "station": "Chhapra Junction",
+   "stationCode": "CPR",
+   "railZone": "NER"
+  },
+  {
+   "name": "Munger",
+   "state": "Bihar",
+   "lat": 25.38,
+   "lon": 86.47,
+   "oldName": "Monghyr",
+   "pop2011": 213,
+   "station": "Munger",
+   "stationCode": "MGR",
+   "railZone": "ER"
+  },
+  {
+   "name": "Sasaram",
+   "state": "Bihar",
+   "lat": 24.95,
+   "lon": 84.03,
+   "pop2011": 147,
+   "station": "Sasaram Junction",
+   "stationCode": "SSM",
+   "railZone": "ECR"
+  },
+  {
+   "name": "Deoghar",
+   "state": "Jharkhand",
+   "lat": 24.48,
+   "lon": 86.7,
+   "pop2011": 203,
+   "station": "Jasidih Junction",
+   "stationCode": "JSME",
+   "railZone": "ER"
+  },
+  {
+   "name": "Hazaribagh",
+   "state": "Jharkhand",
+   "lat": 23.98,
+   "lon": 85.35,
+   "pop1951": 34,
+   "pop1971": 55,
+   "pop1991": 98,
+   "pop2011": 154,
+   "station": "Hazaribagh Town",
+   "stationCode": "HZBN",
+   "railZone": "ECR"
+  },
+  {
+   "name": "Giridih",
+   "state": "Jharkhand",
+   "lat": 24.18,
+   "lon": 86.3,
+   "pop1951": 29,
+   "pop1971": 40,
+   "pop1991": 78,
+   "pop2011": 144,
+   "station": "Giridih",
+   "stationCode": "GRD",
+   "railZone": "ER"
+  },
+  {
+   "name": "Sagar",
+   "state": "Madhya Pradesh",
+   "lat": 23.83,
+   "lon": 78.71,
+   "oldName": "Saugor",
+   "pop2011": 370,
+   "station": "Saugor",
+   "stationCode": "SGO",
+   "railZone": "WCR"
+  },
+  {
+   "name": "Dewas",
+   "state": "Madhya Pradesh",
+   "lat": 22.96,
+   "lon": 76.06,
+   "pop2011": 290,
+   "station": "Dewas Junction",
+   "stationCode": "DWX",
+   "railZone": "WR"
+  },
+  {
+   "name": "Satna",
+   "state": "Madhya Pradesh",
+   "lat": 24.6,
+   "lon": 80.83,
+   "pop2011": 280,
+   "station": "Satna Junction",
+   "stationCode": "STA",
+   "railZone": "WCR"
+  },
+  {
+   "name": "Ratlam",
+   "state": "Madhya Pradesh",
+   "lat": 23.33,
+   "lon": 75.04,
+   "pop2011": 265,
+   "station": "Ratlam Junction",
+   "stationCode": "RTM",
+   "railZone": "WR"
+  },
+  {
+   "name": "Rewa",
+   "state": "Madhya Pradesh",
+   "lat": 24.54,
+   "lon": 81.3,
+   "pop2011": 236,
+   "station": "Rewa",
+   "stationCode": "REWA",
+   "railZone": "WCR"
+  },
+  {
+   "name": "Chhindwara",
+   "state": "Madhya Pradesh",
+   "lat": 22.07,
+   "lon": 78.93,
+   "pop2011": 190,
+   "station": "Chhindwara Junction",
+   "stationCode": "CWA",
+   "railZone": "SECR"
+  },
+  {
+   "name": "Vidisha",
+   "state": "Madhya Pradesh",
+   "lat": 23.53,
+   "lon": 77.82,
+   "oldName": "Bhilsa",
+   "renamedOn": "1956-01-01",
+   "pop1951": 19,
+   "pop1971": 43,
+   "pop1991": 93,
+   "pop2011": 156,
+   "station": "Vidisha",
+   "stationCode": "BHS",
+   "railZone": "WCR"
+  },
+  {
+   "name": "Bharatpur",
+   "state": "Rajasthan",
+   "lat": 27.22,
+   "lon": 77.49,
+   "pop2011": 252,
+   "station": "Bharatpur Junction",
+   "stationCode": "BTE",
+   "railZone": "WCR"
+  },
+  {
+   "name": "Sikar",
+   "state": "Rajasthan",
+   "lat": 27.62,
+   "lon": 75.13,
+   "pop2011": 238,
+   "station": "Sikar Junction",
+   "stationCode": "SIKR",
+   "railZone": "NWR"
+  },
+  {
+   "name": "Bhilwara",
+   "state": "Rajasthan",
+   "lat": 25.35,
+   "lon": 74.64,
+   "pop2011": 359,
+   "station": "Bhilwara",
+   "stationCode": "BHL",
+   "railZone": "NWR"
+  },
+  {
+   "name": "Alwar",
+   "state": "Rajasthan",
+   "lat": 27.56,
+   "lon": 76.63,
+   "pop2011": 315,
+   "station": "Alwar Junction",
+   "stationCode": "AWR",
+   "railZone": "NWR"
+  },
+  {
+   "name": "Sri Ganganagar",
+   "state": "Rajasthan",
+   "lat": 29.9,
+   "lon": 73.88,
+   "pop2011": 238,
+   "station": "Shri Ganganagar Junction",
+   "stationCode": "SGNR",
+   "railZone": "NWR"
+  },
+  {
+   "name": "Pali",
+   "state": "Rajasthan",
+   "lat": 25.77,
+   "lon": 73.32,
+   "pop2011": 230,
+   "station": "Pali Marwar",
+   "stationCode": "PMY",
+   "railZone": "NWR"
+  },
+  {
+   "name": "Rohtak",
+   "state": "Haryana",
+   "lat": 28.89,
+   "lon": 76.59,
+   "pop2011": 373,
+   "station": "Rohtak Junction",
+   "stationCode": "ROK",
+   "railZone": "NR"
+  },
+  {
+   "name": "Hisar",
+   "state": "Haryana",
+   "lat": 29.15,
+   "lon": 75.72,
+   "pop2011": 301,
+   "station": "Hisar Junction",
+   "stationCode": "HSR",
+   "railZone": "NWR"
+  },
+  {
+   "name": "Karnal",
+   "state": "Haryana",
+   "lat": 29.69,
+   "lon": 76.99,
+   "pop2011": 287,
+   "station": "Karnal",
+   "stationCode": "KUN",
+   "railZone": "NR"
+  },
+  {
+   "name": "Sonipat",
+   "state": "Haryana",
+   "lat": 28.98,
+   "lon": 77.02,
+   "pop2011": 277,
+   "station": "Sonipat Junction",
+   "stationCode": "SNP",
+   "railZone": "NR"
+  },
+  {
+   "name": "Yamunanagar",
+   "state": "Haryana",
+   "lat": 30.13,
+   "lon": 77.28,
+   "pop2011": 217,
+   "station": "Yamunanagar-Jagadhri",
+   "stationCode": "YJUD",
+   "railZone": "NR"
+  },
+  {
+   "name": "Pathankot",
+   "state": "Punjab",
+   "lat": 32.27,
+   "lon": 75.65,
+   "pop2011": 160,
+   "station": "Pathankot Junction",
+   "stationCode": "PTK",
+   "railZone": "NR"
+  },
+  {
+   "name": "Hoshiarpur",
+   "state": "Punjab",
+   "lat": 31.53,
+   "lon": 75.91,
+   "pop2011": 169,
+   "station": "Hoshiarpur",
+   "stationCode": "HSX",
+   "railZone": "NR"
+  },
+  {
+   "name": "Batala",
+   "state": "Punjab",
+   "lat": 31.82,
+   "lon": 75.21,
+   "pop2011": 157,
+   "station": "Batala Junction",
+   "stationCode": "BAT",
+   "railZone": "NR"
+  },
+  {
+   "name": "Moga",
+   "state": "Punjab",
+   "lat": 30.82,
+   "lon": 75.17,
+   "station": "Moga",
+   "stationCode": "MOGA",
+   "railZone": "NR"
+  },
+  {
+   "name": "Mandi",
+   "state": "Himachal Pradesh",
+   "lat": 31.71,
+   "lon": 76.93,
+   "pop2011": 26
+  },
+  {
+   "name": "Solan",
+   "state": "Himachal Pradesh",
+   "lat": 30.9,
+   "lon": 77.1,
+   "pop2011": 39,
+   "station": "Solan",
+   "stationCode": "SOL",
+   "railZone": "NR"
+  },
+  {
+   "name": "Kullu",
+   "state": "Himachal Pradesh",
+   "lat": 31.96,
+   "lon": 77.11,
+   "pop2011": 19
+  },
+  {
+   "name": "Anantnag",
+   "state": "Jammu and Kashmir",
+   "lat": 33.73,
+   "lon": 75.15,
+   "pop2011": 109,
+   "station": "Anantnag",
+   "stationCode": "ANT",
+   "railZone": "NR"
+  },
+  {
+   "name": "Baramulla",
+   "state": "Jammu and Kashmir",
+   "lat": 34.2,
+   "lon": 74.35,
+   "station": "Baramulla",
+   "stationCode": "BRML",
+   "railZone": "NR"
+  },
+  {
+   "name": "Haldwani",
+   "state": "Uttarakhand",
+   "lat": 29.22,
+   "lon": 79.53,
+   "pop2011": 156,
+   "station": "Haldwani",
+   "stationCode": "HDW",
+   "railZone": "NER"
+  },
+  {
+   "name": "Roorkee",
+   "state": "Uttarakhand",
+   "lat": 29.87,
+   "lon": 77.89,
+   "pop2011": 118,
+   "station": "Roorkee",
+   "stationCode": "RK",
+   "railZone": "NR"
+  },
+  {
+   "name": "Almora",
+   "state": "Uttarakhand",
+   "lat": 29.59,
+   "lon": 79.65
+  },
+  {
+   "name": "Akola",
+   "state": "Maharashtra",
+   "lat": 20.71,
+   "lon": 77,
+   "pop2011": 426,
+   "station": "Akola Junction",
+   "stationCode": "AK",
+   "railZone": "CR"
+  },
+  {
+   "name": "Jalgaon",
+   "state": "Maharashtra",
+   "lat": 21,
+   "lon": 75.56,
+   "pop2011": 460,
+   "station": "Jalgaon Junction",
+   "stationCode": "JL",
+   "railZone": "CR"
+  },
+  {
+   "name": "Latur",
+   "state": "Maharashtra",
+   "lat": 18.41,
+   "lon": 76.58,
+   "pop2011": 383,
+   "station": "Latur",
+   "stationCode": "LUR",
+   "railZone": "CR"
+  },
+  {
+   "name": "Sangli",
+   "state": "Maharashtra",
+   "lat": 16.85,
+   "lon": 74.56,
+   "pop2011": 503,
+   "station": "Sangli",
+   "stationCode": "SLI",
+   "railZone": "CR"
+  },
+  {
+   "name": "Nanded",
+   "state": "Maharashtra",
+   "lat": 19.15,
+   "lon": 77.3,
+   "pop2011": 550,
+   "station": "Hazur Sahib Nanded",
+   "stationCode": "NED",
+   "railZone": "SCR"
+  },
+  {
+   "name": "Satara",
+   "state": "Maharashtra",
+   "lat": 17.69,
+   "lon": 74,
+   "pop2011": 120,
+   "station": "Satara",
+   "stationCode": "STR",
+   "railZone": "CR"
+  },
+  {
+   "name": "Ratnagiri",
+   "state": "Maharashtra",
+   "lat": 16.99,
+   "lon": 73.31,
+   "pop2011": 76,
+   "station": "Ratnagiri",
+   "stationCode": "RN",
+   "railZone": "KR"
+  },
+  {
+   "name": "Ichalkaranji",
+   "state": "Maharashtra",
+   "lat": 16.7,
+   "lon": 74.46,
+   "pop2011": 287
+  },
+  {
+   "name": "Junagadh",
+   "state": "Gujarat",
+   "lat": 21.52,
+   "lon": 70.46,
+   "pop2011": 319,
+   "station": "Junagadh Junction",
+   "stationCode": "JND",
+   "railZone": "WR"
+  },
+  {
+   "name": "Anand",
+   "state": "Gujarat",
+   "lat": 22.56,
+   "lon": 72.95,
+   "pop2011": 209,
+   "station": "Anand Junction",
+   "stationCode": "ANND",
+   "railZone": "WR"
+  },
+  {
+   "name": "Nadiad",
+   "state": "Gujarat",
+   "lat": 22.69,
+   "lon": 72.86,
+   "pop2011": 218,
+   "station": "Nadiad Junction",
+   "stationCode": "ND",
+   "railZone": "WR"
+  },
+  {
+   "name": "Mehsana",
+   "state": "Gujarat",
+   "lat": 23.6,
+   "lon": 72.4,
+   "pop2011": 191,
+   "station": "Mahesana Junction",
+   "stationCode": "MSH",
+   "railZone": "WR"
+  },
+  {
+   "name": "Bharuch",
+   "state": "Gujarat",
+   "lat": 21.71,
+   "lon": 73,
+   "oldName": "Broach",
+   "pop2011": 169,
+   "station": "Bharuch Junction",
+   "stationCode": "BH",
+   "railZone": "WR"
+  },
+  {
+   "name": "Porbandar",
+   "state": "Gujarat",
+   "lat": 21.64,
+   "lon": 69.61,
+   "pop2011": 153,
+   "station": "Porbandar",
+   "stationCode": "PBR",
+   "railZone": "WR"
+  },
+  {
+   "name": "Mapusa",
+   "state": "Goa",
+   "lat": 15.59,
+   "lon": 73.81,
+   "pop2011": 40
+  },
+  {
+   "name": "Ponda",
+   "state": "Goa",
+   "lat": 15.4,
+   "lon": 74.01,
+   "pop2011": 23
+  },
+  {
+   "name": "Kharagpur",
+   "state": "West Bengal",
+   "lat": 22.34,
+   "lon": 87.33,
+   "pop1991": 178,
+   "pop2011": 208,
+   "station": "Kharagpur Junction",
+   "stationCode": "KGP",
+   "railZone": "SER"
+  },
+  {
+   "name": "Malda",
+   "state": "West Bengal",
+   "lat": 25.01,
+   "lon": 88.14,
+   "pop1991": 139,
+   "pop2011": 206,
+   "station": "Malda Town",
+   "stationCode": "MLDT",
+   "railZone": "ER"
+  },
+  {
+   "name": "Berhampore",
+   "state": "West Bengal",
+   "lat": 24.1,
+   "lon": 88.27,
+   "pop1991": 115,
+   "pop2011": 195,
+   "station": "Berhampore Court",
+   "stationCode": "BPC",
+   "railZone": "ER"
+  },
+  {
+   "name": "Krishnanagar",
+   "state": "West Bengal",
+   "lat": 23.4,
+   "lon": 88.5,
+   "pop1991": 121,
+   "pop2011": 153,
+   "station": "Krishnanagar City Junction",
+   "stationCode": "KNJ",
+   "railZone": "ER"
+  },
+  {
+   "name": "Midnapore",
+   "state": "West Bengal",
+   "lat": 22.43,
+   "lon": 87.31,
+   "pop2011": 169,
+   "station": "Midnapore",
+   "stationCode": "MDN",
+   "railZone": "SER"
+  },
+  {
+   "name": "Cooch Behar",
+   "state": "West Bengal",
+   "lat": 26.32,
+   "lon": 89.45,
+   "pop1991": 71,
+   "pop2011": 78,
+   "station": "New Cooch Behar",
+   "stationCode": "NCB",
+   "railZone": "NFR"
+  },
+  {
+   "name": "Balasore",
+   "state": "Odisha",
+   "lat": 21.5,
+   "lon": 86.92,
+   "pop1991": 85,
+   "pop2011": 144,
+   "station": "Balasore",
+   "stationCode": "BLS",
+   "railZone": "SER"
+  },
+  {
+   "name": "Baripada",
+   "state": "Odisha",
+   "lat": 21.94,
+   "lon": 86.73,
+   "pop2011": 117,
+   "station": "Baripada",
+   "stationCode": "BPO",
+   "railZone": "SER"
+  },
+  {
+   "name": "Bhadrak",
+   "state": "Odisha",
+   "lat": 21.06,
+   "lon": 86.5,
+   "pop1991": 76,
+   "pop2011": 121,
+   "station": "Bhadrak",
+   "stationCode": "BHC",
+   "railZone": "ECoR"
+  },
+  {
+   "name": "Jeypore",
+   "state": "Odisha",
+   "lat": 18.86,
+   "lon": 82.57,
+   "pop1991": 65,
+   "pop2011": 85,
+   "station": "Jeypore",
+   "stationCode": "JYP",
+   "railZone": "ECoR"
+  },
+  {
+   "name": "Nagaon",
+   "state": "Assam",
+   "lat": 26.35,
+   "lon": 92.69,
+   "pop1991": 93,
+   "pop2011": 117,
+   "station": "Haibargaon",
+   "stationCode": "HBN",
+   "railZone": "NFR"
+  },
+  {
+   "name": "Tinsukia",
+   "state": "Assam",
+   "lat": 27.49,
+   "lon": 95.36,
+   "pop1991": 74,
+   "pop2011": 116,
+   "station": "New Tinsukia Junction",
+   "stationCode": "NTSK",
+   "railZone": "NFR"
+  },
+  {
+   "name": "Tezpur",
+   "state": "Assam",
+   "lat": 26.63,
+   "lon": 92.8,
+   "pop1991": 55,
+   "pop2011": 76,
+   "station": "Dekargaon",
+   "stationCode": "DKGN",
+   "railZone": "NFR"
+  },
+  {
+   "name": "Diphu",
+   "state": "Assam",
+   "lat": 25.84,
+   "lon": 93.44,
+   "pop1991": 40,
+   "pop2011": 62,
+   "station": "Diphu",
+   "stationCode": "DPU",
+   "railZone": "NFR"
+  },
+  {
+   "name": "Korba",
+   "state": "Chhattisgarh",
+   "lat": 22.36,
+   "lon": 82.73,
+   "pop1991": 125,
+   "pop2011": 365,
+   "station": "Korba",
+   "stationCode": "KRBA",
+   "railZone": "SECR"
+  },
+  {
+   "name": "Durg",
+   "state": "Chhattisgarh",
+   "lat": 21.19,
+   "lon": 81.28,
+   "pop1991": 151,
+   "pop2011": 269,
+   "station": "Durg Junction",
+   "stationCode": "DURG",
+   "railZone": "SECR"
+  },
+  {
+   "name": "Raigarh",
+   "state": "Chhattisgarh",
+   "lat": 21.9,
+   "lon": 83.4,
+   "pop1991": 87,
+   "pop2011": 150,
+   "station": "Raigarh",
+   "stationCode": "RIG",
+   "railZone": "SECR"
+  },
+  {
+   "name": "Jagdalpur",
+   "state": "Chhattisgarh",
+   "lat": 19.08,
+   "lon": 82.03,
+   "pop1991": 66,
+   "pop2011": 125,
+   "station": "Jagdalpur",
+   "stationCode": "JDB",
+   "railZone": "ECoR"
+  },
+  {
+   "name": "Jowai",
+   "state": "Meghalaya",
+   "lat": 25.45,
+   "lon": 92.2,
+   "pop1991": 21,
+   "pop2011": 28
+  },
+  {
+   "name": "Thoubal",
+   "state": "Manipur",
+   "lat": 24.62,
+   "lon": 94.01,
+   "pop1991": 31,
+   "pop2011": 46
+  },
+  {
+   "name": "Mokokchung",
+   "state": "Nagaland",
+   "lat": 26.32,
+   "lon": 94.52,
+   "pop1991": 25,
+   "pop2011": 36
+  },
+  {
+   "name": "Pasighat",
+   "state": "Arunachal Pradesh",
+   "lat": 28.07,
+   "lon": 95.33,
+   "pop1991": 15,
+   "pop2011": 25
+  },
+  {
+   "name": "Gyalshing",
+   "state": "Sikkim",
+   "lat": 27.29,
+   "lon": 88.26,
+   "pop2011": 4
   }
  ]
 }
