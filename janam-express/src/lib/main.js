@@ -7,7 +7,7 @@ import {
 } from './lookup.js';
 import { skyOn, panchangOn } from './astronomy.js';
 import { weatherOn, historyOn, historyIndia, famousBirthdays, famousBirthdaysGlobal, postersOf } from './api.js';
-import { rashiChart, RASHIS, GRAHA_NAMES } from './kundli.js';
+import { rashiChart } from './kundli.js';
 import { mahadasha, numerology, weekdayOf } from './jyotish.js';
 import { buildCaption, shareTicket, downloadTicket } from './share.js';
 
@@ -318,22 +318,24 @@ function render() {
   /* beat 9 · famous birthday twins — scope-aware (India / World) */
   renderFamous(famousScope);
 
-  /* beat 11 · birth chart / rashi kundli (astronomy-engine, computed) */
-  document.querySelectorAll('#chart .cell').forEach(c => {
-    c.innerHTML = `<span class="cell-sign">${RASHIS[+c.dataset.r]}</span><span class="cell-grahas"></span>`;
-  });
-  $('chartname').textContent = name && name !== 'Traveller' ? name : 'You';
-  $('chartmoon').textContent = 'casting the chart…';
-  chartP.then(chart => {
-    if (!fresh()) return;
-    chart.signs.forEach((grahas, r) => {
-      const g = document.querySelector(`#chart .cell[data-r="${r}"] .cell-grahas`);
-      if (g) g.textContent = grahas.join(' ');
-    });
-    $('chartmoon').textContent = `Moon in ${RASHIS[chart.moonRashi]}`;
-    $('kundlilegend').innerHTML = Object.entries(GRAHA_NAMES)
-      .map(([ab, nm]) => `<span><b>${ab}</b> ${nm}</span>`).join('');
-  }).catch(() => { $('chartmoon').textContent = 'the sky is clouded over just now'; });
+  /* beat 10 · the life you've lived — pure compute from the DOB (full chart moved to /reading) */
+  {
+    const bornAt = new Date(y, m - 1, d, 6, 0, 0);
+    const days = Math.max(0, Math.floor((Date.now() - bornAt) / 86400000));
+    const yrs = days / 365.2425;
+    const nf = n => Math.round(n).toLocaleString('en-IN');
+    const approx = n => n >= 1e9 ? '≈ ' + (n / 1e9).toFixed(2) + ' billion' : n >= 1e7 ? '≈ ' + (n / 1e7).toFixed(1) + ' crore' : nf(n);
+    $('lifedays').dataset.target = days;
+    $('lifedays').textContent = nf(days);
+    $('lifeyears').textContent = `That's about ${yrs.toFixed(1)} years — ${nf(yrs * 12)} months, or ${nf(days / 7)} weeks.`;
+    $('lifegrid').innerHTML = [
+      ['Hours', nf(days * 24)], ['Minutes', nf(days * 1440)], ['Full moons', nf(days / 29.53)],
+      ['Heartbeats', approx(days * 103680)], ['Breaths', approx(days * 23040)], ['Trips round the Sun', nf(Math.floor(yrs))],
+    ].map(([l, v]) => `<div class="life-card"><b>${v}</b><span>${l}</span></div>`).join('');
+    const nextK = Math.ceil((days + 1) / 1000) * 1000;
+    const nextDate = new Date(bornAt.getTime() + nextK * 86400000);
+    $('lifenext').innerHTML = `Your <b>${nf(nextK)}th day</b> falls on <b>${nextDate.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}</b> — ${nf(nextK - days)} days to go.`;
+  }
 
   /* beat 13 · the gods of your birth */
   const wd = weekdayOf(dob);
@@ -572,12 +574,27 @@ function countUp() {
   }
   requestAnimationFrame(f);
 }
+function animateLifeDays() {
+  const el = $('lifedays'), target = +el.dataset.target || 0;
+  if (reduceMotion) { el.textContent = target.toLocaleString('en-IN'); return; }
+  const start = performance.now(), dur = 1500;
+  function f(now) {
+    const p = Math.min(1, (now - start) / dur), e = 1 - Math.pow(1 - p, 4);
+    el.textContent = Math.floor(target * e).toLocaleString('en-IN');
+    if (p < 1) requestAnimationFrame(f);
+  }
+  requestAnimationFrame(f);
+}
 const io = new IntersectionObserver(entries => entries.forEach(en => {
   if (!en.isIntersecting) return;
   en.target.classList.add('in');
   if (en.target.id === 'rupee' && !en.target.dataset.counted) {
     en.target.dataset.counted = '1';
     countUp();
+  }
+  if (en.target.id === 'lifebeat' && !en.target.dataset.counted) {
+    en.target.dataset.counted = '1';
+    animateLifeDays();
   }
 }), { threshold: 0.25 });
 document.querySelectorAll('.beat').forEach(b => io.observe(b));

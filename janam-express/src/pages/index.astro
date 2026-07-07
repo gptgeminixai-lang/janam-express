@@ -234,9 +234,53 @@ const deityImgs = {
     </div>
   </section>
 
-  <!-- BEAT 10 · THE STARS -->
+  <!-- BEAT 10 · THE LIFE YOU'VE LIVED -->
+  <section class="beat" id="lifebeat">
+    <p class="kicker reveal">· Beat 10 · The life you've lived ·</p>
+    <div class="life reveal d1">
+      <div class="life-hero">
+        <p class="life-eyebrow">Since the morning you arrived, you have lived</p>
+        <p class="life-days"><b id="lifedays">0</b><span>days</span></p>
+        <p class="life-sub" id="lifeyears"></p>
+      </div>
+      <div class="life-grid" id="lifegrid"></div>
+      <p class="life-next" id="lifenext"></p>
+      <p class="astro-note">Counted to this very moment · the arithmetic of a life, in the units we rarely stop to add up. Heartbeats &amp; breaths are gentle estimates.</p>
+    </div>
+  </section>
+
+  <!-- BEAT 11 · YOUR HOMELAND -->
+  <section class="beat" id="homelandbeat">
+    <p class="kicker reveal">· Beat 11 · Your homeland ·</p>
+    <div class="homeland reveal d1">
+      <div class="hl-card hl-known">
+        <p class="hl-label">Your city is known for</p>
+        <p class="hl-known-line" id="hlknown"></p>
+      </div>
+      <div class="hl-card hl-newyear">
+        <p class="hl-label">Your people's new year</p>
+        <p class="hl-big" id="hlnewyear"></p>
+        <p class="hl-sub" id="hlera"></p>
+      </div>
+      <div class="hl-card hl-symbols">
+        <p class="hl-label">Your state's emblems</p>
+        <div class="hl-sym-grid" id="hlsymbols"></div>
+      </div>
+      <div class="hl-card hl-growth" id="hlgrowth" hidden>
+        <p class="hl-label">Your city grew up with you</p>
+        <p class="hl-growth-line" id="hlgrowthline"></p>
+        <div class="hl-spark" id="hlspark"></div>
+      </div>
+      <div class="hl-card hl-culture">
+        <p class="hl-label">Your region's colours</p>
+        <p class="hl-culture-line" id="hlculture"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEAT 12 · THE STARS -->
   <section class="beat" id="stars">
-    <p class="kicker reveal">· Beat 10 · What the sky said ·</p>
+    <p class="kicker reveal">· Beat 12 · What the sky said ·</p>
     <div class="matchbox reveal d1">
       <p class="mb-top">Safety Matches · Made in your birth year</p>
       <p class="mb-samvat" id="mbsamvat"></p>
@@ -247,9 +291,9 @@ const deityImgs = {
     </div>
   </section>
 
-  <!-- BEAT 11 · YOUR ASTROLOGY -->
+  <!-- BEAT 13 · YOUR ASTROLOGY -->
   <section class="beat" id="astrobeat">
-    <p class="kicker reveal">· Beat 11 · The star you were born under ·</p>
+    <p class="kicker reveal">· Beat 13 · The star you were born under ·</p>
     <div class="astro reveal d1">
       <div class="astro-totem">
         <p class="astro-star" id="astrostar">…</p>
@@ -265,47 +309,13 @@ const deityImgs = {
         <p class="astro-label">Why you're you — read together, not one label</p>
         <div class="astro-rows" id="astrorows"></div>
       </div>
-      <a class="astro-cta" id="readingcta" href={`${base}reading/`}>
-        <span class="cta-spark">✨</span>
-        <span class="cta-text">Your detailed reading<small>How the planets are moving you this week &amp; month — a full personalised Jyotish reading</small></span>
-        <span class="cta-arrow">→</span>
-      </a>
       <p class="astro-note">A cultural garnish, described in the heritage of Jyotish — for delight, not prediction.</p>
-    </div>
-  </section>
-
-  <!-- BEAT 12 · BIRTH CHART / KUNDLI -->
-  <section class="beat" id="kundlibeat">
-    <p class="kicker reveal">· Beat 12 · Your birth chart ·</p>
-    <div class="kundli reveal d1">
-      <p class="kundli-top">Janma Rashi Chakra · जन्म राशि चक्र</p>
-      <div class="chart" id="chart">
-        <div class="cell rc11" data-r="11"></div>
-        <div class="cell rc0" data-r="0"></div>
-        <div class="cell rc1" data-r="1"></div>
-        <div class="cell rc2" data-r="2"></div>
-        <div class="cell rc10" data-r="10"></div>
-        <div class="chart-center" id="chartcenter">
-          <span>Rashi chart</span>
-          <b id="chartname"></b>
-          <i id="chartmoon"></i>
-        </div>
-        <div class="cell rc3" data-r="3"></div>
-        <div class="cell rc9" data-r="9"></div>
-        <div class="cell rc4" data-r="4"></div>
-        <div class="cell rc8" data-r="8"></div>
-        <div class="cell rc7" data-r="7"></div>
-        <div class="cell rc6" data-r="6"></div>
-        <div class="cell rc5" data-r="5"></div>
-      </div>
-      <div class="kundli-legend" id="kundlilegend"></div>
-      <p class="kundli-note">Sidereal (Lahiri) positions at midday · a full kundli also needs your exact birth time</p>
     </div>
   </section>
 
   <!-- BEAT 13 · THE GODS OF YOUR BIRTH -->
   <section class="beat" id="godsbeat">
-    <p class="kicker reveal">· Beat 13 · The gods of your birth ·</p>
+    <p class="kicker reveal">· Beat 14 · The gods of your birth ·</p>
     <div class="gods reveal d1">
       <div class="deity-hero">
         <figure class="deity-portrait" id="deityfig" hidden>
@@ -342,7 +352,7 @@ const deityImgs = {
 
   <!-- BEAT 14 · THE WHEEL OF YOUR YEARS -->
   <section class="beat" id="dashabeat">
-    <p class="kicker reveal">· Beat 14 · The wheel of your years ·</p>
+    <p class="kicker reveal">· Beat 15 · The wheel of your years ·</p>
     <div class="wheel reveal d1">
       <p class="wheel-lead" id="dashalead"></p>
       <div class="dasha-ribbon" id="dasharibbon"></div>
@@ -353,33 +363,14 @@ const deityImgs = {
     <p class="astro-note reveal d3">Vimshottari dasha &amp; Indian numerology · a period's exact start needs your birth hour, so we place you to the year.</p>
   </section>
 
-  <!-- BEAT 15 · YOUR HOMELAND -->
-  <section class="beat" id="homelandbeat">
-    <p class="kicker reveal">· Beat 15 · Your homeland ·</p>
-    <div class="homeland reveal d1">
-      <div class="hl-card hl-known">
-        <p class="hl-label">Your city is known for</p>
-        <p class="hl-known-line" id="hlknown"></p>
-      </div>
-      <div class="hl-card hl-newyear">
-        <p class="hl-label">Your people's new year</p>
-        <p class="hl-big" id="hlnewyear"></p>
-        <p class="hl-sub" id="hlera"></p>
-      </div>
-      <div class="hl-card hl-symbols">
-        <p class="hl-label">Your state's emblems</p>
-        <div class="hl-sym-grid" id="hlsymbols"></div>
-      </div>
-      <div class="hl-card hl-growth" id="hlgrowth" hidden>
-        <p class="hl-label">Your city grew up with you</p>
-        <p class="hl-growth-line" id="hlgrowthline"></p>
-        <div class="hl-spark" id="hlspark"></div>
-      </div>
-      <div class="hl-card hl-culture">
-        <p class="hl-label">Your region's colours</p>
-        <p class="hl-culture-line" id="hlculture"></p>
-      </div>
-    </div>
+  <!-- YOUR DETAILED READING · portal to the /reading page -->
+  <section class="beat" id="readingportal">
+    <a class="reading-portal reveal d1" id="readingcta" href={`${base}reading/`}>
+      <span class="rp-eyebrow">✦ The Jyotish Desk ✦</span>
+      <h3 class="rp-title">Your full birth reading</h3>
+      <p class="rp-sub">Add your exact birth time and unlock your Lagna &amp; houses, your career leanings, the dasha period you're living through, this week's &amp; month's real transits, your lucky colours, doshas and remedies — read in nine Indian languages.</p>
+      <span class="rp-btn">Open your detailed reading →</span>
+    </a>
   </section>
 
   <!-- BEAT 16 · THE TICKET -->
