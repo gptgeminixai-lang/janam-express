@@ -33,7 +33,7 @@ jobs:
       - run: npm run build
         working-directory: janam-express
         env:
-          PUBLIC_BASE: /janam-express/
+          PUBLIC_BASE: /
       - uses: actions/upload-pages-artifact@v3
         with:
           path: janam-express/dist
